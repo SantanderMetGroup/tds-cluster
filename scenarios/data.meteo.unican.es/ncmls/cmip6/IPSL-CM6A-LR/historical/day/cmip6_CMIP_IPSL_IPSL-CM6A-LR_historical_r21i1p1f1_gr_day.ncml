@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="5968056495" />
+  <attribute name="size_human" value="6.0 GB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01 00:00:00" />
+    <values start="0.5" increment="1.0" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r21i1p1f1/day/tas/gr/v20190614/tas_day_IPSL-CM6A-LR_historical_r21i1p1f1_gr_18500101-20141231.nc" ncoords="60265.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r21i1p1f1/day/tasmax/gr/v20190614/tasmax_day_IPSL-CM6A-LR_historical_r21i1p1f1_gr_18500101-20141231.nc" ncoords="60265.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

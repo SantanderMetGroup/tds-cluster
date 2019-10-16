@@ -1,0 +1,7 @@
+tds_war: ../../software/tds-5.0.0-beta7.war
+tds_context: thredds
+tds_content_path: thredds
+tds_content_root_path: "{{ tomcat_bases }}/{{ tomcat.name }}/content"
+tds_content: "{{ tds_content_root_path }}/{{ tds_content_path }}"
+tds_useSSL: False
+tds_sslPort: 8443

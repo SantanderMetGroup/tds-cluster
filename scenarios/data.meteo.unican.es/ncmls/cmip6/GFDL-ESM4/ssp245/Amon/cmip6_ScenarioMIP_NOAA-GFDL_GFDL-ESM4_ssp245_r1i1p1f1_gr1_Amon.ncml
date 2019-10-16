@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="527215710" />
+  <attribute name="size_human" value="527.2 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01 00:00:00" />
+    <values start="60240.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/pr/gr1/v20180701/pr_Amon_GFDL-ESM4_ssp245_r1i1p1f1_gr1_201501-210012.nc" ncoords="1032.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/tas/gr1/v20180701/tas_Amon_GFDL-ESM4_ssp245_r1i1p1f1_gr1_201501-210012.nc" ncoords="1032.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/tasmax/gr1/v20180701/tasmax_Amon_GFDL-ESM4_ssp245_r1i1p1f1_gr1_201501-210012.nc" ncoords="1032.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NOAA-GFDL/GFDL-ESM4/ssp245/r1i1p1f1/Amon/tasmin/gr1/v20180701/tasmin_Amon_GFDL-ESM4_ssp245_r1i1p1f1_gr1_201501-210012.nc" ncoords="1032.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

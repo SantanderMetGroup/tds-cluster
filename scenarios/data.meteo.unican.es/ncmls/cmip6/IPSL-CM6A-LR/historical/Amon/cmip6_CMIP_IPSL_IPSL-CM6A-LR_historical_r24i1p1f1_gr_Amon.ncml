@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="417128432" />
+  <attribute name="size_human" value="417.1 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01 00:00:00" />
+    <values start="15.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r24i1p1f1/Amon/pr/gr/v20180803/pr_Amon_IPSL-CM6A-LR_historical_r24i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r24i1p1f1/Amon/tas/gr/v20180803/tas_Amon_IPSL-CM6A-LR_historical_r24i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r24i1p1f1/Amon/tasmax/gr/v20180803/tasmax_Amon_IPSL-CM6A-LR_historical_r24i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r24i1p1f1/Amon/tasmin/gr/v20180803/tasmin_Amon_IPSL-CM6A-LR_historical_r24i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r24i1p1f1/fx/sftlf/gr/v20180803/sftlf_fx_IPSL-CM6A-LR_historical_r24i1p1f1_gr.nc" />
+    
+  </aggregation>
+</netcdf>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="999725724" />
+  <attribute name="size_human" value="999.7 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01" />
+    <values start="15.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r2i1p1f1/Amon/pr/gn/v20190222/pr_Amon_MRI-ESM2-0_historical_r2i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r2i1p1f1/Amon/tas/gn/v20190222/tas_Amon_MRI-ESM2-0_historical_r2i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r2i1p1f1/Amon/tasmax/gn/v20190222/tasmax_Amon_MRI-ESM2-0_historical_r2i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r2i1p1f1/Amon/tasmin/gn/v20190222/tasmin_Amon_MRI-ESM2-0_historical_r2i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

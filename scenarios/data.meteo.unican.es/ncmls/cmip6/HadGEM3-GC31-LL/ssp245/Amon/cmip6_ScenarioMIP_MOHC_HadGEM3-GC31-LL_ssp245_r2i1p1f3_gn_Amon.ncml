@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="19981855" />
+  <attribute name="size_human" value="20.0 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01" />
+    <values start="59415.0" increment="30.0" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r2i1p1f3/Amon/pr/gn/v20190906/pr_Amon_HadGEM3-GC31-LL_ssp245_r2i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r2i1p1f3/Amon/tas/gn/v20190906/tas_Amon_HadGEM3-GC31-LL_ssp245_r2i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r2i1p1f3/Amon/tasmax/gn/v20190906/tasmax_Amon_HadGEM3-GC31-LL_ssp245_r2i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r2i1p1f3/Amon/tasmin/gn/v20190906/tasmin_Amon_HadGEM3-GC31-LL_ssp245_r2i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

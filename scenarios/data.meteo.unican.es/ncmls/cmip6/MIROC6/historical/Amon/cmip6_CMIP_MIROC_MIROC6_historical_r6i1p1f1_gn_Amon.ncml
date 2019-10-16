@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="632701912" />
+  <attribute name="size_human" value="632.7 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-1-1" />
+    <values start="36539.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/pr/gn/v20181212/pr_Amon_MIROC6_historical_r6i1p1f1_gn_185001-194912.nc" ncoords="1200.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/pr/gn/v20181212/pr_Amon_MIROC6_historical_r6i1p1f1_gn_195001-201412.nc" ncoords="780.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tas/gn/v20181212/tas_Amon_MIROC6_historical_r6i1p1f1_gn_195001-201412.nc" ncoords="780.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tas/gn/v20181212/tas_Amon_MIROC6_historical_r6i1p1f1_gn_185001-194912.nc" ncoords="1200.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tasmax/gn/v20181212/tasmax_Amon_MIROC6_historical_r6i1p1f1_gn_195001-201412.nc" ncoords="780.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tasmax/gn/v20181212/tasmax_Amon_MIROC6_historical_r6i1p1f1_gn_185001-194912.nc" ncoords="1200.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tasmin/gn/v20181212/tasmin_Amon_MIROC6_historical_r6i1p1f1_gn_185001-194912.nc" ncoords="1200.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC6/historical/r6i1p1f1/Amon/tasmin/gn/v20181212/tasmin_Amon_MIROC6_historical_r6i1p1f1_gn_195001-201412.nc" ncoords="780.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

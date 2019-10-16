@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="417891968" />
+  <attribute name="size_human" value="417.9 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 2015-1-1 00:00" />
+    <values start="15.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CAMS/CAMS-CSM1-0/ssp245/r1i1p1f1/Amon/pr/gn/v20190708/pr_Amon_CAMS-CSM1-0_ssp245_r1i1p1f1_gn_201501-209912.nc" ncoords="1020.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CAMS/CAMS-CSM1-0/ssp245/r1i1p1f1/Amon/tas/gn/v20190708/tas_Amon_CAMS-CSM1-0_ssp245_r1i1p1f1_gn_201501-209912.nc" ncoords="1020.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    
+  </aggregation>
+</netcdf>

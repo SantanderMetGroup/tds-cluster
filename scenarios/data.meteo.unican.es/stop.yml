@@ -1,0 +1,32 @@
+- name: Stop httpd
+  hosts: lbs
+  tasks:
+    - name: Stop httpd
+      service: name=httpd state=stopped
+
+- name: Stop tomcats
+  hosts: servers
+  tasks:
+    - name: Stop tomcats
+      command: "{{ tomcat_home }}/bin/shutdown.sh"
+      args:
+        removes: "{{ tomcat_bases }}/{{ item.name }}/logs/catalina.pid"
+      environment:
+        CATALINA_BASE: "{{ tomcat_bases }}/{{ item.name }}"
+      with_items: "{{ tomcats }}"
+      ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
+
+    - name: Remove catalina.pid
+      file: path={{ tomcat_bases }}/{{ item.name }}/logs/catalina.pid state=absent
+      with_items: "{{ tomcats }}"
+
+- name: Stop database
+  hosts: databases
+  tasks:
+    - command: bin/stopNetworkServer
+      args:
+        chdir: "{{ derby_home }}"
+      environment:
+        DERBY_HOME: "{{ derby_home }}"
+        JAVA_HOME: "{{ jdk_home }}"
+      ignore_errors: True

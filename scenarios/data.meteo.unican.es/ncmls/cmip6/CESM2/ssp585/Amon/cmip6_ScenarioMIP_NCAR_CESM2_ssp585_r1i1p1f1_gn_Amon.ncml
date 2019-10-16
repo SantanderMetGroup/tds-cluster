@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="509969968" />
+  <attribute name="size_human" value="510.0 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 0001-01-01 00:00:00" />
+    <values start="735124.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/pr/gn/v20190730/pr_Amon_CESM2_ssp585_r1i1p1f1_gn_206501-210012.nc" ncoords="432.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/pr/gn/v20190730/pr_Amon_CESM2_ssp585_r1i1p1f1_gn_201501-206412.nc" ncoords="600.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/tas/gn/v20190730/tas_Amon_CESM2_ssp585_r1i1p1f1_gn_201501-206412.nc" ncoords="600.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/tas/gn/v20190730/tas_Amon_CESM2_ssp585_r1i1p1f1_gn_206501-210012.nc" ncoords="432.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/tasmax/gn/v20190730/tasmax_Amon_CESM2_ssp585_r1i1p1f1_gn_201501-206412.nc" ncoords="600.0" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/tasmax/gn/v20190730/tasmax_Amon_CESM2_ssp585_r1i1p1f1_gn_206501-210012.nc" ncoords="432.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/Amon/tasmin/gn/v20190730/tasmin_Amon_CESM2_ssp585_r1i1p1f1_gn_201501-206412.nc" ncoords="600.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2/ssp585/r1i1p1f1/fx/sftlf/gn/v20190730/sftlf_fx_CESM2_ssp585_r1i1p1f1_gn.nc" />
+    
+  </aggregation>
+</netcdf>

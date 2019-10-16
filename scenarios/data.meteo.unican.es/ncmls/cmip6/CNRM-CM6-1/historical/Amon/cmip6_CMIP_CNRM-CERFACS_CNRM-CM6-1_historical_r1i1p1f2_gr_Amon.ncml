@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="size" type="int" value="634023901" />
+  <attribute name="size_human" value="634.0 MB" />
+
+  <variable name="time" orgName="time">
+    <attribute name="units" value="days since 1850-01-01 00:00:00" />
+    <values start="15.5" increment="29.5" />
+  </variable>
+
+  <aggregation type="union">
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/Amon/pr/gr/v20180917/pr_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/Amon/tas/gr/v20180917/tas_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/Amon/tasmax/gr/v20180917/tasmax_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/Amon/tasmin/gr/v20180917/tasmin_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc" ncoords="1980.0" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CNRM-CERFACS/CNRM-CM6-1/historical/r1i1p1f2/fx/sftlf/gr/v20180917/sftlf_fx_CNRM-CM6-1_historical_r1i1p1f2_gr.nc" />
+    
+  </aggregation>
+</netcdf>

@@ -1,0 +1,26 @@
+- name: Start httpd
+  hosts: lbs
+  tasks:
+    - name: Start httpd
+      service: name=httpd state=started
+
+- name: Start tomcats
+  hosts: servers
+  tasks:
+    - name: Start tomcats
+      shell: "nohup {{ tomcat_home }}/bin/startup.sh"
+      args:
+        creates: "{{ tomcat_bases }}/{{ item.name }}/logs/catalina.pid"
+      environment:
+        CATALINA_BASE: "{{ tomcat_bases }}/{{ item.name }}"
+      with_items: "{{ tomcats }}"
+
+- name: Start database
+  hosts: databases
+  tasks:
+    - command: nohup bin/startNetworkServer &
+      args:
+        chdir: "{{ derby_home }}"
+      environment:
+        DERBY_HOME: "{{ derby_home }}"
+        JAVA_HOME: "{{ jdk_home }}"

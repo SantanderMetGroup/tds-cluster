@@ -1,0 +1,48 @@
+- name: Install TDS catalogs and datasets
+  hosts: servers
+  vars_files:
+    - secrets.yml
+  tasks:
+    - name: Create directory for TDS5 data
+      file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
+      with_items: "{{ tomcats }}"
+
+    - name: Synchronize TDS5 catalogs
+      synchronize: >
+        src=TDS5/tomcat/content/thredds/catalogs
+        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds
+      with_items: "{{ tomcats }}"
+
+    - name: Synchronize TDS5 datasets
+      synchronize: >
+        src=TDS5/tomcat/content/thredds/public/
+        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public/
+      with_items: "{{ tomcats }}"
+
+    - name: Fix TDS5 catalogs and datasets (remove tabs)
+      shell: find catalogs public -type f -print0 | xargs -0 -n1 | grep -v svn | xargs -n1 perl -pi -e 's/(".*?)\t+"/\1"/g'
+      args:
+        chdir: "{{ tomcat_bases }}/{{ item.name }}/content/thredds"
+      with_items: "{{ tomcats }}"
+
+    - name: Copy root catalog
+      copy: src=catalog.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalog.xml
+      with_items: "{{ tomcats }}"
+
+    - name: Copy catalogs
+      synchronize: src=catalogs/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
+      with_items: "{{ tomcats }}"
+
+    - name: Synchronize datasets
+      synchronize: src=ncmls/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
+      with_items: "{{ tomcats }}"
+
+    - name: Refresh catalogs
+      command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
+      vars:
+        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Catalogs/reinit
+
+    - name: Clear caches
+      command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
+      vars:
+        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Catalogs/reinit

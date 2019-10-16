@@ -1,0 +1,18 @@
+[all]
+spock ansible_host=spock.meteo.unican.es ansible_user=root
+wn023 ansible_host=wn023 ansible_user=zequi
+wn025 ansible_host=wn025 ansible_user=zequi
+
+[lbs]
+spock
+
+[servers]
+wn023
+wn025
+
+[servers:vars]
+tomcat_Xms=1024m
+tomcat_Xmx=6144m
+
+[databases]
+wn023
