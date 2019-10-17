@@ -5,6 +5,8 @@
     tomcat_tgz: ../../software/apache-tomcat-8.0.42.tar.gz
     tds_war: ../../software/tds-5.0.0-beta6.war
     derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
+    jrobin_jar: ../../software/jrobin-1.5.9.jar
+    melody_jar: ../../software/javamelody-core-1.73.1.jar
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
     tds_context: tds5
@@ -40,6 +42,7 @@
         extra_opts:
           - --strip-components=2
 
+# Tomcats
     - name: Deploy catalina bases
       include_role:
         name: tomcat
@@ -55,6 +58,7 @@
       template: src=templates/server.xml.j2 dest={{ tomcat_bases }}/{{ item.name }}/conf/server.xml
       with_items: "{{ tomcats }}"
 
+# TDS
     - name: Deploy TDSs
       include_role:
         name: tds
@@ -63,6 +67,16 @@
         tds_sslPort: "{{ item.ssl }}"
       with_items: "{{ tomcats }}"
 
+# Melody
+    - name: Install jrobin
+      copy: src={{ jrobin_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
+      with_items: "{{ tomcats }}"
+
+    - name: Install java melody
+      copy: src={{ melody_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
+      with_items: "{{ tomcats }}"
+
+# TAP
     - name: Create tap directory
       file: state=directory path={{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap
       with_items: "{{ tomcats }}"
