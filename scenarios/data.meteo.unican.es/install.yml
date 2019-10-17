@@ -3,10 +3,10 @@
   vars:
     jdk_tgz: ../../software/jdk8.tar.gz
     tomcat_tgz: ../../software/apache-tomcat-8.0.42.tar.gz
+    tds_war: ../../software/tds-5.0.0-beta6.war
     derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
-    tds_war: ../../software/tds-5.0.0-beta6.war
     tds_context: tds5
   vars_files:
     - secrets.yml
@@ -59,10 +59,9 @@
       include_role:
         name: tds
       vars:
-        tds_sslPort: "{{ tomcat.ssl }}"
+        tds_home: "{{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}"
+        tds_sslPort: "{{ item.ssl }}"
       with_items: "{{ tomcats }}"
-      loop_control:
-        loop_var: tomcat
 
     - name: Create tap directory
       file: state=directory path={{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap
@@ -123,7 +122,8 @@
         path: /etc/httpd/conf.d/modproxy.conf
         insertafter: <Proxy "balancer://{{ item.cluster }}">
         marker: "# {mark} {{ item.cluster }}://{{ ansible_all_ipv4_addresses[0] }}:8009"
-        block: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:8009" {{ item.properties }}
+        block: |
+          BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:8009" {{ item.properties }}
       delegate_to: "{{ item.gateway }}"
       with_items: "{{ workers }}"
 
