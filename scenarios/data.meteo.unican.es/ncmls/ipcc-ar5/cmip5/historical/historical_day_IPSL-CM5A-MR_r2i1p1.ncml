@@ -13,27 +13,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/IPSL-CM5A-MR/r2i1p1/huss_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190" />
 	  
       </aggregation>
     </netcdf>
@@ -41,35 +27,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/IPSL-CM5A-MR/r2i1p1/pr_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190" />
 	  
       </aggregation>
     </netcdf>
@@ -77,35 +41,35 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/IPSL-CM5A-MR/r2i1p1/tas_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190" />
 	  
       </aggregation>
     </netcdf>
@@ -113,35 +77,71 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/IPSL-CM5A-MR/r2i1p1/tasmax_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18791231.nc" ncoords="10950" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18841231.nc" ncoords="12775" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18891231.nc" ncoords="14600" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18941231.nc" ncoords="16425" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_18500101-18991231.nc" ncoords="18250" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19341231.nc" ncoords="12775" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19391231.nc" ncoords="14600" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19441231.nc" ncoords="16425" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19000101-19491231.nc" ncoords="18250" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19791231.nc" ncoords="10950" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19841231.nc" ncoords="12775" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19891231.nc" ncoords="14600" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19941231.nc" ncoords="16425" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_19500101-19991231.nc" ncoords="18250" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/IPSL-CM5A-MR/r2i1p1/tasmin_day_IPSL-CM5A-MR_historical_r2i1p1_20000101-20051231.nc" ncoords="2190" />
 	  
       </aggregation>
     </netcdf>

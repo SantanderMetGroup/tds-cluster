@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/BNU-ESM/r1i1p1/huss_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/huss/BNU-ESM/r1i1p1/huss_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/BNU-ESM/r1i1p1/pr_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/pr/BNU-ESM/r1i1p1/pr_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/BNU-ESM/r1i1p1/tas_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tas/BNU-ESM/r1i1p1/tas_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/BNU-ESM/r1i1p1/tasmax_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmax/BNU-ESM/r1i1p1/tasmax_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440" />
 	  
       </aggregation>
     </netcdf>
@@ -45,7 +45,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/BNU-ESM/r1i1p1/tasmin_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/historical/day/tasmin/BNU-ESM/r1i1p1/tasmin_day_BNU-ESM_historical_r1i1p1_19500101-20051231.nc" ncoords="20440" />
 	  
       </aggregation>
     </netcdf>

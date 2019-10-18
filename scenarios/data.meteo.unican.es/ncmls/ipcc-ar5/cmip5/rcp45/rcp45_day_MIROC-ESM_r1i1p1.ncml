@@ -13,23 +13,11 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/MIROC-ESM/r1i1p1/pr_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609" />
 	  
       </aggregation>
     </netcdf>
@@ -37,11 +25,11 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/MIROC-ESM/r1i1p1/tas_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609" />
 	  
       </aggregation>
     </netcdf>
@@ -49,11 +37,23 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/MIROC-ESM/r1i1p1/tasmax_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_20060101-21001231.nc" ncoords="34698" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_21010101-22601231.nc" ncoords="58439" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/MIROC-ESM/r1i1p1/tasmin_day_MIROC-ESM_rcp45_r1i1p1_22610101-23001231.nc" ncoords="14609" />
 	  
       </aggregation>
     </netcdf>

@@ -13,27 +13,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131.0" />
-	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/pr/ACCESS1-3/r1i1p1/pr_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304" />
 	  
       </aggregation>
     </netcdf>
@@ -41,13 +27,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tas/ACCESS1-3/r1i1p1/tas_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304" />
 	  
       </aggregation>
     </netcdf>
@@ -55,13 +41,27 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132" />
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmax/ACCESS1-3/r1i1p1/tasmax_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20060101-20301231.nc" ncoords="9131" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20310101-20551231.nc" ncoords="9131" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20560101-20801231.nc" ncoords="9132" />
+	  
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp85/day/tasmin/ACCESS1-3/r1i1p1/tasmin_day_ACCESS1-3_rcp85_r1i1p1_20810101-21001231.nc" ncoords="7304" />
 	  
       </aggregation>
     </netcdf>

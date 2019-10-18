@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/CanESM2/r3i1p1/pr_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/pr/CanESM2/r3i1p1/pr_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/CanESM2/r3i1p1/tas_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tas/CanESM2/r3i1p1/tas_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/CanESM2/r3i1p1/tasmax_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmax/CanESM2/r3i1p1/tasmax_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/CanESM2/r3i1p1/tasmin_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675.0" />
+        <netcdf location="/oceano/gmeteo/DATA/ESGF/ETHZ-SNAPSHOT/cmip5-ar5-wg1/rcp45/day/tasmin/CanESM2/r3i1p1/tasmin_day_CanESM2_rcp45_r3i1p1_20060101-21001231.nc" ncoords="34675" />
 	  
       </aggregation>
     </netcdf>
