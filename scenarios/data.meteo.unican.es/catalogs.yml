@@ -45,4 +45,4 @@
     - name: Clear caches
       command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
       vars:
-        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Catalogs/reinit
+        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Caches/clearCaches
