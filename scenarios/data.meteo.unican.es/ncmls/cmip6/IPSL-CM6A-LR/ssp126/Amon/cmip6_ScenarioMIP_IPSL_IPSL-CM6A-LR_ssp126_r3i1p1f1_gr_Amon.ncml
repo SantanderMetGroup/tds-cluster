@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/pr/gr/v20190410/pr_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/pr/gr/v20190410/pr_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tas/gr/v20190410/tas_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tas/gr/v20190410/tas_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tasmax/gr/v20190410/tasmax_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tasmax/gr/v20190410/tasmax_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tasmin/gr/v20190410/tasmin_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp126/r3i1p1f1/Amon/tasmin/gr/v20190410/tasmin_Amon_IPSL-CM6A-LR_ssp126_r3i1p1f1_gr_201501-210012.nc" ncoords="1032" />
 	  
       </aggregation>
     </netcdf>

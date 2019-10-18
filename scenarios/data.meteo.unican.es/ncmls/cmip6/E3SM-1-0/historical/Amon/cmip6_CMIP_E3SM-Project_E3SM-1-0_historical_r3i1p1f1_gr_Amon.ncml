@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01 00:00:00" />
-    <values start="18265.5" increment="29.5" />
+    <values start="15.5" increment="29.5" />
   </variable>
 
   <aggregation type="union">
@@ -13,19 +13,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_200001-201412.nc" ncoords="180.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_185001-187412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_195001-197412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_187501-189912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_185001-187412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_190001-192412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_192501-194912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_192501-194912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_190001-192412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_195001-197412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_197501-199912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_197501-199912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_187501-189912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/pr/gr/v20190729/pr_Amon_E3SM-1-0_historical_r3i1p1f1_gr_200001-201412.nc" ncoords="180" />
 	  
       </aggregation>
     </netcdf>
@@ -33,19 +33,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_190001-192412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_185001-187412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_192501-194912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_187501-189912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_197501-199912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_190001-192412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_187501-189912.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_192501-194912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_195001-197412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_195001-197412.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_200001-201412.nc" ncoords="180.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_197501-199912.nc" ncoords="300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_185001-187412.nc" ncoords="300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/E3SM-Project/E3SM-1-0/historical/r3i1p1f1/Amon/tas/gr/v20190729/tas_Amon_E3SM-1-0_historical_r3i1p1f1_gr_200001-201412.nc" ncoords="180" />
 	  
       </aggregation>
     </netcdf>

@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-CM6-1/ssp370/r6i1p1f2/day/tas/gr/v20190410/tas_day_CNRM-CM6-1_ssp370_r6i1p1f2_gr_20150101-21001231.nc" ncoords="31411.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-CM6-1/ssp370/r6i1p1f2/day/tas/gr/v20190410/tas_day_CNRM-CM6-1_ssp370_r6i1p1f2_gr_20150101-21001231.nc" ncoords="31411" />
 	  
       </aggregation>
     </netcdf>

@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/pr/gn/v20190908/pr_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/pr/gn/v20190908/pr_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tas/gn/v20190908/tas_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tas/gn/v20190908/tas_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tasmax/gn/v20190908/tasmax_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tasmax/gn/v20190908/tasmax_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tasmin/gn/v20190908/tasmin_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/HadGEM3-GC31-LL/ssp245/r3i1p1f3/Amon/tasmin/gn/v20190908/tasmin_Amon_HadGEM3-GC31-LL_ssp245_r3i1p1f3_gn_201501-202012.nc" ncoords="72" />
 	  
       </aggregation>
     </netcdf>

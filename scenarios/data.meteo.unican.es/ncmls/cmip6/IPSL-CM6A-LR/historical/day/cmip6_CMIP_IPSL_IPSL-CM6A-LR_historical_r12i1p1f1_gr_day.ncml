@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r12i1p1f1/day/tas/gr/v20190614/tas_day_IPSL-CM6A-LR_historical_r12i1p1f1_gr_18500101-20141231.nc" ncoords="60265.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r12i1p1f1/day/tas/gr/v20190614/tas_day_IPSL-CM6A-LR_historical_r12i1p1f1_gr_18500101-20141231.nc" ncoords="60265" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r12i1p1f1/day/tasmax/gr/v20190614/tasmax_day_IPSL-CM6A-LR_historical_r12i1p1f1_gr_18500101-20141231.nc" ncoords="60265.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r12i1p1f1/day/tasmax/gr/v20190614/tasmax_day_IPSL-CM6A-LR_historical_r12i1p1f1_gr_18500101-20141231.nc" ncoords="60265" />
 	  
       </aggregation>
     </netcdf>

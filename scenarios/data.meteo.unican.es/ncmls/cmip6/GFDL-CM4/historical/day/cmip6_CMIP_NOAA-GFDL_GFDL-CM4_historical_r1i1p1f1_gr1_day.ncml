@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01 00:00:00" />
-    <values start="29200.5" increment="1.0" />
+    <values start="0.5" increment="1.0" />
   </variable>
 
   <aggregation type="union">
@@ -13,47 +13,23 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/pr/gr1/v20180701/pr_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825" />
 	  
       </aggregation>
     </netcdf>
@@ -61,23 +37,23 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tas/gr1/v20180701/tas_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825" />
 	  
       </aggregation>
     </netcdf>
@@ -85,23 +61,47 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmax/gr1/v20180701/tasmax_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18500101-18691231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18700101-18891231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_18900101-19091231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19100101-19291231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19300101-19491231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19500101-19691231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19700101-19891231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_19900101-20091231.nc" ncoords="7300" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/day/tasmin/gr1/v20180701/tasmin_day_GFDL-CM4_historical_r1i1p1f1_gr1_20100101-20141231.nc" ncoords="1825" />
 	  
       </aggregation>
     </netcdf>

@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/pr/gn/v20190823/pr_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/pr/gn/v20190823/pr_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tas/gn/v20190823/tas_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tas/gn/v20190823/tas_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tasmax/gn/v20190823/tasmax_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tasmax/gn/v20190823/tasmax_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tasmin/gn/v20190823/tasmin_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MIROC/MIROC-ES2L/historical/r2i1p1f2/Amon/tasmin/gn/v20190823/tasmin_Amon_MIROC-ES2L_historical_r2i1p1f2_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>

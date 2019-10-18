@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/pr/gr/v20190328/pr_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/pr/gr/v20190328/pr_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411" />
 	  
       </aggregation>
     </netcdf>
@@ -21,17 +21,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tas/gr/v20190328/tas_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-20551231.nc" ncoords="14975.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tas/gr/v20190328/tas_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-20551231.nc" ncoords="14975" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tas/gr/v20190328/tas_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tasmax/gr/v20190328/tasmax_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tas/gr/v20190328/tas_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411" />
 	  
       </aggregation>
     </netcdf>
@@ -39,7 +31,15 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tasmin/gr/v20190328/tasmin_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tasmax/gr/v20190328/tasmax_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CNRM-CERFACS/CNRM-ESM2-1/ssp370/r1i1p1f2/day/tasmin/gr/v20190328/tasmin_day_CNRM-ESM2-1_ssp370_r1i1p1f2_gr_20150101-21001231.nc" ncoords="31411" />
 	  
       </aggregation>
     </netcdf>

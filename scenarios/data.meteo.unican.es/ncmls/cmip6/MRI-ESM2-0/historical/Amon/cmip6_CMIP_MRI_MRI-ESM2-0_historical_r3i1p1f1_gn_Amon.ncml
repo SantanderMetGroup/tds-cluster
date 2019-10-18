@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/pr/gn/v20190222/pr_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/pr/gn/v20190222/pr_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tas/gn/v20190222/tas_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tas/gn/v20190222/tas_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tasmax/gn/v20190222/tasmax_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tasmax/gn/v20190222/tasmax_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tasmin/gn/v20190222/tasmin_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MRI/MRI-ESM2-0/historical/r3i1p1f1/Amon/tasmin/gn/v20190222/tasmin_Amon_MRI-ESM2-0_historical_r3i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>

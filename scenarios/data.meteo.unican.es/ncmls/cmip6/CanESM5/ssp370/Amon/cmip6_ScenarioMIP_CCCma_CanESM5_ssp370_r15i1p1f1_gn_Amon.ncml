@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
-  <attribute name="size" type="int" value="31279555" />
-  <attribute name="size_human" value="31.3 MB" />
+  <attribute name="size" type="int" value="58616161" />
+  <attribute name="size_human" value="58.6 MB" />
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01 0:0:0.0" />
@@ -13,7 +13,15 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp370/r15i1p1f1/Amon/pr/gn/v20190429/pr_Amon_CanESM5_ssp370_r15i1p1f1_gn_201501-210012.nc" ncoords="1032.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp370/r15i1p1f1/Amon/pr/gn/v20190429/pr_Amon_CanESM5_ssp370_r15i1p1f1_gn_201501-210012.nc" ncoords="1032" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/CCCma/CanESM5/ssp370/r15i1p1f1/Amon/tasmax/gn/v20190429/tasmax_Amon_CanESM5_ssp370_r15i1p1f1_gn_201501-210012.nc" ncoords="1032" />
 	  
       </aggregation>
     </netcdf>

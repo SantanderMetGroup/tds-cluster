@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CAMS/CAMS-CSM1-0/historical/r1i1p1f1/Amon/pr/gn/v20190708/pr_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CAMS/CAMS-CSM1-0/historical/r1i1p1f1/Amon/pr/gn/v20190708/pr_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CAMS/CAMS-CSM1-0/historical/r1i1p1f1/Amon/tas/gn/v20190708/tas_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/CAMS/CAMS-CSM1-0/historical/r1i1p1f1/Amon/tas/gn/v20190708/tas_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>

@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01" />
-    <values start="36015.0" increment="30.0" />
+    <values start="15.0" increment="30.0" />
   </variable>
 
   <aggregation type="union">
@@ -13,9 +13,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmax/gn/v20190708/tasmax_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_195001-201412.nc" ncoords="780.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmax/gn/v20190708/tasmax_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_185001-194912.nc" ncoords="1200" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmax/gn/v20190708/tasmax_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_185001-194912.nc" ncoords="1200.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmax/gn/v20190708/tasmax_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_195001-201412.nc" ncoords="780" />
 	  
       </aggregation>
     </netcdf>
@@ -23,9 +23,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmin/gn/v20190708/tasmin_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_185001-194912.nc" ncoords="1200.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmin/gn/v20190708/tasmin_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_185001-194912.nc" ncoords="1200" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmin/gn/v20190708/tasmin_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_195001-201412.nc" ncoords="780.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r4i1p1f2/Amon/tasmin/gn/v20190708/tasmin_Amon_UKESM1-0-LL_historical_r4i1p1f2_gn_195001-201412.nc" ncoords="780" />
 	  
       </aggregation>
     </netcdf>

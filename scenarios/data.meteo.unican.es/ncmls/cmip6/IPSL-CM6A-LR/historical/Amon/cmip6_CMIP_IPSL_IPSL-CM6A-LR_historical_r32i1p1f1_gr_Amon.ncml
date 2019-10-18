@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/pr/gr/v20190802/pr_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/pr/gr/v20190802/pr_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tas/gr/v20190802/tas_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tas/gr/v20190802/tas_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -29,7 +29,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tasmax/gr/v20190802/tasmax_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tasmax/gr/v20190802/tasmax_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>
@@ -37,7 +37,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tasmin/gr/v20190802/tasmin_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r32i1p1f1/Amon/tasmin/gr/v20190802/tasmin_Amon_IPSL-CM6A-LR_historical_r32i1p1f1_gr_185001-201412.nc" ncoords="1980" />
 	  
       </aggregation>
     </netcdf>

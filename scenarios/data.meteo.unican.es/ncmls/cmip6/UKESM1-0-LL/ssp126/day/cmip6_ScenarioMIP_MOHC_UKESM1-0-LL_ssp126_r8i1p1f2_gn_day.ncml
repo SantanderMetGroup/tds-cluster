@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01" />
-    <values start="72000.5" increment="1.0" />
+    <values start="59400.5" increment="1.0" />
   </variable>
 
   <aggregation type="union">
@@ -13,19 +13,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/pr/gn/v20190801/pr_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/pr/gn/v20190801/pr_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/pr/gn/v20190801/pr_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tas/gn/v20190801/tas_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tas/gn/v20190801/tas_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/pr/gn/v20190801/pr_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>
@@ -33,9 +23,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmax/gn/v20190801/tasmax_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tas/gn/v20190801/tas_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmax/gn/v20190801/tasmax_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tas/gn/v20190801/tas_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>
@@ -43,9 +33,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmin/gn/v20190801/tasmin_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmax/gn/v20190801/tasmax_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmin/gn/v20190801/tasmin_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmax/gn/v20190801/tasmax_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmin/gn/v20190801/tasmin_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp126/r8i1p1f2/day/tasmin/gn/v20190801/tasmin_day_UKESM1-0-LL_ssp126_r8i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>

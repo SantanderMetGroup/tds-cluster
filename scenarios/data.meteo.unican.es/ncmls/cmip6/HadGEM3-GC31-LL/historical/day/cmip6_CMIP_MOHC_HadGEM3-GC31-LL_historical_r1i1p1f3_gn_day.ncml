@@ -13,19 +13,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/pr/gn/v20190624/pr_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/pr/gn/v20190624/pr_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/pr/gn/v20190624/pr_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tas/gn/v20190624/tas_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tas/gn/v20190624/tas_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/pr/gn/v20190624/pr_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>
@@ -33,9 +23,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmax/gn/v20190624/tasmax_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tas/gn/v20190624/tas_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmax/gn/v20190624/tasmax_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tas/gn/v20190624/tas_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>
@@ -43,9 +33,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmin/gn/v20190624/tasmin_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmax/gn/v20190624/tasmax_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmin/gn/v20190624/tasmin_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmax/gn/v20190624/tasmax_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmin/gn/v20190624/tasmin_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_18500101-19491230.nc" ncoords="36000" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/HadGEM3-GC31-LL/historical/r1i1p1f3/day/tasmin/gn/v20190624/tasmin_day_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>

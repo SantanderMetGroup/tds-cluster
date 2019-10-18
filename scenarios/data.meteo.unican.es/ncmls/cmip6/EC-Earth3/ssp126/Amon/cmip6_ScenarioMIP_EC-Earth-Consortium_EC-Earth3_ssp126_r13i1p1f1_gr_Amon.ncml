@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01 00:00:00" />
-    <values start="82560.5" increment="30.0" />
+    <values start="60280.5" increment="29.5" />
   </variable>
 
   <aggregation type="union">
@@ -13,177 +13,177 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/pr/gr/v20190710/pr_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12" />
 	  
       </aggregation>
     </netcdf>
@@ -191,177 +191,177 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tas/gr/v20190710/tas_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12" />
 	  
       </aggregation>
     </netcdf>
@@ -369,177 +369,177 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmax/gr/v20190710/tasmax_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12" />
 	  
       </aggregation>
     </netcdf>
@@ -547,177 +547,177 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201601-201612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202201-202212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201801-201812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203201-203212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202501-202512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203501-203512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203601-203612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202801-202812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201501-201512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204001-204012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203101-203112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204701-204712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204401-204412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203801-203812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204901-204912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205001-205012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202601-202612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205301-205312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204301-204312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205401-205412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202101-202112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205701-205712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202401-202412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205901-205912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201901-201912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206001-206012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205801-205812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204601-204612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206301-206312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202301-202312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206401-206412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206201-206212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206501-206512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204101-204112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206701-206712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205601-205612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_201701-201712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206901-206912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207001-207012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204801-204812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203401-203412.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207301-207312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207401-207412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207501-207512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205101-205112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203301-203312.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207701-207712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207201-207212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206101-206112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207901-207912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202001-202012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208001-208012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204201-204212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208101-208112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208201-208212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208301-208312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206601-206612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208401-208412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202701-202712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208501-208512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203901-203912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207801-207812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208701-208712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208601-208612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_204501-204512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208901-208912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209001-209012.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205201-205212.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209101-209112.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207101-207112.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209201-209212.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203001-203012.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209301-209312.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_205501-205512.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209401-209412.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209501-209512.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_202901-202912.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209601-209612.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_206801-206812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209701-209712.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_207601-207612.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209801-209812.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_203701-203712.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_209901-209912.nc" ncoords="12" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_208801-208812.nc" ncoords="12.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3/ssp126/r13i1p1f1/Amon/tasmin/gr/v20190710/tasmin_Amon_EC-Earth3_ssp126_r13i1p1f1_gr_210001-210012.nc" ncoords="12" />
 	  
       </aggregation>
     </netcdf>

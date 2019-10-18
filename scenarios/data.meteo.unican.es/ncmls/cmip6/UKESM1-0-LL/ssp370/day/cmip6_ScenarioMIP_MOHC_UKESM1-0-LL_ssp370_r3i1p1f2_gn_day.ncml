@@ -13,19 +13,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/pr/gn/v20190726/pr_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/pr/gn/v20190726/pr_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/pr/gn/v20190726/pr_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tas/gn/v20190726/tas_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tas/gn/v20190726/tas_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/pr/gn/v20190726/pr_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>
@@ -33,9 +23,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmax/gn/v20190726/tasmax_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tas/gn/v20190726/tas_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmax/gn/v20190726/tasmax_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tas/gn/v20190726/tas_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>
@@ -43,9 +33,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmin/gn/v20190726/tasmin_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmax/gn/v20190726/tasmax_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmin/gn/v20190726/tasmin_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmax/gn/v20190726/tasmax_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmin/gn/v20190726/tasmin_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20150101-20491230.nc" ncoords="12600" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/MOHC/UKESM1-0-LL/ssp370/r3i1p1f2/day/tasmin/gn/v20190726/tasmin_day_UKESM1-0-LL_ssp370_r3i1p1f2_gn_20500101-21001230.nc" ncoords="18360" />
 	  
       </aggregation>
     </netcdf>

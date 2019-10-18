@@ -5,7 +5,7 @@
 
   <variable name="time" orgName="time">
     <attribute name="units" value="days since 1850-01-01" />
-    <values start="36000.5" increment="1.0" />
+    <values start="0.5" increment="1.0" />
   </variable>
 
   <aggregation type="union">
@@ -13,19 +13,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/pr/gn/v20190627/pr_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/pr/gn/v20190627/pr_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/pr/gn/v20190627/pr_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tas/gn/v20190627/tas_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tas/gn/v20190627/tas_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/pr/gn/v20190627/pr_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>
@@ -33,9 +23,9 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmax/gn/v20190627/tasmax_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tas/gn/v20190627/tas_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmax/gn/v20190627/tasmax_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tas/gn/v20190627/tas_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>
@@ -43,9 +33,19 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmin/gn/v20190627/tasmin_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmax/gn/v20190627/tasmax_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmin/gn/v20190627/tasmin_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmax/gn/v20190627/tasmax_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmin/gn/v20190627/tasmin_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-19491230.nc" ncoords="36000" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/tasmin/gn/v20190627/tasmin_day_UKESM1-0-LL_historical_r1i1p1f2_gn_19500101-20141230.nc" ncoords="23400" />
 	  
       </aggregation>
     </netcdf>

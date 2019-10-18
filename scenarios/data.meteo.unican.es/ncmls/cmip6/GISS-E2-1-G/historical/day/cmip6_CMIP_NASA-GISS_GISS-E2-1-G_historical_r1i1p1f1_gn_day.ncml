@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/day/tasmax/gn/v20181015/tasmax_day_GISS-E2-1-G_historical_r1i1p1f1_gn_19500101-20141231.nc" ncoords="23725.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/day/tasmax/gn/v20181015/tasmax_day_GISS-E2-1-G_historical_r1i1p1f1_gn_19500101-20141231.nc" ncoords="23725" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/day/tasmin/gn/v20181015/tasmin_day_GISS-E2-1-G_historical_r1i1p1f1_gn_19500101-20141231.nc" ncoords="23725.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r1i1p1f1/day/tasmin/gn/v20181015/tasmin_day_GISS-E2-1-G_historical_r1i1p1f1_gn_19500101-20141231.nc" ncoords="23725" />
 	  
       </aggregation>
     </netcdf>

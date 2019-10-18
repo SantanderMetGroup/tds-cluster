@@ -13,7 +13,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2-WACCM/ssp370/r2i1p1f1/Amon/pr/gn/v20190815/pr_Amon_CESM2-WACCM_ssp370_r2i1p1f1_gn_201501-205512.nc" ncoords="492.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2-WACCM/ssp370/r2i1p1f1/Amon/pr/gn/v20190815/pr_Amon_CESM2-WACCM_ssp370_r2i1p1f1_gn_201501-205512.nc" ncoords="492" />
 	  
       </aggregation>
     </netcdf>
@@ -21,7 +21,7 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2-WACCM/ssp370/r2i1p1f1/Amon/tas/gn/v20190815/tas_Amon_CESM2-WACCM_ssp370_r2i1p1f1_gn_201501-205512.nc" ncoords="492.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/NCAR/CESM2-WACCM/ssp370/r2i1p1f1/Amon/tas/gn/v20190815/tas_Amon_CESM2-WACCM_ssp370_r2i1p1f1_gn_201501-205512.nc" ncoords="492" />
 	  
       </aggregation>
     </netcdf>

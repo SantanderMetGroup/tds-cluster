@@ -13,27 +13,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612.0" />
-	  
-      </aggregation>
-    </netcdf>
-  	
-    <netcdf>
-      <aggregation type="joinExisting" dimName="time">
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168.0" />
-	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/pr/gn/v20190903/pr_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168" />
 	  
       </aggregation>
     </netcdf>
@@ -41,13 +27,13 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tas/gn/v20190903/tas_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168" />
 	  
       </aggregation>
     </netcdf>
@@ -55,13 +41,27 @@
     <netcdf>
       <aggregation type="joinExisting" dimName="time">
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600" />
 	  
-        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600.0" />
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmax/gn/v20190903/tasmax_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168" />
+	  
+      </aggregation>
+    </netcdf>
+  	
+    <netcdf>
+      <aggregation type="joinExisting" dimName="time">
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_185001-190012.nc" ncoords="612" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_190101-195012.nc" ncoords="600" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_195101-200012.nc" ncoords="600" />
+	  
+        <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NASA-GISS/GISS-E2-1-G/historical/r4i1p1f2/Amon/tasmin/gn/v20190903/tasmin_Amon_GISS-E2-1-G_historical_r4i1p1f2_gn_200101-201412.nc" ncoords="168" />
 	  
       </aggregation>
     </netcdf>
