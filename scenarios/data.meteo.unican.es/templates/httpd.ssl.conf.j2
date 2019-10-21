@@ -4,4 +4,5 @@ Listen 443
 SSLEngine on
 SSLCertificateFile {{ hostcert }}
 SSLCertificateKeyFile {{ hostkey }}
+SSLProtocol all -SSLv2 -SSLv3
 </VirtualHost>
