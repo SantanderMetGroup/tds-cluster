@@ -3,11 +3,6 @@
   <attribute name="size" type="int" value="145662464" />
   <attribute name="size_human" value="145.7 MB" />
 
-  <variable name="time" orgName="time">
-    <attribute name="units" value="days since 0001-01-01 00:00:00" />
-    <values start="735124.5" increment="29.5" />
-  </variable>
-
   <aggregation type="union">
   	
     <netcdf>

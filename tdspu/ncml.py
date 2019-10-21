@@ -37,16 +37,11 @@ def ncdata(file):
 
 	ncoords = ds.dimensions['time'].size
 	units = ds.variables['time'].units
-	time0 = ds.variables['time'][0].data.item()
-	time1 = ds.variables['time'][1].data.item()
-	inc = time1 - time0
-	timeN = ds.variables['time'][-1].data.item()
 
 	ds.close()
 
 	return {	'time_ncoords': ncoords,
-				'time_units': units,
-				'time_generator': frange(time0, timeN + inc, inc)
+				'time_units': units
 	}
 
 def filter_project_facets(project, d):
@@ -58,12 +53,6 @@ def filter_project_facets(project, d):
 
 def aggregate(df, agg_spec):
 	return df.sort_index().groupby(agg_spec, sort=False)
-
-def frange(start,end,jump):
-	tmp = start
-	while tmp < end:
-		yield tmp
-	tmp+=jump
 
 def main():
 	parser = argparse.ArgumentParser(description='Read a csv formatted table of facets and files and generate NcMLs')
@@ -120,29 +109,32 @@ def main():
 
 			# look for missing time periods comparing ideal dates with real dates
 			for aggname, agg in aggregations:
-				first = agg.index[0]
-				last = agg.index[-1]
-				frequency = agg.loc[first].frequency
-				format = FREQS_FORMATS[frequency]
+				try:
+					first = agg.index[0]
+					last = agg.index[-1]
+					frequency = agg.loc[first].frequency
+					format = FREQS_FORMATS[frequency]
 
-				p = '[0-9]+-[0-9]+'
-				pfirst = re.findall(p, first)[-1]
-				plast = re.findall(p, last)[-1]
+					p = '[0-9]+-[0-9]+'
+					pfirst = re.findall(p, first)[-1]
+					plast = re.findall(p, last)[-1]
 
-				start_date = datetime.strptime(pfirst.split('-')[0], format)
-				end_date = datetime.strptime(plast.split('-')[1], format)
-				ideal = pd.date_range(start_date, end_date, freq='MS').to_list()
+					start_date = datetime.strptime(pfirst.split('-')[0], format)
+					end_date = datetime.strptime(plast.split('-')[1], format)
+					ideal = pd.date_range(start_date, end_date, freq='MS').to_list()
 
-				real = []
-				for f in agg.index:
-					fdates = re.findall(p, f)[-1].split('-')
-					fstart_date = datetime.strptime(fdates[0], format)
-					fend_date = datetime.strptime(fdates[1], format)
-					real.extend(pd.date_range(fstart_date, fend_date, freq='MS'))
+					real = []
+					for f in agg.index:
+						fdates = re.findall(p, f)[-1].split('-')
+						fstart_date = datetime.strptime(fdates[0], format)
+						fend_date = datetime.strptime(fdates[1], format)
+						real.extend(pd.date_range(fstart_date, fend_date, freq='MS'))
 
-				if ideal != real:
-					# TODO log print('NcML {} has missing files for {} aggregation'.format(dest, aggname), file=sys.stderr)
-					print('{},{}'.format(dest, aggname), file=sys.stderr)
+					if ideal != real:
+						# TODO log print('NcML {} has missing files for {} aggregation'.format(dest, aggname), file=sys.stderr)
+						print('{},{}'.format(dest, aggname), file=sys.stderr)
+				except Exception as e:
+					print('{},{},Exception'.format(dest, aggname), file=sys.stderr)
 
 			params = {	'aggregations': aggregations,
 						'fxs': list(fxs.index),
