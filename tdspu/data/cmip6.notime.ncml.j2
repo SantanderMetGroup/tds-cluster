@@ -3,11 +3,6 @@
   <attribute name="size" type="int" value="{{ size }}" />
   <attribute name="size_human" value="{{ size|filesizeformat }}" />
 
-  <variable name="time" orgName="time">
-    <attribute name="units" value="{{ time_units }}" />
-    <values start="{{ time_start }}" increment="{{ time_increment }}" />
-  </variable>
-
   <aggregation type="union">
   	{% for name,aggregation in aggregations %}
     <netcdf>

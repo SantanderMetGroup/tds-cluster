@@ -35,13 +35,22 @@ def ncdata(file):
 					'time_units': None
 		}
 
-	ncoords = ds.dimensions['time'].size
-	units = ds.variables['time'].units
+	time = ds.variables['time']
+	ncoords = time.size
+	units = time.units
+	value0 = time[0].data.item()
+	value1 = time[1].data.item()
+
+	u = np.unique(np.diff(time))
+	regular = u[0] if u.size == 1 else np.nan
 
 	ds.close()
 
 	return {	'time_ncoords': ncoords,
-				'time_units': units
+				'time_units': units,
+				'time_start': value0,
+				'time_increment': value1 - value0,
+				'time_regular': regular
 	}
 
 def filter_project_facets(project, d):
@@ -97,6 +106,7 @@ def main():
 		# each group contains .nc files for one .ncml
 		for name,group in grouped:
 			# create dest path, formatted string values come from group name
+			template = args.template
 			d = dict(zip(group_spec, name))
 			dest = args.dest.format(**d)
 
@@ -124,27 +134,38 @@ def main():
 					ideal = pd.date_range(start_date, end_date, freq='MS').to_list()
 
 					real = []
+					regulars = []
 					for f in agg.index:
+						# generate real time range
 						fdates = re.findall(p, f)[-1].split('-')
 						fstart_date = datetime.strptime(fdates[0], format)
 						fend_date = datetime.strptime(fdates[1], format)
 						real.extend(pd.date_range(fstart_date, fend_date, freq='MS'))
 
+						# get time_regular value
+						regulars.append(agg.loc[f].time_regular)
+
 					if ideal != real:
 						# TODO log print('NcML {} has missing files for {} aggregation'.format(dest, aggname), file=sys.stderr)
-						print('{},{}'.format(dest, aggname), file=sys.stderr)
+						print('{},{},Missing'.format(dest, aggname), file=sys.stderr)
+
+					if not all(x == regulars[0] for x in regulars):
+						template = 'cmip6.notime.ncml.j2'
+						print('{},{},Irregular'.format(dest, aggname), file=sys.stderr)
 				except Exception as e:
 					print('{},{},Exception'.format(dest, aggname), file=sys.stderr)
 
 			params = {	'aggregations': aggregations,
 						'fxs': list(fxs.index),
 						'size': group['size'].sum() + fxs['size'].sum(),
-						'time_units': aggregations.first().iloc[0].time_units
+						'time_units': aggregations.first().iloc[0].time_units,
+						'time_start': aggregations.first().iloc[0].time_start,
+						'time_increment': aggregations.first().iloc[0].time_increment
 			}
 
 			os.makedirs(os.path.dirname(dest), exist_ok=True)
-			# TODO name
-			to_ncml(dest, args.template, **params)
+			# TODO logging name
+			to_ncml(dest, template, **params)
 
 if __name__ == '__main__':
 	main()
