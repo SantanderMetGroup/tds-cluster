@@ -155,6 +155,9 @@ def main():
 					if not all(x == regulars[0] for x in regulars):
 						template = 'cmip6.notime.ncml.j2'
 						print('{},{},Irregular'.format(dest, aggname), file=sys.stderr)
+
+					if len(agg.time_units.unique()) > 1:
+						print('{},{},NotUnique'.format(dest, aggname), file=sys.stderr)
 				except Exception as e:
 					print('{},{},Exception'.format(dest, aggname), file=sys.stderr)
 
