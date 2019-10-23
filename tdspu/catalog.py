@@ -12,26 +12,26 @@ def generate(template, **kwargs):
 
 	return template.render(**kwargs)
 
-def esgf_parameters(name, ncml_location, ncmls):
-	rel_paths = [f.replace(ncml_location, '').lstrip('/') for f in ncmls]
-
-	return {
-		'name': name,
-		'ncml_location': ncml_location,
-		'ncmls': rel_paths
+def main(args):
+	files = sys.stdin.read().splitlines()
+	ncmls = [f.replace(args.root, '').lstrip('/') for f in files]
+	params = {
+		'name': args.name,
+		'location': args.location,
+		'path': args.path,
+		'ncmls': ncmls
 	}
 
-def main():
-	# Arguments, change this for multiple '-p data=whatever -p ncmls=whatever'
-	parser = argparse.ArgumentParser(description='Create ncml for files in directory.')
-	parser.add_argument('--template', dest='template', type=str, default='catalog.xml.j2', help='Template file')
-	parser.add_argument('--name', dest='name', type=str, help='Catalog name')
-	parser.add_argument('--ncmls', dest='ncmls', type=str, help='Path to NcML files')
-	args = parser.parse_args()
-
-	ncmls = sys.stdin.read().splitlines()
-	params = esgf_parameters(args.name, args.ncmls, ncmls)
 	print(generate(args.template, **params))
 
 if __name__ == '__main__':
-	main()
+	parser = argparse.ArgumentParser(description='Create a catalog from a list of ncmls.')
+	parser.add_argument('--root', dest='root', type=str, help='Root of NcMLs hierarchy.')
+	parser.add_argument('--name', dest='name', type=str, help='Catalog name.')
+	parser.add_argument('--location', dest='location', type=str, help='DatasetRoot location.')
+	parser.add_argument('--path', dest='path', type=str, help='DatasetRoot path.')
+	parser.add_argument('--template', dest='template', type=str, help='Template to use.')
+
+	args = parser.parse_args()
+
+	main(args)
