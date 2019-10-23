@@ -41,8 +41,11 @@ def ncdata(file):
 	value0 = time[0].data.item()
 	value1 = time[1].data.item()
 
-	u = np.unique(np.diff(time))
-	regular = u[0] if u.size == 1 else np.nan
+	if ds.frequency == 'mon':
+		u = np.unique(np.diff(time))
+		regular = u[0] if u.size == 1 else np.nan
+	else:
+		regular = 0
 
 	ds.close()
 
