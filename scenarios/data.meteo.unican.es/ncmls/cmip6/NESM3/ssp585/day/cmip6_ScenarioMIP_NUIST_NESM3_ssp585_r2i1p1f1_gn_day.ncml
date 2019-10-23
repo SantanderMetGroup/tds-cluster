@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
-  <attribute name="size" type="int" value="4777384832" />
-  <attribute name="size_human" value="4.8 GB" />
+  <attribute name="size" type="int" value="6855264323" />
+  <attribute name="size_human" value="6.9 GB" />
 
   <variable name="time" orgName="time">
-    <attribute name="units" value="days since 2041-01-01 00:00:00" />
+    <attribute name="units" value="days since 2015-01-01 00:00:00" />
     <values start="0.5" increment="1.0" />
   </variable>
 

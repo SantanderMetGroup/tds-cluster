@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
-  <attribute name="size" type="int" value="48175245085" />
+  <attribute name="size" type="int" value="48175176635" />
   <attribute name="size_human" value="48.2 GB" />
 
   <variable name="time" orgName="time">
@@ -722,6 +722,7 @@
       </aggregation>
     </netcdf>
   	
+    
     <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/ScenarioMIP/EC-Earth-Consortium/EC-Earth3-Veg/ssp370/r2i1p1f1/fx/sftlf/gr/v20190925/sftlf_fx_EC-Earth3-Veg_ssp370_r2i1p1f1_gr.nc" />
     
   </aggregation>

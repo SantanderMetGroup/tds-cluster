@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
-  <attribute name="size" type="int" value="31811912581" />
+  <attribute name="size" type="int" value="31811827804" />
   <attribute name="size_human" value="31.8 GB" />
 
   <variable name="time" orgName="time">
@@ -106,6 +106,7 @@
       </aggregation>
     </netcdf>
   	
+    
     <netcdf location="/oceano/gmeteo/WORK/zequi/DATASETS/cmip6-esm-subset-day/data/CMIP6/CMIP/NOAA-GFDL/GFDL-CM4/historical/r1i1p1f1/fx/sftlf/gr1/v20180701/sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc" />
     
   </aggregation>
