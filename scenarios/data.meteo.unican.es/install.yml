@@ -104,8 +104,8 @@
       - name: default
         urls: [/tds5, /udg-tap]
   tasks:
-    - name: Install httpd
-      yum: name=httpd,mod_ssl state=present
+    #    - name: Install httpd
+    #      yum: name=httpd,mod_ssl state=present
 
     - name: Copy httpd conf
       copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
@@ -125,6 +125,7 @@
 - name: Install default workers
   hosts: servers
   serial: True
+  tags: update-workers
   vars:
     workers:
     - gateway: spock
