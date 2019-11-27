@@ -1,0 +1,25 @@
+[all]
+lb ansible_user=root ansible_host=data.meteo.unican.es 
+wn023 ansible_user=zequi ansible_host=wn023
+wn025 ansible_user=zequi ansible_host=wn025
+
+[data]
+lb
+
+[data:vars]
+hostkey_src=/etc/certs/hostkey.pem
+hostcert_src=/etc/certs/hostcert.pem
+cachain_src=/etc/certs/cachain.pem
+
+[idp]
+esgf-node.ipsl.upmc.fr
+
+[index]
+esgf-node.ipsl.upmc.fr
+
+[servers]
+wn023
+wn025
+
+[databases]
+wn023

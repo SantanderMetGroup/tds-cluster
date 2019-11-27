@@ -1,10 +1,10 @@
 [all]
-spock ansible_host=spock.meteo.unican.es ansible_user=root
+lb ansible_host=spock.meteo.unican.es ansible_user=root
 wn023 ansible_host=wn023 ansible_user=zequi
 wn025 ansible_host=wn025 ansible_user=zequi
 
 [lbs]
-spock
+lb
 
 [servers]
 wn023

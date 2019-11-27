@@ -1,0 +1,10 @@
+# SantanderMetGroup Data Services
+
+## Local testing
+
+Deployment from scratch:
+
+```bash
+lxdock up
+ansible-playbook esgf-ansible/install.yml install.yml esgf-ansible/stop.yml esgf-ansible/start.yml start.yml catalogs.yml
+```

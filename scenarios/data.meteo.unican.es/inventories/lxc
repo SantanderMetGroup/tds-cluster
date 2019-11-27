@@ -1,10 +1,24 @@
 [all]
-spock ansible_user=root ansible_host=lxcspock ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-wn023 ansible_user=root ansible_host=lxcwn023 ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-wn025 ansible_user=root ansible_host=lxcwn025 ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+lb ansible_user=root ansible_host=lb ansible_ssh_private_key_file=../../insecure_private_key ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+wn023 ansible_user=root ansible_host=lxcwn023 ansible_ssh_private_key_file=../../insecure_private_key ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+wn025 ansible_user=root ansible_host=lxcwn025 ansible_ssh_private_key_file=../../insecure_private_key ansible_ssh_common_args='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 [lbs]
-spock
+lb
+
+[data]
+lb
+
+[data:vars]
+hostkey_src=/etc/certs/hostkey.pem
+hostcert_src=/etc/certs/hostcert.pem
+cachain_src=/etc/certs/cachain.pem
+
+[idp]
+arandom.idp.com
+
+[index]
+arandom.idp.com
 
 [servers]
 wn023

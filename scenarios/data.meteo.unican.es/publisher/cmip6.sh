@@ -12,6 +12,9 @@ group="project,product,institution,model,experiment,ensemble,frequency,grid"
 
 find ${root} -type f | python ${publisher}/ncml.py --project cmip6 --root ${root} --drs ${drs}  --group-spec ${group} --dest ${dest} 2> ncml.cmip6.err > ncml.cmip6.out
 
+# use lowercase in project
+find ../ncmls/cmip6/ -type f | while read f; do mv ${f} ${f//CMIP6_/cmip6_}; done
+
 # catalogs
 find ../ncmls/cmip6/ -type f | grep Amon | python ${publisher}/catalog.py --name 'IPCC AR6 Atlas, CMIP6 monthly data' --location 'content/cmip6' --path 'ipcc-ar6' --root ../ncmls/cmip6/ --template cmip6.xml.j2 > ../catalogs/ipcc-ar6/cmip6/cmip6Amon.xml
 find ../ncmls/cmip6/ -type f | grep day |  python ${publisher}/catalog.py --name 'IPCC AR6 Atlas, CMIP6 daily data' --location 'content/cmip6' --path 'ipcc-ar6' --root ../ncmls/cmip6/ --template cmip6.xml.j2 > ../catalogs/ipcc-ar6/cmip6/cmip6day.xml

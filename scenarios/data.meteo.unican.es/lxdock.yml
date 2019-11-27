@@ -2,8 +2,8 @@ name: tds-cluster
 image: centos/6
 
 containers:
-  - name: spock
-    hostnames: [lxcspock,spock]
+  - name: lb
+    hostnames: [lb]
   - name: wn023
     hostnames: [lxcwn023,wn023]
   - name: wn025
@@ -11,5 +11,11 @@ containers:
 
 provisioning:
   - type: ansible
-    playbook: ../../provision.yml
+    playbook: provision/lbs.yml
     lxd_transport: true
+
+  - type: ansible
+    playbook: provision/servers.yml
+    lxd_transport: true
+    groups:
+      servers: [wn023, wn025]

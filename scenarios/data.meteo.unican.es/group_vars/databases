@@ -1,1 +1,1 @@
-derby_home: "{{ ansible_env.HOME }}/tds-cluster/derbydb"
+derby_home: "{{ ansible_env.HOME }}/services/tds-cluster/derbydb"

@@ -67,6 +67,14 @@
         tds_sslPort: "{{ item.ssl }}"
       with_items: "{{ tomcats }}"
 
+    - name: Create content/thredds
+      file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
+      with_items: "{{ tomcats }}"
+
+    - name: Copy threddsConfig.xml
+      copy: src=files/threddsConfig.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/threddsConfig.xml
+      with_items: "{{ tomcats }}"
+
 # Melody
     - name: Install jrobin
       copy: src={{ jrobin_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
@@ -96,7 +104,7 @@
       with_items: "{{ tomcats }}"
 
 - name: Install load balancer
-  hosts: lbs
+  hosts: lb
   vars:
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
@@ -104,31 +112,22 @@
       - name: default
         urls: [/tds5, /udg-tap]
   tasks:
-    #    - name: Install httpd
-    #      yum: name=httpd,mod_ssl state=present
+    - name: Install httpd
+      yum: name=httpd,mod_ssl state=present
 
     - name: Copy httpd conf
       copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
 
-    - name: Template ssl conf
-      template: src=templates/httpd.ssl.conf.j2 dest=/etc/httpd/conf/httpd.ssl.conf
-
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
 
-    - name: Copy httpd certificate
-      copy: src=../../server.pem dest={{ hostcert }}
-
-    - name: Copy httpd private key
-      copy: src=../../insecure_private_key dest={{ hostkey }}
-
-- name: Install default workers
+- name: Install workers
   hosts: servers
   serial: True
   tags: update-workers
   vars:
     workers:
-    - gateway: spock
+    - gateway: lb
       cluster: default
       properties: loadfactor=1 route={{ ansible_hostname }}
   tasks:
@@ -136,9 +135,9 @@
       blockinfile:
         path: /etc/httpd/conf.d/modproxy.conf
         insertafter: <Proxy "balancer://{{ item.cluster }}">
-        marker: "# {mark} {{ item.cluster }}://{{ ansible_all_ipv4_addresses[0] }}:8009"
+        marker: "# {mark} {{ item.cluster }}://{{ ansible_all_ipv4_addresses[0] }}:9009"
         block: |
-          BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:8009" {{ item.properties }}
+          BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:9009" {{ item.properties }}
       delegate_to: "{{ item.gateway }}"
       with_items: "{{ workers }}"
 

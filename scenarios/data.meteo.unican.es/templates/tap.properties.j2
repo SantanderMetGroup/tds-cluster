@@ -2,8 +2,8 @@ recaptcha.verificationurl = {{ tap.verificationurl }}
 recaptcha.privatekey = {{ tap.privatekey }}
 recaptcha.publickey = {{ tap.publickey }}
   
-tap.baseurl = https://spock.meteo.unican.es/udg-tap
+tap.baseurl = https://{{ ansible_hostname }}/udg-tap
 tap.managers.email = {{ tap.emails }}
 tap.noreply = {{ tap.noreply }}
 
-tds.baseurl = https://spock.meteo.unican.es/tds5/catalog/
+tds.baseurl = https://{{ ansible_hostname }}/tds5/catalog/

@@ -6,6 +6,8 @@ ProxyTimeout 600
 </Location>
 
 ProxyPass /status-proxy !
+ProxyPass /tds5/catalog/esgcet !
+Redirect "/tds5/catalog/esgcet/catalog.html" "/thredds/catalog/esgcet/catalog.html"
 
 {% for c in clusters -%}
 <Proxy "balancer://{{ c.name }}">
