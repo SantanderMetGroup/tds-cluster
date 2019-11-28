@@ -2,7 +2,9 @@ ProxyTimeout 600
 
 <Location /status-proxy>
     SetHandler balancer-manager
-    Allow from all
+    Order Deny,Allow
+    Deny from all
+    Allow from 193.144.202.00/24
 </Location>
 
 ProxyPass /status-proxy !
