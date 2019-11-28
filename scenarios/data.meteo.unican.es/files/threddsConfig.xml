@@ -4,7 +4,7 @@
   <!-- all options are commented out in standard install - meaning use default values -->
   <!-- see http://www.unidata.ucar.edu/software/thredds/current/tds/reference/ThreddsConfigXMLFile.html -->
   <serverInformation>
-    <name>THREDDS Data Server at University of Cantabria</name>
+    <name>SantanderMetGroup THREDDS Data Server</name>
     <logoUrl>/thredds/threddsIcon.png</logoUrl>
     <logoAltText>Initial TDS Installation</logoAltText>
 
