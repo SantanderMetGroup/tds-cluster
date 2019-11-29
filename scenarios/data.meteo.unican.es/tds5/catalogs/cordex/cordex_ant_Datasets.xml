@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="CORDEX-Antarctica Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="cordex" location="content/cordex" />
+    <dataset name="Evaluation Exeriment" ID="cordex_ant_Evaluation" restrictAccess="CORDEX">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+			<documentation type="Product Name">Coordinated Regional Climate Downscaling Experiment(CORDEX)</documentation>
+			<documentation type="Institution">Earth System Grid Federation (ESGF)</documentation>
+			<documentation type="Summary">The Coordinated Regional Climate Downscaling Experiment CORDEX (http://wcrp-cordex.ipsl.jussieu.fr/) is an international coordinated effort under the auspices of the World Climate Research Programme's Working Group on Regional Climate to provide homogeneously designed regional climate model output to users.</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution (http://pcmdi-cmip.llnl.gov/cmip5/index.html) on 07/01/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+        </metadata>
+		<dataset name="ANT-44 DMI-HIRHAM5-r1i1p1-v1 (OPeNDAP and Subsetting)"      ID="cordex/ANT-44/DMI/ECMWF-ERAINT_evaluation_r1i1p1_HIRHAM5_v1_day.ncml"           urlPath="cordex/ANT-44/DMI/ECMWF-ERAINT_evaluation_r1i1p1_HIRHAM5_v1_day.ncml"          ></dataset>
+		<dataset name="ANT-44 KNMI-RACMO21P-r1i1p1-v1 (OPeNDAP and Subsetting)"    ID="cordex/ANT-44/KNMI/ECMWF-ERAINT_evaluation_r1i1p1_RACMO21P_v1_day.ncml"         urlPath="cordex/ANT-44/KNMI/ECMWF-ERAINT_evaluation_r1i1p1_RACMO21P_v1_day.ncml"        ></dataset>
+		<dataset name="ANT-44 MOHC-HadRM3P-r1i1p1-v1 (OPeNDAP and Subsetting)"     ID="cordex/ANT-44/MOHC/ECMWF-ERAINT_evaluation_r1i1p1_HadRM3P_v1_day.ncml"          urlPath="cordex/ANT-44/MOHC/ECMWF-ERAINT_evaluation_r1i1p1_HadRM3P_v1_day.ncml"         ></dataset>
+    </dataset>
+    <dataset name="Historical Exeriment" ID="cordex_ant_Historical" restrictAccess="CORDEX">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+			<documentation type="Product Name">Coordinated Regional Climate Downscaling Experiment(CORDEX)</documentation>
+			<documentation type="Institution">Earth System Grid Federation (ESGF)</documentation>
+			<documentation type="Summary">The Coordinated Regional Climate Downscaling Experiment CORDEX (http://wcrp-cordex.ipsl.jussieu.fr/) is an international coordinated effort under the auspices of the World Climate Research Programme's Working Group on Regional Climate to provide homogeneously designed regional climate model output to users.</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution (http://pcmdi-cmip.llnl.gov/cmip5/index.html) on 07/01/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+        </metadata>
+        <dataset name="ANT-44 DMI-ICHEC-EC-EARTH-HIRHAM5-r3i1p1-v1 (OPeNDAP and Subsetting)"      ID="cordex/ANT-44/DMI/ICHEC-EC-EARTH_historical_r3i1p1_HIRHAM5_v1_day.ncml"      urlPath="cordex/ANT-44/DMI/ICHEC-EC-EARTH_historical_r3i1p1_HIRHAM5_v1_day.ncml"       ></dataset>
+        <dataset name="ANT-44 KNMI-ICHEC-EC-EARTH-RACMO21P-r12i1p1-v1 (OPeNDAP and Subsetting)"   ID="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_historical_r12i1p1_RACMO21P_v1_day.ncml"   urlPath="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_historical_r12i1p1_RACMO21P_v1_day.ncml"    ></dataset>
+        <dataset name="ANT-44 KNMI-ICHEC-EC-EARTH-RACMO21P-r1i1p1-v1 (OPeNDAP and Subsetting)"    ID="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_historical_r1i1p1_RACMO21P_v1_day.ncml"    urlPath="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_historical_r1i1p1_RACMO21P_v1_day.ncml"     ></dataset>
+        <dataset name="ANT-44 KNMI-MOHC-HadGEM2-ES-RACMO21P-r1i1p1-v2 (OPeNDAP and Subsetting)"   ID="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_historical_r1i1p1_RACMO21P_v2_day.ncml"   urlPath="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_historical_r1i1p1_RACMO21P_v2_day.ncml"    ></dataset>
+    </dataset>
+    <dataset name="RCP4.5 Exeriment" ID="cordex_ant_rcp45" restrictAccess="CORDEX">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+			<documentation type="Product Name">Coordinated Regional Climate Downscaling Experiment(CORDEX)</documentation>
+			<documentation type="Institution">Earth System Grid Federation (ESGF)</documentation>
+			<documentation type="Summary">The Coordinated Regional Climate Downscaling Experiment CORDEX (http://wcrp-cordex.ipsl.jussieu.fr/) is an international coordinated effort under the auspices of the World Climate Research Programme's Working Group on Regional Climate to provide homogeneously designed regional climate model output to users.</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution (http://pcmdi-cmip.llnl.gov/cmip5/index.html) on 07/01/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+        </metadata>
+        <dataset name="ANT-44 DMI-ICHEC-EC-EARTH-HIRHAM5-r3i1p1-v1 (OPeNDAP and Subsetting)"    ID="cordex/ANT-44/DMI/ICHEC-EC-EARTH_rcp45_r3i1p1_HIRHAM5_v1_day.ncml"     urlPath="cordex/ANT-44/DMI/ICHEC-EC-EARTH_rcp45_r3i1p1_HIRHAM5_v1_day.ncml"       ></dataset>
+        <dataset name="ANT-44 KNMI-ICHEC-EC-EARTH-RACMO21P-r1i1p1-v1 (OPeNDAP and Subsetting)"  ID="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_rcp45_r1i1p1_RACMO21P_v1_day.ncml"   urlPath="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_rcp45_r1i1p1_RACMO21P_v1_day.ncml"     ></dataset>
+        <dataset name="ANT-44 KNMI-MOHC-HadGEM2-ES-RACMO21P-r1i1p1-v2 (OPeNDAP and Subsetting)" ID="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_rcp45_r1i1p1_RACMO21P_v2_day.ncml"  urlPath="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_rcp45_r1i1p1_RACMO21P_v2_day.ncml"    ></dataset>
+    </dataset>
+    <dataset name="RCP8.5 Exeriment" ID="cordex_ant_rcp85" restrictAccess="CORDEX">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+			<documentation type="Product Name">Coordinated Regional Climate Downscaling Experiment(CORDEX)</documentation>
+			<documentation type="Institution">Earth System Grid Federation (ESGF)</documentation>
+			<documentation type="Summary">The Coordinated Regional Climate Downscaling Experiment CORDEX (http://wcrp-cordex.ipsl.jussieu.fr/) is an international coordinated effort under the auspices of the World Climate Research Programme's Working Group on Regional Climate to provide homogeneously designed regional climate model output to users.</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution (http://pcmdi-cmip.llnl.gov/cmip5/index.html) on 07/01/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+        </metadata>
+        <dataset name="ANT-44 DMI-ICHEC-EC-EARTH-HIRHAM5-r3i1p1-v1 (OPeNDAP and Subsetting)"     ID="cordex/ANT-44/DMI/ICHEC-EC-EARTH_rcp85_r3i1p1_HIRHAM5_v1_day.ncml"     urlPath="cordex/ANT-44/DMI/ICHEC-EC-EARTH_rcp85_r3i1p1_HIRHAM5_v1_day.ncml"       ></dataset>
+        <dataset name="ANT-44 KNMI-ICHEC-EC-EARTH-RACMO21P-r1i1p1-v1 (OPeNDAP and Subsetting)"   ID="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_rcp85_r1i1p1_RACMO21P_v1_day.ncml"   urlPath="cordex/ANT-44/KNMI/ICHEC-EC-EARTH_rcp85_r1i1p1_RACMO21P_v1_day.ncml"     ></dataset>
+        <dataset name="ANT-44 KNMI-MOHC-HadGEM2-ES-RACMO21P-r1i1p1-v2 (OPeNDAP and Subsetting)"  ID="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_rcp85_r1i1p1_RACMO21P_v2_day.ncml"  urlPath="cordex/ANT-44/KNMI/MOHC-HadGEM2-ES_rcp85_r1i1p1_RACMO21P_v2_day.ncml"    ></dataset>
+    </dataset>
+</catalog>

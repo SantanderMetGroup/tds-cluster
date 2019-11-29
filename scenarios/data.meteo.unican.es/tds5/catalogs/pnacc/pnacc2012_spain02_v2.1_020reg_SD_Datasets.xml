@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC-2012 Regionalizacion Estadistica"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <dataset name="Escenarios PNACC-2012 Regionalizacion Estadistica" ID="pnacc2012_SD_Datasets">
+		<metadata inherited="true">
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Estadistica</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+			<documentation type="Summary">Escenarios-PNACC 2012 is a dataset of regional climate change projections over Spain based on IPCC-AR4 (CMIP3) projections from global circulation models. Besides the contribution from AEMET, this project was funded by two strategic actions for energy and climate change of the Spanish R+D 2008–2011 Program (ESCENA and ESTCENA, codes 200800050084265 and 200800050084078, for dynamical and statistical downscaling, respectively; see Gutiérrez et al. 2012 and Fernández et al. 2012). The observational dataset is based on a selection of stations provided by AEMET and on the gridded observations provided by Spain02 v2 (regular grids, at a 20km resolution; see Herrera et al. 2013). More info at (in Spanish) http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales/ayuda. </documentation>
+			<documentation type="References">Gutierrez, J.M. et al. (2012) Escenarios-PNACC 2012: Descripcion y Analisis de los Resultados de Regionalizacion Estadistica. En "Cambio climatico: Extremos e Impactos". Publicaciones de la AEC. Serie A, n8, 125-134. ISBN: 978-84-695-4331-3 (Available at http://www.meteo.unican.es/node/73082). See also http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales. Gutierrez, J. M. et al. (2013). Reassessing Statistical Downscaling Techniques for Their Robust Application under Climate Change Conditions. Journal of Climate 26 (1): 171–188. doi:10.1175/JCLI-D-11-00687.1. San-Martin, D. et al. (2017). Reassessing Model Uncertainty for Regional Projections of Precipitation with an Ensemble of Statistical Downscaling Methods. Journal of Climate 30 (1): 203–23. doi:10.1175/JCLI-D-16-0366.1. Herrera et al. (2013) Development and analysis of a 50‐year high‐resolution daily gridded precipitation dataset over Spain (Spain02). International Journal of Climatology, 32(1), 74-85.</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander Meteorology Group (CSIC-UC). Register and accept the data policy of the Group "Escenarios PNACC" to access to this dataset.</documentation>
+		</metadata>
+        <catalogRef xlink:title="Precipitacion (pr)" xlink:href="pnacc2012_spain02_v2.1_020reg_SD_pr.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Temperatura Maxima (tasmax)" xlink:href="pnacc2012_spain02_v2.1_020reg_SD_tasmax.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Temperatura Minima (tasmin)" xlink:href="pnacc2012_spain02_v2.1_020reg_SD_tasmin.xml" name="">
+        </catalogRef>
+    </dataset>
+</catalog>

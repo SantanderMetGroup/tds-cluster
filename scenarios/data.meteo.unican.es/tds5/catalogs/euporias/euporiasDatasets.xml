@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="EUPORIAS Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="euporias" location="content/euporias" />
+    <dataset name="EUPORIAS-ESD" ID="euporias_esd" restrictAccess="euporias">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+        </metadata>
+        <dataset name="EAF-SD SMHI-EC-EARTH-V3 UCAN-anl-30pc (OPeNDAP and Subsetting)" ID="euporias/EAF-SD/UCAN/SMHI-EC-EARTH-V3_seasonal_anl-30pc_v20161031-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EAF-SD SMHI-EC-EARTH-V3 UCAN-glm-15pc (OPeNDAP and Subsetting)" ID="euporias/EAF-SD/UCAN/SMHI-EC-EARTH-V3_seasonal_glm-15pc_v20161031-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EAF-SD SMHI-EC-EARTH-V3 UCAN-anl-30pc v-D212 (OPeNDAP and Subsetting)" ID="euporias/EAF-SD/UCAN/SMHI-EC-EARTH-V3_seasonal_anl-30pc_v20160205-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EAF-SD SMHI-EC-EARTH-V3 UCAN-glm-15pc v-D212 (OPeNDAP and Subsetting)" ID="euporias/EAF-SD/UCAN/SMHI-EC-EARTH-V3_seasonal_glm-15pc_v20160205-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="Europe SMHI-EC-EARTH-V3 UCAN-anl-30pc (OPeNDAP and Subsetting)" ID="euporias/Europe/UCAN/SMHI-EC-EARTH-V3_seasonal_anl-30pc_v20170113-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="Europe SMHI-EC-EARTH-V3 UCAN-lr-15pc (OPeNDAP and Subsetting)" ID="euporias/Europe/UCAN/SMHI-EC-EARTH-V3_seasonal_reg-15pc_v20170113-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EUR-IT ECMWF-IFS UCAN-anl-20pc (OPeNDAP and Subsetting)" ID="euporias/EUR-IT/UCAN/ECMWF-IFS_seasonal_anl-20pc_v20160928-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EUR-IT ECMWF-IFS UCAN-lr-15pc-4nn (OPeNDAP and Subsetting)" ID="euporias/EUR-IT/UCAN/ECMWF-IFS_seasonal_lr-15pc-4nn_v20160928-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EUR-UK ECMWF-IFS UCAN-anl-20pc (OPeNDAP and Subsetting)" ID="euporias/EUR-UK/UCAN/ECMWF-IFS_seasonal_anl-20pc_v20160928-INTERIM_day.ncml">
+        </dataset>
+        <dataset name="EUR-UK ECMWF-IFS UCAN-lr-15pc-4nn (OPeNDAP and Subsetting)" ID="euporias/EUR-UK/UCAN/ECMWF-IFS_seasonal_lr-15pc-4nn_v20160928-INTERIM_day.ncml">
+        </dataset>
+<!--
+        <dataset name="Ethiopia PP an1-30pc (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/pr_Ethiopia_EC-EARTH-V3_INTERIM_PP_an1_30pc_P2-WFDEI-1979-2010_day_19910601-20120930.ncml" urlPath="euporias/EAF-22/UCAN/pr_Ethiopia_EC-EARTH-V3_INTERIM_PP_an1_30pc_P2-WFDEI-1979-2010_day_19910601-20120930.ncml">
+        </dataset>
+        <dataset name="Ethiopia PP glm_15pc (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/pr_Ethiopia_EC-EARTH-V3_INTERIM_PP_glm_15pc_P2-WFDEI-1979-2010_day_19910601-20120930.ncml" urlPath="euporias/EAF-22/UCAN/pr_Ethiopia_EC-EARTH-V3_INTERIM_PP_glm_15pc_P2-WFDEI-1979-2010_day_19910601-20120930.ncml">
+        </dataset>
+-->
+    </dataset>
+    <dataset name="EUPORIAS-RCM" ID="euporias_rcm" restrictAccess="euporias">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+        </metadata>
+        <dataset name="EAF-22 SMHI-EC-EARTH 4years UCAN-WRF341G 3-hourly (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_3hr.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_3hr.ncml">
+        </dataset>
+        <dataset name="EAF-22 SMHI-EC-EARTH 4years UCAN-WRF341G daily (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_day.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_day.ncml">
+        </dataset>
+        <dataset name="EAF-22 SMHI-EC-EARTH 4years UCAN-WRF341G monthly (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_mon.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_4years_UCAN-WRF341G_v1_mon.ncml">
+        </dataset>
+        <dataset name="EAF-22 SMHI-EC-EARTH seasonal UCAN-WRF341G 3-hourly (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_3hr.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_3hr.ncml">
+        </dataset>
+        <dataset name="EAF-22 SMHI-EC-EARTH seasonal UCAN-WRF341G daily (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_day.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_day.ncml">
+        </dataset>
+        <dataset name="EAF-22 SMHI-EC-EARTH seasonal UCAN-WRF341G monthly (OPeNDAP and Subsetting)" ID="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_mon.ncml" urlPath="euporias/EAF-22/UCAN/EAF-22_SMHI-EC-EARTH_seasonal_UCAN-WRF341G_v1_mon.ncml">
+        </dataset>
+    </dataset>
+</catalog>

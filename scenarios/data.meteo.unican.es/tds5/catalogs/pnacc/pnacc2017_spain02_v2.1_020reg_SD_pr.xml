@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC-2017 Regionalizacion Estadistica (Precipitacion)"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <datasetRoot path="pnacc" location="content/pnacc" />
+<!--
+    <dataset name="Experimento de Evaluacion" ID="pnacc2017_sd_Evaluation_pr" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2017 Regionalizacion Estadistica (Temperatura Media)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular FIC-FIC_v1"       ID="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/FIC/ECMWF-ERA40/evaluation/r1/FIC-FIC/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_FIC-FIC_v1-ECMWF-ERA40_day_19610101-20001231.nc"              urlPath="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/FIC/ECMWF-ERA40/evaluation/r1/FIC-FIC/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_FIC-FIC_v1-ECMWF-ERA40_day_19610101-20001231.nc"              ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MLR-CPNN_v1" ID="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-CPNN/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-CPNN_v1-ECMWF-ERA40_day_19610101-20001231.nc" urlPath="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-CPNN/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-CPNN_v1-ECMWF-ERA40_day_19610101-20001231.nc" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MLR-CP_v1"   ID="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-CP/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-CP_v1-ECMWF-ERA40_day_19610101-20001231.nc"     urlPath="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-CP/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-CP_v1-ECMWF-ERA40_day_19610101-20001231.nc"     ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MLR-WT_v1"   ID="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-WT/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-WT_v1-ECMWF-ERA40_day_19610101-20001231.nc"     urlPath="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/Spain02-020reg/UCAN/ECMWF-ERA40/evaluation/r1/UCAN-MLR-WT/v1-ECMWF-ERA40/day/tasmax/tasmax_Spain02-020reg_ECMWF-ERA40_evaluation_r1_UCAN-MLR-WT_v1-ECMWF-ERA40_day_19610101-20001231.nc"     ></dataset>
+    </dataset>
+-->
+    <dataset name="Escenario historical" ID="pnacc2017_sd_historical_pr" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2017 Regionalizacion Estadistica (Precipitacion)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-GLM_v1"            ID="pr_CCCMA-CANESM2_historical_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_CCCMA-CANESM2_historical_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"            >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-ANALOG_v1"         ID="pr_CCCMA-CANESM2_historical_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_CCCMA-CANESM2_historical_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-GLM_v1"    ID="pr_CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_UCAN-GLM_v1r1_day"    path="pr_CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_UCAN-GLM_v1r1_day"    location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"    >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-ANALOG_v1" ID="pr_CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_UCAN-ANALOG_v1r1_day" path="pr_CNRM-CERFACS-CNRM-CM5_historical_r1i1p1_UCAN-ANALOG_v1r1_day" location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr" >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-GLM_v1"        ID="pr_IPSL-IPSL-CM5A-MR_historical_r1i1p1_UCAN-GLM_v1r1_day"        path="pr_IPSL-IPSL-CM5A-MR_historical_r1i1p1_UCAN-GLM_v1r1_day"        location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"        >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-ANALOG_v1"     ID="pr_IPSL-IPSL-CM5A-MR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"     path="pr_IPSL-IPSL-CM5A-MR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"     >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-GLM_v1"          ID="pr_MIROC-MIROC-ESM_historical_r1i1p1_UCAN-GLM_v1r1_day"          path="pr_MIROC-MIROC-ESM_historical_r1i1p1_UCAN-GLM_v1r1_day"          location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"          >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-ANALOG_v1"       ID="pr_MIROC-MIROC-ESM_historical_r1i1p1_UCAN-ANALOG_v1r1_day"       path="pr_MIROC-MIROC-ESM_historical_r1i1p1_UCAN-ANALOG_v1r1_day"       location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"       >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-LR_historical_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-LR_historical_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-LR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-LR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"      >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-MR_historical_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-MR_historical_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-MR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-MR_historical_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"      >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-GLM_v1"            ID="pr_NCC-NORESM1-M_historical_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_NCC-NORESM1-M_historical_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"            >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-ANALOG_v1"         ID="pr_NCC-NORESM1-M_historical_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_NCC-NORESM1-M_historical_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-GLM_v1"     ID="pr_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_UCAN-GLM_v1r1_day"     path="pr_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_UCAN-GLM_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"     >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-ANALOG_v1"  ID="pr_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_UCAN-ANALOG_v1r1_day"  path="pr_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_UCAN-ANALOG_v1r1_day"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"  >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario RCP8.5" ID="pnacc2017_sd_rcp8.5_pr" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2017 Regionalizacion Estadistica (Precipitacion)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-GLM_v1"            ID="pr_CCCMA-CANESM2_rcp85_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_CCCMA-CANESM2_rcp85_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"                       >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-ANALOG_v1"         ID="pr_CCCMA-CANESM2_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_CCCMA-CANESM2_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"                 >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-GLM_v1"    ID="pr_CNRM-CERFACS-CNRM-CM5_rcp85_r1i1p1_UCAN-GLM_v1r1_day"    path="pr_CNRM-CERFACS-CNRM-CM5_rcp85_r1i1p1_UCAN-GLM_v1r1_day"    location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"       >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-ANALOG_v1" ID="pr_CNRM-CERFACS-CNRM-CM5_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day" path="pr_CNRM-CERFACS-CNRM-CM5_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day" location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr" >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-GLM_v1"        ID="pr_IPSL-IPSL-CM5A-MR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"        path="pr_IPSL-IPSL-CM5A-MR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"        location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"               >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-ANALOG_v1"     ID="pr_IPSL-IPSL-CM5A-MR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"     path="pr_IPSL-IPSL-CM5A-MR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-GLM_v1"          ID="pr_MIROC-MIROC-ESM_rcp85_r1i1p1_UCAN-GLM_v1r1_day"          path="pr_MIROC-MIROC-ESM_rcp85_r1i1p1_UCAN-GLM_v1r1_day"          location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"                   >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-ANALOG_v1"       ID="pr_MIROC-MIROC-ESM_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"       path="pr_MIROC-MIROC-ESM_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"       location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"             >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"                 >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"           >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-MR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-MR_rcp85_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"                 >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-MR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-MR_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"           >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-GLM_v1"            ID="pr_NCC-NORESM1-M_rcp85_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_NCC-NORESM1-M_rcp85_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"                       >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-ANALOG_v1"         ID="pr_NCC-NORESM1-M_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_NCC-NORESM1-M_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"                 >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-GLM_v1"     ID="pr_NOAA-GFDL-GFDL-ESM2M_rcp85_r1i1p1_UCAN-GLM_v1r1_day"     path="pr_NOAA-GFDL-GFDL-ESM2M_rcp85_r1i1p1_UCAN-GLM_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/rcp85/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-ANALOG_v1"  ID="pr_NOAA-GFDL-GFDL-ESM2M_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"  path="pr_NOAA-GFDL-GFDL-ESM2M_rcp85_r1i1p1_UCAN-ANALOG_v1r1_day"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/rcp85/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"   >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario RCP4.5" ID="pnacc2017_sd_rcp4.5_pr" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2017 Regionalizacion Estadistica (Precipitacion)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-GLM_v1"            ID="pr_CCCMA-CANESM2_rcp45_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_CCCMA-CANESM2_rcp45_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"            >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CCCMA-CANESM2-r1i1p1-ANALOG_v1"         ID="pr_CCCMA-CANESM2_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_CCCMA-CANESM2_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CCCMA-CANESM2/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-GLM_v1"    ID="pr_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_UCAN-GLM_v1r1_day"    path="pr_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_UCAN-GLM_v1r1_day"    location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"    >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-CNRM-CERFACS-CNRM-CM5-r1i1p1-ANALOG_v1" ID="pr_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day" path="pr_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day" location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/CNRM-CERFACS-CNRM-CM5/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr" >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-GLM_v1"        ID="pr_IPSL-IPSL-CM5A-MR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"        path="pr_IPSL-IPSL-CM5A-MR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"        location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"        >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-IPSL-IPSL-CM5A-MR-r1i1p1-ANALOG_v1"     ID="pr_IPSL-IPSL-CM5A-MR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"     path="pr_IPSL-IPSL-CM5A-MR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/IPSL-IPSL-CM5A-MR/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"     >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-GLM_v1"          ID="pr_MIROC-MIROC-ESM_rcp45_r1i1p1_UCAN-GLM_v1r1_day"          path="pr_MIROC-MIROC-ESM_rcp45_r1i1p1_UCAN-GLM_v1r1_day"          location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"          >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MIROC-MIROC-ESM-r1i1p1-ANALOG_v1"       ID="pr_MIROC-MIROC-ESM_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"       path="pr_MIROC-MIROC-ESM_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"       location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MIROC-MIROC-ESM/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"       >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-LR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-LR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-LR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-LR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-LR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-LR/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"      >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-GLM_v1"         ID="pr_MPI-M-MPI-ESM-MR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"         path="pr_MPI-M-MPI-ESM-MR_rcp45_r1i1p1_UCAN-GLM_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-MPI-M-MPI-ESM-MR-r1i1p1-ANALOG_v1"      ID="pr_MPI-M-MPI-ESM-MR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"      path="pr_MPI-M-MPI-ESM-MR_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"      location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/MPI-M-MPI-ESM-MR/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"      >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-GLM_v1"            ID="pr_NCC-NORESM1-M_rcp45_r1i1p1_UCAN-GLM_v1r1_day"            path="pr_NCC-NORESM1-M_rcp45_r1i1p1_UCAN-GLM_v1r1_day"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"            >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NCC-NORESM1-M-r1i1p1-ANALOG_v1"         ID="pr_NCC-NORESM1-M_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"         path="pr_NCC-NORESM1-M_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NCC-NORESM1-M/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"         >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-GLM_v1"     ID="pr_NOAA-GFDL-GFDL-ESM2M_rcp45_r1i1p1_UCAN-GLM_v1r1_day"     path="pr_NOAA-GFDL-GFDL-ESM2M_rcp45_r1i1p1_UCAN-GLM_v1r1_day"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/rcp45/r1i1p1/UCAN-GLM/v1r1-ECMWF-ERAINT/day/pr"     >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v2.1 020 Regular UCAN-NOAA-GFDL-GFDL-ESM2M-r1i1p1-ANALOG_v1"  ID="pr_NOAA-GFDL-GFDL-ESM2M_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"  path="pr_NOAA-GFDL-GFDL-ESM2M_rcp45_r1i1p1_UCAN-ANALOG_v1r1_day"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2017/output/Spain02-020reg/UCAN/NOAA-GFDL-GFDL-ESM2M/rcp45/r1i1p1/UCAN-ANALOG/v1r1-ECMWF-ERAINT/day/pr"  >
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+</catalog>

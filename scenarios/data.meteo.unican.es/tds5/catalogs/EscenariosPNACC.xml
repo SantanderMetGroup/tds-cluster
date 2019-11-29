@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service/>
+    <dataset name="Escenarios-PNACC 2012" ID="pnacc2012">
+        <metadata inherited="true">
+			<documentation type="Product Name">Escenarios-PNACC 2012</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+			<documentation type="Summary">Escenarios-PNACC 2012 is a dataset of regional climate change projections over Spain based on IPCC-AR4 (CMIP3) projections from global circulation models. Besides the contribution from AEMET, this project was funded by two strategic actions for energy and climate change of the Spanish R+D 2008–2011 Program (ESCENA and ESTCENA, codes 200800050084265 and 200800050084078, for dynamical and statistical downscaling, respectively; see Gutiérrez et al. 2012 and Fernández et al. 2012). The observational dataset is based on a selection of stations provided by AEMET and on the gridded observations provided by Spain02 v2 (regular grids, at a 20km resolution; see Herrera et al. 2013). More info at (in Spanish) http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales/ayuda. </documentation>
+			<documentation type="References">Statistical Downscaling: Gutierrez, J.M. et al. (2012) Escenarios-PNACC 2012: Descripcion y Analisis de los Resultados de Regionalizacion Estadistica. En "Cambio climatico: Extremos e Impactos". Publicaciones de la AEC. Serie A, n8, 125-134. ISBN: 978-84-695-4331-3 (Available at http://www.meteo.unican.es/node/73082). See also http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales. Gutierrez, J. M. et al. (2013). Reassessing Statistical Downscaling Techniques for Their Robust Application under Climate Change Conditions. Journal of Climate 26 (1): 171–188. doi:10.1175/JCLI-D-11-00687.1. San-Martin, D. et al. (2017). Reassessing Model Uncertainty for Regional Projections of Precipitation with an Ensemble of Statistical Downscaling Methods. Journal of Climate 30 (1): 203–23. doi:10.1175/JCLI-D-16-0366.1. Herrera et al. (2013) Development and analysis of a 50‐year high‐resolution daily gridded precipitation dataset over Spain (Spain02). International Journal of Climatology, 32(1), 74-85. Dynamical Downscaling: Jimenez-Guerrero, P. et al. (2013) Mean fields and interannual variability in RCM simulations over Spain: the ESCENA project. Climate Research 57:201-220. doi: 10.3354/cr01165. Dominguez, M. et al. (2013) Present-climate precipitation and temperature extremes over Spain from a set of high resolution RCMs. Climate Research 58:149-164. doi: 10.3354/cr01186. Fernandez et al. (2012) Escenarios-PNACC 2012: Resultados de regionalizacion dinamica. En "Cambio climatico: Extremos e Impactos". Publicaciones de la AEC. Serie A, n8. ISBN: 978-84-695-4331-3 (Available at http://www.meteo.unican.es/node/73108)</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander Meteorology Group (CSIC-UC). Register and accept the data policy of the Group "Escenarios PNACC" to access to this dataset.</documentation>
+        </metadata>
+        <catalogRef xlink:title="Observaciones"          xlink:href="pnacc/spain02_v2.1_020reg_Datasets.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Regionalizacion Estadistica (esTcena)" xlink:href="pnacc/pnacc2012_spain02_v2.1_020reg_SD_Datasets.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Regionalizacion Dinamica (ESCENA)" xlink:href="pnacc/pnacc2012_spain02_v2.1_020reg_DD_Datasets.xml" name="">
+        </catalogRef>
+    </dataset>
+    <dataset name="Escenarios-PNACC 2017" ID="pnacc2017">
+        <metadata inherited="true">
+			<documentation type="Product Name">Escenarios-PNACC 2017</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+			<documentation type="Summary">Update of Escenarios-PNACC 2012 regional climate change projections considering IPCC-AR5 (CMIP5) global projections. For the statistical downscaling methods the update is based on the research done in the framework of the EU VALUE intercomparison project (see Gutiérrez et al. 2017a for details of the methods) and it was funded by the MULTI-SDM project (CGL2015-66583-R, MINECO/FEDER). A description of the products is given in Gutiérrez et al. 2017b. The dynamical downscaling methods are based on EURO-CORDEX and MED-CORDEX. The update of the observational dataset is Spain02 v5 (both regular and rotated grids). </documentation>
+			<documentation type="References">Statistical Downscaling: Gutierrez, J.M. et al. (2012) Escenarios-PNACC 2012: Descripcion y Analisis de los Resultados de Regionalizacion Estadistica. En "Cambio climatico: Extremos e Impactos". Publicaciones de la AEC. Serie A, n8, 125-134. ISBN: 978-84-695-4331-3 (Available at http://www.meteo.unican.es/node/73082). See also http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales. Gutierrez, J.M. et al. (2017a) An intercomparison of a large ensemble of statistical downscaling methods over Europe: Results from the VALUE perfect predictor cross-validation experiment. International Journal of Climatology, to appear. Gutierrez et al. (2017b) Regional climate projections over Spain: Atmosphere. Future climate projections. Submitted to CLIVAR Exchanges. Herrera et al. (2016) Update of the Spain02 gridded observational dataset for EURO‐CORDEX evaluation: assessing the effect of the interpolation methodology. International Journal of Climatology, 36(2), 900-908.</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander Meteorology Group (CSIC-UC). Register and accept the data policy of the Group "Escenarios PNACC" to access to this dataset.</documentation>
+        </metadata>
+        <catalogRef xlink:title="Observaciones"          xlink:href="pnacc/spain02_v5.0_reg_Datasets.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Regionalizacion Estadistica (MULTI-SDM)" xlink:href="pnacc/pnacc2017_spain02_v2.1_020reg_SD_Datasets.xml" name="">
+        </catalogRef>
+    </dataset>
+</catalog>

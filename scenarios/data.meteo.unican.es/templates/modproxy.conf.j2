@@ -9,8 +9,8 @@ ProxyTimeout 600
 </Location>
 
 ProxyPass /status-proxy !
-ProxyPass /tds5/catalog/esgcet !
-Redirect "/tds5/catalog/esgcet/catalog.html" "/thredds/catalog/esgcet/catalog.html"
+ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
+Redirect /tds5 /thredds
 
 {% for c in clusters -%}
 <Proxy "balancer://{{ c.name }}">

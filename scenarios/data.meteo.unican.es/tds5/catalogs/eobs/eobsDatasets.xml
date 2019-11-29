@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="EOBS Gridded Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+<!--
+        <service name="wcs" serviceType="WCS" base="/thredds/wcs/"/>
+        <service name="wms" serviceType="WMS" base="/thredds/wms/"/>
+ -->    
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="eobs" location="content/eobs"/>
+    <dataset name="EOBS v13.1" ID="eobs" restrictAccess="eobs">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+			<documentation type="Source">For the sake of reproducibility, we provide access to a frozen version of the E-OBS datasets (not the up-to-date release) downloaded from the European Climate Assessment and Dataset Project (v13 and v14) and the Copernicus Climate Data Store (v17 and v17e). To access to this datasets we encourage the user to register himself as an E-OBS user in http://surfobs.climate.copernicus.eu/dataaccess/registration.php. Recent versions of this dataset are available at http://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php.</documentation>
+			<documentation type="Terms of use"> The European Climate Assessment and Dataset E-OBS data policy applies. These observational data are strictly for use in non-commercial research and non-commercial education projects only. Scientific results based on these data must be submitted for publication in the open literature without any delay linked to commercial objectives.</documentation>
+			<documentation type="Citation and acknowledgements">Whenever you publish research or applications based on these gridded data products, you should include the following acknowledgement and citations. Ensemble version: We acknowledge the E-OBS dataset from the EU-FP6 project UERRA (http://www.uerra.eu) and the Copernicus Climate Change Service, and the data providers in the European Climate Assessment and Dataset project (https://www.ecad.eu); Cornes, R., G. van der Schrier, E.J.M. van den Besselaar, and P.D. Jones. 2018: An Ensemble Version of the E-OBS Temperature and Precipitation Datasets, J. Geophys. Res. Atmos., 123. doi:10.1029/2017JD028200</documentation>
+        </metadata>
+        <dataset name="e-obs_v13.1_0.50regular.ncml" ID="eobs/e-obs_v13.1_0.50regular.ncml" urlPath="eobs/e-obs_v13.1_0.50regular.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="e-obs_v13.1_0.44rotated.ncml" ID="eobs/e-obs_v13.1_0.44rotated.ncml" urlPath="eobs/e-obs_v13.1_0.44rotated.ncml">
+            <dataSize units="Mbytes">6860</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v13.1_0.25regular.ncml" ID="eobs/e-obs_v13.1_0.25regular.ncml" urlPath="eobs/e-obs_v13.1_0.25regular.ncml">
+            <dataSize units="Mbytes">43016</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v13.1_0.22rotated.ncml" ID="eobs/e-obs_v13.1_0.22rotated.ncml" urlPath="eobs/e-obs_v13.1_0.22rotated.ncml">
+            <dataSize units="Mbytes">26889</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+    <dataset name="EOBS v14.0" ID="eobs" restrictAccess="eobs">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+			<documentation type="Source">For the sake of reproducibility, we provide access to a frozen version of the E-OBS datasets (not the up-to-date release) downloaded from the European Climate Assessment and Dataset Project (v13 and v14) and the Copernicus Climate Data Store (v17 and v17e). To access to this datasets we encourage the user to register himself as an E-OBS user in http://surfobs.climate.copernicus.eu/dataaccess/registration.php. Recent versions of this dataset are available at http://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php.</documentation>
+			<documentation type="Terms of use"> The European Climate Assessment and Dataset E-OBS data policy applies. These observational data are strictly for use in non-commercial research and non-commercial education projects only. Scientific results based on these data must be submitted for publication in the open literature without any delay linked to commercial objectives.</documentation>
+			<documentation type="Citation and acknowledgements">Whenever you publish research or applications based on these gridded data products, you should include the following acknowledgement and citations. Ensemble version: We acknowledge the E-OBS dataset from the EU-FP6 project UERRA (http://www.uerra.eu) and the Copernicus Climate Change Service, and the data providers in the European Climate Assessment and Dataset project (https://www.ecad.eu); Cornes, R., G. van der Schrier, E.J.M. van den Besselaar, and P.D. Jones. 2018: An Ensemble Version of the E-OBS Temperature and Precipitation Datasets, J. Geophys. Res. Atmos., 123. doi:10.1029/2017JD028200</documentation>
+        </metadata>
+        <dataset name="e-obs_v14_0.50regular.ncml" ID="eobs/e-obs_v14_0.50regular.ncml" urlPath="eobs/e-obs_v14_0.50regular.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="e-obs_v14_0.44rotated.ncml" ID="eobs/e-obs_v14_0.44rotated.ncml" urlPath="eobs/e-obs_v14_0.44rotated.ncml">
+            <dataSize units="Mbytes">6860</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v14_0.25regular.ncml" ID="eobs/e-obs_v14_0.25regular.ncml" urlPath="eobs/e-obs_v14_0.25regular.ncml">
+            <dataSize units="Mbytes">43016</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v14_0.22rotated.ncml" ID="eobs/e-obs_v14_0.22rotated.ncml" urlPath="eobs/e-obs_v14_0.22rotated.ncml">
+            <dataSize units="Mbytes">26889</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+    <dataset name="EOBS v17.0" ID="eobs" restrictAccess="eobs">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+			<documentation type="Source">For the sake of reproducibility, we provide access to a frozen version of the E-OBS datasets (not the up-to-date release) downloaded from the European Climate Assessment and Dataset Project (v13 and v14) and the Copernicus Climate Data Store (v17 and v17e). To access to this datasets we encourage the user to register himself as an E-OBS user in http://surfobs.climate.copernicus.eu/dataaccess/registration.php. Recent versions of this dataset are available at http://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php.</documentation>
+			<documentation type="Terms of use"> The European Climate Assessment and Dataset E-OBS data policy applies. These observational data are strictly for use in non-commercial research and non-commercial education projects only. Scientific results based on these data must be submitted for publication in the open literature without any delay linked to commercial objectives.</documentation>
+			<documentation type="Citation and acknowledgements">Whenever you publish research or applications based on these gridded data products, you should include the following acknowledgement and citations. Ensemble version: We acknowledge the E-OBS dataset from the EU-FP6 project UERRA (http://www.uerra.eu) and the Copernicus Climate Change Service, and the data providers in the European Climate Assessment and Dataset project (https://www.ecad.eu); Cornes, R., G. van der Schrier, E.J.M. van den Besselaar, and P.D. Jones. 2018: An Ensemble Version of the E-OBS Temperature and Precipitation Datasets, J. Geophys. Res. Atmos., 123. doi:10.1029/2017JD028200</documentation>
+        </metadata>
+        <dataset name="e-obs_v17_0.50regular.ncml" ID="eobs/e-obs_v17_0.50regular.ncml" urlPath="eobs/e-obs_v17_0.50regular.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="e-obs_v17_0.44rotated.ncml" ID="eobs/e-obs_v17_0.44rotated.ncml" urlPath="eobs/e-obs_v17_0.44rotated.ncml">
+            <dataSize units="Mbytes">6860</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v17_0.25regular.ncml" ID="eobs/e-obs_v17_0.25regular.ncml" urlPath="eobs/e-obs_v17_0.25regular.ncml">
+            <dataSize units="Mbytes">43016</dataSize>
+            <date type="modified">2014-06-18T15:30:38Z</date>
+        </dataset>
+        <dataset name="e-obs_v17_0.22rotated.ncml" ID="eobs/e-obs_v17_0.22rotated.ncml" urlPath="eobs/e-obs_v17_0.22rotated.ncml">
+            <dataSize units="Mbytes">26889</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+    <dataset name="EOBS v17e" ID="eobs" restrictAccess="eobs">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+			<documentation type="Source">For the sake of reproducibility, we provide access to a frozen version of the E-OBS datasets (not the up-to-date release) downloaded from the European Climate Assessment and Dataset Project (v13 and v14) and the Copernicus Climate Data Store (v17 and v17e). To access to this datasets we encourage the user to register himself as an E-OBS user in http://surfobs.climate.copernicus.eu/dataaccess/registration.php. Recent versions of this dataset are available at http://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php.</documentation>
+			<documentation type="Terms of use"> The European Climate Assessment and Dataset E-OBS data policy applies. These observational data are strictly for use in non-commercial research and non-commercial education projects only. Scientific results based on these data must be submitted for publication in the open literature without any delay linked to commercial objectives.</documentation>
+			<documentation type="Citation and acknowledgements">Whenever you publish research or applications based on these gridded data products, you should include the following acknowledgement and citations. Ensemble version: We acknowledge the E-OBS dataset from the EU-FP6 project UERRA (http://www.uerra.eu) and the Copernicus Climate Change Service, and the data providers in the European Climate Assessment and Dataset project (https://www.ecad.eu); Cornes, R., G. van der Schrier, E.J.M. van den Besselaar, and P.D. Jones. 2018: An Ensemble Version of the E-OBS Temperature and Precipitation Datasets, J. Geophys. Res. Atmos., 123. doi:10.1029/2017JD028200</documentation>
+        </metadata>
+        <dataset name="e-obs_v17e_0.10regular.ncml" ID="eobs/e-obs_v17e_0.10regular.ncml" urlPath="eobs/e-obs_v17e_0.10regular.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+</catalog>

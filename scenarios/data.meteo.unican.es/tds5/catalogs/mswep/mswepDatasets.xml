@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="MSWEP Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+  <service name="all" serviceType="Compound" base="">
+    <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+	<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+  </service>
+    <datasetRoot path="mswep" location="content/mswep" />
+  	<dataset name="MSWEP Datasets" ID="mswepdatasets" restrictAccess="mswep">
+		<metadata inherited="true">
+            <documentation type="Product Name">MSWEP</documentation>
+            <documentation type="Institutions">Water and Landscape Dynamics Group</documentation>
+            <documentation type="Contacts"> Prof. Albert van Dijk; albert.vandijk@anu.edu.au</documentation>
+            <documentation type="Summary">Multi-Source Weighted-Ensemble Precipitation (MSWEP) is a global precipitation dataset for the period 1979–2015 with a 3-hourly temporal and 0.25° spatial resolution, designed for hydrological modeling and built by optimally merging several quality controlled data sources (CHPclim, CPC Unified, GPCC, CMORPH, GSMaP-MVK, TMPA 3B42RT, ERA-Interim and JRA-55). MSWEP is available via http://www.gloh2o.org/.</documentation>
+            <documentation type="Source">Data linked from the National Computational Infrastructure THREDDS Server via the OPeNDAP sevice.</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+			<documentation type="Reference">Beck, H.E., A.I.J.M. van Dijk, V. Levizzani, J. Schellekens, D.G. Miralles, B. Martens, A. de Roo (2016): MSWEP: 3-hourly 0.25° global gridded precipitation (1979–2015) by merging gauge, satellite, and reanalysis data, Hydrology and Earth System Sciences Discussions, doi:10.5194/hess-2016–236.</documentation>
+			<documentation type="License">This data is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</documentation>
+			<documentation type="Data Release Disclaimer and Copyright">The data, images and all other material contained in this Product have been collected by the Australian National university. The Australian National University does not provide any warranty or guarantee as to the currency, accuracy, reliability, performance, completeness and suitability of the information and data in this Product, for any particular purpose. You acknowledge that the Product may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law. Use of this Product constitutes acceptance of all terms and conditions in this Disclaimer.</documentation>
+			<serviceName>all</serviceName>
+			<dataType>GRID</dataType>
+			<dataFormat>NetCDF</dataFormat>
+			<geospatialCoverage>
+				<northsouth>
+					<start>-90.0</start>
+					<size>720.0</size>
+					<units>degrees_north</units>
+				</northsouth>
+				<eastwest>
+					<start>-179.5</start>
+					<size>1440</size>
+					<units>degrees_east</units>
+				</eastwest>
+				<name>global</name>
+			</geospatialCoverage>
+			<timeCoverage>
+				<start>1979-01-01T12:00:00Z</start>
+				<end>2014-12-31T12:00:00Z</end>
+			</timeCoverage>
+			<property name="svn_id" value="$Id: mswep_DM.xml 859 2015-11-20 19:38:39Z sixto $"/>
+		</metadata>
+		<dataset name="MSWEP Daily Dataset" ID="mswep/mswep_day.ncml" urlPath="mswep/mswep_day.ncml">
+            <dataSize units="bytes">167388249600</dataSize>
+			<date type="modified">2016-08-23T09:43:00Z</date>
+		</dataset>
+		<dataset name="MSWEP 3-Hourly Dataset" ID="mswep/mswep_3hr.ncml" urlPath="mswep/mswep_3hr.ncml">
+            <dataSize units="bytes">167388249600</dataSize>
+			<date type="modified">2016-08-23T09:43:00Z</date>
+		</dataset>
+    </dataset>
+</catalog>

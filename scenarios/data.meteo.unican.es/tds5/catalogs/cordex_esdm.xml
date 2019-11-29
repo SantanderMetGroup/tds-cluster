@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="CORDEX-ESDM catalog"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+<service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+<!--     <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/grid/"/>
+    </service>
+ -->
+    <dataset name="CORDEX-ESDM" ID="cordex_esdm">
+<!--         <catalogRef xlink:title="WFDEI Daily" xlink:href="wfdei/wfdei_DM.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+ -->        
+        <metadata inherited="true">
+             <serviceName>odap</serviceName>
+        </metadata>
+        <dataset name="WFDEI Daily" ID="wfdei/wfdei_daily.ncml" urlPath="wfdei/wfdei_daily.ncml" restrictAccess="wfdei">
+            <metadata inherited="true">
+                <documentation type="Product Name">WFDEI Daily</documentation>
+                <documentation type="Institutions">Centre for Ecology and Hydrology and Wageningen UR, Earth System Science and Climate Change group</documentation>
+                <documentation type="Contacts"> Graham Weedon; Gian Paolo Balsamo</documentation>
+                <documentation type="Summary">WATCH-Forcing-Data-ERA-Interim (WFDEI) was produced post-WATCH using WFD methodology applied to ERA-Interim data. It is a meteorological forcing dataset extending into early 21st C (1979 – 2012). WFDEI dataset (version 18th September 2013; http://www.eu-watch.org/data_availability) is provided for bona fide research purposes only. No warranty is given as to their suitability for user applications. No liability is accepted by the authors for any errors or omissions in the data or associated information and/or documentation.</documentation>
+                <documentation type="Source">Data downloaded from the ftp server ftp://ftp.iiasa.ac.at/ on 15/06/2015 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices). Daily minimum and maximum temperatures have been obtained from the 3-hourly temperature. 3-hourly relative humidity has been obtained from the 3-hourly surface pressure, mean temperature and specific humidity and then aggregrated to obtain the daily mean, minimum and maximum values.</documentation>
+<!--                <documentation type="Terms of use"> Dataset included in the ECOMS-SDM group of the User Data Gateway (UDG). Register and accept the data policy to access to this dataset (http://www.meteo.unican.es/udg-wiki).</documentation>
+                <documentation type="Citation and acknowledgements">If publishing using the WFDEI please cite (full references below):
+
+                    Weedon, G. P., and Coauthors, 2011: Creation of the WATCH Forcing Data and Its Use to Assess Global and Regional Reference Crop Evaporation over Land during the Twentieth Century. J. Hydrometeor, 12, 823–848. doi: http://dx.doi.org/10.1175/2011JHM1369.1
+
+                    Weedon, G.P., and Coauthors, 2010. The WATCH Forcing Data 1958-2001: a meteorological forcing dataset for land surface- and hydrological models. WATCH Tech. Rep. 22, 41p (available at www.eu-watch.org/publications ).
+
+                    Auxiliar references on ERA-Interim and CRU/GPCC datasets:
+                    Dee et al. 2011. The ERA-Interim reanalysis: configuration and performance of the data assimilation system. Q. J. R. Meteorol. Soc. 137, 553-597.
+
+                    Harris, I., P.D. Jones, T.J. Osborn and D.H. Lister, 2013. Updated high-resolution grids of monthly climatic observations - the CRU TS3.10 dataset. Int. J. Climatol. doi: 10.1002/joc.3711.
+
+                    Schneider, U., A. Becker, P. Finger, A. Meyer-Christoffer, M. Zuise, B. Rudolf, 2013. GPCC’s new land surface precipitation climatology based on quality-controlled in situ data and its role in quantifying the global water cycle. Theor. Appl. Climatol. doi:10.1007/s00704-013-0860-x.</documentation>
+ -->        
+                <serviceName>odap</serviceName>
+                <dataType>GRID</dataType>
+                <dataFormat>NetCDF</dataFormat>
+                <geospatialCoverage>
+                    <northsouth>
+                        <start>-90.0</start>
+                        <size>180.0</size>
+                        <units>degrees_north</units>
+                    </northsouth>
+                    <eastwest>
+                        <start>-179.5</start>
+                        <size>360</size>
+                        <units>degrees_east</units>
+                    </eastwest>
+                    <name>global</name>
+                </geospatialCoverage>
+                <timeCoverage>
+                    <start>1979-01-01T12:00:00Z</start>
+                    <end>2012-12-31T12:00:00Z</end>
+                </timeCoverage>
+                <property name="svn_id" value="$Id: cordex_sdm.xml 824 2015-09-18 15:38:35Z sixto $"/>
+            </metadata>
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </dataset>
+        <catalogRef xlink:title="ERA-Interim Predictors" xlink:href="interim/interim_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+<!--         <catalogRef xlink:title="JRA-25 Predictors" xlink:href="jra25/jra25_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+ -->
+        <catalogRef xlink:title="JRA-55 Predictors" xlink:href="jra55/jra55_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="MERRA Predictors" xlink:href="merra/merra_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="CMIP5 Predictors" xlink:href="cmip5/cmip5Datasets.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+	</dataset>
+	<property name="svn_id" value="$Id: cordex_sdm.xml 824 2015-09-18 15:38:35Z sixto $"/>
+</catalog>

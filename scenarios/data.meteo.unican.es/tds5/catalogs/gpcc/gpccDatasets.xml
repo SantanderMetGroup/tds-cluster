@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="DWD-GPCC Version 2018"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="gpcc" location="content/gpcc"/>
+    <dataset name="DWD-GPCC Full Data Daily Version 2018" ID="gpcc_v2018_daily_Grid100" restrictAccess="spain02">
+		<metadata inherited="true">
+			<documentation type="Product Name">DWD-GPCC Full Data Daily Version 2018</documentation>
+			<documentation type="Institution">DWD Deutscher Wetterdienst</documentation>
+			<documentation type="Summary">GPCC Full Data Daily Version.2018 at 1.0°: Daily Land-Surface Precipitation from Rain-Gauges built on GTS-based and Historic Data (https://opendata.dwd.de/climate_environment/GPCC/html/fulldata-daily_v2018_doi_download.html). More information at: https://opendata.dwd.de/climate_environment/GPCC/PDF/GPCC_intro_products_v2018.pdf</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution on 23/07/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">The Deutscher Wetterdienst has updated its data protection policy in accordance with the General Data Protection Regulation (GDPR). Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+			<serviceName>all</serviceName>
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<geospatialCoverage>
+				<northsouth>
+					<start>-90.0</start>
+					<size>180.0</size>
+					<units>degrees_north</units>
+				</northsouth>
+				<eastwest>
+					<start>-180.0</start>
+					<size>360</size>
+					<units>degrees_east</units>
+				</eastwest>
+				<name>global</name>
+			</geospatialCoverage>
+			<timeCoverage>
+				<start>1982-01-01T00:00:00Z</start>
+				<end>2016-12-31T00:00:00Z</end>
+			</timeCoverage>
+		</metadata>
+        <dataset name="gpcc_v2018_daily_Grid100.ncml" ID="gpcc/gpcc_v2018_daily_Grid100.ncml" urlPath="gpcc/gpcc_v2018_daily_Grid100.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+    <dataset name="DWD-GPCC Full Data Monthly Version 2018" ID="gpcc_v2018_Grid100" restrictAccess="spain02">
+		<metadata inherited="true">
+			<documentation type="Product Name">DWD-GPCC Full Data Monthly Version 2018</documentation>
+			<documentation type="Institution">DWD Deutscher Wetterdienst</documentation>
+			<documentation type="Summary">GPCC Full Data Monthly Product Version 2018 (at 0.25° at 0.5°, 1.0°, 2.5°): Monthly Land-Surface Precipitation from Rain-Gauges built on GTS-based and Historical Data (https://opendata.dwd.de/climate_environment/GPCC/html/fulldata-monthly_v2018_doi_download.html). More information at: https://opendata.dwd.de/climate_environment/GPCC/PDF/GPCC_intro_products_v2018.pdf</documentation>
+			<documentation type="Source">Data downloaded from ESGF at original resolution on 23/07/2019 and stored in the User Data Gateway (UDG) of the Santander MetGroup climate services (http://meteo.unican.es/en/dataservices).</documentation>
+			<documentation type="Terms of use">The Deutscher Wetterdienst has updated its data protection policy in accordance with the General Data Protection Regulation (GDPR). Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander MetGroup. Register and accept the data policy to access to this dataset.</documentation>
+			<serviceName>all</serviceName>
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<geospatialCoverage>
+				<northsouth>
+					<start>-90.0</start>
+					<size>180.0</size>
+					<units>degrees_north</units>
+				</northsouth>
+				<eastwest>
+					<start>-180.0</start>
+					<size>360</size>
+					<units>degrees_east</units>
+				</eastwest>
+				<name>global</name>
+			</geospatialCoverage>
+			<timeCoverage>
+				<start>1891-01-01T00:00:00Z</start>
+				<end>2016-12-31T00:00:00Z</end>
+			</timeCoverage>
+		</metadata>
+        <dataset name="gpcc_v2018_Grid025.ncml" ID="gpcc/gpcc_v2018_Grid025.ncml" urlPath="gpcc/gpcc_v2018_Grid025.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="gpcc_v2018_Grid050.ncml" ID="gpcc/gpcc_v2018_Grid050.ncml" urlPath="gpcc/gpcc_v2018_Grid050.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="gpcc_v2018_Grid100.ncml" ID="gpcc/gpcc_v2018_Grid100.ncml" urlPath="gpcc/gpcc_v2018_Grid100.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+        <dataset name="gpcc_v2018_Grid250.ncml" ID="gpcc/gpcc_v2018_Grid250.ncml" urlPath="gpcc/gpcc_v2018_Grid250.ncml">
+            <dataSize units="Mbytes">10831</dataSize>
+            <date type="modified">2014-06-18T15:30:37Z</date>
+        </dataset>
+    </dataset>
+</catalog>

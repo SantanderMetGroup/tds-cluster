@@ -9,7 +9,7 @@
     melody_jar: ../../software/javamelody-core-1.73.1.jar
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
-    tds_context: tds5
+    tds_context: thredds
   vars_files:
     - secrets.yml
   tasks:
@@ -110,7 +110,7 @@
     hostkey: /etc/pki/tls/private/hostkey.pem
     clusters:
       - name: default
-        urls: [/tds5, /udg-tap]
+        urls: [/thredds, /udg-tap]
   tasks:
     - name: Install httpd
       yum: name=httpd,mod_ssl state=present
@@ -120,6 +120,7 @@
 
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
+      tags: update-workers
 
 - name: Install workers
   hosts: servers

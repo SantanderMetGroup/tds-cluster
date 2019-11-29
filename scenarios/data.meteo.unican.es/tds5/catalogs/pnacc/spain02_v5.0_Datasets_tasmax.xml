@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Spain02 v5.0 Gridded Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <datasetRoot path="pnacc" location="content/pnacc"/>
+    <dataset name="Spain02 v5.0 Gridded Datasets: Temperatura Maxima" ID="spain02v5.0_tasmax" restrictAccess="spain02">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+        </metadata>
+        <datasetScan name="Spain02 v5.0 0.10 Regular" ID="tasmax_Spain02_v5.0_010reg" path="tasmax_Spain02_v5.0_010reg" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain010reg/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v5.0 0.20 Regular" ID="tasmax_Spain02_v5.0_020reg" path="tasmax_Spain02_v5.0_020reg" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain020reg/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v5.0 0.40 Regular" ID="tasmax_Spain02_v5.0_040reg" path="tasmax_Spain02_v5.0_040reg" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain040reg/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v5.0 0.11 Rotated" ID="tasmax_Spain02_v5.0_011rot" path="tasmax_Spain02_v5.0_011rot" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain011rot/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v5.0 0.22 Rotated" ID="tasmax_Spain02_v5.0_022rot" path="tasmax_Spain02_v5.0_022rot" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain022rot/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+        <datasetScan name="Spain02 v5.0 0.44 Rotated" ID="tasmax_Spain02_v5.0_044rot" path="tasmax_Spain02_v5.0_044rot" location="//oceano/gmeteo/DATA/UC/Spain02/v5/Spain044rot/tasmax" >
+			<filter>
+				<include wildcard="*_aa3d_tasmax.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+</catalog>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="MERRA Dataset"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="merra" location="content/merra" />
+    <dataset name="MERRA_DM_predictors" ID="merra/daily/MERRA_daily_Dataset.ncml" urlPath="merra/daily/MERRA_daily_Dataset.ncml" restrictAccess="merra_sd">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+            <geospatialCoverage>
+                <northsouth>
+                    <start>-90.0</start>
+                    <size>180.0</size>
+					<resolution>2.0</resolution>			
+                    <units>degrees_north</units>
+                </northsouth>
+                <eastwest>
+                    <start>0.0</start>
+                    <size>358</size>
+                    <resolution>2.0</resolution>
+					<units>degrees_east</units>
+                </eastwest>
+                <name>global</name>
+            </geospatialCoverage>
+            <timeCoverage>
+                <start>1979-01-01T00:00:00Z</start>
+                <end>2009-12-31T00:00:00Z</end>
+            </timeCoverage>
+            <property name="svn_id" value="$Id: merra_DM_predictors.xml 836 2015-11-11 20:04:58Z sixto $"/>
+        </metadata>
+            <dataSize units="Mbytes">986968</dataSize>
+            <date type="modified">2014-05-27T16:53:00Z</date>
+    </dataset>
+</catalog>

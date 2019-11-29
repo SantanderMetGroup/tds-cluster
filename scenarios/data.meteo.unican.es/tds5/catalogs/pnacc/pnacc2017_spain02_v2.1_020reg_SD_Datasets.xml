@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC-2017 Regionalizacion Estadistica"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <dataset name="Escenarios PNACC-2017 Regionalizacion Estadistica" ID="pnacc2012_SD_Datasets">
+		<metadata inherited="true">
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2017 Regionalizacion Estadistica</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+			<documentation type="Summary">Update of Escenarios-PNACC 2012 regional climate change projections considering IPCC-AR5 (CMIP5) global projections. For the statistical downscaling methods the update is based on the research done in the framework of the EU VALUE intercomparison project (see Gutiérrez et al. 2017a for details of the methods) and it was funded by the MULTI-SDM project (CGL2015-66583-R, MINECO/FEDER). A description of the products is given in Gutiérrez et al. 2017b. The dynamical downscaling methods are based on EURO-CORDEX and MED-CORDEX. The update of the observational dataset is Spain02 v5 (both regular and rotated grids). </documentation>
+			<documentation type="References">Statistical Downscaling: Gutierrez, J.M. et al. (2012) Escenarios-PNACC 2012: Descripcion y Analisis de los Resultados de Regionalizacion Estadistica. En "Cambio climatico: Extremos e Impactos". Publicaciones de la AEC. Serie A, n8, 125-134. ISBN: 978-84-695-4331-3 (Available at http://www.meteo.unican.es/node/73082). See also http://www.aemet.es/es/serviciosclimaticos/cambio_climat/datos_mensuales. Gutierrez, J.M. et al. (2017a) An intercomparison of a large ensemble of statistical downscaling methods over Europe: Results from the VALUE perfect predictor cross-validation experiment. International Journal of Climatology, to appear. Gutierrez et al. (2017b) Regional climate projections over Spain: Atmosphere. Future climate projections. Submitted to CLIVAR Exchanges. Herrera et al. (2016) Update of the Spain02 gridded observational dataset for EURO‐CORDEX evaluation: assessing the effect of the interpolation methodology. International Journal of Climatology, 36(2), 900-908.</documentation>
+			<documentation type="Terms of use">Dataset included in the User Data Gateway (UDG, http://www.meteo.unican.es/udg-wiki) maintained by the Santander Meteorology Group (CSIC-UC). Register and accept the data policy of the Group "Escenarios PNACC" to access to this dataset.</documentation>
+		</metadata>
+        <catalogRef xlink:title="Precipitacion (pr)" xlink:href="pnacc2017_spain02_v2.1_020reg_SD_pr.xml" name="">
+        </catalogRef>
+        <catalogRef xlink:title="Temperatura Media (tas)" xlink:href="pnacc2017_spain02_v2.1_020reg_SD_tas.xml" name="">
+        </catalogRef>
+    </dataset>
+</catalog>

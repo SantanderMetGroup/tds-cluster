@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <service name="access" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+	<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    <datasetRoot path="pnacc" location="content/pnacc" />
+    <dataset name="Experimento de Evaluacion" ID="pnacc2012_dd_Evaluation_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="ESCENA-22 UAHE-ECMWF-ERAINT-REMO_v1"   ID="pnacc/pnacc2012/ESCENA-22/wssmax/ECMWF-ERAINT_evaluation_r1_UAHE-REMO_v1_day.ncml"   urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/ECMWF-ERAINT_evaluation_r1_UAHE-REMO_v1_day.ncml"   >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_ECMWF-ERAINT_evaluation_UAHE-REMO_v1"   path="wssmax_ESCENA-22_ECMWF-ERAINT_evaluation_UAHE-REMO_v1"    location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UAHE/ECMWF-ERAINT/evaluation/r1/UAHE-REMO/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-ECMWF-ERAINT-PROMES_v1" ID="pnacc/pnacc2012/ESCENA-22/wssmax/ECMWF-ERAINT_evaluation_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/ECMWF-ERAINT_evaluation_r1_UCLM-PROMES_v1_day.ncml" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_ECMWF-ERAINT_evaluation_UCLM-PROMES_v1" path="wssmax_ESCENA-22_ECMWF-ERAINT_evaluation_UCLM-PROMES_v1"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/ECMWF-ERAINT/evaluation/r1/UCLM-PROMES/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario 20C3M" ID="pnacc2012_dd_20c3m_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="ESCENA-22 UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UAHE-REMO_v1_day.ncml"            >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UAHE_REMO_v1"            path="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UAHE_REMO_v1"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UAHE/MPI-M-ECHAM5/sres20C3M/r2/UAHE-REMO/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UCLM-PROMES_v1_day.ncml"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UCLM_PROMES_v1"          path="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UCLM_PROMES_v1"          location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/CNRM-CERFACS-CNRM-CM3/sres20C3M/r1/UCLM-PROMES/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sres20c3m_UCLM_PROMES_v1" path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sres20c3m_UCLM_PROMES_v1" location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/MPI-M-ECHAM5/sres20C3M/r2/UCLM-PROMES/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-UKMO-HadCM3-Q16-PROMES_v1"       ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"       urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"       >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sres20c3m_UCLM_PROMES_v1"       path="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sres20c3m_UCLM_PROMES_v1"       location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/UKMO-HadCM3-Q16/sres20C3M/r1/UCLM-PROMES/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-UKMO-HadCM3-Q3-PROMES_v1"        ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"        urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"        >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sres20c3m_UCLM_PROMES_v1"        path="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sres20c3m_UCLM_PROMES_v1"        location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/UKMO-HadCM3-Q3/sres20C3M/r1/UCLM-PROMES/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sres20C3M_r2_UMUR-MM5_v1_day.ncml"             >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UMUR_MM5_v1"             path="wssmax_ESCENA-22_MPI-M-ECHAM5_sres20c3m_UMUR_MM5_v1"             location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/CNRM-CERFACS-CNRM-CM3/sres20C3M/r1/UMUR-MM5/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"    >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sres20c3m_UMUR_MM5_v1"    path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sres20c3m_UMUR_MM5_v1"    location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/MPI-M-ECHAM5/sres20C3M/r2/UMUR-MM5/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-UKMO-HadCM3-Q16-MM5_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sres20C3M_r1_UMUR-MM5_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sres20C3M_r1_UMUR-MM5_v1_day.ncml"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sres20c3m_UMUR_MM5_v1"          path="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sres20c3m_UMUR_MM5_v1"          location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/UKMO-HadCM3-Q16/sres20C3M/r1/UMUR-MM5/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-UKMO-HadCM3-Q3-MM5_v1"           ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"           urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"           >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sres20c3m_UMUR_MM5_v1"           path="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sres20c3m_UMUR_MM5_v1"           location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/UKMO-HadCM3-Q3/sres20C3M/r1/UMUR-MM5/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario A1B" ID="pnacc2012_dd_a1b_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="ESCENA-22 UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UAHE-REMO_v1_day.ncml"             >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UAHE_REMO_v1"            path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UAHE_REMO_v1"             location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UAHE/MPI-M-ECHAM5/sresA1B/r2/UAHE-REMO/v1/day/wssmax"            >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UCLM-PROMES_v1_day.ncml"           >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UCLM_PROMES_v1"          path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UCLM_PROMES_v1"           location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/CNRM-CERFACS-CNRM-CM3/sresA1B/r1/UCLM-PROMES/v1/day/wssmax" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UCLM-PROMES_v1_day.ncml"  >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresa1b_UCLM_PROMES_v1" path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresa1b_UCLM_PROMES_v1"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/MPI-M-ECHAM5/sresA1B/r2/UCLM-PROMES/v1/day/wssmax"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-UKMO-HadCM3-Q16-PROMES_v1"       ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sresA1B_r1_UCLM-PROMES_v1_day.ncml"       urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sresA1B_r1_UCLM-PROMES_v1_day.ncml"        >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sresa1b_UCLM_PROMES_v1"       path="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sresa1b_UCLM_PROMES_v1"        location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/UKMO-HadCM3-Q16/sresA1B/r1/UCLM-PROMES/v1/day/wssmax"       >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-UKMO-HadCM3-Q3-PROMES_v1"        ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sresA1B_r1_UCLM-PROMES_v1_day.ncml"        urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sresA1B_r1_UCLM-PROMES_v1_day.ncml"         >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sresa1b_UCLM_PROMES_v1"        path="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sresa1b_UCLM_PROMES_v1"         location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/UKMO-HadCM3-Q3/sresA1B/r1/UCLM-PROMES/v1/day/wssmax"        >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA1B_r2_UMUR-MM5_v1_day.ncml"              >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UMUR_MM5_v1"             path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa1b_UMUR_MM5_v1"              location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/CNRM-CERFACS-CNRM-CM3/sresA1B/r1/UMUR-MM5/v1/day/wssmax"    >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UMUR-MM5_v1_day.ncml"     >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresa1b_UMUR_MM5_v1"    path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresa1b_UMUR_MM5_v1"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/MPI-M-ECHAM5/sresA1B/r2/UMUR-MM5/v1/day/wssmax"             >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-UKMO-HadCM3-Q16-MM5_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sresA1B_r1_UMUR-MM5_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q16_sresA1B_r1_UMUR-MM5_v1_day.ncml"           >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sresa1b_UMUR_MM5_v1"          path="wssmax_ESCENA-22_UKMO-HadCM3-Q16_sresa1b_UMUR_MM5_v1"           location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/UKMO-HadCM3-Q16/sresA1B/r1/UMUR-MM5/v1/day/wssmax"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-UKMO-HadCM3-Q3-MM5_v1"           ID="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sresA1B_r1_UMUR-MM5_v1_day.ncml"           urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/UKMO-HadCM3-Q3_sresA1B_r1_UMUR-MM5_v1_day.ncml"            >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sresa1b_UMUR_MM5_v1"           path="wssmax_ESCENA-22_UKMO-HadCM3-Q3_sresa1b_UMUR_MM5_v1"            location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/UKMO-HadCM3-Q3/sresA1B/r1/UMUR-MM5/v1/day/wssmax"           >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario B1" ID="pnacc2012_dd_b1_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="ESCENA-22 UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UAHE-REMO_v1_day.ncml"            >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UAHE_REMO_v1"            path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UAHE_REMO_v1"             location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UAHE/MPI-M-ECHAM5/sresB1/r2/UAHE-REMO/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UCLM-PROMES_v1_day.ncml"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UCLM_PROMES_v1"          path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UCLM_PROMES_v1"           location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/MPI-M-ECHAM5/sresB1/r2/UCLM-PROMES/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UCLM-PROMES_v1_day.ncml" >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresb1_UCLM_PROMES_v1" path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresb1_UCLM_PROMES_v1"  location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/CNRM-CERFACS-CNRM-CM3/sresB1/r1/UCLM-PROMES/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresB1_r2_UMUR-MM5_v1_day.ncml"             >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UMUR_MM5_v1"             path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresb1_UMUR_MM5_v1"              location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/MPI-M-ECHAM5/sresB1/r2/UMUR-MM5/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UMUR-MM5_v1_day.ncml"    >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresb1_UMUR_MM5_v1"    path="wssmax_ESCENA-22_CNRM-CERFACS-CNRM-CM3_sresb1_UMUR_MM5_v1"     location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/CNRM-CERFACS-CNRM-CM3/sresB1/r1/UMUR-MM5/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+    <dataset name="Escenario A2" ID="pnacc2012_dd_a2_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="ESCENA-22 UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA2_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA2_r2_UCLM-PROMES_v1_day.ncml"          >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa2_UCLM_PROMES_v1"          path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa2_UCLM_PROMES_v1"           location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UCLM/MPI-M-ECHAM5/sresA2/r2/UCLM-PROMES/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+        <dataset name="ESCENA-22 UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA2_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/ESCENA-22/wssmax/MPI-M-ECHAM5_sresA2_r2_UMUR-MM5_v1_day.ncml"             >
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>access</serviceName>
+			</metadata>
+        </dataset>
+		<datasetScan name="Individual Files" ID="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa2_UMUR_MM5_v1"             path="wssmax_ESCENA-22_MPI-M-ECHAM5_sresa2_UMUR_MM5_v1"              location="//oceano/gmeteo/DATA/Escenarios-PNACC/DATASETS/Escenarios-PNACC-2012/output/ESCENA-22/UMUR/MPI-M-ECHAM5/sresA2/r2/UMUR-MM5/v1/day/wssmax">
+			<metadata inherited="true">
+				<dataType>GRID</dataType>
+				<dataFormat>NcML</dataFormat>
+				<serviceName>fileServer</serviceName>
+			</metadata>
+			<filter>
+				<include wildcard="*.nc"/>
+			</filter>
+		</datasetScan> 
+    </dataset>
+</catalog>

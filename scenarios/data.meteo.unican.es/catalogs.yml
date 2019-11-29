@@ -9,13 +9,13 @@
 
     - name: Synchronize TDS5 catalogs
       synchronize: >
-        src=TDS5/tomcat/content/thredds/catalogs
+        src=tds5/catalogs
         dest={{ tomcat_bases }}/{{ item.name }}/content/thredds
       with_items: "{{ tomcats }}"
 
     - name: Synchronize TDS5 datasets
       synchronize: >
-        src=TDS5/tomcat/content/thredds/public/
+        src=tds5/public/
         dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public/
       with_items: "{{ tomcats }}"
 

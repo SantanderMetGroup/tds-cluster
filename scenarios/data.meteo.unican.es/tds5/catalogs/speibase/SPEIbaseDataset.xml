@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="SPEIbase Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+  <service name="all" serviceType="Compound" base="">
+    <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+    <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+  </service>
+    <datasetRoot path="speibase" location="content/speibase" />
+		<metadata inherited="true">
+			<serviceName>all</serviceName>
+			<dataType>GRID</dataType>
+			<dataFormat>NetCDF</dataFormat>
+			<documentation type="Product Name">SPEIbase: a global 0.5º gridded SPEI data base (V2.5)</documentation>
+			<documentation type="Institution">Consejo Superior de Investigaciones Científicas (IPE–CSIC), Instituto Pirenaico de Ecología, Zaragoza, Spain</documentation>
+			<documentation type="Contact">Santiago Beguería (santiago.begueria@@csic.es) and Sergio Vicente-Serrano (svicen@@ipe.csic.es)</documentation>
+			<documentation type="Summary">Global dataset of the Standardized Precipitation-Evapotranspiration Index (SPEI) at the 34-months time scale. Using CRU TS 4.00 precipitation and potential evapotranspiration data. Dataset created in R using the SPEI package (https://cran.r-project.org/web/packages/SPEI/; https://github.com/sbegueria/SPEI). Data publicly available at http://sac.csic.es/spei.</documentation>
+			<documentation type="Terms of use"> Public dataset included in the PUBLIC_DATA group of the User Data Gateway (UDG). Register and accept the data policy to access to this dataset (http://www.meteo.unican.es/udg-wiki).</documentation>
+			<documentation type="Citation and acknowledgements">The publications or studies of any kind using this dataset should cite the references: Beguería S., Vicente-Serrano S., Reig F., Latorre B. (2014) Standardized precipitation evapotranspiration index (SPEI) revisited: Parameter fitting, evapotranspiration models, tools, datasets and drought monitoring. International Journal of Climatology 34, 3001-3023.; Vicente-Serrano S.M., Beguería S., López-Moreno J.I. (2010) A Multiscalar Drought Index Sensitive to Global Warming: The Standardized Precipitation Evapotranspiration Index. Journal of Climate 23, 1696–1718.; Beguería S., Vicente-Serrano S., Angulo-Martínez M. (2010) A multi-scalar global drought data set: the SPEIbase. Bulletin of the American Meteorological Society 91(10), 1351–1356.</documentation>
+			<geospatialCoverage>
+				<northsouth>
+					<start>-90.0</start>
+					<size>360.0</size>
+					<units>degrees_north</units>
+				</northsouth>
+				<eastwest>
+					<start>-179.5</start>
+					<size>720</size>
+					<units>degrees_east</units>
+				</eastwest>
+				<name>global</name>
+			</geospatialCoverage>
+		</metadata>
+		<dataset name="SPEIbase Datasets V2.5" ID="speibase/speibase_v.2.5.ncml" urlPath="speibase/speibase_v.2.5.ncml">
+			<metadata>
+				<timeCoverage>
+					<start>1991-01-01T00:00:00Z</start>
+					<end>2006-12-31T21:00:00Z</end>
+				</timeCoverage>
+			</metadata>
+		</dataset>
+    </dataset>
+</catalog>

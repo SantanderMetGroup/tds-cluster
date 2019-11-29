@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="System4 Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+        <service name="wcs" serviceType="WCS" base="/thredds/wcs/"/>
+        <service name="wms" serviceType="WMS" base="/thredds/wms/"/>
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/grid/"/>
+    </service>
+    <datasetRoot path="system4monthly" location="content/system4/monthly" />
+    <dataset name="ECMWF's System4 Monthly Datasets" ID="system4monthlydatasets" restrictAccess="system4monthly">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>GRIB-1</dataFormat>
+            <geospatialCoverage>
+                <northsouth>
+                    <start>-90.0</start>
+                    <size>180.0</size>
+                    <units>degrees_north</units>
+					<resolution>0.75</resolution>
+                </northsouth>
+                <eastwest>
+                    <start>0.0</start>
+                    <size>359.25</size>
+                    <units>degrees_east</units>
+					<resolution>0.75</resolution>
+                </eastwest>
+                <name>global</name>
+            </geospatialCoverage>
+            <timeCoverage>
+                <start>1981-01-01T00:00:00Z</start>
+                <end>2014-03-01T00:00:00Z</end>
+            </timeCoverage>
+            <property name="svn_id" value="$Id: System4MonthlyDatasets.xml 615 2014-12-15 10:29:08Z antonio $"/>
+        </metadata>
+        <dataset name="System4 (Operational) 51 members Seasonal range Monthly Mean Dataset" ID="system4monthly/system4_oper_msmm_51.ncml" urlPath="system4monthly/system4_oper_msmm_51.ncml">
+            <variables vocabulary="GRIB-1">
+                <variable name="tp"       vocabulary_name="VAR_98-0-172-228_L1"   units="m"                     vocabulary_id="VAR_98-0-172-228_L1"   >Total precipitation @ Ground or water surface</variable>
+                <variable name="mslp"     vocabulary_name="VAR_98-0-128-151_L1"   units="Pa"                    vocabulary_id="VAR_98-0-128-151_L1"   >Mean sea level pressure @ Ground or water surface</variable>
+                <variable name="t2m"      vocabulary_name="VAR_98-0-128-167_L1"   units="K"                     vocabulary_id="VAR_98-0-128-167_L1"   >2 metre temperature @ Ground or water surface</variable>
+            </variables>			
+            <dataSize units="Mbytes">65552</dataSize>
+            <date type="modified">2014-12-14T16:05:09Z</date>
+            <timeCoverage>
+                <start>1981-01-01T00:00:00Z</start>
+                <end>2014-06-01T00:00:00Z</end>
+            </timeCoverage>
+			<property name="MARS" value="class=od,expver=1,method=1,stream=msmm,origin=ecmf,type=fcmean"/>
+        </dataset>
+        <dataset name="System4 (prescribed SST) 51 members Seasonal range Monthly Mean Dataset" ID="system4monthly/system4_fxvt_msmm_51.ncml" urlPath="system4monthly/system4_fxvt_msmm_51.ncml">
+            <variables vocabulary="GRIB-1">
+                <variable name="tp"       vocabulary_name="VAR_98-0-172-228_L1"   units="m"                     vocabulary_id="VAR_98-0-172-228_L1"   >Total precipitation @ Ground or water surface</variable>
+                <variable name="mslp"     vocabulary_name="VAR_98-0-128-151_L1"   units="Pa"                    vocabulary_id="VAR_98-0-128-151_L1"   >Mean sea level pressure @ Ground or water surface</variable>
+                <variable name="t2m"      vocabulary_name="VAR_98-0-128-167_L1"   units="K"                     vocabulary_id="VAR_98-0-128-167_L1"   >2 metre temperature @ Ground or water surface</variable>
+            </variables>			
+            <dataSize units="Mbytes">37458</dataSize>
+            <date type="modified">2014-12-14T16:05:09Z</date>
+			<property name="MARS" value="class=rd,expver=fxtv,method=1,stream=msmm,origin=ecmf,type=fcmean"/>
+        </dataset>
+        <dataset name="System4 (stochastic physics) 51 members Seasonal range Monthly Mean Dataset" ID="system4monthly/system4_fpo3_msmm_51.ncml" urlPath="system4monthly/system4_fpo3_msmm_51.ncml">
+            <variables vocabulary="GRIB-1">
+                <variable name="tp"       vocabulary_name="VAR_98-0-172-228_L1"   units="m"                     vocabulary_id="VAR_98-0-172-228_L1"   >Total precipitation @ Ground or water surface</variable>
+                <variable name="mslp"     vocabulary_name="VAR_98-0-128-151_L1"   units="Pa"                    vocabulary_id="VAR_98-0-128-151_L1"   >Mean sea level pressure @ Ground or water surface</variable>
+                <variable name="t2m"      vocabulary_name="VAR_98-0-128-167_L1"   units="K"                     vocabulary_id="VAR_98-0-128-167_L1"   >2 metre temperature @ Ground or water surface</variable>
+            </variables>			
+            <dataSize units="Mbytes">44694</dataSize>
+            <date type="modified">2014-12-14T16:05:09Z</date>
+            <timeCoverage>
+                <start>1981-01-01T00:00:00Z</start>
+                <end>2010-06-01T00:00:00Z</end>
+            </timeCoverage>
+			<property name="MARS" value="class=rd,expver=fpo3,method=1,stream=msmm,origin=ecmf,type=fcmean"/>
+        </dataset>
+    </dataset>
+</catalog>

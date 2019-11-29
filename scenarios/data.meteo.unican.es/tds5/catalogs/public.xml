@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="PUBLIC Datasets catalog"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service/>
+    <dataset name="PUBLIC Data" ID="public">
+        <catalogRef xlink:title="NCEP Reanalysis 1 Datasets"          xlink:href="ncepReanalysis1/ncepReanalysis1Datasets.xml" name="">
+            <dataSize units="Mbytes">196267</dataSize>
+            <date type="modified">2014-06-18T14:08:00Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="ECMWF's Interim Reanalysis ESD" xlink:href="interim/interim_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="JMA_JRA55-Reanalysis-ESD" xlink:href="jra55/jra55_DM_predictors.xml" name="">
+            <dataSize units="Mbytes">87142</dataSize>
+            <date type="modified">2014-12-19T03:46:09Z</date>
+        </catalogRef>
+		<catalogRef xlink:title="CMIP5 Dataset" xlink:href="cmip5/cmip5Datasets.xml" name="">
+				<dataSize units="bytes">167388249600</dataSize>
+				<date type="modified">2014-06-13T09:43:00Z</date>
+		</catalogRef>
+		<catalogRef xlink:title="CORDEX Dataset" xlink:href="cordex/cordexDatasets.xml" name="">
+				<dataSize units="bytes">167388249600</dataSize>
+				<date type="modified">2014-06-13T09:43:00Z</date>
+		</catalogRef>
+        <catalogRef xlink:title="NCEP's CFSv2 Datasets" xlink:href="cfs/cfsDatasets.xml" name="">
+            <dataSize units="Mbytes">16492729</dataSize>
+            <date type="modified">2014-05-02T12:56:00Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="Spain02 Gridded Datasets" xlink:href="Spain02/spain02Datasets.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+		<catalogRef xlink:title="EOBS Gridded Datasets" xlink:href="eobs/eobsDatasets.xml" name="">
+            <dataSize units="Mbytes">87596</dataSize>
+            <date type="modified">2013-06-18T15:30:38Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="WFDEI Daily Dataset" xlink:href="wfdei/wfdei_DM.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="PIK Obs-EWEMBI Dataset" xlink:href="ewembi/ewembiDatasets.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+<!--
+        <catalogRef xlink:title="MSWEP Datasets" xlink:href="mswep/mswepDatasets.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+			<date type="modified">2016-08-23T09:43:00Z</date>
+        </catalogRef>
+        <catalogRef xlink:title="CPC Unified Gauge-Based Analysis of Global Daily Precipitation" xlink:href="gauge_glb/gauge_glbDatasets.xml" name="">
+            <dataSize units="bytes">167388249600</dataSize>
+            <date type="modified">2014-06-13T09:43:00Z</date>
+        </catalogRef>
+-->
+    </dataset>
+	<property name="svn_id" value="$Id: public.xml 1471 2019-01-22 15:51:15Z sixto $"/>
+</catalog>

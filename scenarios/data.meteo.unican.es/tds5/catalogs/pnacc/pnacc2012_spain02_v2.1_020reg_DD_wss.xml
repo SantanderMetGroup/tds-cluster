@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+		<service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+		<service name="fileServer" serviceType="HTTPServer" base="/thredds/fileServer/" />		
+    </service>
+    <datasetRoot path="pnacc" location="content/pnacc" />
+    <dataset name="Experimento de Evaluacion" ID="pnacc2012_dd_Evaluation_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular UAHE-ECMWF-ERAINT-REMO_v1"           ID="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UAHE-REMO_v1_day.ncml"           urlPath="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UAHE-REMO_v1_day.ncml"           ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-ECMWF-ERAINT-WRF311-PBL-MYJ_v1" ID="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCAN-WRF311-PBL-MYJ_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCAN-WRF311-PBL-MYJ_v1_day.ncml" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-ECMWF-ERAINT-WRF311-PBL-YSU_v1" ID="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCAN-WRF311-PBL-YSU_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCAN-WRF311-PBL-YSU_v1_day.ncml" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-ECMWF-ERAINT-PROMES_v1"         ID="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCLM-PROMES_v1_day.ncml"         urlPath="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UCLM-PROMES_v1_day.ncml"         ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-ECMWF-ERAINT-MM5_v1"            ID="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UMUR-MM5_v1_day.ncml"            urlPath="pnacc/pnacc2012/Spain02-020reg/wss/ECMWF-ERAINT_evaluation_r1_UMUR-MM5_v1_day.ncml"            ></dataset>
+    </dataset>
+    <dataset name="Escenario 20C3M" ID="pnacc2012_dd_20c3m_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UAHE-REMO_v1_day.ncml"            ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MPI-M-ECHAM5-WRF311-PBL-MYJ_v1"  ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCAN-WRF311-PBL-MYJ_v1_day.ncml"  urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCAN-WRF311-PBL-MYJ_v1_day.ncml"  ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MPI-M-ECHAM5-WRF311-PBL-YSU_v1"  ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCAN-WRF311-PBL-YSU_v1_day.ncml"  urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCAN-WRF311-PBL-YSU_v1_day.ncml"  ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UCLM-PROMES_v1_day.ncml"          ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-UKMO-HadCM3-Q16-PROMES_v1"       ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"       urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"       ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-UKMO-HadCM3-Q3-PROMES_v1"        ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"        urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sres20C3M_r1_UCLM-PROMES_v1_day.ncml"        ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sres20C3M_r2_UMUR-MM5_v1_day.ncml"             ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"    ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-UKMO-HadCM3-Q16-MM5_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sres20C3M_r1_UMUR-MM5_v1_day.ncml"          urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sres20C3M_r1_UMUR-MM5_v1_day.ncml"          ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-UKMO-HadCM3-Q3-MM5_v1"           ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"           urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sres20C3M_r1_UMUR-MM5_v1_day.ncml"           ></dataset>
+    </dataset>
+    <dataset name="Escenario A1B" ID="pnacc2012_dd_a1b_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UAHE-REMO_v1_day.ncml"            ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MPI-M-ECHAM5-WRF311-PBL-MYJ_v1"  ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCAN-WRF311-PBL-MYJ_v1_day.ncml"  urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCAN-WRF311-PBL-MYJ_v1_day.ncml"  ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCAN-MPI-M-ECHAM5-WRF311-PBL-YSU_v1"  ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCAN-WRF311-PBL-YSU_v1_day.ncml"  urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCAN-WRF311-PBL-YSU_v1_day.ncml"  ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UCLM-PROMES_v1_day.ncml"          ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UCLM-PROMES_v1_day.ncml" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-UKMO-HadCM3-Q16-PROMES_v1"       ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sresA1B_r1_UCLM-PROMES_v1_day.ncml"       urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sresA1B_r1_UCLM-PROMES_v1_day.ncml"       ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-UKMO-HadCM3-Q3-PROMES_v1"        ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sresA1B_r1_UCLM-PROMES_v1_day.ncml"        urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sresA1B_r1_UCLM-PROMES_v1_day.ncml"        ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA1B_r2_UMUR-MM5_v1_day.ncml"             ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresA1B_r1_UMUR-MM5_v1_day.ncml"    ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-UKMO-HadCM3-Q16-MM5_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sresA1B_r1_UMUR-MM5_v1_day.ncml"          urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q16_sresA1B_r1_UMUR-MM5_v1_day.ncml"          ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-UKMO-HadCM3-Q3-MM5_v1"           ID="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sresA1B_r1_UMUR-MM5_v1_day.ncml"           urlPath="pnacc/pnacc2012/Spain02-020reg/wss/UKMO-HadCM3-Q3_sresA1B_r1_UMUR-MM5_v1_day.ncml"           ></dataset>
+    </dataset>
+    <dataset name="Escenario B1" ID="pnacc2012_dd_b1_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular UAHE-MPI-M-ECHAM5-REMO_v1"            ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UAHE-REMO_v1_day.ncml"            urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UAHE-REMO_v1_day.ncml"            ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UCLM-PROMES_v1_day.ncml"          urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UCLM-PROMES_v1_day.ncml"          ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-CNRM-CERFACS-CNRM-CM3-PROMES_v1" ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UCLM-PROMES_v1_day.ncml" ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/Spain02-020reg/wss/CNRM-CERFACS-CNRM-CM3_sresB1_r1_UMUR-MM5_v1_day.ncml"    ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-CNRM-CERFACS-CNRM-CM3-MM5_v1"    ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UMUR-MM5_v1_day.ncml"             urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresB1_r2_UMUR-MM5_v1_day.ncml"             ></dataset>
+    </dataset>
+    <dataset name="Escenario A2" ID="pnacc2012_dd_a2_wss" restrictAccess="pnacc">
+		<metadata inherited="true">
+			<dataType>GRID</dataType>
+			<dataFormat>NcML</dataFormat>
+			<serviceName>all</serviceName>
+			<documentation type="Product Name">Escenarios PNACC-2012 Regionalizacion Dinamica (Velocidad del Viento)</documentation>
+			<documentation type="Institution">Santander Meteorology Group (CSIC-UC)</documentation>
+		</metadata>
+        <dataset name="Spain02 v2.1 020 Regular UCLM-MPI-M-ECHAM5-PROMES_v1"          ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA2_r2_UCLM-PROMES_v1_day.ncml" urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA2_r2_UCLM-PROMES_v1_day.ncml"  ></dataset>
+        <dataset name="Spain02 v2.1 020 Regular UMUR-MPI-M-ECHAM5-MM5_v1"             ID="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA2_r2_UMUR-MM5_v1_day.ncml"    urlPath="pnacc/pnacc2012/Spain02-020reg/wss/MPI-M-ECHAM5_sresA2_r2_UMUR-MM5_v1_day.ncml"     ></dataset>
+    </dataset>
+</catalog>

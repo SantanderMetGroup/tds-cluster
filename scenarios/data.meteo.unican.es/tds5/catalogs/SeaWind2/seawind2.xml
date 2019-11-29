@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog name="System4 Datasets"
+        xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <service name="all" serviceType="Compound" base="">
+        <service name="odap" serviceType="OPENDAP" base="/thredds/dodsC/"/>
+<!--
+        <service name="wcs" serviceType="WCS" base="/thredds/wcs/"/>
+        <service name="wms" serviceType="WMS" base="/thredds/wms/"/>
+ -->    
+        <service name="ncss" serviceType="NetcdfSubset" base="/thredds/ncss/"/>
+    </service>
+    <datasetRoot path="seawind2" location="content/SeaWind2" />
+    <dataset name="SeaWind2" ID="seawind2" restrictAccess="seawind2">
+        <metadata inherited="true">
+            <serviceName>all</serviceName>
+            <dataType>GRID</dataType>
+            <dataFormat>NcML</dataFormat>
+            <geospatialCoverage>
+                <northsouth>
+                    <start>18.4540</start>
+                    <size>68.4485</size>
+					<resolution>0.022</resolution>			
+                    <units>degrees_north</units>
+                </northsouth>
+                <eastwest>
+                    <start>-37.8412</start>
+                    <size>60.1608</size>
+                    <resolution>0.24</resolution>
+					<units>degrees_east</units>
+                </eastwest>
+                <name>european</name>
+            </geospatialCoverage>
+            <property name="svn_id" value="$Id: seawind2.xml 836 2015-11-11 20:04:58Z sixto $"/>
+        </metadata>
+        <dataset name="SeaWind2" ID="SeaWind2/seawind2.ncml" urlPath="SeaWind2/seawind2.ncml" >
+			<variables vocabulary="CF-1">
+				<variable name="zg"			units="m"			>Geopotential height</variable>
+				<variable name="hfss"		units="W m-2"		>Upward sensible heat flux at surface</variable>
+				<variable name="ustar"		units="m s-1"		>Frictional velocity in similarity theory</variable>
+				<variable name="evspsbl"	units="kg m-2 s-1"	>Surface evaporation</variable>
+				<variable name="va"			units="m s-1"		>Northward wind</variable>
+				<variable name="ads"		units="kg m -3"		>Air density at 2M</variable>
+				<variable name="hfls"		units="W m-2"		>Upward latent heat flux at surface</variable>
+				<variable name="ps"			units="Pa"			>surface pressure</variable>
+				<variable name="rls"		units="W m-2"		>Net LW surface radiation</variable>
+				<variable name="pr"			units="Kg m-2"		>Precipitation</variable>
+				<variable name="clt"		units="1"			>Total cloud area(fraction)</variable>
+				<variable name="regime"		units="1"			>Stability regime (1=Night/Stable, 2=Mech. Turb., 3=Forced Conv, 4=Free Conv)</variable>
+				<variable name="psl"		units="Pa"			>Mean sea level pressure</variable>
+				<variable name="sst"		units="K"			>sea surface temperature</variable>
+				<variable name="rmol"		units="m"			>Inverse of Monin Obukhov Length</variable>
+				<variable name="rho"		units="kg m-3"		>Density of the air</variable>
+				<variable name="ua"			units="m s-1"		>Eastward wind</variable>
+				<variable name="rss"		units="W m-2"		>Net SW surface radiation</variable>
+				<variable name="hursmean"	units="1"			>Mean surface relative humidity</variable>
+				<variable name="tasmean"	units="K"			>Mean surface air temperature</variable>
+				<variable name="uasmean"	units="m s-1"		>Mean eastward surface wind</variable>
+				<variable name="vasmean"	units="m s-1"		>Mean northward surface wind</variable>
+            </variables>			
+            <timeCoverage>
+                <start>1989-01-01T19:00:00Z</start>
+                <end>2010-12-31T23:00:00Z</end>
+				<resolution>1 hours</resolution>
+            </timeCoverage>
+            <dataSize units="Mbytes">61615</dataSize>
+            <date type="modified">2015-01-12T20:57:09Z</date>
+        </dataset>
+    </dataset>
+</catalog>
