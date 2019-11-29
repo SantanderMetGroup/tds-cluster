@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="pr, tas, tasmax, tasmin"/>
+  <variable name="lon">
+    <attribute name="_CoordinateAxisType" value="Lon"/>
+  </variable>
+  <variable name="lat">
+    <attribute name="_CoordinateAxisType" value="Lat"/>
+  </variable>
+	<variable name="rlat">
+		<attribute name="axis" value="Y"/>
+		<attribute name="standard_name" value="grid_latitude"/>
+		<attribute name="long_name" value="latitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude"/>
+		<attribute name="grid_north_pole_latitude" type="float" value="79.940000"/>
+		<attribute name="grid_north_pole_longitude" type="float" value="-123.300000"/>
+  		<values> -21.560000 -21.120000 -20.680000 -20.240000 -19.800000 -19.360000 -18.920000 -18.480000 -18.040000 -17.600000 -17.160000 -16.720000 -16.280000 -15.840000 -15.400000 -14.960000 -14.520000 -14.080000 -13.640000 -13.200000 -12.760000 -12.320000 -11.880000 -11.440000 -11.000000 -10.560000 -10.120000 -9.680000 -9.240000 -8.800000 -8.360000 -7.920000 -7.480000 -7.040000 -6.600000 -6.160000 -5.720000 -5.280000 -4.840000 -4.400000 -3.960000 -3.520000 -3.080000 -2.640000 -2.200000 -1.760000 -1.320000 -0.880000 -0.440000 -0.000000 0.440000 0.880000 1.320000 1.760000 2.200000 2.640000 3.080000 3.520000 3.960000 4.400000 4.840000 5.280000 5.720000 6.160000 6.600000 7.040000 7.480000 7.920000 8.360000 8.800000 9.240000 9.680000 10.120000 10.560000 11.000000 11.440000 11.880000 12.320000 12.760000 13.200000 13.640000 14.080000 14.520000 14.960000 15.399999 15.839999 16.279999 16.719999 17.159999 17.599999 18.039999 18.479999 18.919999 19.359999 19.799999 20.239999 20.679999 21.119999 21.559999 21.999999 22.439999 22.879999 23.319999 23.759999 24.199999 24.639999 25.079999 25.519999 25.959999 26.399999 26.839999 27.279999 27.719999 28.159999 28.599999 29.039999 29.479999 29.919999 30.359999 30.799999 31.239999 31.679999 32.119999 32.559999 32.999999 33.439999 33.879999 34.319999 34.759999 35.199999		</values>
+	</variable>
+	<variable name="rlon">
+		<attribute name="axis" value="X"/>
+		<attribute name="standard_name" value="grid_longitude"/>
+		<attribute name="long_name" value="longitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude"/>
+		<attribute name="grid_north_pole_latitude" type="float" value="79.940000"/>
+		<attribute name="grid_north_pole_longitude" type="float" value="-123.300000"/>
+  		<values> -32.119998 -31.679998 -31.239998 -30.799998 -30.359998 -29.919998 -29.479998 -29.039998 -28.599998 -28.159998 -27.719998 -27.279998 -26.839998 -26.399998 -25.959998 -25.519998 -25.079998 -24.639998 -24.199998 -23.759998 -23.319998 -22.879998 -22.439998 -21.999998 -21.559998 -21.119998 -20.679998 -20.239998 -19.799998 -19.359998 -18.919998 -18.479998 -18.039998 -17.599998 -17.159998 -16.719998 -16.279998 -15.839998 -15.399998 -14.959998 -14.519998 -14.079998 -13.639998 -13.199998 -12.759998 -12.319998 -11.879998 -11.439998 -10.999998 -10.559998 -10.119998 -9.679998 -9.239998 -8.799998 -8.359998 -7.919998 -7.479998 -7.039998 -6.599998 -6.159998 -5.719998 -5.279998 -4.839998 -4.399998 -3.959998 -3.519998 -3.079998 -2.639998 -2.199998 -1.759998 -1.319998 -0.879998 -0.439998 0.000002 0.440002 0.880002 1.320002 1.760002 2.200002 2.640002 3.080002 3.520002 3.960002 4.400002 4.840002 5.280002 5.720002 6.160002 6.600002 7.040002 7.480002 7.920002 8.360002 8.800002 9.240002 9.680002 10.120002 10.560002 11.000002 11.440002 11.880002 12.320002 12.760002 13.200002 13.640002 14.080002 14.520002 14.960002 15.400002 15.840002 16.280002 16.720002 17.160002 17.600002 18.040002 18.480002 18.920002 19.360002 19.800002 20.240002 20.680002 21.120002 21.560002 22.000002 22.440002 22.880002 23.320002 23.760002 24.200002 24.640002 25.080002 25.520002 25.960002 26.400002 26.840002 27.280002 27.720002 28.160002 28.600002 29.040002 29.480002 29.920002 30.360002 30.800002 31.240002 31.680002 32.120002 32.560002 33.000002 33.440002 33.880002 34.320002 34.760002 35.200002 35.640002 36.080002 36.520002 36.960002 37.400002 37.840002 38.280002 38.720002 39.160002 39.600002 40.040002 40.480002 40.920002 41.360002 41.800002 42.240002 42.680002 43.120002 43.560002 44.000002 44.440002 44.880002 45.320002 45.760002 46.200002 46.640002 47.080002 47.520002 47.960002 48.400002 48.840002 49.280002 49.720002 50.160002 50.600002 51.040002 51.480002 51.920002 52.360002		</values>
+	</variable>
+	<dimension name="time" length="263" isUnlimited="false"/>
+	<variable name="time" shape="time" type="int">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01"/>
+		<attribute name="calendar" value= "proleptic_gregorian"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tasmax">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tasmin">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/pr/v20150701/pr_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199001-199012.nc" ncoords="12"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/pr/v20150701/pr_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199101-200012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/pr/v20150701/pr_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_200101-201012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/pr/v20150701/pr_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_201101-201111.nc" ncoords="11"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tas/v20150701/tas_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199001-199012.nc" ncoords="12"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tas/v20150701/tas_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199101-200012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tas/v20150701/tas_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_200101-201012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tas/v20150701/tas_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_201101-201111.nc" ncoords="11"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmax/v20150701/tasmax_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199001-199012.nc" ncoords="12"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmax/v20150701/tasmax_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199101-200012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmax/v20150701/tasmax_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_200101-201012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmax/v20150701/tasmax_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_201101-201111.nc" ncoords="11"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmin/v20150701/tasmin_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199001-199012.nc" ncoords="12"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmin/v20150701/tasmin_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_199101-200012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmin/v20150701/tasmin_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_200101-201012.nc" ncoords="120"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/mon/tasmin/v20150701/tasmin_WAS-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_mon_201101-201111.nc" ncoords="11"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>

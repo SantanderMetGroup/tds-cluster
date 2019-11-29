@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="pr, tas, tasmax, tasmin"/>
+  <variable name="lon">
+    <attribute name="_CoordinateAxisType" value="Lon"/>
+  </variable>
+  <variable name="lat">
+    <attribute name="_CoordinateAxisType" value="Lat"/>
+  </variable>
+	<dimension name="time" length="660" isUnlimited="false"/>
+	<variable name="time" shape="time" type="int">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01 00:00:00"/>
+		<attribute name="calendar" value= "365_day"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195101-195512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195601-196012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196101-196512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196601-197012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197101-197512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197601-198012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198101-198512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198601-199012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199101-199512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199601-200012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/pr/v20170311/pr_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_200101-200512.nc" ncoords="60"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195101-195512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195601-196012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196101-196512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196601-197012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197101-197512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197601-198012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198101-198512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198601-199012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199101-199512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199601-200012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tas/v20170311/tas_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_200101-200512.nc" ncoords="60"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195101-195512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195601-196012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196101-196512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196601-197012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197101-197512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197601-198012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198101-198512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198601-199012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199101-199512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199601-200012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmax/v20170311/tasmax_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_200101-200512.nc" ncoords="60"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195101-195512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_195601-196012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196101-196512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_196601-197012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197101-197512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_197601-198012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198101-198512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_198601-199012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199101-199512.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_199601-200012.nc" ncoords="60"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/NOAA-GFDL-GFDL-ESM2M/historical/r1i1p1/RegCM4-4/v5/mon/tasmin/v20170311/tasmin_WAS-44_NOAA-GFDL-GFDL-ESM2M_historical_r1i1p1_IITM-RegCM4-4_v5_mon_200101-200512.nc" ncoords="60"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>

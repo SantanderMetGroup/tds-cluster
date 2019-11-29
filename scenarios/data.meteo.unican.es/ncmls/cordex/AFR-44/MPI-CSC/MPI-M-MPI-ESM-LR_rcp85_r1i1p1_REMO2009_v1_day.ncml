@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="huss, pr, ps, rlds, rsds, sfcWind, sfcWindmax, tas, tasmax, tasmin"/>
+	<variable name="lon">
+		<attribute name="_CoordinateAxisType" value="Lon"/>
+	</variable>
+	<variable name="lat">
+		<attribute name="_CoordinateAxisType" value="Lat"/>
+	</variable>
+	<variable name="rotated_latitude_longitude" shape="" type="int">
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+		<attribute name="grid_north_pole_latitude" type="double" value="90.0" />
+		<attribute name="grid_north_pole_longitude" type="double" value="0.0" />
+    	<attribute name="north_pole_grid_longitude" type="double" value="0.0" />
+	</variable>
+	<variable name="rlat">
+		<attribute name="axis" value="Y"/>
+		<attribute name="_CoordinateAxisType" value="GeoY"/>
+		<attribute name="standard_name" value="grid_latitude"/>
+		<attribute name="long_name" value="latitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+	</variable>
+	<variable name="rlon">
+		<attribute name="axis" value="X"/>
+		<attribute name="_CoordinateAxisType" value="GeoX"/>
+		<attribute name="standard_name" value="grid_longitude"/>
+		<attribute name="long_name" value="longitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+	</variable>
+	<dimension name="time" length="34698" isUnlimited="false"/>
+	<variable name="time" shape="time" type="double">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01T00:00:00Z"/>
+		<attribute name="calendar" value= "proleptic_gregorian"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<variable name="huss">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="ps">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="rlds">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="rsds">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="sfcWind">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="sfcWindmax">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tasmax">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tasmin">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/huss/huss_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/pr/pr_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/ps/ps_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rlds/rlds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/rsds/rsds_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWind/sfcWind_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/sfcWindmax/sfcWindmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tas/tas_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmax/tasmax_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20110101-20151231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20160101-20201231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20210101-20251231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20260101-20301231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20310101-20351231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20360101-20401231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20410101-20451231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20460101-20501231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20510101-20551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20560101-20601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20610101-20651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20660101-20701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20710101-20751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20760101-20801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20810101-20851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20860101-20901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20910101-20951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/AFR-44/MPI-CSC/MPI-M-MPI-ESM-LR/rcp85/r1i1p1/REMO2009/v1/day/tasmin/tasmin_AFR-44_MPI-M-MPI-ESM-LR_rcp85_r1i1p1_MPI-CSC-REMO2009_v1_day_20960101-21001231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="pr, tas"/>
+	<dimension name="rlon" orgName="x"/>
+	<dimension name="rlat" orgName="y"/>
+	<variable name="rlon" orgName="x"/>
+	<variable name="rlat" orgName="y"/>
+	<variable name="lon">
+		<attribute name="long_name" value="Longitude on Cross Points" />
+		<attribute name="standard_name" value="longitude" />
+		<attribute name="units" value="degrees_east" />
+		<attribute name="_CoordinateAxisType" value="Lon"/>
+	</variable>
+	<variable name="lat">
+		<attribute name="long_name" value="Latitude on Cross Points" />
+		<attribute name="standard_name" value="latitude" />
+		<attribute name="units" value="degrees_north" />
+		<attribute name="_CoordinateAxisType" value="Lat"/>
+	</variable>
+<!--	<variable name="crs" shape="" type="char">
+		<attribute name="proj4_params" value="+proj=lcc +lat_1=30.00 +lat_2=65.00 +lat_0=48.00 +lon_0=9.75 +x_0=-25000. +y_0=-25000. +ellps=sphere +a=6371229. +b=6371229. +units=m +no_defs" />
+		<attribute name="grid_mapping_name" value="lambert_conformal_conic" />
+		<attribute name="standard_parallel" type="double" value="30.0 65.0" />
+		<attribute name="longitude_of_central_meridian" type="double" value="9.75" />
+		<attribute name="latitude_of_projection_origin" type="double" value="48.0" />
+		<attribute name="semi_major_axis" type="double" value="6371229.0" />
+		<attribute name="inverse_flattening" type="double" value="0.0" />
+		<attribute name="false_easting" type="double" value="-25000.0" />
+		<attribute name="_CoordinateTransformType" value="Projection" />
+		<attribute name="_CoordinateAxisTypes" value="GeoX GeoY" />
+	</variable>
+	<variable name="y">
+		<attribute name="axis" value="Y"/>
+		<attribute name="standard_name" value="projection_y_coordinate"/>
+		<attribute name="long_name" value="y coordinate of projection"/>
+		<attribute name="units" value="m"/>
+		<attribute name="_CoordinateAxisTypes" value="GeoY"/>
+		<attribute name="grid_mapping_name" value="lambert_conformal_conic"/>
+	</variable>
+	<variable name="x">
+		<attribute name="axis" value="X"/>
+		<attribute name="standard_name" value="projection_x_coordinate"/>
+		<attribute name="long_name" value="x coordinate of projection"/>
+		<attribute name="units" value="m"/>
+		<attribute name="_CoordinateAxisTypes" value="GeoX"/>
+		<attribute name="grid_mapping_name" value="lambert_conformal_conic"/>
+	</variable>
+-->
+	<dimension name="time" length="33840" isUnlimited="false"/>
+	<variable name="time" shape="time" type="double">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01 00:00:00"/>
+		<attribute name="calendar" value= "360_day"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time y x"/>
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time y x"/>
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2005120112-2005123012.nc" ncoords="30"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2006010112-2010123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2011010112-2015123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2016010112-2020123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2021010112-2025123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2026010112-2030123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2031010112-2035123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2036010112-2040123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2041010112-2045123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2046010112-2050123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2051010112-2055123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2056010112-2060123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2061010112-2065123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2066010112-2070123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2071010112-2075123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2076010112-2080123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2081010112-2085123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2086010112-2090123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2091010112-2095123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/pr/pr_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2096010112-2099113012.nc" ncoords="1410"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2005120112-2005123012.nc" ncoords="30"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2006010112-2010123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2011010112-2015123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2016010112-2020123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2021010112-2025123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2026010112-2030123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2031010112-2035123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2036010112-2040123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2041010112-2045123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2046010112-2050123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2051010112-2055123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2056010112-2060123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2061010112-2065123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2066010112-2070123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2071010112-2075123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2076010112-2080123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2081010112-2085123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2086010112-2090123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2091010112-2095123012.nc" ncoords="1800"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/EUR-44/ICTP/MOHC-HadGEM2-ES/rcp85/r1i1p1/RegCM4-3/v1/day/tas/tas_EUR-44_MOHC-HadGEM2-ES_rcp85_r1i1p1_ICTP-RegCM4-3_v1_day_2096010112-2099113012.nc" ncoords="1410"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>

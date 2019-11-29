@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="pr, tas, tasmax, tasmin"/>
+	<variable name="lon">
+		<attribute name="_CoordinateAxisType" value="Lon"/>
+	</variable>
+	<variable name="lat">
+		<attribute name="_CoordinateAxisType" value="Lat"/>
+	</variable>
+	<variable name="rotated_latitude_longitude" shape="" type="int">
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude" />
+		<attribute name="grid_north_pole_latitude" type="double" value="6.079999923706055" />
+		<attribute name="grid_north_pole_longitude" type="double" value="193.08" />
+		<attribute name="north_pole_grid_longitude" type="double" value="0.0" />
+	</variable>
+	<variable name="rlat">
+		<attribute name="axis" value="Y"/>
+		<attribute name="standard_name" value="grid_latitude"/>
+		<attribute name="long_name" value="latitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+	</variable>
+	<variable name="rlon">
+		<attribute name="axis" value="X"/>
+		<attribute name="standard_name" value="grid_longitude"/>
+		<attribute name="long_name" value="longitude in rotated grid"/>
+		<attribute name="units" value="degrees"/>
+	</variable>
+	<dimension name="time" length="8004" isUnlimited="false"/>
+	<variable name="time" shape="time" type="double">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01"/>
+		<attribute name="calendar" value= "proleptic_gregorian"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tasmax">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping" value="rotated_latitude_longitude" />
+	</variable>
+	<variable name="tasmin">
+		<attribute name="coordinates" value="time rlat rlon"/>
+		<attribute name="grid_mapping" value="rotated_latitude_longitude" />
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19900101-19901231.nc" ncoords="365"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20010101-20051231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/pr/pr_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20110101-20111130.nc" ncoords="334"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19900101-19901231.nc" ncoords="365"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20010101-20051231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tas/tas_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20110101-20111130.nc" ncoords="334"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19900101-19901231.nc" ncoords="365"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20010101-20051231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmax/tasmax_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20110101-20111130.nc" ncoords="334"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19900101-19901231.nc" ncoords="365"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20010101-20051231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20060101-20101231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/DATASETS/CORDEX/output/ANT-44/MOHC/ECMWF-ERAINT/evaluation/r1i1p1/HadRM3P/v1/day/tasmin/tasmin_ANT-44_ECMWF-ERAINT_evaluation_r1i1p1_MOHC-HadRM3P_v1_day_20110101-20111130.nc" ncoords="334"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>
