@@ -40,9 +40,9 @@
     - name: Refresh catalogs
       command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
       vars:
-        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Catalogs/reinit
+        url: https://{{ inventory_hostname }}:9443/tds5/admin/debug?Catalogs/reinit
 
     - name: Clear caches
       command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
       vars:
-        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Caches/clearCaches
+        url: https://{{ inventory_hostname }}:9443/tds5/admin/debug?Caches/clearCaches
