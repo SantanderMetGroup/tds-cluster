@@ -10,7 +10,7 @@ ProxyTimeout 600
 
 ProxyPass /status-proxy !
 ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
-Redirect /tds5 /thredds
+Redirect permanent /tds5 /thredds
 
 {% for c in clusters -%}
 <Proxy "balancer://{{ c.name }}">
