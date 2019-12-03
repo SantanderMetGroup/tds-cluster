@@ -1,10 +1,12 @@
 jdk_home: "{{ ansible_env.HOME }}/services/tds-cluster/jdk"
+
 tomcat_home: "{{ ansible_env.HOME }}/services/tds-cluster/tomcat"
 tomcat_bases: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats"
-
 tomcats:
   - name: tomcat1
     http: 9080
     ssl: 9443
     ajp: 9009
     shutdown: 9005
+
+tds_context: thredds

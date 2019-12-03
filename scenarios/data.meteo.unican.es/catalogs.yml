@@ -37,12 +37,12 @@
       synchronize: src=ncmls/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
       with_items: "{{ tomcats }}"
 
-    - name: Refresh catalogs
-      command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
-      vars:
-        url: https://{{ inventory_hostname }}:9443/tds5/admin/debug?Catalogs/reinit
-
     - name: Clear caches
-      command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
-      vars:
-        url: https://{{ inventory_hostname }}:9443/tds5/admin/debug?Caches/clearCaches
+      uri:
+        url: "{{ item }}"
+        validate_certs: false
+        user: "{{ tds.user }}"
+        password: "{{ tds.password }}"
+      with_items:
+        - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Catalogs/reinit
+        - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Caches/clearCaches

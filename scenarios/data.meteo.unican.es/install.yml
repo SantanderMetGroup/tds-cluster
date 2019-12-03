@@ -9,7 +9,6 @@
     melody_jar: ../../software/javamelody-core-1.73.1.jar
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
-    tds_context: thredds
   vars_files:
     - secrets.yml
   tasks:
