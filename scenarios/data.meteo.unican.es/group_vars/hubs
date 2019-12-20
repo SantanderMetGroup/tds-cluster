@@ -1,0 +1,4 @@
+hub_home: "{{ ansible_env.HOME }}/jupyterhub"
+hub_prefix: "{{ hub_home }}/miniconda"
+hub_packages: "notebook"
+hub_pid: "{{ hub_home }}/jupyterhub.pid"

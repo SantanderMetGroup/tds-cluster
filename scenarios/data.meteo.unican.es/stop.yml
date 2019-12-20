@@ -30,3 +30,8 @@
         DERBY_HOME: "{{ derby_home }}"
         JAVA_HOME: "{{ jdk_home }}"
       ignore_errors: True
+
+- name: Stop hubs
+  hosts: hubs
+  tasks:
+    - shell: kill $(cat {{ hub_pid }})

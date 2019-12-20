@@ -157,3 +157,22 @@
 
     - name: Template derby.properties
       template: src=templates/derby.properties.j2 dest={{ derby_home }}/derby.properties
+
+- name: Install hubs
+  hosts: hubs
+  tags: hubs
+  tasks:
+    - name: Create {{ hub_home }}
+      file: state=directory path={{ hub_home }}
+
+    - name: Copy miniconda installer
+      copy: src=../../software/Miniconda3-latest-Linux-x86_64.sh dest={{ hub_home }}/installer mode=0555
+
+    - name: Install miniconda
+      command: "{{ hub_home }}/installer -b -f -p {{ hub_prefix }}"
+
+    - name: Install jupyterhub
+      command: "{{ hub_prefix }}/bin/conda install -y -c conda-forge jupyterhub configurable-http-proxy {{ hub_packages }}"
+
+    - name: Template jupyterhub conf
+      template: src=templates/jupyterhub_config.py.j2 dest={{ hub_home }}/jupyterhub_config.py

@@ -24,3 +24,11 @@
       environment:
         DERBY_HOME: "{{ derby_home }}"
         JAVA_HOME: "{{ jdk_home }}"
+
+- name: Start hubs
+  hosts: hubs
+  tasks:
+    - shell: PATH={{ hub_prefix }}/bin:$PATH nohup {{ hub_prefix }}/bin/jupyterhub &>{{ hub_home }}/jupyterhub.log &
+      args:
+        chdir: "{{ hub_home }}"
+        creates: "{{ hub_home }}/jupyterhub_pid"
