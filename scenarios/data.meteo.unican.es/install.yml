@@ -109,6 +109,7 @@
 
     - name: Copy httpd conf
       copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
+      tags: httpd-conf
 
     - name: Template ssl conf
       template: src=templates/httpd.ssl.conf.j2 dest=/etc/httpd/conf/httpd.ssl.conf
