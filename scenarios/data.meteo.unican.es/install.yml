@@ -121,6 +121,8 @@
       template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
       tags: update-workers
 
+# configurable-http-proxy
+
 - name: Install workers
   hosts: servers
   serial: True

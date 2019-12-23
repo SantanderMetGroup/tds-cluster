@@ -1,3 +1,4 @@
+c.JupyterHub.pid_file = '/root/jupyterhub/jupyterhub.pid'
 c.JupyterHub.pid_file = '{{ hub_pid }}'
 c.JupyterHub.cleanup_servers = False
 c.ConfigurableHTTPProxy.should_start = False
