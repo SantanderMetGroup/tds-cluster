@@ -1,0 +1,57 @@
+- name: Install load balancer
+  hosts: lb
+  vars:
+    hostcert: /etc/pki/tls/certs/hostcert.pem
+    hostkey: /etc/pki/tls/private/hostkey.pem
+    clusters:
+      - name: default
+        urls: [/thredds, /udg-tap]
+    hub_url: "wn023:8081"
+  tasks:
+    - name: Install httpd
+      yum: name=httpd,mod_ssl state=present
+
+    - name: Copy httpd conf
+      copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
+
+    - name: Template modproxy.conf
+      template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
+      tags: update-workers
+
+# configurable-http-proxy
+    - name: Download nodejs
+      shell: curl -sL https://rpm.nodesource.com/setup_11.x | bash -
+
+    - name: Install nodejs
+      yum:
+        state: present 
+        name: [nodejs,make,gcc-c++]
+
+    - name: Install configurable-http-proxy
+      npm: name=configurable-http-proxy global=yes
+
+    - name: Template configurable-http-proxy service
+      template: src=templates/configurable-http-proxy.service.j2 dest=/usr/etc/configurable-http-proxy mode=0755
+
+- name: Install hubs
+  hosts: hubs
+  tags: hubs
+  vars:
+    hub_api_url: "{{ hostvars['lb']['ansible_default_ipv4']['address'] }}:8001"
+  tasks:
+    - name: Create {{ hub_home }}
+      file: state=directory path={{ hub_home }}
+
+    - name: Copy miniconda installer
+      copy: src=../../software/Miniconda3-latest-Linux-x86_64.sh dest={{ hub_home }}/installer mode=0555
+
+    - name: Install miniconda
+      command: "bash {{ hub_home }}/installer -b -f -p {{ hub_prefix }}"
+      args:
+        creates: "{{ hub_prefix }}"
+
+    - name: Install jupyterhub
+      command: "{{ hub_prefix }}/bin/conda install -y -c conda-forge jupyterhub {{ hub_packages }}"
+
+    - name: Template jupyterhub conf
+      template: src=templates/jupyterhub_config.py.j2 dest={{ hub_home }}/jupyterhub_config.py

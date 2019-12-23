@@ -2,7 +2,9 @@ c.JupyterHub.pid_file = '{{ hub_pid }}'
 c.JupyterHub.cleanup_servers = False
 c.ConfigurableHTTPProxy.should_start = False
 c.ConfigurableHTTPProxy.auth_token = "CONFIGPROXY_AUTH_TOKEN"
-c.ConfigurableHTTPProxy.api_url = 'http://localhost:8001'
+c.ConfigurableHTTPProxy.api_url = 'http://{{ hub_api_url }}'
+c.JupyterHub.hub_ip = '0.0.0.0'
+c.JupyterHub.hub_port = 8081
 
 # Configuration file for jupyterhub.
 

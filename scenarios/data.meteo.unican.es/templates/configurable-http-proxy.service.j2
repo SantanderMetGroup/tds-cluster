@@ -1,0 +1,32 @@
+export PATH=/root/jupyterhub/miniconda/bin/:$PATH
+
+start() {
+  nohup configurable-http-proxy \
+    --ip={{ ansible_default_ipv4.address }} \
+    --port=8000 \
+    --api-ip={{ ansible_default_ipv4.address }} \
+    --api-port=8001 \
+    --default-target=http://{{ hub_url }} \
+    --error-target=http://{{ hub_url }}/hub/error &>> /usr/etc/configurable-http-proxy.log &
+
+  PID=$!
+  echo $PID > /usr/etc/configurable-http-proxy.pid
+}
+
+stop() {
+  date
+  echo "Shutting down configurable-httpd-proxy"
+  [ ! -f /usr/etc/configurable-http-proxy.pid ] || kill $(cat /usr/etc/configurable-http-proxy.pid) && rm /usr/etc/configurable-http-proxy.pid &>> /usr/etc/configurable-http-proxy.log
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  *)
+    echo "Usage: $0 {start|stop}"
+esac
+exit $?

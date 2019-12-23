@@ -34,4 +34,4 @@
 - name: Stop hubs
   hosts: hubs
   tasks:
-    - shell: kill $(cat {{ hub_pid }})
+    - shell: '[ ! -f {{ hub_pid }} ] || kill $(cat {{ hub_pid }})'

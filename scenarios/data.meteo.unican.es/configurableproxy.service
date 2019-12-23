@@ -1,9 +1,0 @@
-export PATH=/root/jupyterhub/miniconda/bin/:$PATH
-
-configurable-http-proxy \
-	--ip=10.46.119.201 \
-	--port=8000 \
-	--api-ip=localhost \
-	--api-port=8001 \
-	--default-target=http://localhost:8081 \
-	--error-target=http://localhost:8081/hub/error
