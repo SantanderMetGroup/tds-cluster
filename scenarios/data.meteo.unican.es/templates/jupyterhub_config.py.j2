@@ -5,6 +5,7 @@ c.ConfigurableHTTPProxy.auth_token = "CONFIGPROXY_AUTH_TOKEN"
 c.ConfigurableHTTPProxy.api_url = 'http://{{ hub_api_url }}'
 c.JupyterHub.hub_ip = '0.0.0.0'
 c.JupyterHub.hub_port = 8081
+c.LocalProcessSpawner.ip = '{{ ansible_eth0.ipv4.address }}'
 
 # Configuration file for jupyterhub.
 
