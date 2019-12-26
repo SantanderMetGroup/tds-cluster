@@ -11,11 +11,8 @@ containers:
 
 provisioning:
   - type: ansible
-    playbook: provision/lbs.yml
-    lxd_transport: true
-
-  - type: ansible
-    playbook: provision/servers.yml
+    playbook: provision/lxc.yml
     lxd_transport: true
     groups:
+      lbs: [lb]
       servers: [wn023, wn025]

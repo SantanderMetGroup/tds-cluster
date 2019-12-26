@@ -1,19 +1,11 @@
-- name: Provision lxc lbs
-  hosts: lb
+- name: Common lxc provisioning
+  hosts: all
   become: True
   vars:
     users: [root, ansible]
     key: ../../../insecure_private_key.pub
     debug: True
-    hostkey_src: /etc/certs/hostkey.pem
-    hostcert_src: /etc/certs/hostcert.pem
-    cachain_src: /etc/certs/cachain.pem
   tasks:
-    # Install packages
-    - name: Install Base packages
-      yum: name="@Base" state=present
-      when: ansible_pkg_mgr == "yum"
-
     - name: EPEL
       yum: name=epel-release
       when: ansible_pkg_mgr == "yum"
@@ -27,8 +19,9 @@
       with_items: [vim, telnet, net-tools, fuse-sshfs]
       when: debug
 
+    # password is 'ansible'
     - name: Create users
-      user: name={{ item }} shell=/bin/bash
+      user: name={{ item }} shell=/bin/bash password=35c2e5724fe8f28d637e0d7f8376cb1c75a0a71549f8911ddb44ced5d9d0d57f481a3d0bdb847a35cadf270566853bb97a6f770bc79c74c7af210909720862e8
       with_items: "{{ users }}"
 
     # Allow ssh access
@@ -38,6 +31,19 @@
 
     - name: Start sshd
       service: name=sshd state=started
+
+- name: Provision lxc lbs
+  hosts: lb
+  become: True
+  vars:
+    hostkey_src: /etc/certs/hostkey.pem
+    hostcert_src: /etc/certs/hostcert.pem
+    cachain_src: /etc/certs/cachain.pem
+  tasks:
+    # Install packages
+    - name: Install Base packages
+      yum: name="@Base" state=present
+      when: ansible_pkg_mgr == "yum"
 
     - name: Create /etc/certs
       file: state=directory path=/etc/certs
@@ -50,3 +56,10 @@
 
     - name: Copy cachain
       copy: src=../../../server.pem dest={{ cachain_src }} mode=0644
+
+- name: Provision lxc servers
+  hosts: servers
+  become: True
+  tasks:
+    - name: Set hostname
+      command: hostname {{ inventory_hostname }}
