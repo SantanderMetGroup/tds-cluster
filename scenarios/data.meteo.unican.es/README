@@ -8,3 +8,11 @@ Deployment from scratch:
 lxdock up
 ansible-playbook esgf-ansible/install.yml install.yml esgf-ansible/stop.yml esgf-ansible/start.yml start.yml catalogs.yml
 ```
+
+## Update catalogs and datasets
+
+**Note the `-i` flag:** This runs the playbook against data.meteo.unican.es/thredds.
+
+```bash
+ansible-playbook catalogs.yml -i inventories/prod
+```
