@@ -1,0 +1,19 @@
+#!/bin/bash
+
+publisher="/home/zequi/publisher"
+cmip6="../tds-data/public/cmip6"
+
+find "$cmip6" -type f | grep Amon | \
+  python ${publisher}/catalog.py \
+    --name 'IPCC AR6 Atlas, CMIP6 monthly data' \
+    --root "$cmip6" \
+    --path ipcc/ar6/cmip6 \
+    --template catalog.xml.j2 > ../tds-data/catalogs/ipcc/cmip6mon.xml
+
+find "$cmip6" -type f | grep day | \
+  python ${publisher}/catalog.py \
+    --name 'IPCC AR6 Atlas, CMIP6 daily data' \
+    --root "$cmip6" \
+    --path ipcc/ar6/cmip6 \
+    --template catalog.xml.j2 > ../tds-data/catalogs/ipcc/cmip6day.xml
+

@@ -7,34 +7,32 @@
       file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
       with_items: "{{ tomcats }}"
 
-    - name: Synchronize TDS5 catalogs
-      synchronize: >
-        src=tds5/catalogs
-        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds
+    - name: Checkout TDS catalogs
+      subversion:
+        dest: "{{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs"
+        repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/catalogs/
+        username: "{{ svn.username }}"
+        password: "{{ svn.password }}"
+        force: yes
       with_items: "{{ tomcats }}"
 
-    - name: Synchronize TDS5 datasets
-      synchronize: >
-        src=tds5/public/
-        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public/
-      with_items: "{{ tomcats }}"
-
-    - name: Fix TDS5 catalogs and datasets (remove tabs)
-      shell: find catalogs public -type f -print0 | xargs -0 -n1 | grep -v svn | xargs -n1 perl -pi -e 's/(".*?)\t+"/\1"/g'
-      args:
-        chdir: "{{ tomcat_bases }}/{{ item.name }}/content/thredds"
+    - name: Checkout TDS datasets
+      subversion:
+        dest: "{{ tomcat_bases }}/{{ item.name }}/content/thredds/public"
+        repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/public
+        username: "{{ svn.username }}"
+        password: "{{ svn.password }}"
+        force: yes
       with_items: "{{ tomcats }}"
 
     - name: Copy root catalog
       copy: src=catalog.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalog.xml
       with_items: "{{ tomcats }}"
 
-    - name: Copy catalogs
-      synchronize: src=catalogs/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
-      with_items: "{{ tomcats }}"
-
-    - name: Synchronize datasets
-      synchronize: src=ncmls/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
+    - name: Fix TDS5 catalogs and datasets (remove tabs)
+      shell: find catalogs public -type f -print0 | xargs -0 -n1 | grep -v svn | xargs -n1 perl -pi -e 's/(".*?)\t+"/\1"/g'
+      args:
+        chdir: "{{ tomcat_bases }}/{{ item.name }}/content/thredds"
       with_items: "{{ tomcats }}"
 
     - name: Clear caches
