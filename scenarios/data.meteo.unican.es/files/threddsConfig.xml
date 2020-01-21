@@ -275,4 +275,7 @@
     <useForReading>false</useForReading>
   </Netcdf4Clibrary>
   -->
+  <Catalog>
+    <cache>false</cache>
+  </Catalog>
 </threddsConfig>

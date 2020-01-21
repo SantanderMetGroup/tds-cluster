@@ -9,23 +9,28 @@
 
     - name: Checkout TDS catalogs
       subversion:
-        dest: "{{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs"
+        dest: "{{ root }}/catalogs"
         repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/catalogs/
         username: "{{ svn.username }}"
         password: "{{ svn.password }}"
         force: yes
         in_place: yes
-      with_items: "{{ tomcats }}"
+      run_once: yes
 
     - name: Checkout TDS datasets
       subversion:
-        dest: "{{ tomcat_bases }}/{{ item.name }}/content/thredds/public"
+        dest: "{{ root }}/public"
         repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/public
         username: "{{ svn.username }}"
         password: "{{ svn.password }}"
         force: yes
         in_place: yes
-      with_items: "{{ tomcats }}"
+      run_once: yes
+
+    - name: Set catalog and dataset permissions
+      file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes
+      with_items: [catalogs, public]
+      run_once: yes
 
     - name: Copy root catalog
       copy: src=catalog.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalog.xml
@@ -36,6 +41,7 @@
       args:
         chdir: "{{ tomcat_bases }}/{{ item.name }}/content/thredds"
       with_items: "{{ tomcats }}"
+      run_once: yes
 
     - name: Clear caches
       uri:
