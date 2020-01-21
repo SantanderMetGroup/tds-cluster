@@ -2,7 +2,9 @@
 
 ## Local testing
 
-Deployment from scratch:
+- You need to fill your secrets.yml file (secrets.yml.dummy is provided as template)
+- If catalogs.yml reports unauthorized you should copy the database to the database server (e.g. lxc file push -r tap $CONTAINER/root/services/tds-cluster/derbydb). Note that first you have to obtain the tap folder, which contains the database
+- The udg-tap.war installed is builded from the latest commit of the svn repo
 
 ```bash
 lxdock up
