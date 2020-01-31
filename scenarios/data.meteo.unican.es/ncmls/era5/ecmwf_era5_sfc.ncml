@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<dimension name="time" length="357929" isUnlimited="false"/>
+	<variable name="time" type="float">
+		<attribute name="units" value="hours since 1979-01-01 06:00:00"/>
+		<attribute name="_CoordinateAxisType" value="Time" />
+		<values start="0" increment="1" />
+	</variable>
+	<variable name="longitude">
+		<attribute name="standard_name" value="longitude"/>
+		<attribute name="long_name" value="longitude"/>
+		<attribute name="_CoordinateAxisType" value="Lon"/>
+		<attribute name="units" value="degrees_east"/>
+	</variable>
+	<variable name="latitude">
+		<attribute name="standard_name" value="latitude"/>
+		<attribute name="long_name" value="latitude"/>
+		<attribute name="_CoordinateAxisType" value="Lat"/>
+		<attribute name="units" value="degrees_north"/>
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time latitude longitude"/>
+		<attribute name="scale_factor" type="double" value="1000" />
+		<attribute name="add_offset" type="double" value="0" />
+		<attribute name="units" value="kg m-2"/>
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time latitude longitude"/>
+		<attribute name="scale_factor" type="double" value="1" />
+		<attribute name="add_offset" type="double" value="-273.15" />
+		<attribute name="units" value="degrees_celsius"/>
+	</variable>
+	<variable name="orog">
+		<attribute name="scale_factor" type="double" value="0.102040816" />
+		<attribute name="units" value= "m"/>
+	</variable>
+	<aggregation type="union">
+		<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/FX/ECMWF_ERA5_FX_orog.128.nc" enhance="ScaleMissing" >
+			<dimension name="time1" orgName="time" isUnlimited="false"/>
+			<variable name="orog" orgName="z" >
+				<attribute name="long_name" value= "Meters above the sea level obtained from the geopotencial"/>
+				<attribute name="standard_name" value= "orography"/>
+			</variable>
+			<variable name="time1" orgName="time" >
+				<attribute name="long_name" value="time"/>
+				<attribute name="standard_name" value="time"/>
+				<attribute name="units" value= "days since 2000-01-01 00:00:00"/>
+				<attribute name="calendar" value= "standard"/>
+				<attribute name="_CoordinateAxisType" value="Time"/>
+				<values> 0 </values>
+			</variable>
+		</netcdf>
+		<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/FX/ECMWF_ERA5_FX_sftlf.128.nc" >
+			<dimension name="time1" orgName="time" isUnlimited="false"/>
+			<variable name="sftlf" orgName="lsm" />
+			<variable name="time1" orgName="time" >
+				<attribute name="long_name" value="time"/>
+				<attribute name="standard_name" value="time"/>
+				<attribute name="units" value= "days since 2000-01-01 00:00:00"/>
+				<attribute name="calendar" value= "standard"/>
+				<attribute name="_CoordinateAxisType" value="Time"/>
+				<values> 0 </values>
+			</variable>
+		</netcdf>
+		<netcdf>
+			<aggregation dimName="time" type="joinExisting">
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1979/ECMWF_ERA5_1979_SFC_228.128.nc" ncoords="8753" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1980/ECMWF_ERA5_1980_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1981/ECMWF_ERA5_1981_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1982/ECMWF_ERA5_1982_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1983/ECMWF_ERA5_1983_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1984/ECMWF_ERA5_1984_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1985/ECMWF_ERA5_1985_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1986/ECMWF_ERA5_1986_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1987/ECMWF_ERA5_1987_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1988/ECMWF_ERA5_1988_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1989/ECMWF_ERA5_1989_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1990/ECMWF_ERA5_1990_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1991/ECMWF_ERA5_1991_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1992/ECMWF_ERA5_1992_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1993/ECMWF_ERA5_1993_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1994/ECMWF_ERA5_1994_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1995/ECMWF_ERA5_1995_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1996/ECMWF_ERA5_1996_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1997/ECMWF_ERA5_1997_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1998/ECMWF_ERA5_1998_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1999/ECMWF_ERA5_1999_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2000/ECMWF_ERA5_2000_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2001/ECMWF_ERA5_2001_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2002/ECMWF_ERA5_2002_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2003/ECMWF_ERA5_2003_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2004/ECMWF_ERA5_2004_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2005/ECMWF_ERA5_2005_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2006/ECMWF_ERA5_2006_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2007/ECMWF_ERA5_2007_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2008/ECMWF_ERA5_2008_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2009/ECMWF_ERA5_2009_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2010/ECMWF_ERA5_2010_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2011/ECMWF_ERA5_2011_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2012/ECMWF_ERA5_2012_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2013/ECMWF_ERA5_2013_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2014/ECMWF_ERA5_2014_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2015/ECMWF_ERA5_2015_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2016/ECMWF_ERA5_2016_SFC_228.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2017/ECMWF_ERA5_2017_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2018/ECMWF_ERA5_2018_SFC_228.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2019/ECMWF_ERA5_2019_SFC_228.128.nc" ncoords="7296" enhance="ScaleMissing"/>
+				<variable name="pr" orgName="tp"/>
+			</aggregation> 
+		</netcdf>
+		<netcdf>
+			<aggregation dimName="time" type="joinExisting">
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1979/ECMWF_ERA5_1979_SFC_167.128.nc" ncoords="8753" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1980/ECMWF_ERA5_1980_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1981/ECMWF_ERA5_1981_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1982/ECMWF_ERA5_1982_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1983/ECMWF_ERA5_1983_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1984/ECMWF_ERA5_1984_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1985/ECMWF_ERA5_1985_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1986/ECMWF_ERA5_1986_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1987/ECMWF_ERA5_1987_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1988/ECMWF_ERA5_1988_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1989/ECMWF_ERA5_1989_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1990/ECMWF_ERA5_1990_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1991/ECMWF_ERA5_1991_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1992/ECMWF_ERA5_1992_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1993/ECMWF_ERA5_1993_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1994/ECMWF_ERA5_1994_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1995/ECMWF_ERA5_1995_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1996/ECMWF_ERA5_1996_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1997/ECMWF_ERA5_1997_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1998/ECMWF_ERA5_1998_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/1999/ECMWF_ERA5_1999_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2000/ECMWF_ERA5_2000_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2001/ECMWF_ERA5_2001_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2002/ECMWF_ERA5_2002_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2003/ECMWF_ERA5_2003_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2004/ECMWF_ERA5_2004_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2005/ECMWF_ERA5_2005_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2006/ECMWF_ERA5_2006_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2007/ECMWF_ERA5_2007_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2008/ECMWF_ERA5_2008_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2009/ECMWF_ERA5_2009_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2010/ECMWF_ERA5_2010_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2011/ECMWF_ERA5_2011_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2012/ECMWF_ERA5_2012_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2013/ECMWF_ERA5_2013_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2014/ECMWF_ERA5_2014_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2015/ECMWF_ERA5_2015_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2016/ECMWF_ERA5_2016_SFC_167.128.nc" ncoords="8784" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2017/ECMWF_ERA5_2017_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2018/ECMWF_ERA5_2018_SFC_167.128.nc" ncoords="8760" enhance="ScaleMissing"/>
+				<netcdf location="//oceano/gmeteo/WORK/DATA/C3S/era5/2019/ECMWF_ERA5_2019_SFC_167.128.nc" ncoords="7296" enhance="ScaleMissing"/>
+				<variable name="tas" orgName="t2m"/>
+			</aggregation> 
+		</netcdf>
+	</aggregation> 
+</netcdf>

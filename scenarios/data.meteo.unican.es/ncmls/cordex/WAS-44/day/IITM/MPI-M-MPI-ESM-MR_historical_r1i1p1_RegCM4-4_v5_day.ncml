@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+	<attribute name="Conventions" value="CF-1.6, _Coordinates, UW-1.0"/>
+	<attribute name="primary_variables" value="pr, tas, tasmax, tasmin"/>
+  <variable name="lon">
+    <attribute name="_CoordinateAxisType" value="Lon"/>
+  </variable>
+  <variable name="lat">
+    <attribute name="_CoordinateAxisType" value="Lat"/>
+  </variable>
+<!--	<variable name="lat">
+		<attribute name="standard_name" value="latitude"/>
+		<attribute name="long_name" value="Latitude on Cross Points"/>
+		<attribute name="units" value="degrees_north"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude"/>
+		<attribute name="_CoordinateAxisTypes" value="Lat"/>
+	</variable>
+	<variable name="lon">
+		<attribute name="standard_name" value="longitude"/>
+		<attribute name="long_name" value="Longitude on Cross Points"/>
+		<attribute name="units" value="degrees_east"/>
+		<attribute name="grid_mapping_name" value="rotated_latitude_longitude"/>
+		<attribute name="_CoordinateAxisTypes" value="Lon"/>
+	</variable>
+	<variable name="pr">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tas">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tasmax">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+	<variable name="tasmin">
+		<attribute name="coordinates" value="time rlat rlon"/>
+	</variable>
+-->	<dimension name="time" length="20089" isUnlimited="false"/>
+	<variable name="time" shape="time" type="int">
+		<attribute name="long_name" value="time"/>
+		<attribute name="standard_name" value="time"/>
+		<attribute name="units" value= "days since 1949-12-01 00:00:00"/>
+		<attribute name="calendar" value= "proleptic_gregorian"/>
+		<attribute name="_CoordinateAxisType" value="Time"/>
+	</variable>
+	<aggregation type="union">
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19510101-19551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19560101-19601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19610101-19651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19660101-19701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19710101-19751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19760101-19801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19810101-19851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19860101-19901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/pr/v20170321/pr_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_20010101-20051231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19510101-19551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19560101-19601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19610101-19651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19660101-19701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19710101-19751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19760101-19801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19810101-19851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19860101-19901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tas/v20170321/tas_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_20010101-20051231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19510101-19551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19560101-19601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19610101-19651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19660101-19701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19710101-19751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19760101-19801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19810101-19851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19860101-19901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmax/v20170321/tasmax_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_20010101-20051231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	<netcdf>
+		<aggregation dimName="time" type="joinExisting">
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19510101-19551231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19560101-19601231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19610101-19651231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19660101-19701231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19710101-19751231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19760101-19801231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19810101-19851231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19860101-19901231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19910101-19951231.nc" ncoords="1826"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_19960101-20001231.nc" ncoords="1827"/>
+			<netcdf location="//oceano/gmeteo/DATA/ESGF/synda/cordex/output/WAS-44/IITM/MPI-M-MPI-ESM-MR/historical/r1i1p1/RegCM4-4/v5/day/tasmin/v20170321/tasmin_WAS-44_MPI-M-MPI-ESM-MR_historical_r1i1p1_IITM-RegCM4-4_v5_day_20010101-20051231.nc" ncoords="1826"/>
+		</aggregation>
+	</netcdf>
+	</aggregation>
+</netcdf>
