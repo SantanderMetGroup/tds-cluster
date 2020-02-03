@@ -7,7 +7,7 @@
       file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
       with_items: "{{ tomcats }}"
 
-    - name: Checkout TDS catalogs
+    - name: Checkout TDS5 catalogs
       subversion:
         dest: "{{ root }}/catalogs"
         repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/catalogs/
@@ -16,6 +16,16 @@
         force: yes
         in_place: yes
       run_once: yes
+
+    - name: Checkout IPCC catalogs
+      subversion:
+        dest: "{{ tomcat_bases }}/{{ item.name }}/content/thredds/ipcc"
+        repo: https://meteo.unican.es/svn/repos/sistemas/services/TDS5/tomcat/content/thredds/ipcc
+        username: "{{ svn.username }}"
+        password: "{{ svn.password }}"
+        force: yes
+        in_place: yes
+      with_items: "{{ tomcats }}"
 
     - name: Checkout TDS datasets
       subversion:

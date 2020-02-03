@@ -28,5 +28,6 @@
 		<dataSize units="bytes">167388249600</dataSize>
 		<date type="modified">2014-06-13T09:43:00Z</date>
 	</catalogRef>
+    <catalogRef xlink:title="IPCC" xlink:href="ipcc/ar6/catalog.xml" name="" />
 	<property name="svn_id" value="$Id: catalog.xml 1142 2017-05-30 18:23:16Z sixto $"/>
 </catalog>

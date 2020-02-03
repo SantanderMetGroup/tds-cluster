@@ -128,6 +128,7 @@
 
     - name: Copy httpd conf
       copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
+      tags: update-workers
 
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
