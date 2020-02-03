@@ -1,0 +1,20 @@
+<catalog xmlns="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.unidata.ucar.edu/namespaces/thredds/InvCatalog/v1.0 http://www.unidata.ucar.edu/schemas/thredds/InvCatalog.1.0.6.xsd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     name="IPCC CORDEX">
+
+	<datasetRoot path="ipcc/cordex" location="content/cordex" />
+	<catalogRef xlink:title="AFR-44 day" xlink:href="ipcc/cordex/AFR-44/day/catalog.xml" name="" />
+	<catalogRef xlink:title="ANT-44 day" xlink:href="ipcc/cordex/ANT-44/day/catalog.xml" name="" />
+	<catalogRef xlink:title="EUR-11 day" xlink:href="ipcc/cordex/EUR-11/day/catalog.xml" name="" />
+	<catalogRef xlink:title="EUR-44 day" xlink:href="ipcc/cordex/EUR-44/day/catalog.xml" name="" />
+	<catalogRef xlink:title="SAM-22 day" xlink:href="ipcc/cordex/SAM-22/day/catalog.xml" name="" />
+	<catalogRef xlink:title="SAM-22 mon" xlink:href="ipcc/cordex/SAM-22/mon/catalog.xml" name="" />
+	<catalogRef xlink:title="SAM-44 day" xlink:href="ipcc/cordex/SAM-44/day/catalog.xml" name="" />
+	<catalogRef xlink:title="SAM-44 mon" xlink:href="ipcc/cordex/SAM-44/mon/catalog.xml" name="" />
+	<catalogRef xlink:title="WAS-22 day" xlink:href="ipcc/cordex/WAS-22/day/catalog.xml" name="" />
+	<catalogRef xlink:title="WAS-22 mon" xlink:href="ipcc/cordex/WAS-22/mon/catalog.xml" name="" />
+	<catalogRef xlink:title="WAS-44 day" xlink:href="ipcc/cordex/WAS-44/day/catalog.xml" name="" />
+	<catalogRef xlink:title="WAS-44 mon" xlink:href="ipcc/cordex/WAS-44/mon/catalog.xml" name="" />
+</catalog>

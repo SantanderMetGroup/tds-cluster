@@ -32,4 +32,5 @@
 	<catalogRef xlink:title="IPCC AR6 Atlas" xlink:href="catalogs/ipcc-ar6/catalog.xml" name="" />
 	<catalogRef xlink:title="ERA5" xlink:href="catalogs/era5.xml" name="" />
 	<catalogRef xlink:title="IPCC AR5" xlink:href="catalogs/ipcc-ar5.xml" name="" />
+	<catalogRef xlink:title="IPCC CORDEX" xlink:href="catalogs/ipcc-cordex/catalog.xml" name="" />
 </catalog>
