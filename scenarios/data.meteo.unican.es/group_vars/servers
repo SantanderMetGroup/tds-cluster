@@ -1,6 +1,7 @@
-jdk_home: "{{ ansible_env.HOME }}/tds-cluster/jdk"
-tomcat_home: "{{ ansible_env.HOME }}/tds-cluster/tomcat"
-tomcat_bases: "{{ ansible_env.HOME }}/tds-cluster/{{ inventory_hostname }}/tomcats"
+root: "{{ ansible_env.HOME }}/tds-cluster"
+jdk_home: "{{ root }}/jdk"
+tomcat_home: "{{ root }}/tomcat"
+tomcat_bases: "{{ root }}/{{ inventory_hostname }}/tomcats"
 
 tomcats:
   - name: tomcat1

@@ -3,20 +3,24 @@
   vars_files:
     - secrets.yml
   tasks:
-    - name: Create directory for TDS5 data
-      file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
+    - name: Clone tds-content repository
+      run_once: True
+      local_action:
+        module: git
+        repo: git@gitlab.com:scds/tds-content.git
+        dest: tds-content
+
+    - name: Synchronize tds-content
+      synchronize: src=tds-content/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds
       with_items: "{{ tomcats }}"
 
-    - name: Synchronize TDS5 catalogs
-      synchronize: >
-        src=TDS5/tomcat/content/thredds/catalogs
-        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds
-      with_items: "{{ tomcats }}"
+    - name: Set catalog and dataset permissions
+      file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes
+      with_items: [catalogs, public]
+      run_once: yes
 
-    - name: Synchronize TDS5 datasets
-      synchronize: >
-        src=TDS5/tomcat/content/thredds/public/
-        dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/public/
+    - name: Copy root catalog
+      copy: src=catalog.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalog.xml
       with_items: "{{ tomcats }}"
 
     - name: Fix TDS5 catalogs and datasets (remove tabs)
@@ -43,6 +47,12 @@
         url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Catalogs/reinit
 
     - name: Clear caches
-      command: curl -L --insecure -u '{{ tds.user }}:{{ tds.password }}' {{ url }}
-      vars:
-        url: https://{{ inventory_hostname }}:8443/tds5/admin/debug?Caches/clearCaches
+      uri:
+        url: "{{ item }}"
+        validate_certs: false
+        user: "{{ tds.user }}"
+        password: "{{ tds.password }}"
+      with_items:
+        - https://{{ inventory_hostname }}:9443/thredds/admin/debug?Catalogs/reinit
+        - https://{{ inventory_hostname }}:9443/thredds/admin/debug?Caches/clearCaches
+      tags: caches
