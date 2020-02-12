@@ -63,7 +63,8 @@
         name: tds
       vars:
         tds_home: "{{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}"
-        tds_sslPort: "{{ item.ssl }}"
+        tds_sslPort: 443
+        tds_useSSL: True
       with_items: "{{ tomcats }}"
 
     - name: Create content/thredds
@@ -74,16 +75,27 @@
       file: state=directory path={{ root }}/{{ item }} mode=0775
       with_items: [catalogs, public]
 
+    - name: Copy threddsConfig.xml
+      copy: src=files/threddsConfig.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/threddsConfig.xml
+      with_items: "{{ tomcats }}"
+
+    - name: Clone tds-content repository
+      run_once: True
+      local_action:
+        module: git
+        repo: git@gitlab.com:scds/tds-content.git
+        dest: tds-content
+
+    - name: Synchronize tds-content
+      run_once: True
+      local_action: command rsync -avz tds-content {{ ansible_hostname }}:{{ root }}
+
     - name: Symlink catalogs
-      file: state=link src={{ root }}/catalogs path={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
+      file: state=link src={{ root }}/tds-content/catalogs path={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
       with_items: "{{ tomcats }}"
 
     - name: Symlink ncmls
-      file: state=link src={{ root }}/public path={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
-      with_items: "{{ tomcats }}"
-
-    - name: Copy threddsConfig.xml
-      copy: src=files/threddsConfig.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/threddsConfig.xml
+      file: state=link src={{ root }}/tds-content/public path={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
       with_items: "{{ tomcats }}"
 
 # Melody

@@ -3,6 +3,9 @@ lb ansible_user=root ansible_host=data.meteo.unican.es
 wn023 ansible_user=zequi ansible_host=wn023
 wn025 ansible_user=zequi ansible_host=wn025
 
+[lbs]
+lb
+
 [data]
 lb
 
