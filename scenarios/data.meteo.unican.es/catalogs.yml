@@ -12,7 +12,7 @@
 
     - name: Synchronize tds-content
       run_once: True
-      local_action: command rsync -avz tds-content {{ ansible_hostname }}:{{ root }}
+      synchronize: src=tds-content dest={{ root }}
 
     - name: Set catalog and dataset permissions
       file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes
@@ -39,3 +39,4 @@
       with_items:
         - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Catalogs/reinit
         - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Caches/clearCaches
+      tags: caches
