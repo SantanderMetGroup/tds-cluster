@@ -9,6 +9,7 @@
         module: git
         repo: git@gitlab.com:scds/tds-content.git
         dest: tds-content
+        version: spock
 
     - name: Synchronize tds-content
       synchronize: src=tds-content/ dest={{ tomcat_bases }}/{{ item.name }}/content/thredds

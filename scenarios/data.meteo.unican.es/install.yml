@@ -65,7 +65,7 @@
       vars:
         tds_home: "{{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}"
         tds_sslPort: 443
-        tds_useSSL: True
+        tds_useSSL: False
       with_items: "{{ tomcats }}"
 
     - name: Create content/thredds
@@ -94,23 +94,6 @@
     - name: Find directory catalogs
       find: paths={{ root }}/tds-content file_type=directory recurse=no
       register: catalog_result
-
-    - name: Symlink tds-content
-      file:
-        state: link
-        src: "{{ item.1.path }}"
-        path: "{{ tomcat_bases }}/{{ item.0.name }}/content/thredds/{{ item.1.path|basename }}"
-      with_nested:
-        - "{{ tomcats }}"
-        - "{{ catalog_result.files }}"
-
-    - name: Symlink catalogs
-      file: state=link src={{ root }}/tds-content/catalogs path={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
-      with_items: "{{ tomcats }}"
-
-    - name: Symlink ncmls
-      file: state=link src={{ root }}/tds-content/public path={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
-      with_items: "{{ tomcats }}"
 
 # Melody
     - name: Install jrobin
