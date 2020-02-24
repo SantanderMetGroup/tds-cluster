@@ -1,31 +1,25 @@
-- name: TDS for ATLAS
+- name: ATLAS development TDS
   hosts: wn023
   vars:
-      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
-      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
-      http: 7000
-      ajp: 7002
-      shutdown: 7003
+    jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
+    tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+    tds_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/webapps/thredds
+    id: atlas
+    http: 7000
+    ajp: 7002
+    shutdown: 7003
   roles:
-    - role: tomcat
-    - role: tds
-      tds_home: "{{ tomcat_home }}/webapps/thredds"
-  tasks:
-    - name: Template setenv.sh
-      template: src=templates/atlas/setenv.sh.j2 dest={{ tomcat_home }}/bin/setenv.sh
+    - role: devel
 
-    - name: Copy server.xml
-      template: src=templates/atlas/server.xml.j2 dest={{ tomcat_home }}/conf/server.xml
-
-    - name: Add ATLAS tds as modproxy worker
-      blockinfile:
-        path: /etc/httpd/conf.d/modproxy.conf
-        marker: "# {mark} ATLAS"
-        insertafter: </Location>
-        block: |
-          ProxyPass "/thredds/catalog/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/catalog/atlas"
-          ProxyPass "/thredds/dodsC/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/dodsC/atlas"
-          #ProxyPassMatch "/thredds/(catalog|dodsC)/atlas/(.*)" "ajp://10.46.119.184:{{ ajp }}/thredds/$1/atlas/$2"
-          ProxyPassReverse "/thredds/catalog/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/catalog/atlas"
-          ProxyPassReverse "/thredds/dodsC/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/dodsC/atlas"
-      delegate_to: lb
+- name: C3s34d development TDS
+  hosts: wn023
+  vars:
+    jdk_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/jdk
+    tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
+    tds_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/webapps/thredds
+    id: c3s34d
+    http: 7005
+    ajp: 7007
+    shutdown: 7008
+  roles:
+    - role: devel

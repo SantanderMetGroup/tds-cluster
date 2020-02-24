@@ -9,6 +9,7 @@
         module: git
         repo: git@gitlab.com:scds/tds-content.git
         dest: tds-content
+        version: master
 
     - name: Synchronize tds-content
       run_once: True
@@ -18,10 +19,6 @@
       file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes
       with_items: [catalogs, public]
       run_once: yes
-
-    - name: Copy root catalog
-      copy: src=catalog.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalog.xml
-      with_items: "{{ tomcats }}"
 
     - name: Fix TDS5 catalogs and datasets (remove tabs)
       shell: find catalogs public -type f -print0 | xargs -0 -n1 | grep -v svn | xargs -n1 perl -pi -e 's/(".*?)\t+"/\1"/g'

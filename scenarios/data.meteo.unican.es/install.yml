@@ -71,7 +71,7 @@
       synchronize: src=tds-content dest={{ root }}
 
     - name: Find directory catalogs
-      find: paths={{ root }}/tds-content file_type=directory recurse=no
+      find: paths={{ root }}/tds-content recurse=no file_type=any
       register: catalog_result
 
     - name: Symlink tds-content
