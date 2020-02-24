@@ -1,18 +1,15 @@
-- name: Create directories for catalina bases
-  file: state=directory path={{ tomcat_bases }}/{{ tomcat.name }}
+- name: Create directory for jdk
+  file: state=directory path={{ jdk_home }}
 
-- name: Set up catalina base
-  file: path={{ tomcat_bases }}/{{ tomcat.name }}/{{ item }} state=directory
-  with_items: ['bin', 'conf', 'lib', 'logs', 'webapps', 'temp']
+- name: Unarchive jdk in {{ tomcat_home }}
+  unarchive: >
+    src={{ jdk_tgz }} dest={{ jdk_home }}
+    extra_opts="--strip-components=1"
 
-- name: Copy server.xml
-  copy: >
-    src={{ tomcat_home }}/conf/server.xml
-    dest={{ tomcat_bases }}/{{ tomcat.name }}/conf/server.xml
-    remote_src=True
+- name: Create {{ tomcat_home }} directory
+  file: state=directory path={{ tomcat_home }}
 
-- name: Copy web.xml
-  copy: >
-    src={{ tomcat_home }}/conf/web.xml
-    dest={{ tomcat_bases }}/{{ tomcat.name }}/conf/web.xml
-    remote_src=True
+- name: Unarchive tomcat in {{ tomcat_home }}
+  unarchive: >
+    src={{ tomcat_tgz }} dest={{ tomcat_home }}
+    extra_opts="--strip-components=1"

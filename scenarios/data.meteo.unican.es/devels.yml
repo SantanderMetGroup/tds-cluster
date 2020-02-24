@@ -1,0 +1,31 @@
+- name: TDS for ATLAS
+  hosts: wn023
+  vars:
+      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
+      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+      http: 7000
+      ajp: 7002
+      shutdown: 7003
+  roles:
+    - role: tomcat
+    - role: tds
+      tds_home: "{{ tomcat_home }}/webapps/thredds"
+  tasks:
+    - name: Template setenv.sh
+      template: src=templates/atlas/setenv.sh.j2 dest={{ tomcat_home }}/bin/setenv.sh
+
+    - name: Copy server.xml
+      template: src=templates/atlas/server.xml.j2 dest={{ tomcat_home }}/conf/server.xml
+
+    - name: Add ATLAS tds as modproxy worker
+      blockinfile:
+        path: /etc/httpd/conf.d/modproxy.conf
+        marker: "# {mark} ATLAS"
+        insertafter: </Location>
+        block: |
+          ProxyPass "/thredds/catalog/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/catalog/atlas"
+          ProxyPass "/thredds/dodsC/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/dodsC/atlas"
+          #ProxyPassMatch "/thredds/(catalog|dodsC)/atlas/(.*)" "ajp://10.46.119.184:{{ ajp }}/thredds/$1/atlas/$2"
+          ProxyPassReverse "/thredds/catalog/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/catalog/atlas"
+          ProxyPassReverse "/thredds/dodsC/atlas" "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ ajp }}/thredds/dodsC/atlas"
+      delegate_to: lb
