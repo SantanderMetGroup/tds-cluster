@@ -35,4 +35,4 @@
       service: name=sshd state=started
 
     - name: Create /oceano directory
-      file: state=directory path=/oceano user={{ ansible_user }} group={{ ansible_user }} mode=775
+      file: state=directory path=/oceano owner={{ ansible_user }} group={{ ansible_user }} mode=775

@@ -6,6 +6,9 @@ wn025 ansible_user=root ansible_host=lxcwn025 ansible_ssh_private_key_file=../..
 [lbs]
 lb
 
+[lbs:vars]
+admin_pass=coches1
+
 [data]
 lb
 
