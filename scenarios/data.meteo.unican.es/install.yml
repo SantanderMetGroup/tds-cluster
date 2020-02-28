@@ -83,14 +83,6 @@
         - "{{ tomcats }}"
         - "{{ catalog_result.files }}"
 
-    - name: Symlink catalogs
-      file: state=link src={{ root }}/tds-content/catalogs path={{ tomcat_bases }}/{{ item.name }}/content/thredds/catalogs
-      with_items: "{{ tomcats }}"
-
-    - name: Symlink ncmls
-      file: state=link src={{ root }}/tds-content/public path={{ tomcat_bases }}/{{ item.name }}/content/thredds/public
-      with_items: "{{ tomcats }}"
-
 # Melody
     - name: Install jrobin
       copy: src={{ jrobin_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
@@ -119,46 +111,6 @@
       copy: src=files/context.xml dest={{ tomcat_bases }}/{{ item.name }}/conf/context.xml
       with_items: "{{ tomcats }}"
 
-- name: Install load balancer
-  hosts: lb
-  vars:
-    hostcert: /etc/pki/tls/certs/hostcert.pem
-    hostkey: /etc/pki/tls/private/hostkey.pem
-    clusters:
-      - name: default
-        urls: [/thredds, /udg-tap]
-  tasks:
-    - name: Install httpd
-      yum: name=httpd,mod_ssl state=present
-
-    - name: Copy httpd conf
-      copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
-      tags: update-workers
-
-    - name: Template modproxy.conf
-      template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
-      tags: update-workers
-
-- name: Install workers
-  hosts: servers
-  serial: True
-  tags: update-workers
-  vars:
-    workers:
-    - gateway: lb
-      cluster: default
-      properties: loadfactor=1 route={{ ansible_hostname }}
-  tasks:
-    - name: Add tomcat as a modproxy worker
-      blockinfile:
-        path: /etc/httpd/conf.d/modproxy.conf
-        insertafter: <Proxy "balancer://{{ item.cluster }}">
-        marker: "# {mark} {{ item.cluster }}://{{ ansible_all_ipv4_addresses[0] }}:9009"
-        block: |
-          BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:9009" {{ item.properties }}
-      delegate_to: "{{ item.gateway }}"
-      with_items: "{{ workers }}"
-
 - name: Install derbydb
   hosts: databases
   vars:
@@ -175,3 +127,89 @@
 
     - name: Template derby.properties
       template: src=templates/derby.properties.j2 dest={{ derby_home }}/derby.properties
+
+- name: Install load balancer
+  hosts: lb
+  vars:
+    hostcert: /etc/pki/tls/certs/hostcert.pem
+    hostkey: /etc/pki/tls/private/hostkey.pem
+    clusters: # modproxy requires order
+      - name: atlas-devel
+        urls:
+          - /thredds/catalog/devel/atlas
+          - /thredds/dodsC/devel/atlas
+      - name: c3s34d-devel
+        urls:
+          - /thredds/catalog/devel/c3s34d
+          - /thredds/dodsC/devel/c3s34d
+      - name: default
+        urls:
+          - /thredds
+          - /udg-tap
+  tasks:
+    - name: Install httpd
+      yum: name=httpd,mod_ssl state=present
+
+    - name: Copy httpd conf
+      copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
+      tags: update-workers
+
+    - name: Template modproxy.conf
+      template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
+      tags: update-workers
+
+- name: Install production workers
+  hosts: servers
+  serial: True
+  tags: update-workers
+  roles:
+    - role: worker
+
+- name: Install development tomcats and workers
+  hosts: wn023
+  serial: True
+  tags: update-workers
+  vars:
+    atlas:
+      gateway: lb
+      cluster: atlas-devel
+      host: "{{ ansible_all_ipv4_addresses[0] }}"
+      properties: loadfactor=1 route={{ ansible_hostname }}
+      ajp: 7002
+      http: 7000
+      shutdown: 7003
+    c3s34d:
+      gateway: lb
+      cluster: c3s34d-devel
+      host: "{{ ansible_all_ipv4_addresses[0] }}"
+      properties: loadfactor=1 route={{ ansible_hostname }}
+      ajp: 7007
+      http: 7005
+      shutdown: 7008
+    tomcats:
+      - "{{ atlas }}"
+      - "{{ c3s34d }}"
+  roles:
+    - role: tomcat
+      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
+      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+    - role: tds
+      tds_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/webapps/thredds
+    - role: devel
+      ajp: "{{ atlas.ajp }}"
+      http: "{{ atlas.http }}"
+      shutdown: "{{ atlas.shutdown }}"
+      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+
+    - role: tomcat
+      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/jdk
+      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
+    - role: tds
+      tds_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/webapps/thredds
+    - role: devel
+      ajp: "{{ c3s34d.ajp }}"
+      http: "{{ c3s34d.http }}"
+      shutdown: "{{ c3s34d.shutdown }}"
+      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
+
+    - role: worker

@@ -10,19 +10,6 @@
 - name: Copy threddsConfig.xml
   copy: src=files/threddsConfig.xml dest={{ tomcat_home }}/content/thredds/threddsConfig.xml
 
-- name: Add {{ id }} tds as modproxy worker
-  vars:
-    ip: "{{ ansible_all_ipv4_addresses[0] }}"
-  blockinfile:
-    path: /etc/httpd/conf.d/modproxy.conf
-    marker: "# {mark} {{ id }}"
-    insertafter: </Location>
-    block: |
-      ProxyPass "/thredds/catalog/devel/{{ id }}" "ajp://{{ ip }}:{{ ajp }}/thredds/catalog/devel/{{ id }}"
-      ProxyPass "/thredds/dodsC/devel/{{ id }}" "ajp://{{ ip }}:{{ ajp }}/thredds/dodsC/devel/{{ id }}"
-      ProxyPassReverse "/thredds/catalog/devel/{{ id }}" "ajp://{{ ip }}:{{ ajp }}/thredds/catalog/devel/{{ id }}"
-      ProxyPassReverse "/thredds/dodsC/devel/{{ id }}" "ajp://{{ ip }}:{{ ajp }}/thredds/dodsC/devel/{{ id }}"
-  delegate_to: lb
 #
 #- name: Add catalogRef
 #  lineinfile:

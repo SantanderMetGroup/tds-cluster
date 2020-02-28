@@ -1,0 +1,9 @@
+- name: Add tomcat as a modproxy worker
+  blockinfile:
+    path: "{{ modproxy_conf }}"
+    insertafter: <Proxy "balancer://{{ item.cluster }}">
+    marker: "# {mark} {{ item.cluster }}://{{ item.host }}:{{ item.ajp }}"
+    block: |
+      BalancerMember "ajp://{{ item.host }}:{{ item.ajp }}" {{ item.properties }}
+  delegate_to: "{{ item.gateway }}"
+  with_items: "{{ tomcats }}"
