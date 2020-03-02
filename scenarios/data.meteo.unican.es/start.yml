@@ -6,6 +6,7 @@
 
 - name: Start tomcats
   hosts: servers
+  tags: tomcats
   tasks:
     - name: Start tomcats
       shell: "nohup {{ tomcat_home }}/bin/startup.sh"
