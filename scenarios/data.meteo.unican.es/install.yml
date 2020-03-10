@@ -111,6 +111,13 @@
       copy: src=files/context.xml dest={{ tomcat_bases }}/{{ item.name }}/conf/context.xml
       with_items: "{{ tomcats }}"
 
+    - name: Add <absolute-ordering/> to web.xml
+      lineinfile:
+        path: "{{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap/WEB-INF/web.xml"
+        insertbefore: <display-name>
+        line: <absolute-ordering/>
+      with_items: "{{ tomcats }}"
+
 - name: Install derbydb
   hosts: databases
   vars:
@@ -168,7 +175,9 @@
 - name: Install development tomcats and workers
   hosts: wn023
   serial: True
-  tags: update-workers
+  tags:
+    - devels
+    - update-workers
   vars:
     atlas:
       gateway: lb

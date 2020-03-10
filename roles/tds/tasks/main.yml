@@ -10,6 +10,12 @@
     regexp: <param-value>thredds</param-value>
     replace: <param-value>{{ tds_context }}</param-value>
 
+- name: Add <absolute-ordering/> to web.xml
+  lineinfile:
+    path: "{{ tds_home }}/WEB-INF/web.xml"
+    insertafter: <display-name>
+    line: <absolute-ordering/>
+
 - name: Update tds.properties
   replace:
     path: "{{ tds_home }}/WEB-INF/classes/thredds/server/tds.properties"

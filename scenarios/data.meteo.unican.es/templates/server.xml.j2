@@ -2,7 +2,7 @@
 <Server port="{{ item.shutdown }}" shutdown="{{ item.name }}">
   <GlobalNamingResources>
     <Resource name="{{ derby.name }}" auth="Container" type="javax.sql.DataSource"
-              factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+              factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
               validationQuery="SELECT count(*) FROM users" maxActive="20" maxIdle="10"
               username="{{ derby.user }}" password="{{ derby.password }}"
               driverClassName="org.apache.derby.jdbc.ClientDriver"
@@ -18,8 +18,8 @@
   <Service name="Catalina">
     <Connector port="{{ item.http }}" protocol="HTTP/1.1" connectionTimeout="20000"
                redirectPort="{{ item.ssl }}"/>
-    <Connector port="{{ item.ajp }}" protocol="AJP/1.3" />
-    <Connector port="{{ item.ssl }}" protocol="org.apache.coyote.http11.Http11Nio2Protocol"
+    <Connector port="{{ item.ajp }}" protocol="AJP/1.3" secretRequired="false" address="{{ ansible_all_ipv4_addresses[0] }}"/>
+    <Connector port="{{ item.ssl }}" protocol="org.apache.coyote.http11.Http11Protocol"
                maxThreads="200" scheme="https"
                secure="True" SSLEnabled="True"
                keystoreFile="{{ tomcat_ssl_keystoreFile }}" keystorePass="{{ tomcat_ssl_keystorePass }}"
