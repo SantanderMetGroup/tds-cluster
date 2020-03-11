@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<Server port="{{ item.shutdown }}" shutdown="{{ item.name }}">
+<Server port="{{ item.shutdown }}" shutdown="{{ item.base|basename }}">
   <GlobalNamingResources>
     <Resource name="{{ derby.name }}" auth="Container" type="javax.sql.DataSource"
               factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"

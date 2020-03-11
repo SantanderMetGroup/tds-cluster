@@ -4,3 +4,32 @@ tds_war: ../../software/tds-5.0.0-beta6.war
 derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
 melody_jar: ../../software/javamelody-core-1.73.1.jar
+
+devels:
+  - jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
+    home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+    ajp: 7002
+    http: 7000
+    shutdown: 7003
+    gateway: lb
+    cluster: atlas-devel
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
+  - jdk: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/jdk
+    home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
+    ajp: 7007
+    http: 7005
+    shutdown: 7008
+    gateway: lb
+    cluster: c3s34d-devel
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
+  - jdk: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/circulation-types-test/jdk"
+    home: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/circulation-types-test"
+    http: 7010
+    ajp: 7012
+    shutdown: 7013
+    gateway: lb
+    cluster: circulation-types-test-devel
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
