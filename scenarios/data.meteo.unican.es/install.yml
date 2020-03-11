@@ -141,6 +141,10 @@
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
     clusters: # modproxy requires order
+      - name: circulation-types-test
+        urls:
+          - /thredds/catalog/devel/circulation-types-test
+          - /thredds/dodsC/devel/circulation-types-test
       - name: atlas-devel
         urls:
           - /thredds/catalog/devel/atlas
@@ -195,9 +199,19 @@
       ajp: 7007
       http: 7005
       shutdown: 7008
+    circulationTypesTest:
+      root: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/circulation-types-test"
+      gateway: lb
+      cluster: circulation-types-test
+      host: "{{ ansible_all_ipv4_addresses[0] }}"
+      properties: loadfactor=1 route={{ ansible_hostname }}
+      http: 7010
+      ajp: 7012
+      shutdown: 7013
     tomcats:
       - "{{ atlas }}"
       - "{{ c3s34d }}"
+      - "{{ circulationTypesTest }}"
   roles:
     - role: tomcat
       jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
@@ -220,5 +234,16 @@
       http: "{{ c3s34d.http }}"
       shutdown: "{{ c3s34d.shutdown }}"
       tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
+
+    - role: tomcat
+      jdk_home: "{{ circulationTypesTest.root }}/jdk"
+      tomcat_home: "{{ circulationTypesTest.root }}"
+    - role: tds
+      tds_home: "{{ circulationTypesTest.root }}/webapps/thredds"
+    - role: devel
+      tomcat_home: "{{ circulationTypesTest.root }}"
+      ajp: "{{ circulationTypesTest.ajp }}"
+      http: "{{ circulationTypesTest.http }}"
+      shutdown: "{{ circulationTypesTest.shutdown }}"
 
     - role: worker
