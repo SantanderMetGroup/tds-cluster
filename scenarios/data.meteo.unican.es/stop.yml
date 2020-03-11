@@ -6,7 +6,6 @@
 
 - name: Stop tomcats
   hosts: servers
-  tags: tomcats
   tasks:
     - name: Import stop tasks
       import_tasks: stop/tomcats.yml
