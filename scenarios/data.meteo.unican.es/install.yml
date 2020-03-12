@@ -177,18 +177,17 @@
 - name: Install development TDSs
   hosts: wn023
   serial: True
-  tags:
-    - devels
-    - update-workers
   roles:
     - role: worker
       tomcats: "{{ devels }}"
+      tags: update-workers
   tasks:
     - name: Install development TDSs
       include_role:
         name: devel
       vars:
         tds_home: "{{ tomcat.home }}/webapps/thredds"
+      tags: devels
       with_items: "{{ devels }}"
       loop_control:
         loop_var: tomcat
