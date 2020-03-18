@@ -1,11 +1,11 @@
 root: "{{ ansible_env.HOME }}/services/tds-cluster"
+tomcat_home: "{{ root }}/tomcat"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 
-jdk_home: "{{ root }}/jdk"
-tomcat_home: "{{ root }}/tomcat"
-tomcat_bases: "{{ root }}/{{ inventory_hostname }}/tomcats"
 tomcats:
-  - name: tomcat1
+  - home: "{{ tomcat_home }}"
+    base: "{{ root }}/{{ inventory_hostname }}/tomcats/tomcat1"
+    jdk: "{{ root }}/jdk"
     http: 9080
     ssl: 9443
     ajp: 9009
@@ -14,5 +14,3 @@ tomcats:
     cluster: default
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}
-
-tds_context: thredds

@@ -8,11 +8,11 @@
   hosts: servers
   tasks:
     - name: Start tomcats
-      shell: "nohup {{ tomcat_home }}/bin/startup.sh"
+      shell: "nohup {{ item.home }}/bin/startup.sh"
       args:
-        creates: "{{ tomcat_bases }}/{{ item.name }}/logs/catalina.pid"
+        creates: "{{ item.base }}/logs/catalina.pid"
       environment:
-        CATALINA_BASE: "{{ tomcat_bases }}/{{ item.name }}"
+        CATALINA_BASE: "{{ item.base }}"
       with_items: "{{ tomcats }}"
 
 - name: Start database

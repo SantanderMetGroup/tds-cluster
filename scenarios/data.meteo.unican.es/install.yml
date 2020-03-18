@@ -5,9 +5,15 @@
     tomcat_ssl_keystorePass: coches1
   vars_files:
     - secrets.yml
-  roles:
-    - role: tomcat
   tasks:
+# Tomcats
+    - name: Install tomcats
+      include_role:
+        name: tomcat
+      with_items: "{{ tomcats }}"
+      loop_control:
+        loop_var: tomcat
+
     - name: Copy keystore
       copy: src=../../server.p12 dest={{ tomcat_ssl_keystoreFile }}
 
@@ -21,20 +27,12 @@
         extra_opts:
           - --strip-components=2
 
-# Tomcats
-    - name: Deploy catalina bases
-      include_role:
-        name: tomcat_base
-      with_items: "{{ tomcats }}"
-      loop_control:
-        loop_var: tomcat
-
     - name: Template setenv.sh
-      template: src=templates/setenv.sh.j2 dest={{ tomcat_bases }}/{{ item.name }}/bin/setenv.sh
+      template: src=templates/setenv.sh.j2 dest={{ item.base }}/bin/setenv.sh
       with_items: "{{ tomcats }}"
 
     - name: Template server.xml
-      template: src=templates/server.xml.j2 dest={{ tomcat_bases }}/{{ item.name }}/conf/server.xml
+      template: src=templates/server.xml.j2 dest={{ item.base }}/conf/server.xml
       with_items: "{{ tomcats }}"
 
 # TDS
@@ -42,13 +40,13 @@
       include_role:
         name: tds
       vars:
-        tds_home: "{{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}"
+        tds_home: "{{ item.base }}/webapps/thredds"
         tds_sslPort: 443
         tds_useSSL: True
       with_items: "{{ tomcats }}"
 
     - name: Create content/thredds
-      file: state=directory path={{ tomcat_bases }}/{{ item.name }}/content/thredds
+      file: state=directory path={{ item.base }}/content/thredds
       with_items: "{{ tomcats }}"
 
     - name: Create common catalog and ncml directories
@@ -56,7 +54,7 @@
       with_items: [catalogs, public]
 
     - name: Copy threddsConfig.xml
-      copy: src=files/threddsConfig.xml dest={{ tomcat_bases }}/{{ item.name }}/content/thredds/threddsConfig.xml
+      copy: src=files/threddsConfig.xml dest={{ item.base }}/content/thredds/threddsConfig.xml
       with_items: "{{ tomcats }}"
 
     - name: Clone tds-content repository
@@ -78,42 +76,42 @@
       file:
         state: link
         src: "{{ item.1.path }}"
-        path: "{{ tomcat_bases }}/{{ item.0.name }}/content/thredds/{{ item.1.path|basename }}"
+        path: "{{ item.0.base }}/content/thredds/{{ item.1.path|basename }}"
       with_nested:
         - "{{ tomcats }}"
         - "{{ catalog_result.files }}"
 
 # Melody
     - name: Install jrobin
-      copy: src={{ jrobin_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
+      copy: src={{ jrobin_jar }} dest={{ item.base }}/webapps/thredds/WEB-INF/lib/
       with_items: "{{ tomcats }}"
 
     - name: Install java melody
-      copy: src={{ melody_jar }} dest={{ tomcat_bases }}/{{ item.name }}/webapps/{{ tds_context }}/WEB-INF/lib/
+      copy: src={{ melody_jar }} dest={{ item.base }}/webapps/thredds/WEB-INF/lib/
       with_items: "{{ tomcats }}"
 
 # TAP
     - name: Create tap directory
-      file: state=directory path={{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap
+      file: state=directory path={{ item.base }}/webapps/udg-tap
       with_items: "{{ tomcats }}"
 
     - name: Unarchive tap
-      unarchive: src=../../software/udg-tap.war dest={{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap
+      unarchive: src=../../software/udg-tap.war dest={{ item.base }}/webapps/udg-tap
       with_items: "{{ tomcats }}"
 
     - name: Template tap properties
       template: >
         src=templates/tap.properties.j2
-        dest={{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap/WEB-INF/classes/global_variables.properties
+        dest={{ item.base }}/webapps/udg-tap/WEB-INF/classes/global_variables.properties
       with_items: "{{ tomcats }}"
 
     - name: Copy context.xml
-      copy: src=files/context.xml dest={{ tomcat_bases }}/{{ item.name }}/conf/context.xml
+      copy: src=files/context.xml dest={{ item.base }}/conf/context.xml
       with_items: "{{ tomcats }}"
 
     - name: Add <absolute-ordering/> to web.xml
       lineinfile:
-        path: "{{ tomcat_bases }}/{{ item.name }}/webapps/udg-tap/WEB-INF/web.xml"
+        path: "{{ item.base }}/webapps/udg-tap/WEB-INF/web.xml"
         insertbefore: <display-name>
         line: <absolute-ordering/>
       with_items: "{{ tomcats }}"
@@ -141,6 +139,10 @@
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
     clusters: # modproxy requires order
+      - name: circulation-types-test-devel
+        urls:
+          - /thredds/catalog/devel/circulation-types-test
+          - /thredds/dodsC/devel/circulation-types-test
       - name: atlas-devel
         urls:
           - /thredds/catalog/devel/atlas
@@ -172,53 +174,13 @@
   roles:
     - role: worker
 
-- name: Install development tomcats and workers
+- name: Install development TDSs
   hosts: wn023
-  serial: True
-  tags:
-    - devels
-    - update-workers
-  vars:
-    atlas:
-      gateway: lb
-      cluster: atlas-devel
-      host: "{{ ansible_all_ipv4_addresses[0] }}"
-      properties: loadfactor=1 route={{ ansible_hostname }}
-      ajp: 7002
-      http: 7000
-      shutdown: 7003
-    c3s34d:
-      gateway: lb
-      cluster: c3s34d-devel
-      host: "{{ ansible_all_ipv4_addresses[0] }}"
-      properties: loadfactor=1 route={{ ansible_hostname }}
-      ajp: 7007
-      http: 7005
-      shutdown: 7008
-    tomcats:
-      - "{{ atlas }}"
-      - "{{ c3s34d }}"
-  roles:
-    - role: tomcat
-      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
-      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
-    - role: tds
-      tds_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/webapps/thredds
-    - role: devel
-      ajp: "{{ atlas.ajp }}"
-      http: "{{ atlas.http }}"
-      shutdown: "{{ atlas.shutdown }}"
-      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
-
-    - role: tomcat
-      jdk_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/jdk
-      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
-    - role: tds
-      tds_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/webapps/thredds
-    - role: devel
-      ajp: "{{ c3s34d.ajp }}"
-      http: "{{ c3s34d.http }}"
-      shutdown: "{{ c3s34d.shutdown }}"
-      tomcat_home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
-
-    - role: worker
+  tags: devels
+  tasks:
+    - name: Install development TDSs
+      include_role:
+        name: devel
+      with_items: "{{ devels }}"
+      loop_control:
+        loop_var: tomcat

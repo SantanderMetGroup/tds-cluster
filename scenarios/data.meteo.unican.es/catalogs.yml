@@ -1,5 +1,6 @@
 - name: Install TDS catalogs and datasets
   hosts: servers
+  tags: devels
   vars_files:
     - secrets.yml
   tasks:
@@ -23,7 +24,7 @@
     - name: Fix TDS5 catalogs and datasets (remove tabs)
       shell: find catalogs public -type f -print0 | xargs -0 -n1 | grep -v svn | xargs -n1 perl -pi -e 's/(".*?)\t+"/\1"/g'
       args:
-        chdir: "{{ tomcat_bases }}/{{ item.name }}/content/thredds"
+        chdir: "{{ item.base }}/content/thredds"
       with_items: "{{ tomcats }}"
       run_once: yes
 
@@ -34,6 +35,6 @@
         user: "{{ tds.user }}"
         password: "{{ tds.password }}"
       with_items:
-        - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Catalogs/reinit
-        - https://{{ inventory_hostname }}:9443/{{ tds_context }}/admin/debug?Caches/clearCaches
+        - https://{{ inventory_hostname }}:9443//thredds/admin/debug?Catalogs/reinit
+        - https://{{ inventory_hostname }}:9443//thredds/admin/debug?Caches/clearCaches
       tags: caches

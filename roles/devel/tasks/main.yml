@@ -1,18 +1,15 @@
 - name: Template setenv.sh
-  template: src=templates/setenv.sh.j2 dest={{ tomcat_home }}/bin/setenv.sh
+  template: src=templates/setenv.sh.j2 dest={{ tomcat.home }}/bin/setenv.sh
 
 - name: Template server.xml
-  template: src=templates/server.xml.j2 dest={{ tomcat_home }}/conf/server.xml
+  template: src=templates/server.xml.j2 dest={{ tomcat.home }}/conf/server.xml
+  vars:
+    shutdown: "{{ tomcat.shutdown }}"
+    http: "{{ tomcat.http }}"
+    ajp: "{{ tomcat.ajp }}"
 
 - name: Create content/thredds
-  file: state=directory path={{ tomcat_home }}/content/thredds
+  file: state=directory path={{ tomcat.home }}/content/thredds
 
 - name: Copy threddsConfig.xml
-  copy: src=files/threddsConfig.xml dest={{ tomcat_home }}/content/thredds/threddsConfig.xml
-
-#
-#- name: Add catalogRef
-#  lineinfile:
-#    path: "{{ catalog }}"
-#    insertbefore: </catalog>
-#    line: '<catalogRef xlink:title="{{ id }}" xlink:href="{{ id }}/catalog.xml" name="" />'
+  copy: src=files/threddsConfig.xml dest={{ tomcat.home }}/content/thredds/threddsConfig.xml

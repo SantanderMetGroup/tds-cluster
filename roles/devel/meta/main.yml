@@ -1,0 +1,7 @@
+dependencies:
+  - role: tomcat
+  - role: tds
+    tds_home: "{{ tomcat.home }}/webapps/thredds"
+  - role: worker
+    tomcats:
+      - "{{ tomcat }}"
