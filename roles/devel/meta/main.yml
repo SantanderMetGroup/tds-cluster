@@ -5,3 +5,4 @@ dependencies:
   - role: worker
     tomcats:
       - "{{ tomcat }}"
+    tags: update-workers

@@ -164,7 +164,16 @@
       tags: update-workers
 
     - name: Template modproxy.conf
-      template: src=templates/modproxy.conf.j2 dest=/etc/httpd/conf.d/modproxy.conf
+      template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
+      tags: update-workers
+
+    - name: Add additional reverse proxies to {{ modproxy_conf }}
+      blockinfile:
+        path: "{{ modproxy_conf }}"
+        marker: "# {mark} Additional reverse proxies"
+        block: |
+          ProxyPass /work http://ui.macc.unican.es/work
+          ProxyPassReverse /work http://ui.macc.unican.es/work
       tags: update-workers
 
 - name: Install production workers
@@ -176,7 +185,6 @@
 
 - name: Install development TDSs
   hosts: wn023
-  tags: devels
   tasks:
     - name: Install development TDSs
       include_role:
@@ -184,3 +192,4 @@
       with_items: "{{ devels }}"
       loop_control:
         loop_var: tomcat
+      tags: devels, update-workers

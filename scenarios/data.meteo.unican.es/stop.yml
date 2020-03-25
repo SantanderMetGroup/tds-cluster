@@ -1,5 +1,6 @@
 - name: Stop httpd
   hosts: lbs
+  tags: update-workers
   tasks:
     - name: Stop httpd
       service: name=httpd state=stopped

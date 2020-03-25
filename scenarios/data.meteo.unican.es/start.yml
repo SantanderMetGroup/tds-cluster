@@ -1,5 +1,6 @@
 - name: Start httpd
   hosts: lbs
+  tags: update-workers
   tasks:
     - name: Start httpd
       service: name=httpd state=started
