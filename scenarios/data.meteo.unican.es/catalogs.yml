@@ -14,7 +14,7 @@
 
     - name: Synchronize tds-content
       run_once: True
-      synchronize: src=tds-content dest={{ root }}
+      synchronize: src={{ tds_content }} dest={{ root }}
 
     - name: Set catalog and dataset permissions
       file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes

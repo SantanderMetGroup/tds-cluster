@@ -27,5 +27,8 @@ arandom.idp.com
 wn023
 wn025
 
+[servers:vars]
+tds_content=/home/zequi/tds-content
+
 [databases]
 wn023

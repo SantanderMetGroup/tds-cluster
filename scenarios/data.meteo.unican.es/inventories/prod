@@ -24,5 +24,8 @@ esgf-node.ipsl.upmc.fr
 wn023
 wn025
 
+[servers:vars]
+tds_content=tds-content
+
 [databases]
 wn023
