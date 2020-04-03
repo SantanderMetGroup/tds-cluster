@@ -1,0 +1,5 @@
+- name: Install devel TDS C3S_34d
+  hosts: wn023
+  roles:
+    - role: devel
+      tomcat: "{{ devels.c3s34d }}"

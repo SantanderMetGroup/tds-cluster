@@ -52,12 +52,14 @@ Then, declare a `tomcat` variable for the `devel` role and execute it in the hos
         properties: loadfactor=1 route={{ ansible_hostname }} # choose appropiates values
 ```
 
-Examples can be found in the `group_vars` directory.
+Examples can be found in the `inventories/group_vars` directory and in the `devels` directory.
 
-Run the playbook:
+Run the playbook
 
 ```
-ansible-playbook install.yml catalogs.yml --tags devels,update-workers
+ansible-playbook $PLAYBOOK
+# to update all workers you have to include all playbooks
+ansible-playbook install.yml devels/*.yml --tags update-workers
 ```
 
 Finally, to set up development TDS catalogs and datasets, just access the directory where you have deployed the new TDS and clone the appropiate branch of [tds-content](https://gitlab.com/scds/tds-content).

@@ -1,0 +1,5 @@
+- name: Install devel TDS ATLAS
+  hosts: wn023
+  roles:
+    - role: devel
+      tomcat: "{{ devels.atlas }}"

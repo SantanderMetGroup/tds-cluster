@@ -1,0 +1,23 @@
+- name: Install devel TDS tds5_data
+  hosts: wn023
+  vars_files:
+    - ../secrets.yml
+  tags: devels
+  roles:
+    - role: devel
+      tomcat: "{{ devels.tds5_data }}"
+  tasks:
+    - name: Template server.xml for tds5-data
+      template:
+        src: templates/tds5-data.server.xml.j2
+        dest: "{{ devels.tds5_data.home }}/conf/server.xml"
+
+    - name: Unarchive derbydb client in tds5-data
+      unarchive:
+        src: "../{{ derby_tgz }}"
+        dest: "{{ devels.tds5_data.home }}/lib"
+        exclude:
+          - derby.war
+          - README.htm
+        extra_opts:
+          - --strip-components=2

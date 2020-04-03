@@ -139,6 +139,8 @@
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
     clusters: # modproxy requires order
+      - name: tds5
+        urls: "{{ tds5_paths }}"
       - name: circulation-types-test-devel
         urls:
           - /thredds/catalog/devel/circulation-types-test
@@ -182,14 +184,3 @@
   tags: update-workers
   roles:
     - role: worker
-
-- name: Install development TDSs
-  hosts: wn023
-  tasks:
-    - name: Install development TDSs
-      include_role:
-        name: devel
-      with_items: "{{ devels }}"
-      loop_control:
-        loop_var: tomcat
-      tags: devels, update-workers

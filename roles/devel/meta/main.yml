@@ -1,7 +1,9 @@
 dependencies:
   - role: tomcat
+    tags: devels
   - role: tds
     tds_home: "{{ tomcat.home }}/webapps/thredds"
+    tags: devels
   - role: worker
     tomcats:
       - "{{ tomcat }}"

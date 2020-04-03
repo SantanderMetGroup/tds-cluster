@@ -1,0 +1,5 @@
+- name: Install devel TDS circulation-types-test
+  hosts: wn023
+  roles:
+    - role: devel
+      tomcat: "{{ devels.circulation_types_test }}"

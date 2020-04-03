@@ -35,6 +35,6 @@
         user: "{{ tds.user }}"
         password: "{{ tds.password }}"
       with_items:
-        - https://{{ inventory_hostname }}:9443//thredds/admin/debug?Catalogs/reinit
-        - https://{{ inventory_hostname }}:9443//thredds/admin/debug?Caches/clearCaches
+        - https://{{ inventory_hostname }}:9443/thredds/admin/debug?Catalogs/reinit
+        - https://{{ inventory_hostname }}:9443/thredds/admin/debug?Caches/clearCaches
       tags: caches
