@@ -16,6 +16,19 @@
       run_once: True
       synchronize: src={{ tds_content }} dest={{ root }}
 
+    - name: Find directory catalogs
+      find: paths={{ root }}/tds-content recurse=no file_type=any
+      register: catalog_result
+
+    - name: Symlink tds-content
+      file:
+        state: link
+        src: "{{ item.1.path }}"
+        path: "{{ item.0.base }}/content/thredds/{{ item.1.path|basename }}"
+      with_nested:
+        - "{{ tomcats }}"
+        - "{{ catalog_result.files }}"
+
     - name: Set catalog and dataset permissions
       file: path={{ root }}/{{ item }} mode=u=rwX,g=rwX,o=rX recurse=yes
       with_items: [catalogs, public]
