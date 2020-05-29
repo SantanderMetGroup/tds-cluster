@@ -1,5 +1,5 @@
 jdk_tgz: ../../software/jdk8.tar.gz
-tomcat_tgz: ../../software/apache-tomcat-7.0.100.tar.gz
+tomcat_tgz: ../../software/apache-tomcat-7.0.104.tar.gz
 tds_war: ../../software/tds-5.0.0-beta6.war
 derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
