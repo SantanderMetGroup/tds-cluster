@@ -1,5 +1,7 @@
 - name: Install tomcats
   hosts: servers
+  tags:
+    - update-tomcat
   vars:
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
@@ -138,25 +140,6 @@
   vars:
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
-    clusters: # modproxy requires order
-      - name: tds5
-        urls: "{{ tds5_paths }}"
-      - name: circulation-types-test-devel
-        urls:
-          - /thredds/catalog/devel/circulation-types-test
-          - /thredds/dodsC/devel/circulation-types-test
-      - name: atlas-devel
-        urls:
-          - /thredds/catalog/devel/atlas
-          - /thredds/dodsC/devel/atlas
-      - name: c3s34d-devel
-        urls:
-          - /thredds/catalog/devel/c3s34d
-          - /thredds/dodsC/devel/c3s34d
-      - name: default
-        urls:
-          - /thredds
-          - /udg-tap
   tasks:
     - name: Install httpd
       yum: name=httpd,mod_ssl state=present
@@ -164,6 +147,9 @@
     - name: Copy httpd conf
       copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
       tags: update-workers
+
+    - name: Copy httpd ssl conf
+      copy: src=files/httpd.ssl.conf dest=/etc/httpd/conf/httpd.ssl.conf
 
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
