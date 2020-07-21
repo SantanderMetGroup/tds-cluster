@@ -2,7 +2,7 @@ dependencies:
   - role: tomcat
     tags: devels
   - role: tds
-    tds_home: "{{ tomcat.home }}/webapps/thredds"
+    tds_home: "{{ tomcat.home }}/webapps/{{ tds_context }}"
     tags: devels
   - role: worker
     tomcats:

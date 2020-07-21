@@ -153,7 +153,18 @@
 
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
-      tags: update-workers
+      tags:
+        - update-workers
+        - update-clusters
+
+    - name: Add tds5 proxy
+      blockinfile:
+        path: "{{ modproxy_conf }}"
+        marker: "# {mark} TDS5"
+        insertbefore: 'ProxyPass "/thredds"'
+        block: |
+          ProxyPass "/thredds/catalog/devel/tds5" "balancer://tds5/tds5/catalog"
+          ProxyPassReverse "/thredds/catalog/devel/tds5" "balancer://tds5/tds5/catalog"
 
     - name: Add additional reverse proxies to {{ modproxy_conf }}
       blockinfile:

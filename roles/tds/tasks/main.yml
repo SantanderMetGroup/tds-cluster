@@ -2,7 +2,9 @@
   file: state=directory path={{ tds_home }}
 
 - name: Unarchive TDS
-  unarchive: src={{ tds_war }} dest={{ tds_home }}
+  unarchive:
+    src: "{{ tds_war }}"
+    dest: "{{ tds_home }}"
 
 - name: Update context path in web.xml
   replace:

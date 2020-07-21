@@ -7,12 +7,14 @@
 
 - name: Stop tomcats
   hosts: servers
+  tags: tomcats
   tasks:
     - name: Import stop tasks
       import_tasks: stop/tomcats.yml
 
 - name: Stop database
   hosts: databases
+  tags: databases
   tasks:
     - command: bin/stopNetworkServer
       args:

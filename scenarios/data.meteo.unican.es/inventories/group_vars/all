@@ -5,6 +5,30 @@ derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
 melody_jar: ../../software/javamelody-core-1.73.1.jar
 
+clusters: # modproxy requires order
+  - name: cordex-esdm
+    urls:
+      - /thredds/catalog/cordex-esdm
+      - /thredds/dodsC/cordex-esdm
+      - /thredds/fileServer/cordex-esdm
+  - name: tds5
+  - name: circulation-types-test-devel
+    urls:
+      - /thredds/catalog/devel/circulation-types-test
+      - /thredds/dodsC/devel/circulation-types-test
+  - name: atlas-devel
+    urls:
+      - /thredds/catalog/devel/atlas
+      - /thredds/dodsC/devel/atlas
+  - name: c3s34d-devel
+    urls:
+      - /thredds/catalog/devel/c3s34d
+      - /thredds/dodsC/devel/c3s34d
+  - name: default
+    urls:
+      - /thredds
+      - /udg-tap
+
 devels:
   atlas:
     jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
@@ -37,6 +61,7 @@ devels:
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}
   tds5_data:
+    tds_context: tds5
     jdk: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/tds5/jdk"
     home: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/tds5"
     http: 7015
@@ -44,5 +69,15 @@ devels:
     shutdown: 7018
     gateway: lb
     cluster: tds5
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
+  cordex_esdm:
+    jdk: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/cordex_esdm/jdk"
+    home: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/cordex_esdm"
+    http: 7020
+    ajp: 7022
+    shutdown: 7023
+    gateway: lb
+    cluster: cordex-esdm
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}

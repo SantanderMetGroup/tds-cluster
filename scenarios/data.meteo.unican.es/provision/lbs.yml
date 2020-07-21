@@ -20,7 +20,7 @@
 
     - name: Required packages
       package: name={{ item }} state=present
-      with_items: [openssh-server, sudo, python-passlib, subversion, git, unzip]
+      with_items: [openssh-server, sudo, python-passlib, subversion, git, unzip, mod_geoip]
 
     - name: Debug packages
       package: name={{ item }} state=present

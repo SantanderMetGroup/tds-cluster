@@ -7,6 +7,7 @@
 
 - name: Start tomcats
   hosts: servers
+  tags: tomcats
   tasks:
     - name: Start tomcats
       shell: "nohup {{ item.home }}/bin/startup.sh"
@@ -18,6 +19,7 @@
 
 - name: Start database
   hosts: databases
+  tags: databases
   tasks:
     - command: nohup bin/startNetworkServer &
       args:

@@ -6,6 +6,7 @@
   roles:
     - role: devel
       tomcat: "{{ devels.tds5_data }}"
+      tds_context: tds5
   tasks:
     - name: Template server.xml for tds5-data
       template:
