@@ -12,10 +12,6 @@ clusters: # modproxy requires order
       - /thredds/dodsC/cordex-esdm
       - /thredds/fileServer/cordex-esdm
   - name: tds5
-  - name: circulation-types-test-devel
-    urls:
-      - /thredds/catalog/devel/circulation-types-test
-      - /thredds/dodsC/devel/circulation-types-test
   - name: atlas-devel
     urls:
       - /thredds/catalog/devel/atlas
