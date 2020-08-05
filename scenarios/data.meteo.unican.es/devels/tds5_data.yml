@@ -2,7 +2,6 @@
   hosts: wn023
   vars_files:
     - ../secrets.yml
-  tags: devels
   roles:
     - role: devel
       tomcat: "{{ devels.tds5_data }}"
@@ -22,3 +21,12 @@
           - README.htm
         extra_opts:
           - --strip-components=2
+
+    - name: Start tomcat
+      include_tasks:
+        file: ../restart.yml
+        apply:
+          tags: start
+      vars:
+        tomcat: "{{ devels.tds5_data }}"
+      tags: start

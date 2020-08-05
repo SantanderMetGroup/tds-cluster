@@ -1,0 +1,17 @@
+- name: Stop tomcat
+  command: "{{ tomcat.home }}/bin/shutdown.sh"
+  args:
+    removes: "{{ tomcat.base|default(tomcat.home) }}/logs/catalina.pid"
+  environment:
+    CATALINA_BASE: "{{ tomcat.base|default(tomcat.home) }}"
+  ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
+
+- name: Remove catalina.pid
+  file: path={{ tomcat.base|default(tomcat.home) }}/logs/catalina.pid state=absent
+
+- name: Start tomcat
+  shell: "nohup {{ tomcat.home }}/bin/startup.sh"
+  args:
+    creates: "{{ tomcat.base|default(tomcat.home) }}/logs/catalina.pid"
+  environment:
+    CATALINA_BASE: "{{ tomcat.base|default(tomcat.home) }}"

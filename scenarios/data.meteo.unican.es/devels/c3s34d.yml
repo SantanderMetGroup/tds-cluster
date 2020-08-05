@@ -3,3 +3,12 @@
   roles:
     - role: devel
       tomcat: "{{ devels.c3s34d }}"
+  tasks:
+    - name: Start tomcat
+      include_tasks:
+        file: ../restart.yml
+        apply:
+          tags: start
+      vars:
+        tomcat: "{{ devels.c3s34d }}"
+      tags: start

@@ -5,17 +5,14 @@
     - name: Start httpd
       service: name=httpd state=started
 
-- name: Start tomcats
+- name: Start production tomcats
   hosts: servers
-  tags: tomcats
+  tags: start
   tasks:
-    - name: Start tomcats
-      shell: "nohup {{ item.home }}/bin/startup.sh"
-      args:
-        creates: "{{ item.base }}/logs/catalina.pid"
-      environment:
-        CATALINA_BASE: "{{ item.base }}"
+    - include_tasks: restart.yml
       with_items: "{{ tomcats }}"
+      loop_control:
+        loop_var: tomcat
 
 - name: Start database
   hosts: databases

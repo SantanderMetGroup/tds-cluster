@@ -1,8 +1,8 @@
-- name: Install devel TDS ATLAS
+- name: Install devel TDS CORDEX-ESDM
   hosts: wn023
   roles:
     - role: devel
-      tomcat: "{{ devels.atlas }}"
+      tomcat: "{{ devels.cordex_esdm }}"
   tasks:
     - name: Start tomcat
       include_tasks:
@@ -10,5 +10,5 @@
         apply:
           tags: start
       vars:
-        tomcat: "{{ devels.atlas }}"
+        tomcat: "{{ devels.cordex_esdm }}"
       tags: start

@@ -9,6 +9,9 @@
 ```bash
 lxdock up
 ansible-playbook esgf-ansible/install.yml install.yml esgf-ansible/stop.yml esgf-ansible/start.yml start.yml catalogs.yml
+
+# To deploy development TDSs
+ansible-playbook devels/*.yml
 ```
 
 ## Update catalogs and datasets
