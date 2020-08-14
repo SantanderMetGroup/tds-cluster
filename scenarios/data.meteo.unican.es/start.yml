@@ -7,7 +7,10 @@
 
 - name: Start production tomcats
   hosts: servers
-  tags: start
+  serial: True
+  tags:
+    - start
+    - tomcats
   tasks:
     - include_tasks: restart.yml
       with_items: "{{ tomcats }}"
