@@ -2,6 +2,12 @@
   hosts: lbs
   tags: update-workers
   tasks:
+    - name: Start ntpd
+      service: name=ntpd state=started
+
+    - name: Start filebeat
+      service: name=filebeat state=started
+
     - name: Start httpd
       service: name=httpd state=started
 
