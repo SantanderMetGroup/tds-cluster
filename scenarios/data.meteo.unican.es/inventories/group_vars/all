@@ -25,6 +25,9 @@ clusters: # modproxy requires order
       - /thredds
       - /udg-tap
 
+esgf:
+  home: /usr/local/tomcat
+
 devels:
   atlas:
     jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk

@@ -11,6 +11,14 @@
     - name: Start httpd
       service: name=httpd state=started
 
+    - name: Start esgf tomcat
+      include_tasks:
+        file: restart.yml
+        apply:
+          tags: start
+      vars:
+        tomcat: "{{ esgf }}"
+
 - name: Start production tomcats
   hosts: servers
   serial: True
