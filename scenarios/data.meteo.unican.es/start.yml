@@ -33,7 +33,9 @@
 
 - name: Start database
   hosts: databases
-  tags: databases
+  tags:
+    - databases
+    - start
   tasks:
     - command: nohup bin/startNetworkServer &
       args:

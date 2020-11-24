@@ -1,5 +1,5 @@
 - name: Install devel TDS tds5_data
-  hosts: wn023
+  hosts: wn025
   vars_files:
     - ../secrets.yml
   roles:
@@ -11,6 +11,18 @@
       template:
         src: templates/tds5-data.server.xml.j2
         dest: "{{ devels.tds5_data.home }}/conf/server.xml"
+
+    - name: Worker for /tds5
+      delegate_to: lb
+      delegate_facts: true
+      blockinfile:
+        path: /etc/httpd/conf/httpd.conf
+        insertbefore: '<VirtualHost \*:80>'
+        block: |
+          <Location /tds5>
+            ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
+            ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
+          </Location>
 
     - name: Unarchive derbydb client in tds5-data
       unarchive:
