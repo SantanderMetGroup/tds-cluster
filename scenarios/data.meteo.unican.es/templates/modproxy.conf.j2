@@ -12,6 +12,11 @@ ProxyPass /status-proxy !
 ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
 Redirect permanent /tds5 /thredds
 
+#<Proxy "balancer://esgf">
+#BalancerMember "ajp://localhost:8223/thredds"
+#</Proxy>
+#ProxyPassMatch ^(/thredds/dodsC/cordex\.output\..*aggregation\.[0-9]+.*)$ "balancer://esgf$1"
+
 {% for c in clusters -%}
 <Proxy "balancer://{{ c.name }}">
 ProxySet stickysession=JSESSIONID
