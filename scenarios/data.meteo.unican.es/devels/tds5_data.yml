@@ -34,6 +34,18 @@
         extra_opts:
           - --strip-components=2
 
+    - name: Copy grib table
+      copy: src=tds5/2.98.128.table dest={{ devels.tds5_data.home }}/content/thredds/2.98.128.table
+
+    - name: Add grib table to threddsConfig.xml
+      blockinfile:
+        path: "{{ devels.tds5_data.home }}/content/thredds/threddsConfig.xml"
+        insertbefore: '</threddsConfig>'
+        block: |
+          <nj22Config>
+            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ devels.tds5_data.home }}/content/thredds/2.98.128.table</gribParameterTable>
+          </nj22Config>
+
     - name: Start tomcat
       include_tasks:
         file: ../restart.yml
