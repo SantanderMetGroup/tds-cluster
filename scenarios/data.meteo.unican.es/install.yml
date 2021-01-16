@@ -2,6 +2,7 @@
   hosts: servers
   tags:
     - update-tomcat
+    - production
   vars:
     tomcat_ssl_keystoreFile: "{{ tomcat_home }}/server.p12"
     tomcat_ssl_keystorePass: coches1
@@ -135,46 +136,11 @@
     - name: Template derby.properties
       template: src=templates/derby.properties.j2 dest={{ derby_home }}/derby.properties
 
-- name: Install load balancer
-  hosts: lb
-  vars:
-    hostcert: /etc/pki/tls/certs/hostcert.pem
-    hostkey: /etc/pki/tls/private/hostkey.pem
-  tasks:
-    - name: Install httpd
-      yum: name=httpd,mod_ssl state=present
-
-    - name: Copy httpd conf
-      copy: src=files/httpd.conf dest=/etc/httpd/conf/httpd.conf
-      tags: update-workers
-
-    - name: Copy httpd ssl conf
-      copy: src=files/httpd.ssl.conf dest=/etc/httpd/conf/httpd.ssl.conf
-
-    - name: Template modproxy.conf
-      template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
-      tags: update-workers
-
-    - name: Add tds5 proxy
-      blockinfile:
-        path: "{{ modproxy_conf }}"
-        marker: "# {mark} TDS5"
-        insertbefore: ProxyPass "/thredds"
-        block: "{{ tds5_paths }}"
-      tags: update-workers
-
-    - name: Add additional reverse proxies to {{ modproxy_conf }}
-      blockinfile:
-        path: "{{ modproxy_conf }}"
-        marker: "# {mark} Additional reverse proxies"
-        block: |
-          ProxyPass /work http://ui.macc.unican.es/work
-          ProxyPassReverse /work http://ui.macc.unican.es/work
-      tags: update-workers
-
 - name: Install production workers
   hosts: servers
   serial: True
-  tags: update-workers
+  tags:
+    - update-workers
+    - production
   roles:
     - role: worker

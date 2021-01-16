@@ -1,3 +1,5 @@
+root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
+
 jdk_tgz: ../../software/jdk8.tar.gz
 tomcat_tgz: ../../software/apache-tomcat-7.0.104.tar.gz
 tds_war: ../../software/tds-5.0.0-beta6.war
@@ -20,6 +22,10 @@ clusters: # modproxy requires order
     urls:
       - /thredds/catalog/devel/c3s34d
       - /thredds/dodsC/devel/c3s34d
+  - name: scratch
+    urls:
+      - /thredds/catalog/devel/SCRATCH
+      - /thredds/dodsC/devel/SCRATCH
   - name: default
     urls:
       - /thredds
@@ -78,5 +84,15 @@ devels:
     shutdown: 7023
     gateway: lb
     cluster: cordex-esdm
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
+  scratch:
+    home: "{{ root }}/{{ inventory_hostname }}/tomcats/scratch"
+    jdk: "{{ root }}/jdk"
+    http: 7025
+    ajp: 7027
+    shutdown: 7028
+    gateway: lb
+    cluster: scratch
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}

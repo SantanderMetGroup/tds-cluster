@@ -1,0 +1,8 @@
+tabla vieja - https://github.com/Unidata/thredds/blob/v4.3.18/grib/src/main/resources/resources/grib1/ecmwf/local_table_2_version_128
+tabla nueva - https://github.com/Unidata/netcdf-java/blob/develop/grib/src/main/resources/resources/grib1/ecmwfEcCodes/2.98.128.table
+
+runtime loading - https://docs.unidata.ucar.edu/netcdf-java/current/userguide/runtime_loading.html
+
+java -jar ~/sw/netcdf-java/build/libs/toolsUI-5.3.3.jar -nj22config ncconfig.xml FILE
+
+java -cp ~/sw/toolsUI-4.3.18.jar ucar.nc2.NCdumpW FILE

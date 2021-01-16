@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<nj22Config>
+
+<gribParameterTable edition="1" center="98" subcenter="-1" version="128">2.98.128.table</gribParameterTable>
+<!--<gribParameterTableLookup edition="1">C:/grib/tables/ncepLookup.txt</gribParameterTableLookup>-->
+<!--<table type="GRIB1" filename="/grib/tables/userlookup.lst"/>-->
+<!--<table type="GRIB2" filename="/grib/tables/grib2userparameters" />-->
+<!--<grib1Table strict="false"/>-->
+</nj22Config>

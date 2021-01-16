@@ -1,4 +1,4 @@
-root: "{{ ansible_env.HOME }}/services/tds-cluster"
+root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
 tomcat_home: "{{ root }}/tomcat"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 

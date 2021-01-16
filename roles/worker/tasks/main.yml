@@ -1,3 +1,12 @@
+- name: Check if cluster for workder is defined
+  lineinfile:
+    path: "{{ modproxy_conf }}"
+    line: <Proxy "balancer://{{ item.cluster }}">
+  delegate_to: "{{ item.gateway }}"
+  with_items: "{{ tomcats }}"
+  check_mode: yes
+  register: is_present
+
 - name: Add tomcat as a modproxy worker
   blockinfile:
     path: "{{ modproxy_conf }}"
@@ -7,3 +16,4 @@
       BalancerMember "ajp://{{ item.host }}:{{ item.ajp }}" {{ item.properties }}
   delegate_to: "{{ item.gateway }}"
   with_items: "{{ tomcats }}"
+  when: not is_present.changed

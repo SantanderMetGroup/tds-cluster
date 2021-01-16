@@ -1,0 +1,14 @@
+- name: Install devel TDS SCRATCH
+  hosts: wn023
+  roles:
+    - role: devel
+      tomcat: "{{ devels.scratch }}"
+  tasks:
+    - name: Start tomcat
+      include_tasks:
+        file: ../restart.yml
+        apply:
+          tags: start
+      vars:
+        tomcat: "{{ devels.scratch }}"
+      tags: start
