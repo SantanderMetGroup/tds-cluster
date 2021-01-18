@@ -22,10 +22,10 @@ clusters: # modproxy requires order
     urls:
       - /thredds/catalog/devel/c3s34d
       - /thredds/dodsC/devel/c3s34d
-  - name: scratch
+  - name: devel
     urls:
-      - /thredds/catalog/devel/SCRATCH
-      - /thredds/dodsC/devel/SCRATCH
+      - /thredds/catalog/devel
+      - /thredds/dodsC/devel
   - name: default
     urls:
       - /thredds
@@ -93,6 +93,6 @@ devels:
     ajp: 7027
     shutdown: 7028
     gateway: lb
-    cluster: scratch
+    cluster: devel
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}

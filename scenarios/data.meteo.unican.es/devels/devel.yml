@@ -1,4 +1,4 @@
-- name: Install devel TDS SCRATCH
+- name: Install devel TDS
   hosts: wn023
   roles:
     - role: devel
