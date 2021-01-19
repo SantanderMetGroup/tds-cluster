@@ -67,8 +67,8 @@ devels:
     properties: loadfactor=1 route={{ ansible_hostname }}
   tds5_data:
     tds_context: tds5
-    jdk: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/tds5/jdk"
-    home: "{{ ansible_env.HOME }}/services/tds-cluster/{{ inventory_hostname }}/tomcats/tds5"
+    jdk: "{{ root }}/jdk"
+    home: "{{ root }}/{{ inventory_hostname }}/tomcats/tds5"
     http: 7015
     ajp: 7017
     shutdown: 7018

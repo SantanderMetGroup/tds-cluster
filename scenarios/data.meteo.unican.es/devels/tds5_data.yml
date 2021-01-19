@@ -23,6 +23,11 @@
             ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
             ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
           </Location>
+          <Location /thredds/catalog/devel/tds5>
+            ProxyPass ajp://192.168.202.35:7017/tds5
+            ProxyPassReverse ajp://192.168.202.35:7017/tds5
+          </Location>
+      tags: update_workers
 
     - name: Unarchive derbydb client in tds5-data
       unarchive:
