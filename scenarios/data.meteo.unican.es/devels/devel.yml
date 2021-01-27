@@ -1,9 +1,20 @@
 - name: Install devel TDS
   hosts: wn023
+  vars:
+    tomcat: "{{ devels.scratch }}"
   roles:
     - role: devel
-      tomcat: "{{ devels.scratch }}"
   tasks:
+    - name: Synchronize tds-content
+      tags: content
+      #synchronize: src=../tds-content/ dest={{ tomcat.home }}/content/thredds
+      shell: git pull --ff-only
+      args:
+        chdir: "{{ tomcat.home }}/content/thredds"
+      notify:
+        - Touch
+
+  handlers:
     - name: Start tomcat
       include_tasks:
         file: ../restart.yml
@@ -12,3 +23,6 @@
       vars:
         tomcat: "{{ devels.scratch }}"
       tags: start
+
+    - name: Touch
+      file: path={{ tomcat.home }}/webapps/thredds/WEB-INF/web.xml state=touch

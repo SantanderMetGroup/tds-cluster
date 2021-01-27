@@ -22,11 +22,3 @@
         marker: "# {mark} TDS5"
         insertbefore: ProxyPass "/thredds"
         block: "{{ tds5_paths }}"
-
-    - name: Add additional reverse proxies to {{ modproxy_conf }}
-      blockinfile:
-        path: "{{ modproxy_conf }}"
-        marker: "# {mark} Additional reverse proxies"
-        block: |
-          ProxyPass /work http://ui.macc.unican.es/work
-          ProxyPassReverse /work http://ui.macc.unican.es/work

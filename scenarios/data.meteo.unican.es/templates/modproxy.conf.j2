@@ -10,7 +10,6 @@ ProxyTimeout 600
 
 ProxyPass /status-proxy !
 ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
-Redirect permanent /tds5 /thredds
 
 #<Proxy "balancer://esgf">
 #BalancerMember "ajp://localhost:8223/thredds"
@@ -28,3 +27,7 @@ ProxyPassReverse "{{ u }}" "balancer://{{ c.name }}{{ u }}"
 {% endfor %}
 
 {% endfor %}
+
+# Additional reverse proxies
+ProxyPass /work http://ui.macc.unican.es/work
+ProxyPassReverse /work http://ui.macc.unican.es/work
