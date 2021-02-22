@@ -11,10 +11,12 @@
         repo: git@gitlab.com:scds/tds-content.git
         dest: tds-content
         version: master
+      tags: caches
 
     - name: Synchronize tds-content
       run_once: True
       synchronize: src={{ tds_content }} dest={{ root }}
+      tags: caches
 
     - name: Find directory catalogs
       find: paths={{ root }}/tds-content recurse=no file_type=any
