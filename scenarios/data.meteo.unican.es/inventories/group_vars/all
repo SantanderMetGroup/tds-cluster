@@ -1,4 +1,6 @@
 root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
+jdk_home: "{{ root }}/jdk"
+derby_home: "{{ root }}/derbydb"
 
 jdk_tgz: ../../software/jdk8.tar.gz
 tomcat_tgz: ../../software/apache-tomcat-7.0.104.tar.gz

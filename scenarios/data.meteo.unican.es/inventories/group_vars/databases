@@ -1,2 +1,0 @@
-jdk_home: "{{ ansible_env.HOME }}/services/tds-cluster/jdk"
-derby_home: "{{ ansible_env.HOME }}/services/tds-cluster/derbydb"
