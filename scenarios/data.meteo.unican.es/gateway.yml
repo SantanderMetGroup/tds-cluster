@@ -22,3 +22,55 @@
         marker: "# {mark} TDS5"
         insertbefore: ProxyPass "/thredds"
         block: "{{ tds5_paths }}"
+
+- name: Production workers
+  hosts: servers
+  serial: 1
+  tasks:
+    - name: Add tomcat worker {{ tomcat.ajp }}
+      include_tasks: worker.yml
+      vars:
+        tomcat: "{{ tomcats.prod }}"
+
+- name: Devel worker
+  hosts: wn023
+  serial: 1
+  tasks:
+    - name: Add devel worker {{ tomcat.ajp }}
+      include_tasks: worker.yml
+      vars:
+        tomcat: "{{ tomcats.scratch }}"
+
+- name: Atlas worker
+  hosts: wn025
+  serial: 1
+  tasks:
+    - name: Add atlas worker {{ tomcat.ajp }}
+      include_tasks: worker.yml
+      vars:
+        tomcat: "{{ tomcats.atlas }}"
+
+- name: TDS5 worker
+  hosts: wn025
+  serial: 1
+  tasks:
+    - name: Add atlas worker {{ tomcat.ajp }}
+      include_tasks: worker.yml
+      vars:
+        tomcat: "{{ tomcats.tds5_data }}"
+
+    - name: Worker for /tds5
+      delegate_to: lb
+      delegate_facts: true
+      blockinfile:
+        path: /etc/httpd/conf/httpd.conf
+        insertbefore: '<VirtualHost \*:80>'
+        block: |
+          <Location /tds5>
+            ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats.tds5_data.ajp }}/tds5
+            ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats.tds5_data.ajp }}/tds5
+          </Location>
+          <Location /thredds/catalog/devel/tds5>
+            ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats.tds5_data.ajp }}/tds5
+            ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats.tds5_data.ajp }}/tds5
+          </Location>

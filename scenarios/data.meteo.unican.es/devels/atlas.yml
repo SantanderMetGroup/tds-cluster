@@ -2,7 +2,7 @@
   hosts: wn025
   roles:
     - role: devel
-      tomcat: "{{ devels.atlas }}"
+      tomcat: "{{ tomcats.atlas }}"
   tasks:
     - name: Start tomcat
       include_tasks:
@@ -10,5 +10,5 @@
         apply:
           tags: start
       vars:
-        tomcat: "{{ devels.atlas }}"
+        tomcat: "{{ tomcats.atlas }}"
       tags: start

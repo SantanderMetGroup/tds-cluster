@@ -15,10 +15,6 @@ clusters: # modproxy requires order
     urls:
       - /thredds/catalog/devel/atlas
       - /thredds/dodsC/devel/atlas
-  - name: c3s34d-devel
-    urls:
-      - /thredds/catalog/devel/c3s34d
-      - /thredds/dodsC/devel/c3s34d
   - name: devel
     urls:
       - /thredds/catalog/devel
@@ -31,7 +27,19 @@ clusters: # modproxy requires order
 esgf:
   home: /usr/local/tomcat
 
-devels:
+tomcats:
+  prod:
+    home: "{{ tomcat_home }}"
+    base: "{{ root }}/{{ inventory_hostname }}/tomcats/tomcat1"
+    jdk: "{{ root }}/jdk"
+    http: 9080
+    ssl: 9443
+    ajp: 9009
+    shutdown: 9005
+    gateway: lb
+    cluster: default
+    host: "{{ ansible_all_ipv4_addresses[0] }}"
+    properties: loadfactor=1 route={{ ansible_hostname }}
   atlas:
     jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
     home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
@@ -40,16 +48,6 @@ devels:
     shutdown: 7003
     gateway: lb
     cluster: atlas-devel
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}
-  c3s34d:
-    jdk: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds/jdk
-    home: /oceano/gmeteo/WORK/PROYECTOS/2020_C3S_34d/tds
-    ajp: 7007
-    http: 7005
-    shutdown: 7008
-    gateway: lb
-    cluster: c3s34d-devel
     host: "{{ ansible_all_ipv4_addresses[0] }}"
     properties: loadfactor=1 route={{ ansible_hostname }}
   tds5_data:

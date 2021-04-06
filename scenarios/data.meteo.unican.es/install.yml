@@ -135,12 +135,3 @@
 
     - name: Template derby.properties
       template: src=templates/derby.properties.j2 dest={{ derby_home }}/derby.properties
-
-- name: Install production workers
-  hosts: servers
-  serial: True
-  tags:
-    - update-workers
-    - production
-  roles:
-    - role: worker

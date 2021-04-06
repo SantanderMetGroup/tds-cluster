@@ -1,16 +1,3 @@
 root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
 tomcat_home: "{{ root }}/tomcat"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
-
-tomcats:
-  - home: "{{ tomcat_home }}"
-    base: "{{ root }}/{{ inventory_hostname }}/tomcats/tomcat1"
-    jdk: "{{ root }}/jdk"
-    http: 9080
-    ssl: 9443
-    ajp: 9009
-    shutdown: 9005
-    gateway: lb
-    cluster: default
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}

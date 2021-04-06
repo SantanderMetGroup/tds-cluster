@@ -4,7 +4,3 @@ dependencies:
   - role: tds
     tds_home: "{{ tomcat.home }}/webapps/{{ tds_context }}"
     tags: devels
-  - role: worker
-    tomcats:
-      - "{{ tomcat }}"
-    tags: update-workers

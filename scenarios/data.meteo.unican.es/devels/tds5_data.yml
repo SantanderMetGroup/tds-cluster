@@ -4,35 +4,18 @@
     - ../secrets.yml
   roles:
     - role: devel
-      tomcat: "{{ devels.tds5_data }}"
+      tomcat: "{{ tomcats.tds5_data }}"
       tds_context: tds5
   tasks:
     - name: Template server.xml for tds5-data
       template:
         src: templates/tds5-data.server.xml.j2
-        dest: "{{ devels.tds5_data.home }}/conf/server.xml"
-
-    - name: Worker for /tds5
-      delegate_to: lb
-      delegate_facts: true
-      blockinfile:
-        path: /etc/httpd/conf/httpd.conf
-        insertbefore: '<VirtualHost \*:80>'
-        block: |
-          <Location /tds5>
-            ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
-            ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
-          </Location>
-          <Location /thredds/catalog/devel/tds5>
-            ProxyPass ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
-            ProxyPassReverse ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ devels.tds5_data.ajp }}/tds5
-          </Location>
-      tags: update_workers
+        dest: "{{ tomcats.tds5_data.home }}/conf/server.xml"
 
     - name: Unarchive derbydb client in tds5-data
       unarchive:
         src: "../{{ derby_tgz }}"
-        dest: "{{ devels.tds5_data.home }}/lib"
+        dest: "{{ tomcats.tds5_data.home }}/lib"
         exclude:
           - derby.war
           - README.htm
@@ -40,15 +23,15 @@
           - --strip-components=2
 
     - name: Copy grib table
-      copy: src=tds5/2.98.128.table dest={{ devels.tds5_data.home }}/content/thredds/2.98.128.table
+      copy: src=tds5/2.98.128.table dest={{ tomcats.tds5_data.home }}/content/thredds/2.98.128.table
 
     - name: Add grib table to threddsConfig.xml
       blockinfile:
-        path: "{{ devels.tds5_data.home }}/content/thredds/threddsConfig.xml"
+        path: "{{ tomcats.tds5_data.home }}/content/thredds/threddsConfig.xml"
         insertbefore: '</threddsConfig>'
         block: |
           <nj22Config>
-            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ devels.tds5_data.home }}/content/thredds/2.98.128.table</gribParameterTable>
+            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ tomcats.tds5_data.home }}/content/thredds/2.98.128.table</gribParameterTable>
           </nj22Config>
 
     - name: Start tomcat
@@ -57,5 +40,5 @@
         apply:
           tags: start
       vars:
-        tomcat: "{{ devels.tds5_data }}"
+        tomcat: "{{ tomcats.tds5_data }}"
       tags: start

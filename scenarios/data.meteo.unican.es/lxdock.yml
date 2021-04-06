@@ -1,5 +1,5 @@
 name: tds-cluster
-image: centos/6
+image: centos/7
 
 containers:
   - name: lb

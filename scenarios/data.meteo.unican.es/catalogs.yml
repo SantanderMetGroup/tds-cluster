@@ -1,6 +1,5 @@
 - name: Install TDS catalogs and datasets
   hosts: servers
-  tags: devels
   vars_files:
     - secrets.yml
   tasks:
