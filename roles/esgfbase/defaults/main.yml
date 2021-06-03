@@ -1,0 +1,30 @@
+esghome: "" # this allows /esg/config,/esg/content,etc
+esg:
+  home: "{{ esghome }}/esg"
+  config: "{{ esghome }}/esg/config"
+  esgcet: "{{ esghome }}/esg/config/esgcet"
+  content: "{{ esghome }}/esg/content"
+esgf:
+  thredds_username: dnode_user
+  thredds_restrict_access: esg-user
+db:
+  name: esgcet
+  host: localhost
+  port: 5432
+  admin:
+    name: dbsuper
+    pass: "{{ admin_pass }}"
+  user:
+    name: esgcet
+    pass: "{{ admin_pass }}"
+conda:
+  home: "{{ esg.home }}/miniconda2"
+  exe: "{{ esg.home }}/miniconda2/bin/conda"
+  actv: "source {{ esg.home }}/miniconda2/bin/activate"
+gridftp:
+  security: /etc/grid-security
+  port: 2811
+  chroot: "{{ esg.home }}/gridftp_root"
+  cert_dir: /etc/grid-security/certificates
+  hostcert: /etc/grid-security/hostcert.pem
+  hostkey: /etc/grid-security/hostkey.pem

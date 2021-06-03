@@ -1,6 +1,8 @@
 root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
 jdk_home: "{{ root }}/jdk"
 derby_home: "{{ root }}/derbydb"
+modproxy_conf: /etc/httpd/conf.d/modproxy.conf
+tdscontent_repo: git@gitlab.com:SCDS/tds-content.git
 
 jdk_tgz: ../../software/jdk8.tar.gz
 tomcat_tgz: ../../software/apache-tomcat-7.0.104.tar.gz
@@ -9,65 +11,38 @@ derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
 melody_jar: ../../software/javamelody-core-1.73.1.jar
 
-clusters: # modproxy requires order
-  - name: tds5
-  - name: atlas-devel
-    urls:
-      - /thredds/catalog/devel/atlas
-      - /thredds/dodsC/devel/atlas
-  - name: devel
-    urls:
-      - /thredds/catalog/devel
-      - /thredds/dodsC/devel
-  - name: default
-    urls:
-      - /thredds
-      - /udg-tap
-
-esgf:
-  home: /usr/local/tomcat
-
 tomcats:
-  prod:
-    home: "{{ tomcat_home }}"
-    base: "{{ root }}/{{ inventory_hostname }}/tomcats/tomcat1"
-    jdk: "{{ root }}/jdk"
+  udg:
+    home: "{{ root }}/{{ inventory_hostname }}/tomcats/udg"
+    jdk: "{{ jdk_home }}"
     http: 9080
     ssl: 9443
     ajp: 9009
     shutdown: 9005
-    gateway: lb
-    cluster: default
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}
-  atlas:
-    jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
-    home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
-    ajp: 7002
-    http: 7000
-    shutdown: 7003
-    gateway: lb
-    cluster: atlas-devel
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}
-  tds5_data:
-    tds_context: tds5
-    jdk: "{{ root }}/jdk"
+  tds5:
+    jdk: "{{ jdk_home }}"
     home: "{{ root }}/{{ inventory_hostname }}/tomcats/tds5"
     http: 7015
+    ssl: 7016
     ajp: 7017
     shutdown: 7018
-    gateway: lb
-    cluster: tds5
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}
-  scratch:
-    home: "{{ root }}/{{ inventory_hostname }}/tomcats/scratch"
-    jdk: "{{ root }}/jdk"
-    http: 7025
-    ajp: 7027
-    shutdown: 7028
-    gateway: lb
-    cluster: devel
-    host: "{{ ansible_all_ipv4_addresses[0] }}"
-    properties: loadfactor=1 route={{ ansible_hostname }}
+  esgf:
+    home: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf"
+    http: 8080
+    ssl: 8443
+    ajp: 8223
+    shutdown: 8005
+    truststore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-truststore.ts"
+    keystore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-keystore.ts"
+
+atlas:
+  jdk: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds/jdk
+  home: /oceano/gmeteo/WORK/PROYECTOS/ATLAS/tds
+  ajp: 7002
+  http: 7000
+  ssl: 7001
+  shutdown: 7003
+  gateway: lb
+  cluster: atlas-devel
+  host: "{{ ansible_all_ipv4_addresses[0] }}"
+  properties: loadfactor=1 route={{ ansible_hostname }}

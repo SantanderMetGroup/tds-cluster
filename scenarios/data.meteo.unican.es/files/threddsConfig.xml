@@ -6,7 +6,7 @@
   <serverInformation>
     <name>SantanderMetGroup THREDDS Data Server</name>
     <logoUrl>/thredds/threddsIcon.png</logoUrl>
-    <logoAltText>Initial TDS Installation</logoAltText>
+    <logoAltText>SantanderMetGroup THREDDS Data Server</logoAltText>
 
     <abstract>Scientific Data</abstract>
     <keywords>meteorology, atmosphere, climate, ocean, earth science</keywords>

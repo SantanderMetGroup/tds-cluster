@@ -1,0 +1,17 @@
+tds.zip
+
+```
+tar -xf apache-tomcat-7.0.104.tar.gz
+mv apache-tomcat-7.0.104 tds
+
+rm -rf tds/webabpps/*
+rm tds/{BUILDING.txt,CONTRIBUTING.md,LICENSE,README.md,NOTICE,RELEASE-NOTES,RUNNING.txt}
+
+# tds
+unzip tds-5.0.0-beta6.war -d tds/webapps/thredds
+tar -xf db-derby-10.14.2.0-lib.tar.gz -C tds/lib --strip-components=2
+cp jrobin-1.5.9.jar javamelody-core-1.73.1.jar tds/webapps/thredds/WEB-INF/lib/
+
+# tap
+unzip udg-tap.war -d tds/webapps/udg-tap
+```

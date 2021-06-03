@@ -1,18 +1,30 @@
-[all]
-lb ansible_host=spock.meteo.unican.es ansible_user=root
-wn023 ansible_host=wn023 ansible_user=zequi
-wn025 ansible_host=wn025 ansible_user=zequi
-
-[lbs]
-lb
-
-[servers]
-wn023
-wn025
-
-[servers:vars]
-tomcat_Xms=1024m
-tomcat_Xmx=6144m
-
-[databases]
-wn023
+all:
+  hosts:
+    lb:
+      ansible_host: spock.meteo.unican.es
+      ansible_user: root
+      ajp_address: 192.168.202.140
+  vars:
+    certs: certstest
+    db: 
+      name: esgcet
+      host: "{{ ansible_all_ipv4_addresses[1] }}"
+      port: 5432
+      admin:
+        name: dbsuper
+        pass: "{{ admin_pass }}" 
+      user:
+        name: esgcet
+        pass: "{{ admin_pass }}" 
+lbs:
+  hosts:
+    lb:
+  vars:
+    httpd_conf_src: files/httpd.conf
+    httpd_sslconf_src: files/httpd.ssl.conf
+servers:
+  hosts:
+    lb:
+databases:
+  hosts:
+    lb:

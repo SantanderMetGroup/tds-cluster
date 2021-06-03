@@ -1,0 +1,129 @@
+- name: Common provisioning
+  hosts: all
+  become: True
+  vars:
+    users: [root, zequi]
+    keys: [../../../insecure_private_key.pub, /home/zequi/.ssh/id_rsa.pub]
+    packages:
+      - bind-utils
+      - curl
+      - gcc
+      - git
+      - httpd
+      - libcurl
+      - lsof
+      - nss
+      - openssl
+      - openssl-devel
+      - unzip
+      - wget
+      - openssh-server
+      - sudo
+      - netcdf
+      - vim
+      - telnet
+      - net-tools
+      - fuse-sshfs
+      - ntp
+      - rsync
+  tasks:
+    - name: Set hostname
+      command: hostname {{ hostname|default(ansible_hostname) }}
+      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
+
+    - name: EPEL
+      yum: name=epel-release
+      when: ansible_pkg_mgr == "yum"
+
+    - name: Install packages
+      yum: name={{ packages }} state=present
+
+    - name: Create users
+      user: name={{ item }} shell=/bin/bash
+      with_items: "{{ users }}"
+      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
+
+    # Allow ssh access
+    - name: Copy public key
+      authorized_key: user={{ item.0 }} key={{ lookup('file', item.1) }}
+      with_nested:
+        - "{{ users }}"
+        - "{{ keys }}"
+      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
+
+    - name: Start sshd
+      service: name=sshd state=started
+
+    - name: Create a root directory
+      file: state=directory dest=/oceano/gmeteo/WORK/zequi owner={{ users[1] }} group={{ users[1] }} mode=755
+
+- name: Provision servers
+  hosts: servers
+  become: True
+  vars:
+    packages:
+      # tomcat
+      - java-1.8.0-openjdk
+  tasks:
+    - name: Install packages
+      yum: name={{ packages }} state=present
+
+- name: Provision gateway
+  hosts: lb
+  become: True
+  vars:
+    packages:
+      - mod_ssl
+      - mod_geoip
+      # publisher
+      - libxml2
+      - libxml2-devel
+      - libxslt
+      - libxslt-devel
+      - java-1.8.0-openjdk
+      # postgres
+      - postgresql
+      - postgresql-server
+      - postgresql-devel
+      - python-psycopg2
+      # cog
+      - httpd-devel
+      - sqlite-devel
+  vars_files:
+    - secrets.yml
+  tasks:
+    - name: Install filebeat
+      package:
+        name: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-7.5.1-x86_64.rpm
+
+    - name: Install packages
+      yum: name={{ packages }} state=present
+
+    # postgres
+    - name: Initialize postgres
+      command: postgresql-setup initdb
+      args:
+        creates: /var/lib/pgsql/data/pg_hba.conf
+
+    - name: Copy postgres configuration
+      copy: src=files/postgresql.conf dest=/var/lib/pgsql/data/postgresql.conf
+
+    - name: Copy pg_hba configuration
+      copy: src=files/pg_hba.conf dest=/var/lib/pgsql/data/pg_hba.conf
+
+    - name: Start postgres
+      service: name=postgresql state=restarted
+
+    - name: Create db super user
+      become: yes
+      become_user: postgres
+      postgresql_user:
+        name: dbsuper
+        password: "{{ admin_pass }}"
+        role_attr_flags: SUPERUSER
+    
+    - name: Create ESGCET database
+      become: yes
+      become_user: postgres
+      postgresql_db:
+        name: esgcet

@@ -1,4 +1,0 @@
-tds_context: thredds
-tds_content_path: thredds
-tds_useSSL: False
-tds_sslPort: 8443

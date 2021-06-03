@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="/oceano/gmeteo/WORK/DATA/C3S/seasonal-original/ECMWF/forecast/176.128_SFC/01/SYSTEM5_ecmwf_20170101_SFC_176.128_0.grib">
+            <variable name="ssr" orgName="Surface_solar_radiation_surface">
+                <attribute name="ref" value="http://www.uncertml.org/samples/realisation"/>
+                <attribute name="standard_name" value="surface_downwelling_shortwave_flux_in_air"/>
+                <attribute name="coordinates" value="run member time215 lat lon"/>
+            </variable>
+</netcdf>

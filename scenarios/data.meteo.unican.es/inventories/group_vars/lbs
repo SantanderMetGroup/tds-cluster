@@ -1,4 +1,3 @@
-modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 tds5_paths: |
   ProxyPass "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"
   ProxyPassReverse "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"

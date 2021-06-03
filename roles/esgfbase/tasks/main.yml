@@ -1,0 +1,86 @@
+# Downloads
+- name: Create downloads directory
+  run_once: True
+  local_action:
+    module: file
+    state: directory
+    dest: ./downloads
+
+- name: Clone git repos
+  run_once: True
+  local_action:
+    module: git
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: "{{ item.version|default('master') }}"
+  with_items:
+    - { 'repo': 'https://github.com/ESGF/config.git', 'dest': './downloads/config' }
+
+# Config
+- name: Create directories
+  file: state=directory dest={{ item }}
+  with_items:
+    - "{{ esg.config }}"
+    - "{{ esg.esgcet }}"
+    - "{{ esg.content }}"
+
+- name: Copy esgf config files
+  synchronize: src=./downloads/config/esgf-prod/ dest={{ esg.config }}
+
+- name: Copy esgf_policies_local.xml
+  copy: src=files/esgf_policies_local.xml dest={{ esg.config }}/esgf_policies_local.xml
+
+- name: Copy esgf_policies_common.xml
+  copy: src=files/esgf_policies_common.xml dest={{ esg.config }}/esgf_policies_common.xml
+
+- name: Template esgf.properties.j2
+  template: src=templates/base.properties.j2 dest={{ esg.config }}/esgf.properties
+
+- name: Template esgf_ats.xml.j2
+  template: src=templates/esgf_ats.xml.j2 dest={{ esg.config }}/esgf_ats.xml
+
+- name: Template esgf_azs.xml.j2
+  template: src=templates/esgf_azs.xml.j2 dest={{ esg.config }}/esgf_azs.xml
+
+- name: Template esgf_idp.xml.j2
+  template: src=templates/esgf_idp.xml.j2 dest={{ esg.config }}/esgf_idp.xml
+
+- name: Copy password
+  no_log: true
+  copy:
+    content: "{{ admin_pass }}"
+    dest: "{{ esg.config }}/{{ item }}"
+    mode: 0640
+  loop:
+    - ".esgf_pass"
+    - ".esg_keystore_pass"
+    - ".esg_pg_pass"
+    - ".esg_pg_publisher_pass"
+
+- name: Copy .ini
+  synchronize: src=./downloads/config/publisher-configs/ini/ dest={{ esg.esgcet }}
+
+- name: Override .ini
+  synchronize: src=files/ini/ dest={{ esg.esgcet }}
+
+- name: Template esg.ini
+  template: src=templates/esg.ini.j2 dest={{ esg.esgcet }}/esg.ini
+
+- name: Copy esgcet_models_table.txt
+  copy: src=./downloads/config/publisher-configs/esgcet_models_table.txt dest={{ esg.esgcet }}/esgcet_models_table.txt
+
+# Miniconda
+- name: Download miniconda installer
+  run_once: True
+  local_action:
+    module: get_url
+    url: https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    dest: ./downloads/Miniconda2-latest-Linux-x86_64.sh
+
+- name: Copy miniconda installer
+  copy: src=./downloads/Miniconda2-latest-Linux-x86_64.sh dest=/tmp/Miniconda2-latest-Linux-x86_64.sh mode=0755
+
+- name: Install miniconda
+  command: "bash /tmp/Miniconda2-latest-Linux-x86_64.sh -b -p {{ conda.home }}"
+  args:
+    creates: "{{ conda.home }}"

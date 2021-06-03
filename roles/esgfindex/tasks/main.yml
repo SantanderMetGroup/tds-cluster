@@ -1,0 +1,153 @@
+- name: Clone CoG Repo
+  git:
+    repo: "{{ cog.repo }}"
+    dest: "{{ cog.dest }}"
+    version: "{{ cog.version }}"
+    force: True
+  register: cog_clone
+
+- name: Create CoG conda env
+  command: "{{ conda.exe }} create -y -n cog -c conda-forge 'python<3' pip rsa=3.4.2=py27_0 gcc_linux-64"
+  args:
+    creates: "{{ conda.home }}/envs/cog"
+  register: cog_env
+
+- name: Install CoG Requirments
+  shell: >
+    {{ conda.actv }} cog && \
+    pip install 'mod_wsgi<4.6' 'git+https://github.com/EarthSystemCoG/django-openid-auth.git#egg=django-openid-auth' -r requirements.txt
+  args:
+    chdir: "{{ cog.dest }}"
+
+# Install mkproxy
+- name: Clone Transfer API Client Repo
+  git:
+    repo: "https://github.com/globusonline/transfer-api-client-python.git"
+    dest: "{{ cog.base }}/transfer-api-client-python"
+
+## x86_64-conda_cos6-linux-gnu-gcc -I /esg/miniconda2/envs/cog/include/ -o mkproxy mkproxy.c /esg/miniconda2/envs/cog/lib/libssl.so /esg/miniconda2/envs/cog/lib/libcrypto.so
+#- name: Make and Install mkproxy
+#  shell: >
+#    {{ conda.actv }} cog && \
+#    make clean && make && make install
+#  args:
+#    chdir: "{{ cog.base }}/transfer-api-client-python/mkproxy"
+#- name: Install mkproxy
+#  shell: >
+#    {{ conda.actv }} cog && {{ conda.home }}/envs/cog/bin/x86_64-conda_cos6-linux-gnu-gcc -I /usr/local/apache2/include -I {{ conda.home }}/envs/cog/include/ -o mkproxy mkproxy.c {{ conda.home }}/envs/cog/lib/libssl.so {{ conda.home }}/envs/cog/lib/libcrypto.so && make install
+#  args:
+#    chdir: "{{ cog.base }}/transfer-api-client-python/mkproxy"
+
+- name: Install CoG into conda env
+  shell: >
+    {{ conda.actv }} cog && \
+    python setup.py --quiet install
+  args:
+    chdir: "{{ cog.dest }}"
+
+- name: Setup CoG
+  shell: >
+    {{ conda.actv }} cog && \
+    python setup.py setup_cog --esgf=true
+  args:
+    chdir: "{{ cog.dest }}"
+
+- name: CoG collectstatic
+  shell: >
+    {{ conda.actv }} cog && \
+    python manage.py collectstatic --no-input
+  args:
+    chdir: "{{ cog.dest }}"
+
+- name: Setup CoG mod_wsgi-express server
+  shell: >
+    {{ conda.actv }} cog && \
+    mod_wsgi-express setup-server apache/wsgi.py \
+    --server-root {{ cog.wsgi_dir }} \
+    --user apache --group apache \
+    --host localhost --port 8889 \
+    --url-alias /static {{ cog.dest }}/static/ \
+    --modules-directory /opt/rh/httpd24/root/usr/lib64/httpd/modules
+  args:
+    chdir: "{{ cog.dest }}"
+
+# - name : Install the cog proxy config
+#   template:
+#     src: "httpd{{ httpd_version }}/cog.httpd.conf.j2"
+#     dest: "{{ httpd.ssl_proxy_dir }}/9cog.conf"
+
+- name: Set Ownership
+  file:
+    path: "{{ cog.base }}"
+    owner: apache
+    group: apache
+    recurse: yes
+
+# Solr
+- name: solr Group
+  group:
+    name: solr
+
+- name: solr User
+  user:
+    name: solr
+    groups: solr
+
+- name: solr Download
+  unarchive:
+    src: "{{ solr.src }}"
+    dest: /usr/local
+    remote_src: yes
+    creates: "/usr/local/{{ solr.root_dir }}"
+  register: solr_download
+
+- name: Check for solr symlink
+  stat:
+    path: "{{ solr.path }}"
+  register: solr_link
+
+- name: Remove {{ solr.path }} if it exists and is not a symlink
+  when: solr_link.stat.exists and not solr_link.stat.islnk
+  file:
+    path: "{{ solr.path }}"
+    state: absent
+
+- name: Install solr
+  file:
+    dest: "{{ solr.path }}"
+    src: "/usr/local/{{ solr.root_dir }}"
+    state: link
+
+- name: Install solr.in.sh
+  template:
+    src: solr.in.sh.j2
+    dest: "{{ solr.path }}/bin/solr.in.sh"
+    owner: solr
+    group: solr
+
+- name: Set solr ownership
+  file:
+    path: "/usr/local/{{ solr.root_dir }}"
+    owner: solr
+    group: solr
+    recurse: yes
+
+- name: Download ESGF Solr Cores template
+  unarchive:
+    src: "{{ assets.base }}/solr-home.tar"
+    dest: /tmp
+    remote_src: yes
+    creates: /tmp/solr-home
+
+- name: Add default shards
+  include_tasks: add_shard.yml
+  loop: "{{ solr.shards }}"
+  loop_control:
+    loop_var: shard
+
+- name: Set solr ownership
+  file:
+    path: "/usr/local/{{ solr.root_dir }}"
+    owner: solr
+    group: solr
+    recurse: yes

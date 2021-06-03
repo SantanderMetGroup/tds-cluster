@@ -1,0 +1,20 @@
+- name: Install TDS catalogs and datasets
+  hosts: servers
+  vars_files:
+    - secrets.yml
+  tasks:
+    - name: Reinit catalogs
+      uri:
+        url: https://{{ ansible_host }}:{{ tomcats[item].ssl }}/thredds/admin/debug?Catalogs/reinit
+        validate_certs: false
+        user: "{{ tds.user }}"
+        password: "{{ tds.password }}"
+      with_items: "{{ tomcats }}"
+
+    - name: Clear caches
+      uri:
+        url: https://{{ ansible_host }}:{{ tomcats[item].ssl }}/thredds/admin/debug?Caches/clearCaches
+        validate_certs: false
+        user: "{{ tds.user }}"
+        password: "{{ tds.password }}"
+      with_items: "{{ tomcats }}"

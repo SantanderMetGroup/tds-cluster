@@ -1,0 +1,31 @@
+- name: Create tomcat home
+  file: state=directory dest={{ tomcat.home }}
+
+- name: Create TDS content
+  file: state=directory dest={{ tomcat.home }}/content/thredds
+
+- name: Unarchive tomcat
+  unarchive: src=files/udgtomcat.zip dest={{ tomcat.home }}
+
+- name: Copy keystore
+  copy: src=files/server.p12 dest={{ tomcat.home }}/server.p12
+
+- name: Template setenv.sh
+  template: src=templates/setenv.sh.j2 dest={{ tomcat.home }}/bin/setenv.sh
+
+- name: Template server.xml
+  template: src=templates/server.xml.j2 dest={{ tomcat.home }}/conf/server.xml
+
+- name: Template context.xml
+  template: src=templates/context.xml.j2 dest={{ tomcat.home }}/conf/context.xml
+
+- name: Copy threddsConfig.xml
+  copy: src=files/threddsConfig.xml dest={{ tomcat.home }}/content/thredds/threddsConfig.xml
+
+- name: Template tap properties
+  template:
+    src: templates/tap.properties.j2
+    dest: "{{ tomcat.home }}/webapps/udg-tap/WEB-INF/classes/global_variables.properties"
+
+- name: Template tds applicationContext.xml
+  template: src=templates/tds-applicationContext.xml.j2 dest={{ tomcat.home }}/webapps/thredds/WEB-INF/applicationContext.xml

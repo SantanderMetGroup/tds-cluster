@@ -1,9 +1,0 @@
-- name: Uninstall tomcats
-  hosts: servers
-  tasks:
-    - name: Stop tomcats
-      import_tasks: stop/tomcats.yml
-
-    - name: Remove tomcats
-      file: path={{ tomcat_bases }}/{{ item.name }} state=absent
-      with_items: "{{ tomcats }}"

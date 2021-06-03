@@ -1,12 +1,15 @@
 - name: Stop tomcats
-  command: "{{ item.home }}/bin/shutdown.sh"
-  args:
-    removes: "{{ item.base }}/logs/catalina.pid"
-  environment:
-    CATALINA_BASE: "{{ item.base }}"
-  with_items: "{{ tomcats }}"
-  ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
-
-- name: Remove catalina.pid
-  file: path={{ item.base }}/logs/catalina.pid state=absent
-  with_items: "{{ tomcats }}"
+  hosts: servers
+  tasks:
+    - name: Stop tomcat
+      command: "{{ tomcats[item].home }}/bin/shutdown.sh"
+      args:
+        removes: "{{ tomcats[item].home }}/logs/catalina.pid"
+      environment:
+        CATALINA_BASE: "{{ tomcats[item].home }}"
+      ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
+      with_items: "{{ tomcats }}"
+    
+    - name: Remove catalina.pid
+      file: path={{ tomcats[item].home }}/logs/catalina.pid state=absent
+      with_items: "{{ tomcats }}"
