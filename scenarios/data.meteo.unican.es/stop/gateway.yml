@@ -1,13 +1,13 @@
-- name: Start httpd
+- name: Stop gateway services
   hosts: lbs
   tasks:
-    - name: Start ntpd
+    - name: Stop ntpd
       service: name=ntpd state=stopped
 
-    - name: Start filebeat
+    - name: Stop filebeat
       service: name=filebeat state=stopped
 
-    - name: Start httpd
+    - name: Stop httpd
       service: name=httpd state=stopped
 
     - name: Start CoG

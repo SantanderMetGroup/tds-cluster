@@ -5,6 +5,7 @@ all:
       ansible_user: root
       ajp_address: 192.168.202.140
   vars:
+    esgf_host: spock.meteo.unican.es
     certs: certstest
     db: 
       name: esgcet

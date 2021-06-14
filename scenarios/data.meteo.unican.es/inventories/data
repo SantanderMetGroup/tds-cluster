@@ -10,6 +10,7 @@ all:
       ansible_host: wn025
       ansible_user: zequi
   vars:
+    esgf_host: data.meteo.unican.es
     certs: certs
 lbs:
   hosts:

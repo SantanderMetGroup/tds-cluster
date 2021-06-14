@@ -2,7 +2,6 @@
   hosts: servers
   vars:
     esghome: "{{ root }}/{{ inventory_hostname }}/esgf"
-    esgf_host: lb
   vars_files:
     - secrets.yml
   roles:
