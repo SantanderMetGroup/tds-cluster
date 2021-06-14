@@ -1,12 +1,4 @@
 # publisher
-- name: Copy esgf-pub conda environment
-  copy: src=files/esgfpub-environment.yml dest=/tmp/esgfpub-environment.yml
-
-- name: Create esgf-pub conda environment
-  command: "{{ conda.exe }} env create --file /tmp/esgfpub-environment.yml -p {{ conda.home }}/envs/esgf-pub"
-  args:
-    creates: "{{ conda.home }}/envs/esgf-pub"
-
 - name: Run esgsetup for the database
   shell: >
     {{ conda.actv }} esgf-pub && \

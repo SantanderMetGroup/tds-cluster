@@ -2,6 +2,7 @@
   hosts: servers
   vars:
     esghome: "{{ root }}/{{ inventory_hostname }}/esgf"
+    esgf_host: lb
   vars_files:
     - secrets.yml
   roles:
@@ -15,11 +16,10 @@
       copy: src={{ certs }}/esg-keystore.ts dest={{ tomcats.esgf.keystore }} mode=600
 
     - name: Create content/thredds
-      file: state=directory dest={{ tomcats.esgf.home }}/content/thredds
+      file: state=directory dest={{ esg.content }}/thredds
 
     - name: Copy UDG threddsConfig.xml
       copy: src=files/threddsConfig.xml dest={{ esg.content }}/thredds/threddsConfig.xml
-      tags: asdf
 
     - name: Clone tds-content
       run_once: True

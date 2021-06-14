@@ -4,6 +4,7 @@ esg:
   config: "{{ esghome }}/esg/config"
   esgcet: "{{ esghome }}/esg/config/esgcet"
   content: "{{ esghome }}/esg/content"
+esgf_host: "{{ ansible_host }}"
 esgf:
   thredds_username: dnode_user
   thredds_restrict_access: esg-user

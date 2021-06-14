@@ -26,6 +26,9 @@
       - fuse-sshfs
       - ntp
       - rsync
+      # required because of pg_config for publisher
+      - postgresql
+      - postgresql-devel
   tasks:
     - name: Set hostname
       command: hostname {{ hostname|default(ansible_hostname) }}
