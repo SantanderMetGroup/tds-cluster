@@ -1,0 +1,23 @@
+# Miniconda
+- name: Download miniconda installer
+  run_once: True
+  local_action:
+    module: get_url
+    url: https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    dest: ./downloads/Miniconda2-latest-Linux-x86_64.sh
+
+- name: Copy miniconda installer
+  copy: src=./downloads/Miniconda2-latest-Linux-x86_64.sh dest=/tmp/Miniconda2-latest-Linux-x86_64.sh mode=0755
+
+- name: Install miniconda
+  command: "bash /tmp/Miniconda2-latest-Linux-x86_64.sh -b -p {{ conda.home }}"
+  args:
+    creates: "{{ conda.home }}"
+
+- name: Copy jupyterhub conda environment
+  copy: src=files/environment.yml dest=/tmp/jupyterhub-environment.yml
+
+- name: Create esgf-pub conda environment
+  command: "{{ conda.exe }} env create --file /tmp/jupyterhub-environment.yml -p {{ conda.home }}/envs/jupyterhub"
+  args:
+    creates: "{{ conda.home }}/envs/jupyterhub"

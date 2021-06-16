@@ -1,0 +1,4 @@
+conda:
+  home: "{{ ansible_env.HOME }}/miniconda2"
+  exe: "{{ ansible_env.HOME }}/miniconda2/bin/conda"
+  actv: "source {{ ansible_env.HOME }}/miniconda2/bin/activate"
