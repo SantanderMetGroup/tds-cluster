@@ -1,7 +1,7 @@
 import os
 import batchspawner # Even though not used, needed to register batchspawner interface
 
-runtime_dir = '/oceano/gmeteo/WORK/zequi/services/jupyterhub'
+runtime_dir = '{{ jupyterhub_home }}'
 
 c = get_config()
 c.JupyterHub.cookie_secret_file = os.path.join(runtime_dir, 'cookie_secret')
@@ -11,8 +11,8 @@ c.ConfigurableHTTPProxy.pid_file = os.path.join(runtime_dir, 'jupyterhub-proxy.p
 c.JupyterHub.active_server_limit = 5
 c.JupyterHub.active_user_window = 1800 # seconds
 c.JupyterHub.authenticator_class = 'jupyterhub.auth.PAMAuthenticator'
-#c.JupyterHub.bind_url = 'http://192.168.202.131:8000'
-c.JupyterHub.hub_connect_ip = '192.168.202.131'
+c.JupyterHub.bind_url = 'http://193.144.184.31:8000'
+c.JupyterHub.hub_connect_ip = '193.144.184.31'
 
 c.JupyterHub.spawner_class = 'batchspawner.TorqueSpawner'
 c.Spawner.http_timeout = 120
@@ -32,7 +32,7 @@ c.TorqueSpawner.batch_script = '''#!/bin/sh
 #PBS -N jupyterhub-singleuser
 #PBS -v {keepvars}
 
-source /oceano/gmeteo/WORK/zequi/miniconda3/bin/activate jupyterhub
+{{ conda.actv }}
 {cmd}
 '''
 

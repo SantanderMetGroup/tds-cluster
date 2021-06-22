@@ -1,0 +1,5 @@
+all:
+  hosts:
+    ui:
+      ansible_user: zequi
+      ansible_host: ui.macc.unican.es

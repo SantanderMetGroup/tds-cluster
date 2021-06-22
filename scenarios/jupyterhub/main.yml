@@ -1,0 +1,11 @@
+- name: Install jupyterhub
+  hosts: ui
+  vars:
+    root: "{{ ansible_env.HOME }}/jupyterhub"
+    jupyterhub_home: "{{ root }}"
+    conda:
+      home: "{{ root }}/miniconda2"
+      exe: "{{ root }}/miniconda2/bin/conda"
+      actv: "source {{ root }}/miniconda2/bin/activate jupyterhub"
+  roles:
+    - role: jupyterhub

@@ -1,4 +1,11 @@
 # Miniconda
+- name: Create downloads directory
+  run_once: True
+  local_action:
+    module: file
+    state: directory
+    dest: ./downloads
+
 - name: Download miniconda installer
   run_once: True
   local_action:
@@ -17,7 +24,10 @@
 - name: Copy jupyterhub conda environment
   copy: src=files/environment.yml dest=/tmp/jupyterhub-environment.yml
 
-- name: Create esgf-pub conda environment
+- name: Create jupyterhub conda environment
   command: "{{ conda.exe }} env create --file /tmp/jupyterhub-environment.yml -p {{ conda.home }}/envs/jupyterhub"
   args:
     creates: "{{ conda.home }}/envs/jupyterhub"
+
+- name: Template jupyterhub config
+  template: src=jupyterhub_config.py.j2 dest={{ jupyterhub_home }}/jupyterhub_config.py
