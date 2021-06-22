@@ -31,3 +31,9 @@ servers:
 databases:
   hosts:
     wn023:
+jupyterhub:
+  hosts:
+    wn023:
+  vars:
+    jupyterhub_bind_url: "http://{{ ansible_all_ipv4_addresses[0] }}:8000"
+    jupyterhub_hub_connect_ip: "{{ ansible_all_ipv4_addresses[0] }}"

@@ -1,0 +1,16 @@
+- name: Jupyterhub server
+  hosts: jupyterhub
+  roles:
+    - role: jupyterhub
+  tasks:
+    - name: Template jupyterhub config
+      template: src=templates/jupyterhub_config.py.j2 dest={{ jupyterhub_home }}/jupyterhub_config.py
+      when: 'inventory_file|basename == "data"'
+
+    - name: Add worker for jupyterhub
+      delegate_to: lb
+      blockinfile:
+        path: "{{ modproxy_conf }}"
+        block: |
+          ProxyPass /hub {{ jupyterhub_bind_url }}/hub
+          ProxyPassReverse /hub {{ jupyterhub_bind_url }}/hub

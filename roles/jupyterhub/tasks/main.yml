@@ -13,6 +13,9 @@
     url: https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh
     dest: ./downloads/Miniconda2-latest-Linux-x86_64.sh
 
+- name: Create jupyterhub home
+  file: state=directory dest={{ jupyterhub_home }}
+
 - name: Copy miniconda installer
   copy: src=./downloads/Miniconda2-latest-Linux-x86_64.sh dest=/tmp/Miniconda2-latest-Linux-x86_64.sh mode=0755
 
