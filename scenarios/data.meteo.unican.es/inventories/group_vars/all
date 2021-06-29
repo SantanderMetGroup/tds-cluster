@@ -46,3 +46,35 @@ atlas:
   cluster: atlas-devel
   host: "{{ ansible_all_ipv4_addresses[0] }}"
   properties: loadfactor=1 route={{ ansible_hostname }}
+
+# solr, to remove
+versions:
+  installer: 4.0.0-alpha1
+  java: jdk1.8.0_192
+  search: v4.17.10
+  stats_api: v1.0.9
+  node_manager: v1.0.5
+  node_manager_db: 0.1.7
+  orp: v2.11.0
+  security: v2.8.11
+  security_db: 0.1.7
+  idp: v2.8.8
+assets:
+  base: https://github.com/ESGF/esgf-ansible/releases/download/{{ versions.installer }}
+  search: https://github.com/ESGF/esg-search/releases/download/{{ versions.search }}
+  stats_api: https://github.com/ESGF/esgf-stats-api/releases/download/{{ versions.stats_api }}
+  node_manager: https://github.com/ESGF/esgf-node-manager/releases/download/{{ versions.node_manager }}
+  orp: https://github.com/ESGF/esg-orp/releases/download/{{ versions.orp }}
+  security: https://github.com/ESGF/esgf-security/releases/download/{{ versions.security }}
+  idp: https://github.com/ESGF/esgf-idp/releases/download/{{ versions.idp }}
+solr:
+  src: http://archive.apache.org/dist/lucene/solr/6.6.6/solr-6.6.6.zip
+  path: "{{ root }}/{{ inventory_hostname }}/solr-6.6.6"
+  home: "{{ root }}/{{ inventory_hostname }}/solr-home"
+  shards:
+    - name: master
+      port: 8984
+      args: "-Denable.master=true"
+    - name: slave
+      port: 8983
+      args: "-Denable.slave=true"

@@ -3,37 +3,6 @@
   vars:
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
-    versions:
-      installer: 4.0.0-alpha1
-      java: jdk1.8.0_192
-      search: v4.17.10
-      stats_api: v1.0.9
-      node_manager: v1.0.5
-      node_manager_db: 0.1.7
-      orp: v2.11.0
-      security: v2.8.11
-      security_db: 0.1.7
-      idp: v2.8.8
-    assets:
-      base: https://github.com/ESGF/esgf-ansible/releases/download/{{ versions.installer }}
-      search: https://github.com/ESGF/esg-search/releases/download/{{ versions.search }}
-      stats_api: https://github.com/ESGF/esgf-stats-api/releases/download/{{ versions.stats_api }}
-      node_manager: https://github.com/ESGF/esgf-node-manager/releases/download/{{ versions.node_manager }}
-      orp: https://github.com/ESGF/esg-orp/releases/download/{{ versions.orp }}
-      security: https://github.com/ESGF/esgf-security/releases/download/{{ versions.security }}
-      idp: https://github.com/ESGF/esgf-idp/releases/download/{{ versions.idp }}
-    solr:
-      src: http://archive.apache.org/dist/lucene/solr/6.6.6/solr-6.6.6.zip
-      root_dir: solr-6.6.6
-      path: /usr/local/solr
-      home: /usr/local/solr-home
-      shards:
-        - name: master
-          port: 8984
-          args: "-Denable.master=true"
-        - name: slave
-          port: 8983
-          args: "-Denable.slave=true"
   vars_files:
     - secrets.yml
   roles:
@@ -80,24 +49,13 @@
       run_once: True
       local_action:
         module: git
-        repo: git@gitlab.com:SCDS/tds-content.git
+        repo: git@gitlab.com:zequihg50/esgf-content.git
         dest: esgf-content
-        version: esgf
+        version: master
         depth: 1
 
     - name: Synchronize esgf-content
       synchronize: src=esgf-content/ dest={{ esg.content }}/thredds
-
-    - name: start solr shards
-      become: yes
-      become_user: solr
-      command: "{{ solr.path }}/bin/solr start -s {{ solr.home }}/{{ shard.name }}-{{ shard.port }} -p {{ shard.port }} -a {{ shard.args }} -Ddisable.configEdit=true -Dsolr.disable.shardsWhitelist=true"
-      loop: "{{ solr.shards }}"
-      register: result
-      changed_when: '"Port {{ shard.port }} is already being used" not in result.stdout'
-      failed_when: 'result.rc != 0 and "Port {{ shard.port }} is already being used" not in result.stdout'
-      loop_control:
-        loop_var: shard
 
 - name: Workers
   hosts: servers

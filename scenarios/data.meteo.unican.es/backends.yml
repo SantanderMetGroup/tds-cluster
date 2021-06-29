@@ -24,9 +24,9 @@
       run_once: True
       local_action:
         module: git
-        repo: git@gitlab.com:SCDS/tds-content.git
+        repo: git@gitlab.com:zequihg50/esgf-content.git
         dest: esgf-content
-        version: esgf
+        version: master
         depth: 1
 
     - name: Synchronize esgf-content

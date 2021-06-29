@@ -38,14 +38,20 @@ ProxyPassReverse "/tds5" "balancer://tds5/tds5"
 <Proxy "balancer://esgf">
 ProxySet stickysession=JSESSIONID
 </Proxy>
-ProxyPass "/esg-orp" "balancer://esgf/esg-orp"
-ProxyPassReverse "/esg-orp" "balancer://esgf/esg-orp"
-ProxyPass "/thredds/catalog/esgcet" "balancer://esgf/thredds/catalog/esgcet"
-ProxyPassReverse "/thredds/catalog/esgcet" "balancer://esgf/thredds/catalog/esgcet"
-ProxyPass "/thredds/dodsC/esgcet" "balancer://esgf/thredds/dodsC/esgcet"
-ProxyPassReverse "/thredds/dodsC/esgcet" "balancer://esgf/thredds/dodsC/esgcet"
-ProxyPass "/thredds/fileServer/esgcet" "balancer://esgf/thredds/fileServer/esgcet"
-ProxyPassReverse "/thredds/fileServer/esgcet" "balancer://esgf/thredds/fileServer/esgcet"
+ProxyPassMatch ^/solr(.*)$ balancer://esgf/solr$1
+ProxyPassReverse /solr balancer://esgf/solr
+ProxyPass /esgf-idp balancer://esgf/esgf-idp
+ProxyPassReverse /esgf-idp balancer://esgf/esgf-idp
+ProxyPass /esg-search balancer://esgf/esg-search
+ProxyPassReverse /esg-search balancer://esgf/esg-search
+ProxyPass /esg-orp balancer://esgf/esg-orp
+ProxyPassReverse /esg-orp balancer://esgf/esg-orp
+ProxyPass /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
+ProxyPassReverse /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
+ProxyPass /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
+ProxyPassReverse /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
+ProxyPass /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
+ProxyPassReverse /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
 
 <Proxy "balancer://udg">
 ProxySet stickysession=JSESSIONID

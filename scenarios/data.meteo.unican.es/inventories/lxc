@@ -18,6 +18,16 @@ all:
   vars:
     esgf_host: lb
     certs: certstest
+    db: 
+      name: esgcet
+      host: lb
+      port: 5432
+      admin:
+        name: dbsuper
+        pass: "{{ admin_pass }}" 
+      user:
+        name: esgcet
+        pass: "{{ admin_pass }}" 
 lbs:
   hosts:
     lb:
@@ -37,3 +47,6 @@ jupyterhub:
   vars:
     jupyterhub_bind_url: "http://{{ ansible_all_ipv4_addresses[0] }}:8000"
     jupyterhub_hub_connect_ip: "{{ ansible_all_ipv4_addresses[0] }}"
+solr:
+  hosts:
+    wn023:
