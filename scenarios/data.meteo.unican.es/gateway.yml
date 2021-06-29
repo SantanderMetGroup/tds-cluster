@@ -15,6 +15,15 @@
         - /etc/httpd/conf
         - /etc/httpd/conf.d
 
+    - name: Download stuff
+      run_once: True
+      local_action:
+        module: get_url
+        url: "{{ item }}"
+        dest: ./downloads
+      with_items:
+        - https://github.com/ESGF/esgf-ansible/releases/download/4.0.0-alpha1/esgf-ca-bundle.crt
+
     - name: Copy httpd conf
       copy: src={{ httpd_conf_src }} dest=/etc/httpd/conf/httpd.conf
 
@@ -37,7 +46,7 @@
       copy: src={{ certs }}/cachain.pem dest=/etc/certs/cachain.pem mode=0644
 
     - name: Copy esgf ca bundle
-      copy: src={{ certs }}/esgf-ca-bundle.crt dest=/etc/certs/esgf-ca-bundle.crt
+      copy: src=./downloads/esgf-ca-bundle.crt dest=/etc/certs/esgf-ca-bundle.crt
 
     # Filebeat
     - name: Copy filebeat config
@@ -56,22 +65,3 @@
 
     - name: Synchronize esgf-content
       synchronize: src=esgf-content/ dest={{ esg.content }}/thredds
-
-- name: Workers
-  hosts: servers
-  tasks:
-    - lineinfile:
-        path: "{{ modproxy_conf }}"
-        insertafter: <Proxy "balancer://{{ item }}">
-        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-      delegate_to: lb
-      with_items: [ 'udg', 'esgf', 'tds5' ]
-      when: 'inventory_file|basename != "spock"'
-
-    - lineinfile:
-        path: "{{ modproxy_conf }}"
-        insertafter: <Proxy "balancer://{{ item }}">
-        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-      delegate_to: lb
-      with_items: [ 'udg', 'esgf', 'tds5' ]
-      when: 'inventory_file|basename == "spock"'
