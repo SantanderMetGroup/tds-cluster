@@ -1,0 +1,4 @@
+- name: Install solr
+  hosts: solr
+  roles:
+    - role: esgfsolr

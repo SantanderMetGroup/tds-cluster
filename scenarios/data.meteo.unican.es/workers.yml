@@ -1,0 +1,18 @@
+- name: Workers
+  hosts: servers
+  tasks:
+    - lineinfile:
+        path: "{{ modproxy_conf }}"
+        insertafter: <Proxy "balancer://{{ item }}">
+        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
+      delegate_to: lb
+      with_items: [ 'udg', 'esgf', 'tds5' ]
+      when: 'inventory_file|basename != "spock"'
+
+    - lineinfile:
+        path: "{{ modproxy_conf }}"
+        insertafter: <Proxy "balancer://{{ item }}">
+        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
+      delegate_to: lb
+      with_items: [ 'udg', 'esgf', 'tds5' ]
+      when: 'inventory_file|basename == "spock"'

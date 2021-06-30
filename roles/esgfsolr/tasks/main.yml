@@ -25,19 +25,29 @@
     src: ./downloads/{{ solr.src|basename }}
     dest: "{{ solr.path|dirname }}"
 
-- name: Install solr core
-  unarchive:
-    src: ./downloads/solr-home.tar
-    dest: "{{ solr.home }}"
-    extra_opts: [--strip-components=1]
+- name: Create shards
+  file:
+    path: "{{ solr.home }}/{{ item.name }}-{{ item.port }}"
+    state: directory
+  with_items: "{{ solr.shards }}"
 
-- name: Install solr.in.sh
-  template:
-    src: solr.in.sh.j2
-    dest: "{{ solr.path }}/bin/solr.in.sh"
+- name: Copy solr.xml
+  copy: src=files/solr.xml dest={{ solr.home }}/{{ item.name }}-{{ item.port }}/solr.xml
+  with_items: "{{ solr.shards }}"
 
-#- name: Add default shards
-#  include_tasks: add_shard.yml
-#  loop: "{{ solr.shards }}"
-#  loop_control:
-#    loop_var: shard
+# this comes from solr-home.tar
+- name: Synchronize solr conf
+  synchronize: src=files/conf/ dest={{ solr.home }}/{{ item.name }}-{{ item.port }}/conf
+  with_items: "{{ solr.shards }}"
+
+- name: Start solr
+  command: "{{ solr.path }}/bin/solr start -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }}"
+  with_items: "{{ solr.shards }}"
+
+- name: Create cores
+  command: "{{ solr.path }}/bin/solr create_core -c {{ item.0 }} -d {{ solr.home }}/{{ item.1.name }}-{{ item.1.port }} -p {{ item.1.port }}"
+  args:
+    creates: "{{ solr.home }}/{{ item.1.name }}-{{ item.1.port }}/{{ item.0 }}"
+  with_nested:
+    - ["datasets", "files", "aggregations"]
+    - "{{ solr.shards }}"
