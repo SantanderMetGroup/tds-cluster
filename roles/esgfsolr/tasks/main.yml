@@ -41,7 +41,7 @@
   with_items: "{{ solr.shards }}"
 
 - name: Start solr
-  command: "{{ solr.path }}/bin/solr start -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }}"
+  command: "{{ solr.path }}/bin/solr start -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }} -Dsolr.disable.shardsWhitelist=true -Ddisable.configEdit=true"
   with_items: "{{ solr.shards }}"
 
 - name: Create cores

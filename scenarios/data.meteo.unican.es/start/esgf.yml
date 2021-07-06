@@ -27,3 +27,7 @@
         creates: "{{ tomcats.esgf.home }}/logs/catalina.pid"
       environment:
         CATALINA_BASE: "{{ tomcats.esgf.home }}"
+
+    - name: Start solr
+      command: "{{ solr.path }}/bin/solr start -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }} -Dsolr.disable.shardsWhitelist=true -Ddisable.configEdit=true"
+      with_items: "{{ solr.shards }}"
