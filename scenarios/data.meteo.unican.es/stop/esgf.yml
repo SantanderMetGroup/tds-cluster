@@ -1,0 +1,36 @@
+- name: Stop ESGF
+  hosts: lbs
+  tasks:
+    - name: Stop ntpd
+      service: name=ntpd state=stopped
+
+    - name: Stop filebeat
+      service: name=filebeat state=stopped
+
+    - name: Stop httpd
+      service: name=httpd state=stopped
+
+    - name: Stop CoG
+      command: /etc/cog-wsgi-8889/apachectl stop
+      register: result
+      changed_when: '"already running" not in result.stdout'
+
+    - name: Stop postgres
+      service: name=postgresql state=stopped
+
+- name: Stop ESGF tomcat
+  hosts: servers
+  tasks:
+    - name: Stop tomcat
+      shell: "nohup {{ tomcats.esgf.home }}/bin/shutdown.sh"
+      args:
+        removes: "{{ tomcats.esgf.home }}/logs/catalina.pid"
+      environment:
+        CATALINA_BASE: "{{ tomcats.esgf.home }}"
+      ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
+
+    - name: Stop solr
+      command: "{{ solr.path }}/bin/solr stop -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }}"
+      with_items: "{{ solr.shards }}"
+      ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
+

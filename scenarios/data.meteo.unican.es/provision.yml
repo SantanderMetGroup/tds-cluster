@@ -1,9 +1,15 @@
+# THIS PROVISION IS USED IN LXC TESTING, FOR PRODUCTION YOU NEED TO MAKE YOUR OWN PROVISIONING
 - name: Common provisioning
   hosts: all
   become: True
   vars:
-    users: [root, zequi]
-    keys: [../../../insecure_private_key.pub, /home/zequi/.ssh/id_rsa.pub]
+    user: "{{ lookup('env', 'USER') }}"
+    users:
+     - root
+     - "{{ user }}"
+    keys:
+      - ../../../insecure_private_key.pub
+      - /home/{{ user }}/.ssh/id_rsa.pub
     packages:
       - bind-utils
       - curl
@@ -58,7 +64,7 @@
       service: name=sshd state=started
 
     - name: Create a root directory
-      file: state=directory dest=/oceano/gmeteo/WORK/zequi owner={{ users[1] }} group={{ users[1] }} mode=755
+      file: state=directory dest=/oceano/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
 
 - name: Provision servers
   hosts: servers

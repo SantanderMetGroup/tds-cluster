@@ -19,9 +19,9 @@ db:
     name: esgcet
     pass: "{{ admin_pass }}"
 conda:
-  home: "{{ esg.home }}/miniconda2"
-  exe: "{{ esg.home }}/miniconda2/bin/conda"
-  actv: "source {{ esg.home }}/miniconda2/bin/activate"
+  home: "{{ esg.home }}/miniconda"
+  exe: "{{ esg.home }}/miniconda/bin/conda"
+  actv: "source {{ esg.home }}/miniconda/bin/activate"
 gridftp:
   security: /etc/grid-security
   port: 2811

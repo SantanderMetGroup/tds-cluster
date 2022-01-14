@@ -69,7 +69,7 @@
         depth: 1
       with_items:
         - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "tds5", "dest": "tds5-content" }
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "master", "dest": "tds-content" }
+        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
 
     - name: Create directory for jdk
       file: state=directory path={{ jdk_home }}

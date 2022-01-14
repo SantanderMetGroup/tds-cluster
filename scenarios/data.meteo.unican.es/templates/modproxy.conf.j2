@@ -23,17 +23,22 @@ LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
 ProxyTimeout 600
 ProxyPass /status-proxy !
 
-#ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
-#<Proxy "balancer://esgf">
-#BalancerMember "ajp://localhost:8223/thredds"
-#</Proxy>
-#ProxyPassMatch ^(/thredds/dodsC/cordex\.output\..*aggregation\.[0-9]+.*)$ "balancer://esgf$1"
+ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
+<Proxy "balancer://esgf">
+BalancerMember "ajp://localhost:8223/thredds"
+</Proxy>
+ProxyPassMatch ^(/thredds/dodsC/cordex\.output\..*aggregation\.[0-9]+.*)$ "balancer://esgf$1"
 
 <Proxy "balancer://tds5">
 ProxySet stickysession=JSESSIONID
 </Proxy>
 ProxyPass "/tds5" "balancer://tds5/tds5"
 ProxyPassReverse "/tds5" "balancer://tds5/tds5"
+ProxyPass "/tds5/restrictedAccess" "balancer://tds5/tds5/restrictedAccess"
+ProxyPassReverse "/tds5/restrictedAccess" "balancer://tds5/tds5/restrictedAccess"
+# This is needed so the web catalog works
+ProxyPass "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"
+ProxyPassReverse "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"
 
 <Proxy "balancer://esgf">
 ProxySet stickysession=JSESSIONID

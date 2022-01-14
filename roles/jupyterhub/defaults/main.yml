@@ -1,7 +1,7 @@
 conda:
-  home: "{{ ansible_env.HOME }}/miniconda2"
-  exe: "{{ ansible_env.HOME }}/miniconda2/bin/conda"
-  actv: "source {{ ansible_env.HOME }}/miniconda2/bin/activate"
+  home: "{{ ansible_env.HOME }}/miniconda"
+  exe: "{{ ansible_env.HOME }}/miniconda/bin/conda"
+  actv: "source {{ ansible_env.HOME }}/miniconda/bin/activate"
 
 jupyterhub_home: "{{ ansible_env.HOME }}/jupyterhub"
 jupyterhub_bind_url: http://127.0.0.1:8000

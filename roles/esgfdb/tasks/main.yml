@@ -1,4 +1,28 @@
+# Miniconda
+- name: Download miniconda installer
+  run_once: True
+  local_action:
+    module: get_url
+    url: https://repo.anaconda.com/miniconda/Miniconda3-py38_4.9.2-Linux-x86_64.sh # do not update, won't work in centos/6
+    dest: ./downloads/Miniconda3-latest-Linux-x86_64.sh
+
+- name: Copy miniconda installer
+  copy: src=./downloads/Miniconda3-latest-Linux-x86_64.sh dest=/tmp/Miniconda3-latest-Linux-x86_64.sh mode=0755
+
+- name: Install miniconda
+  command: "bash /tmp/Miniconda3-latest-Linux-x86_64.sh -b -p {{ conda.home }}"
+  args:
+    creates: "{{ conda.home }}"
+
 # publisher
+- name: Copy esgf-pub conda environment
+  copy: src=files/esgfpub-environment.yml dest=/tmp/esgfpub-environment.yml
+
+- name: Create esgf-pub conda environment
+  command: "{{ conda.exe }} env create --file /tmp/esgfpub-environment.yml -p {{ conda.home }}/envs/esgf-pub"
+  args:
+    creates: "{{ conda.home }}/envs/esgf-pub"
+
 - name: Run esgsetup for the database
   shell: >
     {{ conda.actv }} esgf-pub && \
@@ -37,7 +61,7 @@
   copy: src=files/esgf_security-0.1.7-py2.7.egg dest={{ esg.home }}/esgf_security-0.1.7-py2.7.egg
 
 - name: Create schema_migrate conda env
-  command: "{{ conda.exe }} create -y -n schema_migrate 'python<3' pip sqlparse==0.3.0 decorator sqlalchemy sqlalchemy-utils"
+  command: "{{ conda.exe }} create -y -n schema_migrate 'python<3' pip sqlparse==0.3.0 decorator<5 sqlalchemy sqlalchemy-utils"
   args:
     creates: "{{ conda.home }}/envs/schema_migrate"
 

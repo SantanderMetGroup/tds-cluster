@@ -37,7 +37,7 @@ To test the deployment using lxdock (requires lxc):
 
 ```bash
 lxdock up
-ansible-playbook backends.yml gateway.yml
+ansible-playbook backends.yml gateway.yml workers.yml solr.yml stop/*.yml start/*.yml
 ```
 
 ## Add a new load balancer
@@ -310,9 +310,9 @@ Playbook:
       esgcet: "{{ root }}/esg/config/esgcet"
       content: "{{ root }}/esg/content"
     conda:
-      home: "{{ root }}/miniconda2"
-      exe: "{{ root }}/miniconda2/bin/conda"
-      actv: "source {{ root }}/miniconda2/bin/activate"
+      home: "{{ root }}/miniconda"
+      exe: "{{ root }}/miniconda/bin/conda"
+      actv: "source {{ root }}/miniconda/bin/activate"
     db:
       name: esgcet
       host: localhost

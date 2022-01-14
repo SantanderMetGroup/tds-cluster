@@ -1,4 +1,10 @@
-- name: Workers
+- name: Set up gateway
+  hosts: lb
+  tasks:
+    - name: Template modproxy.conf
+      template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
+
+- name: UDG workers
   hosts: servers
   tasks:
     - lineinfile:
@@ -6,7 +12,7 @@
         insertafter: <Proxy "balancer://{{ item }}">
         line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
       delegate_to: lb
-      with_items: [ 'udg', 'esgf', 'tds5' ]
+      with_items: [ 'udg', 'tds5' ]
       when: 'inventory_file|basename != "spock"'
 
     - lineinfile:
@@ -14,5 +20,24 @@
         insertafter: <Proxy "balancer://{{ item }}">
         line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
       delegate_to: lb
-      with_items: [ 'udg', 'esgf', 'tds5' ]
+      with_items: [ 'udg', 'tds5' ]
       when: 'inventory_file|basename == "spock"'
+
+#- name: ESGF workers
+#  hosts: servers
+#  tasks:
+#    - lineinfile:
+#        path: "{{ modproxy_conf }}"
+#        insertafter: <Proxy "balancer://{{ item }}">
+#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
+#      delegate_to: lb
+#      with_items: [ 'esgf' ]
+#      when: 'inventory_file|basename != "spock"'
+#
+#    - lineinfile:
+#        path: "{{ modproxy_conf }}"
+#        insertafter: <Proxy "balancer://{{ item }}">
+#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
+#      delegate_to: lb
+#      with_items: [ 'esgf' ]
+#      when: 'inventory_file|basename == "spock"'

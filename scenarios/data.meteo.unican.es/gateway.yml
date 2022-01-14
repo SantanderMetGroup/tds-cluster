@@ -30,9 +30,6 @@
     - name: Copy httpd ssl conf
       copy: src={{ httpd_sslconf_src }} dest=/etc/httpd/conf/httpd.ssl.conf
 
-    - name: Template modproxy.conf
-      template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
-
     - name: Create /etc/certs
       file: state=directory path=/etc/certs mode=0755
 

@@ -51,3 +51,7 @@
   with_nested:
     - ["datasets", "files", "aggregations"]
     - "{{ solr.shards }}"
+
+- name: Stop solr
+  command: "{{ solr.path }}/bin/solr stop -s {{ solr.home }}/{{ item.name }}-{{ item.port }} -p {{ item.port }}"
+  with_items: "{{ solr.shards }}"

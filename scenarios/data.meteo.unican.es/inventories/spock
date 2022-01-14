@@ -4,7 +4,14 @@ all:
       ansible_host: spock.meteo.unican.es
       ansible_user: root
       ajp_address: 192.168.202.140
+    wn023:
+      ansible_host: wn023
+      ansible_user: zequi
+    wn025:
+      ansible_host: wn025
+      ansible_user: zequi
   vars:
+    root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
     esgf_host: spock.meteo.unican.es
     certs: certstest
     db: 
@@ -25,7 +32,8 @@ lbs:
     httpd_sslconf_src: files/httpd.ssl.conf
 servers:
   hosts:
-    lb:
+    wn023:
+    wn025:
 databases:
   hosts:
-    lb:
+    wn023:
