@@ -6,6 +6,7 @@
 
 - name: UDG workers
   hosts: servers
+  serial: 1 # multiple hosts writing to the gateway
   tasks:
     - lineinfile:
         path: "{{ modproxy_conf }}"
@@ -22,6 +23,15 @@
       delegate_to: lb
       with_items: [ 'udg', 'tds5' ]
       when: 'inventory_file|basename == "spock"'
+
+    - name: Add thredds/admin workers
+      delegate_to: lb
+      blockinfile:
+        path: "{{ modproxy_conf }}"
+        insertafter: "# udg admin"
+        block: |
+          ProxyPass "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats['udg'].ssl }}/thredds/admin"
+          ProxyPassReverse "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats['udg'].ssl }}/thredds/admin"
 
 #- name: ESGF workers
 #  hosts: servers

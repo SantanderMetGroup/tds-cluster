@@ -26,14 +26,14 @@ tomcats:
     ssl: 7016
     ajp: 7017
     shutdown: 7018
-  esgf:
-    home: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf"
-    http: 8080
-    ssl: 8443
-    ajp: 8223
-    shutdown: 8005
-    truststore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-truststore.ts"
-    keystore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-keystore.ts"
+#  esgf:
+#    home: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf"
+#    http: 8080
+#    ssl: 8443
+#    ajp: 8223
+#    shutdown: 8005
+#    truststore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-truststore.ts"
+#    keystore: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf/esg-keystore.ts"
 
 # solr, to remove
 # versions:

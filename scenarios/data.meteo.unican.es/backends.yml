@@ -59,18 +59,6 @@
     - role: udg
       tomcat: "{{ tomcats.tds5 }}"
   tasks:
-    - name: Clone repos
-      run_once: True
-      local_action:
-        module: git
-        repo: "{{ item.repo }}"
-        dest: "{{ item.dest }}"
-        version: "{{ item.version }}"
-        depth: 1
-      with_items:
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "tds5", "dest": "tds5-content" }
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
-
     - name: Create directory for jdk
       file: state=directory path={{ jdk_home }}
     
@@ -79,12 +67,6 @@
         src: "{{ jdk_tgz }}"
         dest: "{{ jdk_home }}"
         extra_opts: --strip-components=1
-
-    - name: Synchronize tds-content
-      synchronize: src=tds-content/ dest={{ tomcats.udg.home }}/content/thredds
-
-    - name: Synchronize tds5-content
-      synchronize: src=tds5-content/ dest={{ tomcats.tds5.home }}/content/thredds
 
     - name: Remove TAP application
       file: state=absent dest={{ tomcats.tds5.home }}/webapps/udg-tap

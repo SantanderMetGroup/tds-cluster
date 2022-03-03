@@ -61,8 +61,13 @@ ProxyPassReverse /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/e
 <Proxy "balancer://udg">
 ProxySet stickysession=JSESSIONID
 </Proxy>
+# restricted access
 ProxyPass "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
 ProxyPassReverse "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
+
+# udg admin
+
+# main workers
 ProxyPass "/thredds" "balancer://udg/thredds"
 ProxyPassReverse "/thredds" "balancer://udg/thredds"
 ProxyPass "/udg-tap" "balancer://udg/udg-tap"
