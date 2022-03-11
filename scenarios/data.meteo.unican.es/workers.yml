@@ -29,6 +29,7 @@
       blockinfile:
         path: "{{ modproxy_conf }}"
         insertafter: "# udg admin"
+        marker: "# udg admin {{ ansible_all_ipv4_addresses[0] }}:{{ tomcats['udg'].ssl }}"
         block: |
           ProxyPass "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats['udg'].ssl }}/thredds/admin"
           ProxyPassReverse "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats['udg'].ssl }}/thredds/admin"
