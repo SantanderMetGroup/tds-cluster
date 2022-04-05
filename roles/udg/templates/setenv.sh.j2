@@ -2,7 +2,7 @@ export CATALINA_HOME={{ tomcat.home }}
 export JRE_HOME={{ jdk_home }}
 export CONTENT_ROOT="-Dtds.content.root.path={{ tomcat.home }}/content"
 
-export NORMAL="-d64 -Xmx{{ tomcat.Xmx | default("2048m") }} -Xms{{ tomcat.Xms | default("512m") }} -server -ea -XX:+HeapDumpOnOutOfMemoryError -Djava.awt.headless=true"
+export NORMAL="-Xmx{{ tomcat.Xmx | default("2048m") }} -Xms{{ tomcat.Xms | default("512m") }} -server -ea -XX:+HeapDumpOnOutOfMemoryError -Djava.awt.headless=true"
 export JAVA_PREFS_ROOTS="-Djava.util.prefs.systemRoot=$CATALINA_BASE/content/thredds/javaUtilPrefs -Djava.util.prefs.userRoot=$CATALINA_BASE/content/thredds/javaUtilPrefs"
 
 export CATALINA_OPTS="$NORMAL $CONTENT_ROOT $JAVA_PREFS_ROOTS"

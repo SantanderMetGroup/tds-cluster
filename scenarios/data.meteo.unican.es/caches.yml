@@ -22,6 +22,12 @@
         - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "tds5", "dest": "tds5-content" }
         - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
 
+    - name: Create content directories
+      file: state=directory dest={{ item }}/content/thredds
+      with_items:
+        - "{{ tomcats.udg.home }}"
+        - "{{ tomcats.tds5.home }}"
+
     - name: Synchronize tds-content
       synchronize: src=tds-content/ dest={{ tomcats.udg.home }}/content/thredds
 

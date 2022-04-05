@@ -7,4 +7,4 @@
         creates: "{{ tomcats[item].home }}/logs/catalina.pid"
       environment:
         CATALINA_BASE: "{{ tomcats[item].home }}"
-      with_items: "{{ tomcats }}"
+      with_items: [ "udg", "tds5" ]

@@ -51,6 +51,7 @@
 
 - name: Install UDGs
   hosts: servers
+  tags: udg
   vars_files:
     - secrets.yml
   roles:

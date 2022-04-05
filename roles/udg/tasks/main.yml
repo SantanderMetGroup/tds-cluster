@@ -1,3 +1,7 @@
+- name: Remove previous versions
+  file: state=absent dest={{ tomcat.home }}/webapps/{{ item }}
+  with_items: ["udg-tap", "thredds"]
+
 - name: Create tomcat home
   file: state=directory dest={{ tomcat.home }}
 

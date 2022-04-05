@@ -9,7 +9,7 @@
 							http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
               http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
               http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
-              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+              http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.6.xsd">
 
 
     <!-- Enables the Spring MVC @Controller programming model  -->
@@ -30,17 +30,21 @@
                 <security:filter-chain pattern="/dap4/**" filters="
            httpHeadFilter,
            requestQueryFilterAllowAngleBrackets,
-           requestCORSFilter,
            requestBracketingLogMessageFilter"/>
                 <security:filter-chain pattern="/dodsC/**" filters="
            httpHeadFilter,
            requestQueryFilterAllowAngleBrackets,
-           requestCORSFilter,
+           requestBracketingLogMessageFilter"/>
+                <security:filter-chain pattern="/wms/**" filters="
+           httpHeadFilter,
+           requestQueryFilterAllowAngleBrackets,
+           requestBracketingLogMessageFilter"/>
+                <security:filter-chain pattern="/fileServer/**" filters="
+           requestQueryFilter,
            requestBracketingLogMessageFilter"/>
                 <security:filter-chain pattern="/**" filters="
            httpHeadFilter,
            requestQueryFilter,
-           requestCORSFilter,
            requestBracketingLogMessageFilter"/>
             </list>
         </constructor-arg>
@@ -52,7 +56,6 @@
     <bean id="requestQueryFilterAllowAngleBrackets" class="thredds.servlet.filter.RequestQueryFilter">
         <property name="allowAngleBrackets" value="true"/>
     </bean>
-    <bean id="requestCORSFilter" class="thredds.servlet.filter.RequestCORSFilter"/>
     <bean id="requestBracketingLogMessageFilter" class="thredds.servlet.filter.RequestBracketingLogMessageFilter"/>
 
     <!-- Properties -->
@@ -88,7 +91,6 @@
         <property name="webappLogoAlt" value="${tds.logo.alt}"/>
         <property name="installUrl" value="${tds.install.url}"/>
     </bean>
-    <bean id="corsConfig" class="thredds.server.config.CorsConfigBean"/>
     <bean id="tdsUpdateConfig" class="thredds.server.config.TdsUpdateConfigBean"/>
     <bean id="wmsConfig" class="thredds.server.config.WmsConfigBean"/>
 
@@ -108,16 +110,16 @@
     <!-- Restricted Access (using container managed security, eg Tomcat, or CAMS) -->
     <bean id="restrictedDatasetAuthorizer" class="thredds.servlet.restrict.TomcatAuthorizer">
         <property name="useSSL" value="true"/>
-        <property name="sslPort" value=""/>
+        <property name="sslPort" value="{{ tomcat.ssl }}"/>
     </bean>
 
     <!-- ESGF
     <bean id="restrictedDatasetAuthorizer" class="esg.orp.app.tds.TDSAuthorizer"/ -->
 
     <!-- JMX -->
-    <bean id="openRAFMonitor" class="thredds.monitor.OpenRAFMonitorImpl"/>
+<!--    <bean id="openRAFMonitor" class="thredds.monitor.OpenRAFMonitorImpl"/>
     <bean id="netcdfFileCacheMonitor" class="thredds.monitor.NetcdfFileCacheMonitorImpl"/>
-    <bean id="fmrcCacheMonitor" class="thredds.monitor.FmrcCacheMonitorImpl"/>
+    <bean id="fmrcCacheMonitor" class="thredds.monitor.FmrcCacheMonitorImpl"/>-->
 
     <!-- Configuration for JMX exposure in the application
     <bean id="mbeanExporter" class="org.springframework.jmx.export.MBeanExporter" lazy-init="false">
