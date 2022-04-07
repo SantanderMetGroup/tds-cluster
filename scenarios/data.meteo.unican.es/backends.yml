@@ -21,16 +21,25 @@
       copy: src=files/threddsConfig.xml dest={{ esg.content }}/thredds/threddsConfig.xml
 
     - name: Clone tds-content
-      run_once: True
-      local_action:
-        module: git
+      git:
         repo: git@gitlab.com:zequihg50/esgf-content.git
         dest: esgf-content
         version: master
         depth: 1
+        force: True
+        executable: /oceano/gmeteo/WORK/zequi/miniconda3/bin/git
 
-    - name: Synchronize esgf-content
-      synchronize: src=esgf-content/ dest={{ esg.content }}/thredds
+#    - name: Clone tds-content
+#      run_once: True
+#      local_action:
+#        module: git
+#        repo: git@gitlab.com:zequihg50/esgf-content.git
+#        dest: esgf-content
+#        version: master
+#        depth: 1
+#
+#    - name: Synchronize esgf-content
+#      synchronize: src=esgf-content/ dest={{ esg.content }}/thredds
 
 - name: Install derbydb server
   hosts: databases

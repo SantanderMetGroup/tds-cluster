@@ -52,3 +52,9 @@
 #      delegate_to: lb
 #      with_items: [ 'esgf' ]
 #      when: 'inventory_file|basename == "spock"'
+
+- name: Restart gateway
+  hosts: lb
+  tasks:
+    - name: Graceful restart
+      command: service httpd graceful
