@@ -64,7 +64,10 @@
       service: name=sshd state=started
 
     - name: Create a root directory
-      file: state=directory dest=/oceano/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
+      file: state=directory dest=/{{ item }}/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
+      with_items:
+        - oceano
+        - lustre
 
 - name: Provision servers
   hosts: servers

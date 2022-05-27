@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 CURRENTDIR=$(pwd)
 BUILDDIR=build
@@ -13,7 +14,7 @@ rm -rf udg
 
 # download
 wget -qc https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.104/bin/apache-tomcat-7.0.104.tar.gz
-wget -qc https://ftp.cixug.es/apache//db/derby/db-derby-10.14.2.0/db-derby-10.14.2.0-lib.tar.gz
+wget -qc https://dlcdn.apache.org//db/derby/db-derby-10.14.2.0/db-derby-10.14.2.0-lib.tar.gz
 wget -qc https://artifacts.unidata.ucar.edu/repository/unidata-releases/edu/ucar/tds/5.0.0-beta6/tds-5.0.0-beta6.war
 
 tar -xf apache-tomcat-7.0.104.tar.gz
