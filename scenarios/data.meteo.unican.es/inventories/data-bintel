@@ -3,6 +3,7 @@ all:
     lb:
       ansible_host: data.meteo.unican.es
       ansible_user: root
+      ansible_python_interpreter: /usr/local/conda/bin/python
     wn031:
       ansible_host: wn031
       ansible_user: zequi
