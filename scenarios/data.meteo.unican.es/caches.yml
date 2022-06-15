@@ -1,5 +1,6 @@
 - name: Discover gateway facts
   hosts: lb
+  tags: caches
   tasks:
     - setup:
 
@@ -10,23 +11,35 @@
   vars_files:
     - secrets.yml
   tasks:
+    #    - name: Clone repos
+    #      run_once: True
+    #      local_action:
+    #        module: git
+    #        repo: "{{ item.repo }}"
+    #        dest: "{{ item.dest }}"
+    #        version: "{{ item.version }}"
+    #        depth: 1
+    #      with_items:
+    #        - { "repo": "git@gitlab.com:zequihg50/tds5-content.git", "version": "devel", "dest": "tds5-content" }
+    #        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "deepesd", "dest": "tds-content" }
+    #
+    #    - name: Synchronize tds-content
+    #      synchronize: src=tds-content/ dest={{ tomcats.udg.home }}/content/thredds
+    #
+    #    - name: Synchronize tds5-content
+    #      synchronize: src=tds5-content/ dest={{ tomcats.tds5.home }}/content/thredds
+    #
     - name: Clone repos
-      run_once: True
-      local_action:
-        module: git
+      git:
         repo: "{{ item.repo }}"
         dest: "{{ item.dest }}"
         version: "{{ item.version }}"
         depth: 1
+      environment:
+        PATH: /lustre/gmeteo/WORK/zequi/miniconda3/bin:{{ ansible_env.PATH }}
       with_items:
-        - { "repo": "git@gitlab.com:zequihg50/tds5-content.git", "version": "devel", "dest": "tds5-content" }
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "lustre", "dest": "tds-content" }
-
-    - name: Synchronize tds-content
-      synchronize: src=tds-content/ dest={{ tomcats.udg.home }}/content/thredds
-
-    - name: Synchronize tds5-content
-      synchronize: src=tds5-content/ dest={{ tomcats.tds5.home }}/content/thredds
+        - { "repo": "git@gitlab.com:zequihg50/tds5-content.git", "version": "devel", "dest": "{{ tomcats.tds5.home }}/content/thredds" }
+        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "deepesd", "dest": "{{ tomcats.udg.home }}/content/thredds" }
 
     - name: Reinit catalogs
       uri:
@@ -35,6 +48,7 @@
         user: "{{ tds.user }}"
         password: "{{ tds.password }}"
       with_items: "{{ tomcats }}"
+      tags: caches
 
     - name: Clear caches
       uri:
@@ -43,3 +57,4 @@
         user: "{{ tds.user }}"
         password: "{{ tds.password }}"
       with_items: "{{ tomcats }}"
+      tags: caches
