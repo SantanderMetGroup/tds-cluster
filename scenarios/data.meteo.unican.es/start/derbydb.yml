@@ -1,9 +1,0 @@
-- name: Start derbydb
-  hosts: databases
-  tasks:
-    - command: nohup bin/startNetworkServer &
-      args:
-        chdir: "{{ derby_home }}"
-      environment:
-        DERBY_HOME: "{{ derby_home }}"
-        JAVA_HOME: "{{ jdk_home }}"
