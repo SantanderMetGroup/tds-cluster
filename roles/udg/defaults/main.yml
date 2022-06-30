@@ -1,8 +1,0 @@
-udg:
-  ajp:
-    address: 127.0.0.1
-  derby:
-    name: jdbc/adminDB
-    user: APP
-    password: changeit
-    url: jdbc:derby://localhost:1527/tap

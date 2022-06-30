@@ -1,8 +1,0 @@
-cog:
-  repo: https://github.com/EarthSystemCoG/COG.git
-  version: v3.15.3
-#  dest: "{{ esg.home }}/cog/cog_install"
-#  base: "{{ esg.home }}/cog"
-  dest: "/usr/local/cog/cog_install"
-  base: "/usr/local/cog"
-  wsgi_dir: /etc/cog-wsgi-8889

@@ -1,6 +1,0 @@
-export JAVA_OPTS="-Dtds.content.root.path={{ esg.content }}"
-#export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:{{ conda.home|default('NOT_USED') }}/envs/esgf-pub/lib"
-#Sets the Java binary for Tomcat to use
-export ESGF_HOME="{{ esg.home }}"
-export CATALINA_OPTS="-Xmx2048m -server -Xms1024m -XX:MaxPermSize=512m -Dsun.security.ssl.allowUnsafeRenegotiation=false -Djavax.net.ssl.trustStore='{{ tomcat.truststore }}' -Djavax.net.ssl.trustStorePassword='changeit'"
-export CATALINA_PID="{{ tomcat.home }}/logs/catalina.pid"
