@@ -1,4 +1,0 @@
-[submodule "scenarios/data.meteo.unican.es/esgf-ansible"]
-	path = scenarios/data.meteo.unican.es/esgf-ansible
-	url = git@github.com:SantanderMetGroup/esgf-ansible
-	branch = data
