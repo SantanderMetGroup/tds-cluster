@@ -1,35 +1,43 @@
+- name: Build UDG
+  run_once: True
+  local_action:
+    module: shell ./build.sh
+    args:
+      chdir: "{{ role_path }}/files"
+      creates: "{{ role_path }}/files/udg.zip"
+
 - name: Remove previous versions
-  file: state=absent dest={{ tomcat.home }}/webapps/{{ item }}
+  file: state=absent dest={{ udg_home }}/webapps/{{ item }}
   with_items: ["udg-tap", "thredds"]
 
 - name: Create tomcat home
-  file: state=directory dest={{ tomcat.home }}
+  file: state=directory dest={{ udg_home }}
 
 - name: Create TDS content
-  file: state=directory dest={{ tomcat.home }}/content/thredds
+  file: state=directory dest={{ udg_home }}/content/thredds
 
 - name: Unarchive tomcat
-  unarchive: src=files/udgtomcat.zip dest={{ tomcat.home }}
+  unarchive: src=files/udg.zip dest={{ udg_home }}
 
 - name: Copy keystore
-  copy: src=files/server.p12 dest={{ tomcat.home }}/server.p12
+  copy: src=files/server.p12 dest={{ udg_home }}/server.p12
 
 - name: Template setenv.sh
-  template: src=templates/setenv.sh.j2 dest={{ tomcat.home }}/bin/setenv.sh
+  template: src=templates/setenv.sh.j2 dest={{ udg_home }}/bin/setenv.sh
 
 - name: Template server.xml
-  template: src=templates/server.xml.j2 dest={{ tomcat.home }}/conf/server.xml
+  template: src=templates/server.xml.j2 dest={{ udg_home }}/conf/server.xml
 
 - name: Template context.xml
-  template: src=templates/context.xml.j2 dest={{ tomcat.home }}/conf/context.xml
+  template: src=templates/context.xml.j2 dest={{ udg_home }}/conf/context.xml
 
 - name: Copy threddsConfig.xml
-  copy: src=files/threddsConfig.xml dest={{ tomcat.home }}/content/thredds/threddsConfig.xml
+  copy: src=files/threddsConfig.xml dest={{ udg_home }}/content/thredds/threddsConfig.xml
 
 - name: Template tap properties
   template:
     src: templates/tap.properties.j2
-    dest: "{{ tomcat.home }}/webapps/udg-tap/WEB-INF/classes/global_variables.properties"
+    dest: "{{ udg_home }}/webapps/udg-tap/WEB-INF/classes/global_variables.properties"
 
 - name: Template tds applicationContext.xml
-  template: src=templates/tds-applicationContext.xml.j2 dest={{ tomcat.home }}/webapps/thredds/WEB-INF/applicationContext.xml
+  template: src=templates/tds-applicationContext.xml.j2 dest={{ udg_home }}/webapps/thredds/WEB-INF/applicationContext.xml

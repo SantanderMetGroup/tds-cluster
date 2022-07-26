@@ -7,7 +7,7 @@
   register: cog_clone
 
 - name: Create CoG conda env
-  command: "{{ conda.exe }} create -y -n cog -c conda-forge 'python<3' pip rsa=3.4.2=py27_0 gcc_linux-64"
+  command: "{{ conda.exe }} create -y -n cog -c conda-forge 'python>3' pip rsa mod_wsgi gcc_linux-64"
   args:
     creates: "{{ conda.home }}/envs/cog"
   register: cog_env
@@ -15,7 +15,7 @@
 - name: Install CoG Requirments
   shell: >
     {{ conda.actv }} cog && \
-    pip install 'mod_wsgi<4.6' 'git+https://github.com/EarthSystemCoG/django-openid-auth.git#egg=django-openid-auth' -r requirements.txt
+    pip install 'git+https://github.com/EarthSystemCoG/django-openid-auth.git#egg=django-openid-auth' -r requirements.txt
   args:
     chdir: "{{ cog.dest }}"
 

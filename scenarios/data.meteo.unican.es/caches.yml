@@ -19,33 +19,26 @@
         version: "{{ item.version }}"
         depth: 1
       with_items:
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "tds5", "dest": "tds5-content" }
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
+        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "lustre", "dest": "tds-content" }
 
     - name: Create content directories
-      file: state=directory dest={{ item }}/content/thredds
+      file: state=directory dest={{ item.home }}/content/thredds
       with_items:
-        - "{{ tomcats.udg.home }}"
-        - "{{ tomcats.tds5.home }}"
+        - "{{ udg }}"
 
     - name: Synchronize tds-content
-      synchronize: src=tds-content/ dest={{ tomcats.udg.home }}/content/thredds
-
-    - name: Synchronize tds5-content
-      synchronize: src=tds5-content/ dest={{ tomcats.tds5.home }}/content/thredds
+      synchronize: src=tds-content/ dest={{ udg.home }}/content/thredds
 
     - name: Reinit catalogs
       uri:
         url: https://{{ gateway }}/thredds/admin/{{ ansible_hostname }}/debug?Catalogs/reinit
         validate_certs: false
-        user: "{{ tds.user }}"
-        password: "{{ tds.password }}"
-      with_items: "{{ tomcats }}"
+        user: "{{ secrets.tds.user }}"
+        password: "{{ secrets.tds.password }}"
 
     - name: Clear caches
       uri:
         url: https://{{ gateway }}/thredds/admin/{{ ansible_hostname }}/debug?Caches/clearCaches
         validate_certs: false
-        user: "{{ tds.user }}"
-        password: "{{ tds.password }}"
-      with_items: "{{ tomcats }}"
+        user: "{{ secrets.tds.user }}"
+        password: "{{ secrets.tds.password }}"

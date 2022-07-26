@@ -1,34 +1,45 @@
-- name: Install ESGF tomcat
-  hosts: servers
-  vars:
-    esghome: "{{ root }}/{{ inventory_hostname }}/esgf"
-  vars_files:
-    - secrets.yml
-  roles:
-    - role: esgftomcat
-      tomcat: "{{ tomcats.esgf }}"
-  tasks:
-    - name: Copy truststore
-      copy: src={{ certs }}/esg-truststore.ts dest={{ tomcats.esgf.truststore }} mode=644
-    
-    - name: Copy keystore
-      copy: src={{ certs }}/esg-keystore.ts dest={{ tomcats.esgf.keystore }} mode=600
-
-    - name: Create content/thredds
-      file: state=directory dest={{ esg.content }}/thredds
-
-    - name: Copy UDG threddsConfig.xml
-      copy: src=files/threddsConfig.xml dest={{ esg.content }}/thredds/threddsConfig.xml
-
-    - name: Clone tds-content
-      git:
-        repo: git@gitlab.com:zequihg50/esgf-content.git
-        dest: esgf-content
-        version: master
-        depth: 1
-        force: True
-        executable: /oceano/gmeteo/WORK/zequi/miniconda3/bin/git
-
+#- name: Install ESGF tomcat
+#  hosts: servers
+#  vars:
+#    esghome: "{{ root }}/{{ inventory_hostname }}/esgf"
+#  vars_files:
+#    - secrets.yml
+#  roles:
+#    - role: esgftomcat
+#      tomcat: "{{ tomcats.esgf }}"
+#  tasks:
+#    - name: Copy truststore
+#      copy: src={{ certs }}/esg-truststore.ts dest={{ tomcats.esgf.truststore }} mode=644
+#    
+#    - name: Copy keystore
+#      copy: src={{ certs }}/esg-keystore.ts dest={{ tomcats.esgf.keystore }} mode=600
+#
+#    - name: Create content/thredds
+#      file: state=directory dest={{ esg.content }}/thredds
+#
+#    - name: Copy UDG threddsConfig.xml
+#      copy: src=files/threddsConfig.xml dest={{ esg.content }}/thredds/threddsConfig.xml
+#
+#    - name: Create esgf-content
+#      file: state=directory dest={{ tomcats.esgf.home }}/content/thredds
+#
+#    - name: Clone esgf-content
+#      run_once: True
+#      local_action:
+#        module: git
+#        repo: git@gitlab.com:zequihg50/esgf-content.git
+#        dest: esgf-content
+#        version: master
+#        depth: 1
+#        force: True
+#          #executable: /oceano/gmeteo/WORK/zequi/miniconda3/bin/git
+#
+#    - name: Copy esgf-content
+#      synchronize:
+#        src: esgf-content/
+#        dest: "{{ tomcats.esgf.home }}/content/thredds"
+#
+#
 #    - name: Clone tds-content
 #      run_once: True
 #      local_action:
@@ -58,55 +69,43 @@
     - name: Template derby.properties
       template: src=templates/derby.properties.j2 dest={{ derby_home }}/derby.properties
 
-- name: Install UDGs
+- name: Install UDG
   hosts: servers
   tags: udg
   vars_files:
     - secrets.yml
   roles:
     - role: udg
-      tomcat: "{{ tomcats.udg }}"
-    - role: udg
-      tomcat: "{{ tomcats.tds5 }}"
+      udg_home: "{{ udg.home }}"
+      udg_jdk: "{{ udg.jdk }}"
+      udg_http: "{{ udg.http }}"
+      udg_ssl: "{{ udg.ssl }}"
+      udg_ajp: "{{ udg.ajp }}"
+      udg_shutdown: "{{ udg.shutdown }}"
+      udg_derby_name: "{{ udg.derby_name }}"
+      udg_derby_user: "{{ udg.derby_user }}"
+      udg_derby_password: "{{ udg.derby_password }}"
+      udg_derby_url: "{{ udg.derby_url }}"
+      udg_ajp_address: "{{ udg.ajp_address }}"
   tasks:
     - name: Create directory for jdk
       file: state=directory path={{ jdk_home }}
-    
+
     - name: Unarchive jdk in {{ jdk_home }}
       unarchive:
         src: "{{ jdk_tgz }}"
         dest: "{{ jdk_home }}"
+        remote_src: True
         extra_opts: --strip-components=1
 
-    - name: Remove TAP application
-      file: state=absent dest={{ tomcats.tds5.home }}/webapps/udg-tap
-
-    - name: Remove tds5 if exists
-      file: state=absent dest={{ tomcats.tds5.home }}/webapps/tds5
-
-    - name: Use /tds5 context
-      command: mv -f {{ tomcats.tds5.home }}/webapps/thredds {{ tomcats.tds5.home }}/webapps/tds5
-
     - name: Copy grib table
-      copy: src=files/tds5/2.98.128.table dest={{ tomcats.tds5.home }}/content/thredds/2.98.128.table
+      copy: src=files/tds5/2.98.128.table dest={{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table
 
     - name: Add grib table to threddsConfig.xml
       blockinfile:
-        path: "{{ tomcats.tds5.home }}/content/thredds/threddsConfig.xml"
+        path: "{{ root }}/{{ inventory_hostname }}/udg/content/thredds/threddsConfig.xml"
         insertbefore: '</threddsConfig>'
         block: |
           <nj22Config>
-            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ tomcats.tds5.home }}/content/thredds/2.98.128.table</gribParameterTable>
+            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table</gribParameterTable>
           </nj22Config>
-
-#- name: Install TDS for ATLAS
-#  hosts: wn025
-#  vars:
-#    tomcat: "{{ atlas }}"
-#  vars_files:
-#    - secrets.yml
-#  roles:
-#    - role: udg
-#  tasks:
-#    - name: Remove TAP application
-#      file: state=absent dest={{ tomcat.home }}/webapps/udg-tap

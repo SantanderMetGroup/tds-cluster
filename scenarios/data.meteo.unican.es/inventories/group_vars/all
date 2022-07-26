@@ -1,31 +1,32 @@
-root: "/oceano/gmeteo/WORK/zequi/services/tds-cluster"
+root: "/lustre/gmeteo/WORK/zequi/services/tds-cluster"
 jdk_home: "{{ root }}/{{ inventory_hostname }}/jdk"
 derby_home: "{{ root }}/{{ inventory_hostname }}/derbydb"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 tdscontent_repo: git@gitlab.com:SCDS/tds-content.git
 
-jdk_tgz: ../../software/jdk11.tar.gz
+jdk_tgz: https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16_8.tar.gz
+#jdk_tgz: https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u342-b07/OpenJDK8U-jdk_x64_linux_hotspot_8u342b07.tar.gz
 tomcat_tgz: ../../software/apache-tomcat-7.0.104.tar.gz
 tds_war: ../../software/tds-5.0.0-beta6.war
 derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
 melody_jar: ../../software/javamelody-core-1.73.1.jar
 
+udg:
+  balancer: udg
+  home: "{{ root }}/{{ inventory_hostname }}/udg"
+  jdk: "{{ jdk_home }}"
+  http: 9080
+  ssl: 9443
+  ajp: 9009
+  shutdown: 9005
+  derby_name: "{{ secrets.udg.derby.name }}"
+  derby_user: "{{ secrets.udg.derby.user }}"
+  derby_password: "{{ secrets.udg.derby.password }}"
+  derby_url: "{{ secrets.udg.derby.url }}"
+  ajp_address: "{{ secrets.udg.ajp.address }}"
+
 tomcats:
-  udg:
-    home: "{{ root }}/{{ inventory_hostname }}/tomcats/udg"
-    jdk: "{{ jdk_home }}"
-    http: 9080
-    ssl: 9443
-    ajp: 9009
-    shutdown: 9005
-  tds5:
-    jdk: "{{ jdk_home }}"
-    home: "{{ root }}/{{ inventory_hostname }}/tomcats/tds5"
-    http: 7015
-    ssl: 7016
-    ajp: 7017
-    shutdown: 7018
   esgf:
     home: "{{ root }}/{{ inventory_hostname }}/tomcats/esgf"
     http: 8080

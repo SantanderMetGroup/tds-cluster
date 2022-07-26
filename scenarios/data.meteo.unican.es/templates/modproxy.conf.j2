@@ -23,55 +23,56 @@ LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
 ProxyTimeout 600
 ProxyPass /status-proxy !
 
-ProxyPassMatch ^/thredds/(.*)/esgcet ajp://localhost:8223
-<Proxy "balancer://esgf">
-BalancerMember "ajp://localhost:8223/thredds"
-</Proxy>
-ProxyPassMatch ^(/thredds/dodsC/cordex\.output\..*aggregation\.[0-9]+.*)$ "balancer://esgf$1"
+# old urls compatibility (2022-06-08)
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/01_EuroCORDEX_INTERIM_022/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/02_EuroCORDEX_INTERIM_044/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/EUR-44_CCCma-CanESM2_rcp4.5_r1i1p1_UCAN-WRF341I_v2/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/EUR-44_ECMWF-ERAINT_evaluation_r1i1p1_UCAN-WRF341I_v1/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/SAM-44_CCCma-CanESM2_historical_r1i1p1_UCAN-WRF341I_v2_20161020/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/SAM-44_CCCma-CanESM2_rcp4.5_r1i1p1_UCAN-WRF341I_v2_20161020/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/SAM-44_ECMWF-ERAINT_evaluation_r1i1p1_UCAN-WRF341I_v1/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/c3s34d/providers/cordex/(.*) ajp://localhost:8223/thredds/$1/esgcet/CORDEX/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/c3s34d/from_PROVIDERS/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/unican/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+# general proxy for ESGF data node
+ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
 
-<Proxy "balancer://tds5">
-ProxySet stickysession=JSESSIONID
-</Proxy>
-ProxyPass "/tds5" "balancer://tds5/tds5"
-ProxyPassReverse "/tds5" "balancer://tds5/tds5"
-ProxyPass "/tds5/restrictedAccess" "balancer://tds5/tds5/restrictedAccess"
-ProxyPassReverse "/tds5/restrictedAccess" "balancer://tds5/tds5/restrictedAccess"
-# This is needed so the web catalog works
-ProxyPass "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"
-ProxyPassReverse "/thredds/catalog/devel/tds5" "balancer://tds5/tds5"
-
-<Proxy "balancer://esgf">
-ProxySet stickysession=JSESSIONID
-</Proxy>
-ProxyPassMatch ^/solr(.*)$ balancer://esgf/solr$1
-ProxyPassReverse /solr balancer://esgf/solr
-ProxyPass /esgf-idp balancer://esgf/esgf-idp
-ProxyPassReverse /esgf-idp balancer://esgf/esgf-idp
-ProxyPass /esg-search balancer://esgf/esg-search
-ProxyPassReverse /esg-search balancer://esgf/esg-search
-ProxyPass /esg-orp balancer://esgf/esg-orp
-ProxyPassReverse /esg-orp balancer://esgf/esg-orp
-ProxyPass /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
-ProxyPassReverse /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
-ProxyPass /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
-ProxyPassReverse /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
-ProxyPass /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
-ProxyPassReverse /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
+#<Proxy "balancer://esgf">
+#BalancerMember "ajp://localhost:8223/thredds"
+#</Proxy>
+#ProxyPassMatch ^(/thredds/dodsC/cordex\.output\..*aggregation\.[0-9]+.*)$ "balancer://esgf$1"
+#<Proxy "balancer://esgf">
+#ProxySet stickysession=JSESSIONID
+#</Proxy>
+#ProxyPassMatch ^/solr(.*)$ balancer://esgf/solr$1
+#ProxyPassReverse /solr balancer://esgf/solr
+#ProxyPass /esgf-idp balancer://esgf/esgf-idp
+#ProxyPassReverse /esgf-idp balancer://esgf/esgf-idp
+#ProxyPass /esg-search balancer://esgf/esg-search
+#ProxyPassReverse /esg-search balancer://esgf/esg-search
+#ProxyPass /esg-orp balancer://esgf/esg-orp
+#ProxyPassReverse /esg-orp balancer://esgf/esg-orp
+#ProxyPass /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
+#ProxyPassReverse /thredds/catalog/esgcet balancer://esgf/thredds/catalog/esgcet
+#ProxyPass /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
+#ProxyPassReverse /thredds/dodsC/esgcet balancer://esgf/thredds/dodsC/esgcet
+#ProxyPass /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
+#ProxyPassReverse /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
 
 <Proxy "balancer://udg">
 ProxySet stickysession=JSESSIONID
 </Proxy>
-# restricted access
+# main workers
+ProxyPass "/tds5" "balancer://udg/thredds"
+ProxyPassReverse "/tds5" "balancer://udg/thredds"
 ProxyPass "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
 ProxyPassReverse "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
-
-# udg admin
-
-# main workers
 ProxyPass "/thredds" "balancer://udg/thredds"
 ProxyPassReverse "/thredds" "balancer://udg/thredds"
 ProxyPass "/udg-tap" "balancer://udg/udg-tap"
 ProxyPassReverse "/udg-tap" "balancer://udg/udg-tap"
+
+# udg admin
 
 # Additional reverse proxies
 ProxyPass /work http://ui.macc.unican.es/work

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<Server port="{{ tomcat.shutdown }}" shutdown="{{ tomcat.home|basename }}">
+<Server port="{{ udg_shutdown }}" shutdown="{{ udg_home|basename }}">
   <GlobalNamingResources>
-    <Resource name="{{ udg.derby.name }}" auth="Container" type="javax.sql.DataSource"
+    <Resource name="{{ udg_derby_name }}" auth="Container" type="javax.sql.DataSource"
               factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
               validationQuery="SELECT count(*) FROM users" maxTotal="20" maxIdle="10"
-              username="{{ udg.derby.user }}" password="{{ udg.derby.password }}"
+              username="{{ udg_derby_user }}" password="{{ udg_derby_password }}"
               driverClassName="org.apache.derby.jdbc.ClientDriver"
-              url="{{ udg.derby.url }}" readOnly="false"/>
+              url="{{ udg_derby_url }}" readOnly="false"/>
   </GlobalNamingResources>
 
   <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
@@ -16,18 +16,18 @@
   <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
 
   <Service name="Catalina">
-    <Connector port="{{ tomcat.http }}" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="{{ tomcat.ssl }}"/>
-    <Connector port="{{ tomcat.ajp }}" protocol="AJP/1.3" secretRequired="false" address="{{ udg.ajp.address }}"/>
-    <Connector port="{{ tomcat.ssl }}" protocol="org.apache.coyote.http11.Http11NioProtocol"
+    <Connector port="{{ udg_http }}" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="{{ udg_ssl }}"/>
+    <Connector port="{{ udg_ajp }}" protocol="AJP/1.3" secretRequired="false" address="{{ udg_ajp_address }}"/>
+    <Connector port="{{ udg_ssl }}" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="200" scheme="https"
                secure="True" SSLEnabled="True"
-               keystoreFile="{{ tomcat.home }}/server.p12" keystorePass="coches1"
+               keystoreFile="{{ udg_home }}/server.p12" keystorePass="coches1"
                clientAuth="False" sslProtocol="TLS" />
 
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="{{ ansible_hostname }}">
       <Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true">
         <Realm className="org.apache.catalina.realm.DataSourceRealm"
-               dataSourceName="{{ udg.derby.name }}" userTable="USERS"
+               dataSourceName="{{ udg_derby_name }}" userTable="USERS"
                userNameCol="USERNAME" userCredCol="PASSWORD" userRoleTable="V_USERS_ROLES"
                roleNameCol="ROLENAME">
           <CredentialHandler className="org.apache.catalina.realm.MessageDigestCredentialHandler" algorithm="MD5" />

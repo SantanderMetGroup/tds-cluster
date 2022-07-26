@@ -64,7 +64,7 @@
       service: name=sshd state=started
 
     - name: Create a root directory
-      file: state=directory dest=/oceano/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
+      file: state=directory dest=/lustre/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
 
 - name: Provision servers
   hosts: servers
@@ -128,7 +128,7 @@
       become_user: postgres
       postgresql_user:
         name: dbsuper
-        password: "{{ admin_pass }}"
+        password: "{{ secrets.admin_pass }}"
         role_attr_flags: SUPERUSER
     
     - name: Create ESGCET database
