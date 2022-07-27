@@ -1,6 +1,6 @@
 root: "/lustre/gmeteo/WORK/zequi/services/tds-cluster"
 jdk_home: "{{ root }}/{{ inventory_hostname }}/jdk"
-derby_home: "{{ root }}/{{ inventory_hostname }}/derbydb"
+derby_home: "{{ root }}/derbydb"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 tdscontent_repo: git@gitlab.com:SCDS/tds-content.git
 

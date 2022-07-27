@@ -110,7 +110,7 @@
     <!-- Restricted Access (using container managed security, eg Tomcat, or CAMS) -->
     <bean id="restrictedDatasetAuthorizer" class="thredds.servlet.restrict.TomcatAuthorizer">
         <property name="useSSL" value="true"/>
-        <property name="sslPort" value="{{ udg_ssl }}"/>
+        <property name="sslPort" value="443"/>
     </bean>
 
     <!-- ESGF
