@@ -13,15 +13,15 @@
     
     <contact>
       <name>SantanderMetGroup</name>
-      <organization>University of Cantabria</organization>
-      <email>support@my.group</email>
+      <organization>SantanderMetGroup</organization>
+      <email>meteo@unican.es</email>
       <!--phone></phone-->
     </contact>
     <hostInstitution>
-      <name>University of Cantabria</name>
-      <webSite>https://web.unican.es</webSite>
+      <name>Santander Climate Data Service</name>
+      <webSite>https://www.scds.es/en/</webSite>
       <logoUrl>/thredds/myGroup.png</logoUrl>
-      <logoAltText>My Group</logoAltText>
+      <logoAltText>SantanderMetGroup</logoAltText>
     </hostInstitution>
   </serverInformation>
 
