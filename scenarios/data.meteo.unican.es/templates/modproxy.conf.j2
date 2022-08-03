@@ -59,6 +59,8 @@ ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
 #ProxyPass /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
 #ProxyPassReverse /thredds/fileServer/esgcet balancer://esgf/thredds/fileServer/esgcet
 
+# udg admin
+
 <Proxy "balancer://udg">
 ProxySet stickysession=JSESSIONID
 </Proxy>
@@ -71,8 +73,6 @@ ProxyPass "/thredds" "balancer://udg/thredds"
 ProxyPassReverse "/thredds" "balancer://udg/thredds"
 ProxyPass "/udg-tap" "balancer://udg/udg-tap"
 ProxyPassReverse "/udg-tap" "balancer://udg/udg-tap"
-
-# udg admin
 
 # Additional reverse proxies
 ProxyPass /work http://ui.macc.unican.es/work

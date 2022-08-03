@@ -19,7 +19,7 @@
         version: "{{ item.version }}"
         depth: 1
       with_items:
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "master", "dest": "tds-content" }
+        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
 
     - name: Create content directories
       file: state=directory dest={{ item.home }}/content/thredds
