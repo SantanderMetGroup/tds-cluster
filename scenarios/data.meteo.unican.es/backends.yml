@@ -88,6 +88,7 @@
       blockinfile:
         path: "{{ root }}/{{ inventory_hostname }}/udg/content/thredds/threddsConfig.xml"
         insertbefore: '</threddsConfig>'
+        marker: ""
         block: |
           <nj22Config>
             <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table</gribParameterTable>
