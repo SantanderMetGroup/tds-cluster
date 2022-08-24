@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<context:component-scan base-package="es.unican.meteo">
+		<context:exclude-filter type="regex" expression="es\.unican\.meteo\.tap\.controller..*"/> 
+	</context:component-scan>
+	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="java:comp/env/jdbc/adminDB"/>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	    <property name="dataSource" ref="dataSource" />
+ 	    <property name="configLocation" value="/WEB-INF/mybatis-config.xml" /> 
+	</bean> 
+	
+	<bean id="usersMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="es.unican.meteo.tap.dao.UserMapper" />
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>	
+	
+	<bean id="rolesMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="es.unican.meteo.tap.dao.RoleMapper" />
+    	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>	
+	
+	<bean id="groupMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="es.unican.meteo.tap.dao.GroupMapper" />
+	   	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>	
+	
+	<bean id="policyMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="es.unican.meteo.tap.dao.PolicyMapper" />
+	   	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>	
+	
+	<bean id="tokenMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="es.unican.meteo.tap.dao.TokenMapper" />
+	   	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>	
+	
+	<!-- Json converter bean --> 
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	   <property name="messageConverters">
+	       <list>
+	           <ref bean="jsonConverter" />
+	       </list>
+	   </property>
+	</bean>
+	
+	<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	   <property name="supportedMediaTypes" value="application/json" />
+ 		<property name="objectMapper">
+	        <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+	            <property name="serializationInclusion" value="NON_NULL"/>
+	        </bean>
+       </property>
+	</bean>
+
+	
+	<!-- email service beans -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="correo.unican.es"/>
+        <property name="port" value="2525"/>
+        <property name="javaMailProperties">
+            <props>
+                <!-- Use SMTP transport protocol -->
+                <prop key="mail.transport.protocol">smtp</prop>
+                <!-- Use SMTP-AUTH to authenticate to SMTP server -->
+                <prop key="mail.smtp.auth">false</prop>
+                <!-- Use TLS to encrypt communication with SMTP server -->
+                <!--<prop key="mail.smtp.starttls.enable">true</prop>-->
+                <prop key="mail.debug">true</prop>
+                <!--<prop key="mail.smtp.ssl.trust">correo.unican.es</prop>-->
+            </props>
+        </property>
+    </bean>
+    
+     <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                contentType=text/html; charset=utf-8
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
+        </property>
+    </bean>
+</beans>

@@ -93,3 +93,6 @@
           <nj22Config>
             <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table</gribParameterTable>
           </nj22Config>
+
+    - name: Copy udg-tap applicationContext.xml
+      copy: src=files/tap/applicationContext.xml dest={{ udg.home }}/webapps/udg-tap/WEB-INF/applicationContext.xml
