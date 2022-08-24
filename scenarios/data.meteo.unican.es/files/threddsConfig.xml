@@ -278,4 +278,7 @@
   <Catalog>
     <cache>false</cache>
   </Catalog>
+  <ConfigCatalog>
+    <maxDatasets>10000000</maxDatasets>
+  </ConfigCatalog>
 </threddsConfig>
