@@ -10,7 +10,7 @@
     - name: Start httpd
       service: name=httpd state=started
 
-    - name: Start CoG
-      command: /etc/cog-wsgi-8889/apachectl start
-      register: result
-      changed_when: '"already running" not in result.stdout'
+        #    - name: Start CoG
+        #      command: /etc/cog-wsgi-8889/apachectl start
+        #      register: result
+        #      changed_when: '"already running" not in result.stdout'
