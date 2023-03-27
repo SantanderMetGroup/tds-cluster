@@ -17,8 +17,8 @@ lbs:
   hosts:
     lb:
   vars:
-    httpd_conf_src: files/httpd.conf
-    httpd_sslconf_src: files/httpd.ssl.conf
+    httpd_conf_src: files/httpd24.conf
+    httpd_sslconf_src: files/httpd24.ssl.conf
 servers:
   hosts:
     wn031:

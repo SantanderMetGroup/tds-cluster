@@ -3,6 +3,7 @@
   vars:
     hostcert: /etc/pki/tls/certs/hostcert.pem
     hostkey: /etc/pki/tls/private/hostkey.pem
+    httpd_root: /opt/rh/httpd24/root/etc/httpd
   vars_files:
     - secrets.yml
   roles:
@@ -14,8 +15,8 @@
     #    - name: Create directories
     #      file: state=directory dest={{ item }}
     #      with_items:
-    #        - /etc/httpd/conf
-    #        - /etc/httpd/conf.d
+    #        - {{ httpd_root }}/conf
+    #        - {{ httpd_root }}/conf.d
     #
     #    - name: Download stuff
     #      run_once: True
@@ -25,13 +26,13 @@
     #        dest: ./downloads
     #      with_items:
     #        - https://github.com/ESGF/esgf-ansible/releases/download/4.0.0-alpha1/esgf-ca-bundle.crt
-    #
-    #    - name: Copy httpd conf
-    #      copy: src={{ httpd_conf_src }} dest=/etc/httpd/conf/httpd.conf
-    #
-    #    - name: Copy httpd ssl conf
-    #      copy: src={{ httpd_sslconf_src }} dest=/etc/httpd/conf/httpd.ssl.conf
-    #
+
+    - name: Copy httpd conf
+      copy: src={{ httpd_conf_src }} dest={{ httpd_root }}/conf/httpd.conf
+
+    - name: Copy httpd ssl conf
+      copy: src={{ httpd_sslconf_src }} dest={{ httpd_root }}/conf/httpd.ssl.conf
+
     #    - name: Create /etc/certs
     #      file: state=directory path=/etc/certs mode=0755
     #
