@@ -12,24 +12,20 @@
   vars_files:
     - secrets.yml
   tasks:
-    - name: Clone repos
-      run_once: True
-      local_action:
-        module: git
-        repo: "{{ item.repo }}"
-        dest: "{{ item.dest }}"
-        version: "{{ item.version }}"
-        depth: 1
-      with_items:
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "tds-content" }
-
     - name: Create content directories
       file: state=directory dest={{ item.home }}/content/thredds
       with_items:
         - "{{ udg }}"
 
-    - name: Synchronize tds-content
-      synchronize: src=tds-content/ dest={{ udg.home }}/content/thredds
+    - name: Clone repos
+      git:
+        repo: "{{ item.repo }}"
+        dest: "{{ item.dest }}"
+        version: "{{ item.version }}"
+        depth: 1
+        executable: /lustre/gmeteo/WORK/zequi/miniconda3/bin/git
+      with_items:
+        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "{{ udg.home }}/content/thredds" }
 
     - name: Reinit catalogs
       uri:
