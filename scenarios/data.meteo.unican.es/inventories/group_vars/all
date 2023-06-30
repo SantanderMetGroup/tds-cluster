@@ -26,6 +26,10 @@ udg:
   derby_password: "{{ secrets.udg.derby.password }}"
   derby_url: "{{ secrets.udg.derby.url }}"
   ajp_address: "{{ secrets.udg.ajp.address }}"
+  urls:
+    - /thredds/restrictedAccess
+    - /thredds
+    - /udg-tap
 
 ## Worker for ERA5
 era5:
@@ -40,11 +44,13 @@ era5:
   derby_password: "{{ secrets.udg.derby.password }}"
   derby_url: "{{ secrets.udg.derby.url }}"
   ajp_address: "{{ secrets.udg.ajp.address }}"
+  urls:
+    - /thredds/dodsC/copernicus/cds
 
-# Add workers here for adding to reverse proxy (requires "balancer" property)
+# Add workers here for adding to reverse proxy (requires "balancer" and "urls" properties)
 workers:
-  - "{{ udg }}"
   - "{{ era5 }}"
+  - "{{ udg }}"
 
 tomcats:
   esgf:

@@ -1,10 +1,6 @@
 # SantanderMetGroup Data Services
 
-## Local testing
-
-- To copy an already populated database to the database server (e.g. lxc file push -r tap $CONTAINER/root/services/tds-cluster/derbydb).
-- The udg-tap.war installed is builded from the latest commit of the svn repo.
-- You need to fill your secrets.yml file.
+Set up your secrets.yml file.
 
 ```
 tds:
@@ -32,6 +28,27 @@ svn:
 admin_pass:
 admin_pass_digest:
 ```
+
+## Local testing (with Vagrant)
+
+```bash
+vagrant up
+ansible-playbook provision.yml vagrant.yml gateway.yml workers.yml stop/tomcats.yml start/tomcats.yml
+```
+
+## In production
+
+```bash
+vagrant up
+ansible-playbook -i inventories/data-bintel workers.yml stop/tomcats.yml start/tomcats.yml
+ansible-playbook -i inventories/data-bintel caches.yml
+```
+
+## Local testing (with lxc)
+
+- To copy an already populated database to the database server (e.g. lxc file push -r tap $CONTAINER/root/services/tds-cluster/derbydb).
+- The udg-tap.war installed is builded from the latest commit of the svn repo.
+- You need to fill your secrets.yml file.
 
 To test the deployment using lxdock (requires lxc):
 

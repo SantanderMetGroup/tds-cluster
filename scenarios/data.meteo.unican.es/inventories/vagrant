@@ -21,6 +21,7 @@ all:
   vars:
     esgf_host: gateway
     certs: certstest
+    root: /home/vagrant/tds-cluster
     db: 
       name: esgcet
       host: gateway
@@ -43,8 +44,6 @@ servers:
   hosts:
     wn023:
     wn025:
-  vars:
-    root: /home/vagrant/tds-cluster
 databases:
   hosts:
     wn023:

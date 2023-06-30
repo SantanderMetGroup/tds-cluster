@@ -8,24 +8,25 @@
   serial: 1
   ignore_errors: True
   vars:
-    gateway: "{{ hostvars['lb']['ansible_facts']['nodename'] }}"
+    gateway: "{{ hostvars['gateway']['ansible_facts']['nodename'] }}"
   vars_files:
     - secrets.yml
   tasks:
     - name: Create content directories
       file: state=directory dest={{ item.home }}/content/thredds
-      with_items:
-        - "{{ udg }}"
+      with_items: "{{ workers }}"
 
     - name: Clone repos
       git:
-        repo: "{{ item.repo }}"
-        dest: "{{ item.dest }}"
-        version: "{{ item.version }}"
+        #repo: "{{ item.repo }}"
+        repo: "git@gitlab.com:SCDS/data-management/tds-content.git"
+        dest: "{{ item.home }}/content/thredds"
+        version: devel
         depth: 1
-        executable: /lustre/gmeteo/WORK/zequi/miniconda3/bin/git
-      with_items:
-        - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "{{ udg.home }}/content/thredds" }
+        #executable: /lustre/gmeteo/WORK/zequi/miniconda3/bin/git
+      #with_items:
+      #  - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "{{ udg.home }}/content/thredds" }
+      with_items: "{{ workers }}"
 
     - name: Reinit catalogs
       uri:

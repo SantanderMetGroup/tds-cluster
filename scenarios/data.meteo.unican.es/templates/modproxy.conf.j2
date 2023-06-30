@@ -62,11 +62,23 @@ ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
 # udg admin
 
 # balancers
-
+{% for worker in workers %}
+<Proxy "balancer://{{ worker.balancer }}">
+ProxySet stickysession=JSESSIONID
+</Proxy>
+{% endfor %}
 
 # main workers
 ProxyPass "/tds5" "balancer://udg/thredds"
 ProxyPassReverse "/tds5" "balancer://udg/thredds"
+{% for worker in workers %}
+{% for url in worker.urls %}
+ProxyPass "{{ url }}" "balancer://{{ worker.balancer }}{{ url }}"
+ProxyPassReverse "{{ url }}" "balancer://{{ worker.balancer }}{{ url }}"
+{% endfor %}
+{% endfor %}
+
+
 ProxyPass "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
 ProxyPassReverse "/thredds/restrictedAccess" "balancer://udg/thredds/restrictedAccess"
 ProxyPass "/thredds" "balancer://udg/thredds"

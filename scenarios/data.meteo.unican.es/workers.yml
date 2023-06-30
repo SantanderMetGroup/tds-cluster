@@ -1,26 +1,36 @@
 - name: Set up gateway
   hosts: gateway
+  vars_files:
+    - secrets.yml
   tasks:
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
 
-- name: UDG workers
+- name: All servers workers
   hosts: servers
   serial: 1 # multiple hosts writing to the gateway
   vars_files:
     - secrets.yml
   tasks:
-    - name: Add balancers to reverse proxy
-      blockinfile:
-        path: "{{ modproxy_conf }}"
-        insertafter: "# balancers"
-        marker: "# {mark} balancer {{ item.balancer }}"
-        block: | 
-          <Proxy "balancer://{{ item.balancer }}">
-          ProxySet stickysession=JSESSIONID
-          </Proxy>
-      delegate_to: gateway
+    - name: Install workers
+      include_role:
+        name: udg
+      vars:
+        udg_home: "{{ worker.home }}"
+        udg_jdk: "{{ worker.jdk }}"
+        udg_http: "{{ worker.http }}"
+        udg_ssl: "{{ worker.ssl }}"
+        udg_ajp: "{{ worker.ajp }}"
+        udg_shutdown: "{{ worker.shutdown }}"
+        udg_derby_name: "{{ worker.derby_name }}"
+        udg_derby_user: "{{ worker.derby_user }}"
+        udg_derby_password: "{{ worker.derby_password }}"
+        udg_derby_url: "{{ worker.derby_url }}"
+        udg_ajp_address: "{{ worker.ajp_address }}"
+        udg_Xmx: "4096m"
       with_items: "{{ workers }}"
+      loop_control:
+        loop_var: worker
 
     - name: Add workers to balancers
       lineinfile:
@@ -40,42 +50,6 @@
         block: |
           ProxyPass "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
           ProxyPassReverse "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
-
-#    - lineinfile:
-#        path: "{{ modproxy_conf }}"
-#        insertafter: <Proxy "balancer://{{ item }}">
-#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-#      delegate_to: lb
-#      with_items: [ 'udg', 'tds5' ]
-#      when: 'inventory_file|basename != "spock"'
-#
-#    - lineinfile:
-#        path: "{{ modproxy_conf }}"
-#        insertafter: <Proxy "balancer://{{ item }}">
-#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-#      delegate_to: lb
-#      with_items: [ 'udg', 'tds5' ]
-#      when: 'inventory_file|basename == "spock"'
-#
-
-#- name: ESGF workers
-#  hosts: servers
-#  tasks:
-#    - lineinfile:
-#        path: "{{ modproxy_conf }}"
-#        insertafter: <Proxy "balancer://{{ item }}">
-#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-#      delegate_to: lb
-#      with_items: [ 'esgf' ]
-#      when: 'inventory_file|basename != "spock"'
-#
-#    - lineinfile:
-#        path: "{{ modproxy_conf }}"
-#        insertafter: <Proxy "balancer://{{ item }}">
-#        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ tomcats[item].ajp }}" loadfactor=1 route={{ ansible_hostname }}
-#      delegate_to: lb
-#      with_items: [ 'esgf' ]
-#      when: 'inventory_file|basename == "spock"'
 
 - name: Restart gateway
   hosts: lb

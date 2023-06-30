@@ -51,37 +51,3 @@
 #
 #    - name: Synchronize esgf-content
 #      synchronize: src=esgf-content/ dest={{ esg.content }}/thredds
-
-- name: Install UDG
-  hosts: servers
-  tags: udg
-  vars_files:
-    - secrets.yml
-  roles:
-    - role: udg
-      udg_home: "{{ udg.home }}"
-      udg_jdk: "{{ udg.jdk }}"
-      udg_http: "{{ udg.http }}"
-      udg_ssl: "{{ udg.ssl }}"
-      udg_ajp: "{{ udg.ajp }}"
-      udg_shutdown: "{{ udg.shutdown }}"
-      udg_derby_name: "{{ udg.derby_name }}"
-      udg_derby_user: "{{ udg.derby_user }}"
-      udg_derby_password: "{{ udg.derby_password }}"
-      udg_derby_url: "{{ udg.derby_url }}"
-      udg_ajp_address: "{{ udg.ajp_address }}"
-      udg_Xmx: "4096m"
-
-    - role: udg
-      udg_home: "{{ era5.home }}"
-      udg_jdk: "{{ era5.jdk }}"
-      udg_http: "{{ era5.http }}"
-      udg_ssl: "{{ era5.ssl }}"
-      udg_ajp: "{{ era5.ajp }}"
-      udg_shutdown: "{{ era5.shutdown }}"
-      udg_derby_name: "{{ era5.derby_name }}"
-      udg_derby_user: "{{ era5.derby_user }}"
-      udg_derby_password: "{{ era5.derby_password }}"
-      udg_derby_url: "{{ era5.derby_url }}"
-      udg_ajp_address: "{{ era5.ajp_address }}"
-      udg_Xmx: "4096m"
