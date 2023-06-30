@@ -1,0 +1,32 @@
+- name: Provisioning for testing
+  hosts: gateway
+  tasks:
+    - name: Download stuff
+      run_once: True
+      local_action:
+        module: get_url
+        url: "{{ item }}"
+        dest: ./downloads
+      with_items:
+        - https://github.com/ESGF/esgf-ansible/releases/download/4.0.0-alpha1/esgf-ca-bundle.crt
+
+    - name: Copy httpd conf
+      template: src={{ httpd_conf_src }} dest={{ httpd_root }}/conf/httpd.conf
+
+    - name: Copy httpd ssl conf
+      copy: src={{ httpd_sslconf_src }} dest={{ httpd_root }}/conf/httpd.ssl.conf
+
+    - name: Create /etc/certs
+      file: state=directory path=/etc/certs mode=0755
+
+    - name: Copy hostkey
+      copy: src={{ certs }}/hostkey.pem dest=/etc/certs/hostkey.pem mode=0400
+
+    - name: Copy hostcert
+      copy: src={{ certs }}/hostcert.pem dest=/etc/certs/hostcert.pem mode=0644
+
+    - name: Copy cachain
+      copy: src={{ certs }}/cachain.pem dest=/etc/certs/cachain.pem mode=0644
+
+    - name: Copy esgf ca bundle
+      copy: src=./downloads/esgf-ca-bundle.crt dest=/etc/certs/esgf-ca-bundle.crt

@@ -1,5 +1,5 @@
 - name: Set up gateway
-  hosts: lb
+  hosts: gateway
   tasks:
     - name: Template modproxy.conf
       template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
@@ -10,34 +10,36 @@
   vars_files:
     - secrets.yml
   tasks:
-    - lineinfile:
+    - name: Add balancers to reverse proxy
+      blockinfile:
+        path: "{{ modproxy_conf }}"
+        insertafter: "# balancers"
+        marker: "# {mark} balancer {{ item.balancer }}"
+        block: | 
+          <Proxy "balancer://{{ item.balancer }}">
+          ProxySet stickysession=JSESSIONID
+          </Proxy>
+      delegate_to: gateway
+      with_items: "{{ workers }}"
+
+    - name: Add workers to balancers
+      lineinfile:
         path: "{{ modproxy_conf }}"
         insertafter: '<Proxy "balancer://{{ item.balancer }}">'
         line: > 
-          BalancerMember "ajp://{{ ansible_all_ipv4_addresses[0] }}:{{ item.ajp }}" loadfactor=1 route={{ ansible_hostname }}
-      delegate_to: lb
-      with_items:
-        - "{{ udg }}"
-      when: 'inventory_file|basename != "spock"'
-
-    - lineinfile:
-        path: "{{ modproxy_conf }}"
-        insertafter: <Proxy "balancer://{{ item.balancer }}">
-        line: BalancerMember "ajp://{{ ansible_all_ipv4_addresses[1] }}:{{ item.ajp }}" loadfactor=1 route={{ ansible_hostname }}
-      delegate_to: lb
-      with_items:
-        - "{{ udg }}"
-      when: 'inventory_file|basename == "spock"'
+          BalancerMember "ajp://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ item.ajp }}" loadfactor=1 route={{ ansible_hostname }}
+      delegate_to: gateway
+      with_items: "{{ workers }}"
 
     - name: Add thredds/admin workers
-      delegate_to: lb
+      delegate_to: gateway
       blockinfile:
         path: "{{ modproxy_conf }}"
         insertafter: "# udg admin"
-        marker: "# udg admin {{ ansible_all_ipv4_addresses[0] }}:{{ udg.ssl }}"
+        marker: "# udg admin {{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}"
         block: |
-          ProxyPass "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ udg.ssl }}/thredds/admin"
-          ProxyPassReverse "/thredds/admin/{{ ansible_host }}" "https://{{ ansible_all_ipv4_addresses[0] }}:{{ udg.ssl }}/thredds/admin"
+          ProxyPass "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
+          ProxyPassReverse "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
 
 #    - lineinfile:
 #        path: "{{ modproxy_conf }}"

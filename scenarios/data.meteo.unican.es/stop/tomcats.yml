@@ -10,10 +10,8 @@
       environment:
         CATALINA_BASE: "{{ item.home }}"
       ignore_errors: True # If catalina.pid is present but process is not running, we don't want an error
-      with_items:
-        - "{{ udg }}"
+      with_items: "{{ workers }}"
     
     - name: Remove catalina.pid
       file: path={{ item.home }}/logs/catalina.pid state=absent
-      with_items:
-        - "{{ udg }}"
+      with_items: "{{ workers }}"

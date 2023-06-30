@@ -9,5 +9,5 @@
         creates: "{{ item.home }}/logs/catalina.pid"
       environment:
         CATALINA_BASE: "{{ item.home }}"
-      with_items:
-        - "{{ udg }}"
+      with_items: "{{ workers }}"
+

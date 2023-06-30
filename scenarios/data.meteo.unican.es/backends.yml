@@ -71,34 +71,17 @@
       udg_derby_url: "{{ udg.derby_url }}"
       udg_ajp_address: "{{ udg.ajp_address }}"
       udg_Xmx: "4096m"
-  tasks:
-    - name: Create directory for jdk
-      file: state=directory path={{ jdk_home }}
 
-    - name: Unarchive jdk in {{ jdk_home }}
-      unarchive:
-        src: "{{ jdk_tgz }}"
-        dest: "{{ jdk_home }}"
-        remote_src: True
-        extra_opts: --strip-components=1
-
-    - name: Copy grib table
-      copy: src=files/tds5/2.98.128.table dest={{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table
-
-    - name: Add grib table to threddsConfig.xml
-      blockinfile:
-        path: "{{ root }}/{{ inventory_hostname }}/udg/content/thredds/threddsConfig.xml"
-        insertbefore: '</threddsConfig>'
-        marker: ""
-        block: |
-          <nj22Config>
-            <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ root }}/{{ inventory_hostname }}/udg/content/thredds/2.98.128.table</gribParameterTable>
-                <Netcdf4Clibrary>
-                  <libraryPath>/lustre/gmeteo/WORK/zequi/miniconda3/lib</libraryPath>
-                  <libraryName>netcdf</libraryName>
-                  <useForReading>true</useForReading>
-                </Netcdf4Clibrary>
-          </nj22Config>
-
-    - name: Copy udg-tap applicationContext.xml
-      copy: src=files/tap/applicationContext.xml dest={{ udg.home }}/webapps/udg-tap/WEB-INF/applicationContext.xml
+    - role: udg
+      udg_home: "{{ era5.home }}"
+      udg_jdk: "{{ era5.jdk }}"
+      udg_http: "{{ era5.http }}"
+      udg_ssl: "{{ era5.ssl }}"
+      udg_ajp: "{{ era5.ajp }}"
+      udg_shutdown: "{{ era5.shutdown }}"
+      udg_derby_name: "{{ era5.derby_name }}"
+      udg_derby_user: "{{ era5.derby_user }}"
+      udg_derby_password: "{{ era5.derby_password }}"
+      udg_derby_url: "{{ era5.derby_url }}"
+      udg_ajp_address: "{{ era5.ajp_address }}"
+      udg_Xmx: "4096m"

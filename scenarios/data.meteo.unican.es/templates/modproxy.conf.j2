@@ -61,9 +61,9 @@ ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
 
 # udg admin
 
-<Proxy "balancer://udg">
-ProxySet stickysession=JSESSIONID
-</Proxy>
+# balancers
+
+
 # main workers
 ProxyPass "/tds5" "balancer://udg/thredds"
 ProxyPassReverse "/tds5" "balancer://udg/thredds"

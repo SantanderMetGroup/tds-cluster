@@ -1,5 +1,5 @@
 export CATALINA_HOME={{ udg_home }}
-export JRE_HOME={{ jdk_home }}
+export JRE_HOME={{ udg_home }}/jdk
 export CONTENT_ROOT="-Dtds.content.root.path={{ udg_home }}/content"
 
 export NORMAL="-Xmx{{ udg_Xmx | default("2048m") }} -Xms{{ udg_Xms | default("512m") }} -server -ea -XX:+HeapDumpOnOutOfMemoryError -Djava.awt.headless=true"

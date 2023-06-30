@@ -41,3 +41,24 @@
 
 - name: Template tds applicationContext.xml
   template: src=templates/tds-applicationContext.xml.j2 dest={{ udg_home }}/webapps/thredds/WEB-INF/applicationContext.xml
+
+- name: Copy grib table
+  copy: src=files/2.98.128.table dest={{ udg_home }}/content/thredds/2.98.128.table
+
+- name: Add grib table to threddsConfig.xml
+  blockinfile:
+    path: "{{ udg_home }}/content/thredds/threddsConfig.xml"
+    insertbefore: '</threddsConfig>'
+    marker: ""
+    block: |
+      <nj22Config>
+        <gribParameterTable edition="1" center="98" subcenter="-1" version="128">{{ udg_home }}/content/thredds/2.98.128.table</gribParameterTable>
+            <Netcdf4Clibrary>
+              <libraryPath>/lustre/gmeteo/WORK/zequi/miniconda3/lib</libraryPath>
+              <libraryName>netcdf</libraryName>
+              <useForReading>true</useForReading>
+            </Netcdf4Clibrary>
+      </nj22Config>
+
+- name: Copy udg-tap applicationContext.xml
+  copy: src=files/tap-applicationContext.xml dest={{ udg_home }}/webapps/udg-tap/WEB-INF/applicationContext.xml

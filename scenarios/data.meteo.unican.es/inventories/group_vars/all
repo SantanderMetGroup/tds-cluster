@@ -1,5 +1,4 @@
-root: "/lustre/gmeteo/WORK/zequi/services/tds-cluster"
-jdk_home: "{{ root }}/{{ inventory_hostname }}/jdk"
+jdk_home: "{{ root }}/{{ inventory_hostname }}/udg/jdk" # assume udg always exist
 derby_home: "{{ root }}/derbydb"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 tdscontent_repo: git@gitlab.com:SCDS/tds-content.git
@@ -12,10 +11,12 @@ derby_tgz: ../../software/db-derby-10.14.2.0-lib.tar.gz
 jrobin_jar: ../../software/jrobin-1.5.9.jar
 melody_jar: ../../software/javamelody-core-1.73.1.jar
 
+# Workers
+
+## The main worker
 udg:
   balancer: udg
   home: "{{ root }}/{{ inventory_hostname }}/udg"
-  jdk: "{{ jdk_home }}"
   http: 9080
   ssl: 9443
   ajp: 9009
@@ -25,6 +26,25 @@ udg:
   derby_password: "{{ secrets.udg.derby.password }}"
   derby_url: "{{ secrets.udg.derby.url }}"
   ajp_address: "{{ secrets.udg.ajp.address }}"
+
+## Worker for ERA5
+era5:
+  balancer: era5
+  home: "{{ root }}/{{ inventory_hostname }}/era5"
+  http: 9081
+  ssl: 9444
+  ajp: 9010
+  shutdown: 9006
+  derby_name: "{{ secrets.udg.derby.name }}"
+  derby_user: "{{ secrets.udg.derby.user }}"
+  derby_password: "{{ secrets.udg.derby.password }}"
+  derby_url: "{{ secrets.udg.derby.url }}"
+  ajp_address: "{{ secrets.udg.ajp.address }}"
+
+# Add workers here for adding to reverse proxy (requires "balancer" property)
+workers:
+  - "{{ udg }}"
+  - "{{ era5 }}"
 
 tomcats:
   esgf:

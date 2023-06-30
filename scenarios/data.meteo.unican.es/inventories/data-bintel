@@ -1,6 +1,6 @@
 all:
   hosts:
-    lb:
+    gateway:
       ansible_host: data.meteo.unican.es
       ansible_user: root
       ansible_python_interpreter: /usr/local/conda/bin/python3
@@ -11,13 +11,16 @@ all:
       ansible_host: wn032
       ansible_user: zequi
   vars:
+    root: "/lustre/gmeteo/WORK/zequi/services/tds-cluster"
+    httpd_root: /opt/rh/httpd24/root/etc/httpd
     esgf_host: data.meteo.unican.es
     certs: certs
-lbs:
+gateways:
   hosts:
-    lb:
+    gateway:
   vars:
-    httpd_conf_src: files/httpd24.conf
+    httpd_root: /opt/rh/httpd24/root/etc/httpd
+    httpd_conf_src: templates/httpd24.conf.j2
     httpd_sslconf_src: files/httpd24.ssl.conf
 servers:
   hosts:

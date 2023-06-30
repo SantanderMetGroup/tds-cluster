@@ -1,15 +1,7 @@
-# THIS PROVISION IS USED IN LXC TESTING, FOR PRODUCTION YOU NEED TO MAKE YOUR OWN PROVISIONING
 - name: Common provisioning
   hosts: all
   become: True
   vars:
-    user: "{{ lookup('env', 'USER') }}"
-    users:
-     - root
-     - "{{ user }}"
-    keys:
-      - ../../../insecure_private_key.pub
-      - /home/{{ user }}/.ssh/id_rsa.pub
     packages:
       - bind-utils
       - curl
@@ -36,10 +28,6 @@
       - postgresql
       - postgresql-devel
   tasks:
-    - name: Set hostname
-      command: hostname {{ hostname|default(ansible_hostname) }}
-      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
-
     - name: EPEL
       yum: name=epel-release
       when: ansible_pkg_mgr == "yum"
@@ -47,24 +35,8 @@
     - name: Install packages
       yum: name={{ packages }} state=present
 
-    - name: Create users
-      user: name={{ item }} shell=/bin/bash
-      with_items: "{{ users }}"
-      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
-
-    # Allow ssh access
-    - name: Copy public key
-      authorized_key: user={{ item.0 }} key={{ lookup('file', item.1) }}
-      with_nested:
-        - "{{ users }}"
-        - "{{ keys }}"
-      when: "inventory_file|basename != 'spock' or inventory_file|basename != 'data'"
-
     - name: Start sshd
       service: name=sshd state=started
-
-    - name: Create a root directory
-      file: state=directory dest=/lustre/gmeteo/WORK/{{ user }} owner={{ user }} group={{ user }} mode=755
 
 - name: Provision servers
   hosts: servers
@@ -78,7 +50,7 @@
       yum: name={{ packages }} state=present
 
 - name: Provision gateway
-  hosts: lb
+  hosts: gateway
   become: True
   vars:
     packages:
