@@ -1,0 +1,73 @@
+- name: Install TDS
+  hosts: tdsifca
+  vars:
+    tds_home: "/home/ubuntu/TDS"
+  tasks:
+    - name: Install packages
+      become: True
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - apache2
+        - openjdk-11-jdk
+        - unzip
+
+    - name: Create directories
+      file:
+        dest: "{{ item }}"
+        state: directory
+        mode: 0755
+      with_items:
+        - "{{ tds_home }}"
+        - "{{ ansible_env.HOME }}/EVA"
+
+    - name: Add ESGF Virtual Aggregation volume
+      become: True
+      lineinfile:
+        path: /etc/fstab
+        line: "/dev/vdc                /home/ubuntu/EVA                auto    auto        0       2"
+
+    - name: Mount ESGF Virtual Aggregation volume
+      become: True
+      mount:
+        src: "/dev/vdc"
+        path: "/home/ubuntu/EVA"
+        state: present
+        fstype: ext4
+
+    - name: Build TDS
+      run_once: True
+      local_action:
+        module: shell ./build.sh
+        args:
+          chdir: "../../builds/tds"
+          creates: "../../builds/tds/tds.zip"
+
+    - name: Install TDS
+      unarchive:
+        src: "../../builds/tds/tds.zip"
+        dest: "{{ tds_home }}"
+
+    - name: Template setenv.sh
+      template:
+        src: templates/setenv.sh.j2
+        dest: "{{ tds_home }}/bin/setenv.sh"
+        mode: 0644
+
+    - name: Copy tomcat server.xml
+      template:
+        src: templates/server.xml.j2
+        dest: "{{ tds_home }}/conf/server.xml"
+        mode: 0644
+
+    - name: Copy TDS catalog
+      copy:
+        src: files/catalog.xml
+        dest: "{{ tds_home }}/content/thredds/catalog.xml"
+
+- name: Restart gateway
+  hosts: tdsifca
+  tasks:
+    - name: Graceful restart
+      command: service apache2 graceful
