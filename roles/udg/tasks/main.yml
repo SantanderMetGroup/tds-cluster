@@ -34,6 +34,9 @@
 - name: Copy threddsConfig.xml
   copy: src=files/threddsConfig.xml dest={{ udg_home }}/content/thredds/threddsConfig.xml
 
+- name: Create directory for tap properties
+  file: state=directory dest={{ udg_home }}/webapps/udg-tap/WEB-INF/classes
+
 - name: Template tap properties
   template:
     src: templates/tap.properties.j2

@@ -4,9 +4,9 @@
   <!-- all options are commented out in standard install - meaning use default values -->
   <!-- see http://www.unidata.ucar.edu/software/thredds/current/tds/reference/ThreddsConfigXMLFile.html -->
   <serverInformation>
-    <name>SantanderMetGroup THREDDS Data Server</name>
+    <name>THREDDS Data Server</name>
     <logoUrl>/thredds/threddsIcon.png</logoUrl>
-    <logoAltText>SantanderMetGroup THREDDS Data Server</logoAltText>
+    <logoAltText>THREDDS Data Server</logoAltText>
 
     <abstract>Scientific Data</abstract>
     <keywords>meteorology, atmosphere, climate, ocean, earth science</keywords>

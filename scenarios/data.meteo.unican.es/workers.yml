@@ -32,6 +32,12 @@
       loop_control:
         loop_var: worker
 
+    - name: Copy jupyter notebooks
+      copy:
+        src: notebooks/
+        dest: "{{ item.home }}/content/thredds/notebooks/"
+      with_items: "{{ workers }}"
+
     - name: Add workers to balancers
       lineinfile:
         path: "{{ modproxy_conf }}"

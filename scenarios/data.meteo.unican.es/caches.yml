@@ -1,5 +1,5 @@
 - name: Discover gateway facts
-  hosts: lb
+  hosts: gateways
   tasks:
     - setup:
 
@@ -23,7 +23,7 @@
         dest: "{{ item.home }}/content/thredds"
         version: devel
         depth: 1
-        #executable: /lustre/gmeteo/WORK/zequi/miniconda3/bin/git
+        executable: /lustre/gmeteo/WORK/zequi/miniconda3/bin/git
       #with_items:
       #  - { "repo": "git@gitlab.com:SCDS/tds-content.git", "version": "devel", "dest": "{{ udg.home }}/content/thredds" }
       with_items: "{{ workers }}"
