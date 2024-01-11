@@ -1,4 +1,4 @@
-jdk_home: "{{ root }}/{{ inventory_hostname }}/jdk" # assume udg always exist
+jdk_home: "{{ root }}/{{ inventory_hostname }}/udg/jdk" # assume udg always exist
 derby_home: "{{ root }}/derbydb"
 modproxy_conf: /etc/httpd/conf.d/modproxy.conf
 tdscontent_repo: git@gitlab.com:SCDS/tds-content.git
