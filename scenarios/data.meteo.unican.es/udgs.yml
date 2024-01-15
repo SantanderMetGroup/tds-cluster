@@ -1,17 +1,34 @@
-- name: Set up gateway
-  hosts: gateway
-  vars_files:
-    - secrets.yml
-  tasks:
-    - name: Template modproxy.conf
-      template: src=templates/modproxy.conf.j2 dest={{ modproxy_conf }}
-
 - name: All servers workers
   hosts: servers
-  serial: 1 # multiple hosts writing to the gateway
   vars_files:
     - secrets.yml
   tasks:
+    - name: Install workers
+      include_role:
+        name: udg
+      vars:
+        udg_home: "{{ worker.home }}"
+        udg_jdk: "{{ worker.jdk }}"
+        udg_http: "{{ worker.http }}"
+        udg_ssl: "{{ worker.ssl }}"
+        udg_ajp: "{{ worker.ajp }}"
+        udg_shutdown: "{{ worker.shutdown }}"
+        udg_derby_name: "{{ worker.derby_name }}"
+        udg_derby_user: "{{ worker.derby_user }}"
+        udg_derby_password: "{{ worker.derby_password }}"
+        udg_derby_url: "{{ worker.derby_url }}"
+        udg_ajp_address: "{{ worker.ajp_address }}"
+        udg_Xmx: "4096m"
+      with_items: "{{ workers }}"
+      loop_control:
+        loop_var: worker
+
+    - name: Copy jupyter notebooks
+      copy:
+        src: notebooks/
+        dest: "{{ item.home }}/content/thredds/notebooks/"
+      with_items: "{{ workers }}"
+
     - name: Add workers to balancers
       lineinfile:
         path: "{{ modproxy_conf }}"
@@ -30,9 +47,3 @@
         block: |
           ProxyPass "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
           ProxyPassReverse "/thredds/admin/{{ inventory_hostname }}" "https://{{ udg_ip|default(ansible_all_ipv4_addresses[0]) }}:{{ udg.ssl }}/thredds/admin"
-
-#- name: Restart gateway
-#  hosts: lb
-#  tasks:
-#    - name: Graceful restart
-#      command: service httpd graceful

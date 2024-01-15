@@ -61,6 +61,10 @@ ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
 
 # udg admin
 
+# FAO con TDS4 porq falla la concurrencia con TDS5
+ProxyPass "/thredds/dodsC/fao/" "ajp://192.168.202.61:9004/thredds/dodsC/fao/"
+ProxyPassReverse "/thredds/dodsC/fao/" "ajp://192.168.202.61:9004/thredds/dodsC/fao/"
+
 # balancers
 {% for worker in workers %}
 <Proxy "balancer://{{ worker.balancer }}">
