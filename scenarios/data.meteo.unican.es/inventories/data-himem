@@ -11,7 +11,7 @@ all:
       ansible_host: wn052
       ansible_user: zequi
   vars:
-    root: "/lustre/gmeteo/WORK/zequi/services/tds-cluster"
+    root: "/lustre/gmeteo/DATA/ESGF/REPLICA/services"
     httpd_root: /opt/rh/httpd24/root/etc/httpd
     esgf_host: data.meteo.unican.es
     certs: certs
