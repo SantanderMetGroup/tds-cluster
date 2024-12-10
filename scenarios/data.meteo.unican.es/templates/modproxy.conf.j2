@@ -33,6 +33,7 @@ ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/SAM-44_CCCma-CanESM2_rcp4.5_r1i1p
 ProxyPassMatch ^/thredds/([^/]*)/esgcet/cordex/SAM-44_ECMWF-ERAINT_evaluation_r1i1p1_UCAN-WRF341I_v1/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
 ProxyPassMatch ^/thredds/([^/]*)/esgcet/c3s34d/providers/cordex/(.*) ajp://localhost:8223/thredds/$1/esgcet/CORDEX/$2
 ProxyPassMatch ^/thredds/([^/]*)/esgcet/c3s34d/from_PROVIDERS/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
+ProxyPassMatch ^/thredds/([^/]*)/esgcet/unican/replica/(.*) balancer://udg/thredds/$1/esgcet/unican/replica/$2
 ProxyPassMatch ^/thredds/([^/]*)/esgcet/unican/(.*) ajp://localhost:8223/thredds/$1/esgcet/$2
 # general proxy for ESGF data node
 ProxyPassMatch ^/thredds/([^/]*)/esgcet ajp://localhost:8223
