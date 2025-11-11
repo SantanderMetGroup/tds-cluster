@@ -1,5 +1,7 @@
 ---
+
 ⚠️ **Repository archived**  
-The new canonical location is [GitLab › sci-uc/scds/tds-cluster](https://gitlab.com/sci-uc/scds/tds-cluster).  
+The new canonical location is [https://gitlab.com/sci-uc/scds/tds-cluster](https://gitlab.com/sci-uc/scds/data-management/tds-cluster).  
 This GitHub repository is kept for historical reference only.
+
 ---
